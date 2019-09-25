@@ -1,0 +1,4 @@
+D:\proD\GeneralTools\checkSyntax\cTime\bin\Release\cTime.exe
+D:\proD\GeneralTools\checkSyntax\cTime\bin\Release\cTime.pdb
+D:\proD\GeneralTools\checkSyntax\cTime\obj\x86\Release\cTime.exe
+D:\proD\GeneralTools\checkSyntax\cTime\obj\x86\Release\cTime.pdb

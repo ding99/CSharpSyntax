@@ -1,0 +1,4 @@
+D:\proD\GeneralTools\checkSyntax\cLanguage\bin\Release\cLanguage.exe
+D:\proD\GeneralTools\checkSyntax\cLanguage\bin\Release\cLanguage.pdb
+D:\proD\GeneralTools\checkSyntax\cLanguage\obj\x86\Release\cLanguage.exe
+D:\proD\GeneralTools\checkSyntax\cLanguage\obj\x86\Release\cLanguage.pdb

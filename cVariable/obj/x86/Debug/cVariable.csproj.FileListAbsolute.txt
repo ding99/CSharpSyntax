@@ -1,0 +1,16 @@
+D:\proD\GeneralTools\checkSyntax\cVariable\bin\Debug\cVariable.exe
+D:\proD\GeneralTools\checkSyntax\cVariable\bin\Debug\cVariable.pdb
+D:\proD\GeneralTools\checkSyntax\cVariable\obj\x86\Debug\cVariable.exe
+D:\proD\GeneralTools\checkSyntax\cVariable\obj\x86\Debug\cVariable.pdb
+D:\proD\GeneralTools\checkSyntax\cVariable\obj\x86\Debug\cVariable.csprojResolveAssemblyReference.cache
+C:\ProC\checkSyntax\cVariable\bin\Debug\cVariable.exe
+C:\ProC\checkSyntax\cVariable\bin\Debug\cVariable.pdb
+C:\ProC\checkSyntax\cVariable\obj\x86\Debug\cVariable.csprojResolveAssemblyReference.cache
+C:\ProC\checkSyntax\cVariable\obj\x86\Debug\cVariable.exe
+C:\ProC\checkSyntax\cVariable\obj\x86\Debug\cVariable.pdb
+E:\proD\GeneralTools\checkSyntax\cVariable\obj\x86\Debug\cVariable.csproj.CoreCompileInputs.cache
+E:\proD\GeneralTools\checkSyntax\cVariable\obj\x86\Debug\cVariable.exe
+E:\proD\GeneralTools\checkSyntax\cVariable\obj\x86\Debug\cVariable.pdb
+E:\proD\GeneralTools\checkSyntax\cVariable\bin\Debug\cVariable.exe
+E:\proD\GeneralTools\checkSyntax\cVariable\bin\Debug\cVariable.pdb
+E:\proD\GeneralTools\checkSyntax\cVariable\obj\x86\Debug\cVariable.csprojAssemblyReference.cache

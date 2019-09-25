@@ -1,0 +1,15 @@
+D:\proD\GeneralTools\checkSyntax\cTime\bin\Debug\cTime.exe
+D:\proD\GeneralTools\checkSyntax\cTime\bin\Debug\cTime.pdb
+D:\proD\GeneralTools\checkSyntax\cTime\obj\x86\Debug\cTime.exe
+D:\proD\GeneralTools\checkSyntax\cTime\obj\x86\Debug\cTime.pdb
+D:\proD\GeneralTools\checkSyntax\cTime\obj\x86\Debug\cTime.csprojResolveAssemblyReference.cache
+D:\proD\GeneralTools\checkSyntax\Times\cTime\bin\Debug\cTime.exe
+D:\proD\GeneralTools\checkSyntax\Times\cTime\bin\Debug\cTime.pdb
+D:\proD\GeneralTools\checkSyntax\Times\cTime\obj\x86\Debug\cTime.csprojResolveAssemblyReference.cache
+D:\proD\GeneralTools\checkSyntax\Times\cTime\obj\x86\Debug\cTime.exe
+D:\proD\GeneralTools\checkSyntax\Times\cTime\obj\x86\Debug\cTime.pdb
+C:\ProC\checkSyntax\Times\cTime\bin\Debug\cTime.exe
+C:\ProC\checkSyntax\Times\cTime\bin\Debug\cTime.pdb
+C:\ProC\checkSyntax\Times\cTime\obj\x86\Debug\cTime.csprojResolveAssemblyReference.cache
+C:\ProC\checkSyntax\Times\cTime\obj\x86\Debug\cTime.exe
+C:\ProC\checkSyntax\Times\cTime\obj\x86\Debug\cTime.pdb

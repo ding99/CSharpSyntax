@@ -1,0 +1,14 @@
+E:\proD\GeneralTools\checkSyntax\cInt\bin\Debug\cInt.exe.config
+E:\proD\GeneralTools\checkSyntax\cInt\bin\Debug\cInt.exe
+E:\proD\GeneralTools\checkSyntax\cInt\bin\Debug\cInt.pdb
+E:\proD\GeneralTools\checkSyntax\cInt\obj\Debug\cInteger.csprojAssemblyReference.cache
+E:\proD\GeneralTools\checkSyntax\cInt\obj\Debug\cInteger.csproj.CoreCompileInputs.cache
+E:\proD\GeneralTools\checkSyntax\cInt\obj\Debug\cInt.exe
+E:\proD\GeneralTools\checkSyntax\cInt\obj\Debug\cInt.pdb
+E:\proD\GeneralTools\checkSyntax\cInteger\obj\Debug\cInteger.csprojAssemblyReference.cache
+E:\proD\GeneralTools\checkSyntax\cInteger\obj\Debug\cInteger.csproj.CoreCompileInputs.cache
+E:\proD\GeneralTools\checkSyntax\cInteger\obj\Debug\cInt.exe
+E:\proD\GeneralTools\checkSyntax\cInteger\obj\Debug\cInt.pdb
+E:\proD\GeneralTools\checkSyntax\cInteger\bin\Debug\cInt.exe.config
+E:\proD\GeneralTools\checkSyntax\cInteger\bin\Debug\cInt.exe
+E:\proD\GeneralTools\checkSyntax\cInteger\bin\Debug\cInt.pdb

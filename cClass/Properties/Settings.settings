@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="cClass.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="set_user01" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SET_U01</Value>
+    </Setting>
+    <Setting Name="set_appl01" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SET_A01</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

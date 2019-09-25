@@ -1,0 +1,10 @@
+D:\proD\GeneralTools\checkSyntax\cArray\bin\Debug\cArray.exe
+D:\proD\GeneralTools\checkSyntax\cArray\bin\Debug\cArray.pdb
+D:\proD\GeneralTools\checkSyntax\cArray\obj\x86\Debug\cArray.exe
+D:\proD\GeneralTools\checkSyntax\cArray\obj\x86\Debug\cArray.pdb
+D:\proD\GeneralTools\checkSyntax\cArray\obj\x86\Debug\cArray.csprojResolveAssemblyReference.cache
+C:\ProC\checkSyntax\cArray\bin\Debug\cArray.exe
+C:\ProC\checkSyntax\cArray\bin\Debug\cArray.pdb
+C:\ProC\checkSyntax\cArray\obj\x86\Debug\cArray.csprojResolveAssemblyReference.cache
+C:\ProC\checkSyntax\cArray\obj\x86\Debug\cArray.exe
+C:\ProC\checkSyntax\cArray\obj\x86\Debug\cArray.pdb

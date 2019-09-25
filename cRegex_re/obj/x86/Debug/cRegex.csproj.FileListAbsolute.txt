@@ -1,0 +1,6 @@
+D:\proD\GeneralTools\checkSyntax\cRegex\bin\Debug\cRegex.exe
+D:\proD\GeneralTools\checkSyntax\cRegex\bin\Debug\cRegex.pdb
+D:\proD\GeneralTools\checkSyntax\cRegex\obj\x86\Debug\cRegex.exe
+D:\proD\GeneralTools\checkSyntax\cRegex\obj\x86\Debug\cRegex.pdb
+D:\proD\GeneralTools\checkSyntax\cRegex\obj\x86\Debug\cRegex.csprojResolveAssemblyReference.cache
+D:\proD\GeneralTools\checkSyntax\cRegex\bin\Debug\cRegex.exe.config

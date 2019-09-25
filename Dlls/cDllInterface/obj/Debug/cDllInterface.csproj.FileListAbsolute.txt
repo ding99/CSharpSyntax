@@ -1,0 +1,14 @@
+D:\proD\GeneralTools\checkSyntax\cDllInterface\bin\Debug\cDllInterface.dll
+D:\proD\GeneralTools\checkSyntax\cDllInterface\bin\Debug\cDllInterface.pdb
+D:\proD\GeneralTools\checkSyntax\cDllInterface\obj\Debug\cDllInterface.dll
+D:\proD\GeneralTools\checkSyntax\cDllInterface\obj\Debug\cDllInterface.pdb
+D:\proD\GeneralTools\checkSyntax\Dlls\cDllInterface\bin\Debug\cDllInterface.dll
+D:\proD\GeneralTools\checkSyntax\Dlls\cDllInterface\bin\Debug\cDllInterface.pdb
+D:\proD\GeneralTools\checkSyntax\Dlls\cDllInterface\obj\Debug\cDllInterface.dll
+D:\proD\GeneralTools\checkSyntax\Dlls\cDllInterface\obj\Debug\cDllInterface.pdb
+D:\proD\GeneralTools\checkSyntax\Dlls\cDllInterface\obj\Debug\cDllInterface.csprojResolveAssemblyReference.cache
+C:\ProC\checkSyntax\Dlls\cDllInterface\bin\Debug\cDllInterface.dll
+C:\ProC\checkSyntax\Dlls\cDllInterface\bin\Debug\cDllInterface.pdb
+C:\ProC\checkSyntax\Dlls\cDllInterface\obj\Debug\cDllInterface.csprojResolveAssemblyReference.cache
+C:\ProC\checkSyntax\Dlls\cDllInterface\obj\Debug\cDllInterface.dll
+C:\ProC\checkSyntax\Dlls\cDllInterface\obj\Debug\cDllInterface.pdb

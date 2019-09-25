@@ -1,0 +1,7 @@
+E:\proD\GeneralTools\checkSyntax\Times\cStopWatch\bin\Debug\cStopWatch.exe.config
+E:\proD\GeneralTools\checkSyntax\Times\cStopWatch\bin\Debug\cStopWatch.exe
+E:\proD\GeneralTools\checkSyntax\Times\cStopWatch\bin\Debug\cStopWatch.pdb
+E:\proD\GeneralTools\checkSyntax\Times\cStopWatch\obj\Debug\cStopWatch.csprojAssemblyReference.cache
+E:\proD\GeneralTools\checkSyntax\Times\cStopWatch\obj\Debug\cStopWatch.csproj.CoreCompileInputs.cache
+E:\proD\GeneralTools\checkSyntax\Times\cStopWatch\obj\Debug\cStopWatch.exe
+E:\proD\GeneralTools\checkSyntax\Times\cStopWatch\obj\Debug\cStopWatch.pdb

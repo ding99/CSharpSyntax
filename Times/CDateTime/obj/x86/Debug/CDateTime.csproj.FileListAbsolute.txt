@@ -1,0 +1,10 @@
+D:\proD\GeneralTools\checkSyntax\Times\CDateTime\bin\Debug\CDateTime.exe
+D:\proD\GeneralTools\checkSyntax\Times\CDateTime\bin\Debug\CDateTime.pdb
+D:\proD\GeneralTools\checkSyntax\Times\CDateTime\obj\x86\Debug\CDateTime.exe
+D:\proD\GeneralTools\checkSyntax\Times\CDateTime\obj\x86\Debug\CDateTime.pdb
+D:\proD\GeneralTools\checkSyntax\Times\CDateTime\obj\x86\Debug\CDateTime.csprojResolveAssemblyReference.cache
+C:\ProC\checkSyntax\Times\CDateTime\bin\Debug\CDateTime.exe
+C:\ProC\checkSyntax\Times\CDateTime\bin\Debug\CDateTime.pdb
+C:\ProC\checkSyntax\Times\CDateTime\obj\x86\Debug\CDateTime.csprojResolveAssemblyReference.cache
+C:\ProC\checkSyntax\Times\CDateTime\obj\x86\Debug\CDateTime.exe
+C:\ProC\checkSyntax\Times\CDateTime\obj\x86\Debug\CDateTime.pdb

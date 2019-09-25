@@ -1,0 +1,15 @@
+D:\proD\GeneralTools\checkSyntax\cDuration\bin\Debug\cDuration.exe
+D:\proD\GeneralTools\checkSyntax\cDuration\bin\Debug\cDuration.pdb
+D:\proD\GeneralTools\checkSyntax\cDuration\obj\x86\Debug\Interop.Shell32.dll
+D:\proD\GeneralTools\checkSyntax\cDuration\obj\x86\Debug\cDuration.csproj.ResolveComReference.cache
+D:\proD\GeneralTools\checkSyntax\cDuration\obj\x86\Debug\cDuration.exe
+D:\proD\GeneralTools\checkSyntax\cDuration\obj\x86\Debug\cDuration.pdb
+D:\proD\GeneralTools\checkSyntax\cDuration\obj\x86\Debug\cDuration.csprojResolveAssemblyReference.cache
+C:\ProC\checkSyntax\cDuration\obj\x86\Debug\cDuration.csprojResolveAssemblyReference.cache
+C:\ProC\checkSyntax\cDuration\obj\x86\Debug\Interop.Shell32.dll
+C:\ProC\checkSyntax\cDuration\obj\x86\Debug\cDuration.csproj.ResolveComReference.cache
+C:\ProC\checkSyntax\cDuration\obj\x86\Debug\cDuration.exe
+C:\ProC\checkSyntax\cDuration\bin\Debug\cDuration.exe
+C:\ProC\checkSyntax\cDuration\bin\Debug\cDuration.pdb
+C:\ProC\checkSyntax\cDuration\bin\Debug\Microsoft.DirectX.AudioVideoPlayback.dll
+C:\ProC\checkSyntax\cDuration\obj\x86\Debug\cDuration.pdb

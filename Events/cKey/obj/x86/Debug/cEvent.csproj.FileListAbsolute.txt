@@ -1,0 +1,9 @@
+E:\proD\GeneralTools\checkSyntax\Events\cKey\bin\Debug\cKey.exe
+E:\proD\GeneralTools\checkSyntax\Events\cKey\bin\Debug\cKey.pdb
+E:\proD\GeneralTools\checkSyntax\Events\cKey\bin\Debug\WorkLib.dll
+E:\proD\GeneralTools\checkSyntax\Events\cKey\bin\Debug\WorkLib.pdb
+E:\proD\GeneralTools\checkSyntax\Events\cKey\obj\x86\Debug\cEvent.csproj.CoreCompileInputs.cache
+E:\proD\GeneralTools\checkSyntax\Events\cKey\obj\x86\Debug\cEvent.csproj.CopyComplete
+E:\proD\GeneralTools\checkSyntax\Events\cKey\obj\x86\Debug\cKey.exe
+E:\proD\GeneralTools\checkSyntax\Events\cKey\obj\x86\Debug\cKey.pdb
+E:\proD\GeneralTools\checkSyntax\Events\cKey\obj\x86\Debug\cEvent.csprojAssemblyReference.cache

@@ -1,0 +1,7 @@
+D:\proD\GeneralTools\checkSyntax\cDllLoad\bin\Release\cDllLoad.exe
+D:\proD\GeneralTools\checkSyntax\cDllLoad\bin\Release\cDllLoad.pdb
+D:\proD\GeneralTools\checkSyntax\cDllLoad\bin\Release\cDllLibm.dll
+D:\proD\GeneralTools\checkSyntax\cDllLoad\bin\Release\cDllLibm.pdb
+D:\proD\GeneralTools\checkSyntax\cDllLoad\obj\x86\Release\cDllLoad.csprojResolveAssemblyReference.cache
+D:\proD\GeneralTools\checkSyntax\cDllLoad\obj\x86\Release\cDllLoad.exe
+D:\proD\GeneralTools\checkSyntax\cDllLoad\obj\x86\Release\cDllLoad.pdb

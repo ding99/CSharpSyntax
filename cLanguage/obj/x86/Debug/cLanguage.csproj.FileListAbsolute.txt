@@ -1,0 +1,13 @@
+D:\proD\GeneralTools\checkSyntax\cLanguage\bin\Debug\cLanguage.exe
+D:\proD\GeneralTools\checkSyntax\cLanguage\bin\Debug\cLanguage.pdb
+D:\proD\GeneralTools\checkSyntax\cLanguage\obj\x86\Debug\cLanguage.exe
+D:\proD\GeneralTools\checkSyntax\cLanguage\obj\x86\Debug\cLanguage.pdb
+D:\proD\GeneralTools\checkSyntax\cLanguage\bin\Debug\CommonLog.dll
+D:\proD\GeneralTools\checkSyntax\cLanguage\bin\Debug\CommonLog.pdb
+D:\proD\GeneralTools\checkSyntax\cLanguage\obj\x86\Debug\cLanguage.csprojResolveAssemblyReference.cache
+C:\ProC\checkSyntax\cLanguage\bin\Debug\cLanguage.exe
+C:\ProC\checkSyntax\cLanguage\bin\Debug\cLanguage.pdb
+C:\ProC\checkSyntax\cLanguage\bin\Debug\CommonLog.pdb
+C:\ProC\checkSyntax\cLanguage\obj\x86\Debug\cLanguage.csprojResolveAssemblyReference.cache
+C:\ProC\checkSyntax\cLanguage\obj\x86\Debug\cLanguage.exe
+C:\ProC\checkSyntax\cLanguage\obj\x86\Debug\cLanguage.pdb

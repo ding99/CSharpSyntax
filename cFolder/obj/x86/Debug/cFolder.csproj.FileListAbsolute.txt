@@ -1,0 +1,10 @@
+D:\proD\GeneralTools\checkSyntax\cFolder\bin\Debug\cFolder.exe
+D:\proD\GeneralTools\checkSyntax\cFolder\bin\Debug\cFolder.pdb
+D:\proD\GeneralTools\checkSyntax\cFolder\obj\x86\Debug\cFolder.exe
+D:\proD\GeneralTools\checkSyntax\cFolder\obj\x86\Debug\cFolder.pdb
+D:\proD\GeneralTools\checkSyntax\cFolder\obj\x86\Debug\cFolder.csprojResolveAssemblyReference.cache
+C:\ProC\checkSyntax\cFolder\bin\Debug\cFolder.exe
+C:\ProC\checkSyntax\cFolder\bin\Debug\cFolder.pdb
+C:\ProC\checkSyntax\cFolder\obj\x86\Debug\cFolder.csprojResolveAssemblyReference.cache
+C:\ProC\checkSyntax\cFolder\obj\x86\Debug\cFolder.exe
+C:\ProC\checkSyntax\cFolder\obj\x86\Debug\cFolder.pdb

@@ -1,0 +1,4 @@
+D:\proD\GeneralTools\checkSyntax\tempName\bin\Debug\tempName.exe
+D:\proD\GeneralTools\checkSyntax\tempName\bin\Debug\tempName.pdb
+D:\proD\GeneralTools\checkSyntax\tempName\obj\x86\Debug\tempName.exe
+D:\proD\GeneralTools\checkSyntax\tempName\obj\x86\Debug\tempName.pdb

@@ -1,0 +1,4 @@
+D:\proD\GeneralTools\checkSyntax\cClass\bin\Release\cClass.exe
+D:\proD\GeneralTools\checkSyntax\cClass\bin\Release\cClass.pdb
+D:\proD\GeneralTools\checkSyntax\cClass\obj\x86\Release\cClass.exe
+D:\proD\GeneralTools\checkSyntax\cClass\obj\x86\Release\cClass.pdb

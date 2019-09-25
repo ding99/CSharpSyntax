@@ -1,0 +1,10 @@
+D:\proD\GeneralTools\checkSyntax\Dlls\MergeSrc1\bin\Debug\MergeSrc1.dll
+D:\proD\GeneralTools\checkSyntax\Dlls\MergeSrc1\bin\Debug\MergeSrc1.pdb
+D:\proD\GeneralTools\checkSyntax\Dlls\MergeSrc1\obj\Debug\MergeSrc1.dll
+D:\proD\GeneralTools\checkSyntax\Dlls\MergeSrc1\obj\Debug\MergeSrc1.pdb
+D:\proD\GeneralTools\checkSyntax\Dlls\MergeSrc1\obj\Debug\MergeSrc1.csprojResolveAssemblyReference.cache
+C:\ProC\checkSyntax\Dlls\MergeSrc1\bin\Debug\MergeSrc1.dll
+C:\ProC\checkSyntax\Dlls\MergeSrc1\bin\Debug\MergeSrc1.pdb
+C:\ProC\checkSyntax\Dlls\MergeSrc1\obj\Debug\MergeSrc1.csprojResolveAssemblyReference.cache
+C:\ProC\checkSyntax\Dlls\MergeSrc1\obj\Debug\MergeSrc1.dll
+C:\ProC\checkSyntax\Dlls\MergeSrc1\obj\Debug\MergeSrc1.pdb

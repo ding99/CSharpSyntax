@@ -1,0 +1,14 @@
+D:\proD\GeneralTools\checkSyntax\cStreamReader\bin\Debug\cStream.exe
+D:\proD\GeneralTools\checkSyntax\cStreamReader\bin\Debug\cStream.pdb
+D:\proD\GeneralTools\checkSyntax\cStreamReader\obj\x86\Debug\cStream.exe
+D:\proD\GeneralTools\checkSyntax\cStreamReader\obj\x86\Debug\cStream.pdb
+D:\proD\GeneralTools\checkSyntax\cStream\bin\Debug\cStream.exe
+D:\proD\GeneralTools\checkSyntax\cStream\bin\Debug\cStream.pdb
+D:\proD\GeneralTools\checkSyntax\cStream\obj\x86\Debug\cStream.exe
+D:\proD\GeneralTools\checkSyntax\cStream\obj\x86\Debug\cStream.pdb
+D:\proD\GeneralTools\checkSyntax\cStream\obj\x86\Debug\cStream.csprojResolveAssemblyReference.cache
+C:\ProC\checkSyntax\cStream\bin\Debug\cStream.exe
+C:\ProC\checkSyntax\cStream\bin\Debug\cStream.pdb
+C:\ProC\checkSyntax\cStream\obj\x86\Debug\cStream.csprojResolveAssemblyReference.cache
+C:\ProC\checkSyntax\cStream\obj\x86\Debug\cStream.exe
+C:\ProC\checkSyntax\cStream\obj\x86\Debug\cStream.pdb

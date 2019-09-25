@@ -1,0 +1,10 @@
+D:\proD\GeneralTools\checkSyntax\Dlls\MergeEntry\bin\Debug\MergeEntry.exe
+D:\proD\GeneralTools\checkSyntax\Dlls\MergeEntry\bin\Debug\MergeEntry.pdb
+D:\proD\GeneralTools\checkSyntax\Dlls\MergeEntry\obj\x86\Debug\MergeEntry.exe
+D:\proD\GeneralTools\checkSyntax\Dlls\MergeEntry\obj\x86\Debug\MergeEntry.pdb
+D:\proD\GeneralTools\checkSyntax\Dlls\MergeEntry\obj\x86\Debug\MergeEntry.csprojResolveAssemblyReference.cache
+C:\ProC\checkSyntax\Dlls\MergeEntry\bin\Debug\MergeEntry.exe
+C:\ProC\checkSyntax\Dlls\MergeEntry\bin\Debug\MergeEntry.pdb
+C:\ProC\checkSyntax\Dlls\MergeEntry\obj\x86\Debug\MergeEntry.csprojResolveAssemblyReference.cache
+C:\ProC\checkSyntax\Dlls\MergeEntry\obj\x86\Debug\MergeEntry.exe
+C:\ProC\checkSyntax\Dlls\MergeEntry\obj\x86\Debug\MergeEntry.pdb

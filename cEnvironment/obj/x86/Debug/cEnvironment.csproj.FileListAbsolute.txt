@@ -1,0 +1,16 @@
+D:\proD\GeneralTools\checkSyntax\cEnvironment\bin\Debug\cEnvironment.exe
+D:\proD\GeneralTools\checkSyntax\cEnvironment\bin\Debug\cEnvironment.pdb
+D:\proD\GeneralTools\checkSyntax\cEnvironment\obj\x86\Debug\cEnvironment.exe
+D:\proD\GeneralTools\checkSyntax\cEnvironment\obj\x86\Debug\cEnvironment.pdb
+D:\proD\GeneralTools\checkSyntax\cEnvironment\obj\x86\Debug\cEnvironment.csprojResolveAssemblyReference.cache
+C:\ProC\checkSyntax\cEnvironment\bin\Debug\cEnvironment.exe
+C:\ProC\checkSyntax\cEnvironment\bin\Debug\cEnvironment.pdb
+C:\ProC\checkSyntax\cEnvironment\obj\x86\Debug\cEnvironment.csprojResolveAssemblyReference.cache
+C:\ProC\checkSyntax\cEnvironment\obj\x86\Debug\cEnvironment.exe
+C:\ProC\checkSyntax\cEnvironment\obj\x86\Debug\cEnvironment.pdb
+E:\proD\GeneralTools\checkSyntax\cEnvironment\bin\Debug\cEnvironment.exe
+E:\proD\GeneralTools\checkSyntax\cEnvironment\bin\Debug\cEnvironment.pdb
+E:\proD\GeneralTools\checkSyntax\cEnvironment\obj\x86\Debug\cEnvironment.csprojAssemblyReference.cache
+E:\proD\GeneralTools\checkSyntax\cEnvironment\obj\x86\Debug\cEnvironment.csproj.CoreCompileInputs.cache
+E:\proD\GeneralTools\checkSyntax\cEnvironment\obj\x86\Debug\cEnvironment.exe
+E:\proD\GeneralTools\checkSyntax\cEnvironment\obj\x86\Debug\cEnvironment.pdb

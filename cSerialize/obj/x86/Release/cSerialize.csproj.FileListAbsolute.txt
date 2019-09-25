@@ -1,0 +1,4 @@
+D:\proD\GeneralTools\checkSyntax\cSerialize\bin\Release\cSerialize.exe
+D:\proD\GeneralTools\checkSyntax\cSerialize\bin\Release\cSerialize.pdb
+D:\proD\GeneralTools\checkSyntax\cSerialize\obj\x86\Release\cSerialize.exe
+D:\proD\GeneralTools\checkSyntax\cSerialize\obj\x86\Release\cSerialize.pdb

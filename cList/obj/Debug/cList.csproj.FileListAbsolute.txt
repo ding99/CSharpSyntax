@@ -1,0 +1,7 @@
+E:\proD\GeneralTools\checkSyntax\cList\bin\Debug\cList.exe.config
+E:\proD\GeneralTools\checkSyntax\cList\bin\Debug\cList.exe
+E:\proD\GeneralTools\checkSyntax\cList\bin\Debug\cList.pdb
+E:\proD\GeneralTools\checkSyntax\cList\obj\Debug\cList.csprojAssemblyReference.cache
+E:\proD\GeneralTools\checkSyntax\cList\obj\Debug\cList.csproj.CoreCompileInputs.cache
+E:\proD\GeneralTools\checkSyntax\cList\obj\Debug\cList.exe
+E:\proD\GeneralTools\checkSyntax\cList\obj\Debug\cList.pdb

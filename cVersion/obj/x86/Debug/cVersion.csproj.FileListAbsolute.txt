@@ -1,0 +1,10 @@
+D:\proD\GeneralTools\checkSyntax\cVersion\bin\Debug\cVersion.exe
+D:\proD\GeneralTools\checkSyntax\cVersion\bin\Debug\cVersion.pdb
+D:\proD\GeneralTools\checkSyntax\cVersion\obj\x86\Debug\cVersion.exe
+D:\proD\GeneralTools\checkSyntax\cVersion\obj\x86\Debug\cVersion.pdb
+D:\proD\GeneralTools\checkSyntax\cVersion\obj\x86\Debug\cVersion.csprojResolveAssemblyReference.cache
+C:\ProC\checkSyntax\cVersion\bin\Debug\cVersion.exe
+C:\ProC\checkSyntax\cVersion\bin\Debug\cVersion.pdb
+C:\ProC\checkSyntax\cVersion\obj\x86\Debug\cVersion.csprojResolveAssemblyReference.cache
+C:\ProC\checkSyntax\cVersion\obj\x86\Debug\cVersion.exe
+C:\ProC\checkSyntax\cVersion\obj\x86\Debug\cVersion.pdb

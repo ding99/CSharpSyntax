@@ -1,0 +1,10 @@
+D:\proD\GeneralTools\checkSyntax\cDictionary\bin\Debug\cDictionary.exe
+D:\proD\GeneralTools\checkSyntax\cDictionary\bin\Debug\cDictionary.pdb
+D:\proD\GeneralTools\checkSyntax\cDictionary\obj\x86\Debug\cDictionary.exe
+D:\proD\GeneralTools\checkSyntax\cDictionary\obj\x86\Debug\cDictionary.pdb
+D:\proD\GeneralTools\checkSyntax\cDictionary\obj\x86\Debug\cDictionary.csprojResolveAssemblyReference.cache
+C:\ProC\checkSyntax\cDictionary\bin\Debug\cDictionary.exe
+C:\ProC\checkSyntax\cDictionary\bin\Debug\cDictionary.pdb
+C:\ProC\checkSyntax\cDictionary\obj\x86\Debug\cDictionary.csprojResolveAssemblyReference.cache
+C:\ProC\checkSyntax\cDictionary\obj\x86\Debug\cDictionary.exe
+C:\ProC\checkSyntax\cDictionary\obj\x86\Debug\cDictionary.pdb

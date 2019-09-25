@@ -1,0 +1,4 @@
+D:\proD\GeneralTools\checkSyntax\cDllLibm\bin\Release\cDllLibm.dll
+D:\proD\GeneralTools\checkSyntax\cDllLibm\bin\Release\cDllLibm.pdb
+D:\proD\GeneralTools\checkSyntax\cDllLibm\obj\Release\cDllLibm.dll
+D:\proD\GeneralTools\checkSyntax\cDllLibm\obj\Release\cDllLibm.pdb
