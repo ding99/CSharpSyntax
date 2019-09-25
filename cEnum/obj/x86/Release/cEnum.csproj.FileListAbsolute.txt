@@ -1,4 +1,0 @@
-D:\proD\GeneralTools\checkSyntax\cEnum\bin\Release\cEnum.exe
-D:\proD\GeneralTools\checkSyntax\cEnum\bin\Release\cEnum.pdb
-D:\proD\GeneralTools\checkSyntax\cEnum\obj\x86\Release\cEnum.exe
-D:\proD\GeneralTools\checkSyntax\cEnum\obj\x86\Release\cEnum.pdb

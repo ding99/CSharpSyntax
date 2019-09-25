@@ -1,4 +1,0 @@
-D:\proD\GeneralTools\checkSyntax\cDllInterface\bin\Release\cDllInterface.dll
-D:\proD\GeneralTools\checkSyntax\cDllInterface\bin\Release\cDllInterface.pdb
-D:\proD\GeneralTools\checkSyntax\cDllInterface\obj\Release\cDllInterface.dll
-D:\proD\GeneralTools\checkSyntax\cDllInterface\obj\Release\cDllInterface.pdb

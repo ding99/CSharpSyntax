@@ -1,7 +1,0 @@
-E:\proD\GeneralTools\checkSyntax\cHash\bin\Debug\cHash.exe.config
-E:\proD\GeneralTools\checkSyntax\cHash\bin\Debug\cHash.exe
-E:\proD\GeneralTools\checkSyntax\cHash\bin\Debug\cHash.pdb
-E:\proD\GeneralTools\checkSyntax\cHash\obj\Debug\cHash.csprojAssemblyReference.cache
-E:\proD\GeneralTools\checkSyntax\cHash\obj\Debug\cHash.csproj.CoreCompileInputs.cache
-E:\proD\GeneralTools\checkSyntax\cHash\obj\Debug\cHash.exe
-E:\proD\GeneralTools\checkSyntax\cHash\obj\Debug\cHash.pdb

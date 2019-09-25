@@ -1,7 +1,0 @@
-E:\proD\GeneralTools\checkSyntax\cGeneric\bin\Debug\cGeneric.exe.config
-E:\proD\GeneralTools\checkSyntax\cGeneric\bin\Debug\cGeneric.exe
-E:\proD\GeneralTools\checkSyntax\cGeneric\bin\Debug\cGeneric.pdb
-E:\proD\GeneralTools\checkSyntax\cGeneric\obj\Debug\cGeneric.csprojAssemblyReference.cache
-E:\proD\GeneralTools\checkSyntax\cGeneric\obj\Debug\cGeneric.csproj.CoreCompileInputs.cache
-E:\proD\GeneralTools\checkSyntax\cGeneric\obj\Debug\cGeneric.exe
-E:\proD\GeneralTools\checkSyntax\cGeneric\obj\Debug\cGeneric.pdb

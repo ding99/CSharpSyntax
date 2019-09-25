@@ -1,9 +1,0 @@
-D:\proD\GeneralTools\checkSyntax\cFile\bin\Debug\cFile.exe
-D:\proD\GeneralTools\checkSyntax\cFile\bin\Debug\cFile.pdb
-D:\proD\GeneralTools\checkSyntax\cFile\obj\x86\Debug\cFile.exe
-D:\proD\GeneralTools\checkSyntax\cFile\obj\x86\Debug\cFile.pdb
-C:\ProC\checkSyntax\cFile\bin\Debug\cFile.exe
-C:\ProC\checkSyntax\cFile\bin\Debug\cFile.pdb
-C:\ProC\checkSyntax\cFile\obj\x86\Debug\cFile.csprojResolveAssemblyReference.cache
-C:\ProC\checkSyntax\cFile\obj\x86\Debug\cFile.exe
-C:\ProC\checkSyntax\cFile\obj\x86\Debug\cFile.pdb

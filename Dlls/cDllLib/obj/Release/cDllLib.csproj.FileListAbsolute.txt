@@ -1,4 +1,0 @@
-D:\proD\GeneralTools\checkSyntax\cDllLib\bin\Release\cDllLib.dll
-D:\proD\GeneralTools\checkSyntax\cDllLib\bin\Release\cDllLib.pdb
-D:\proD\GeneralTools\checkSyntax\cDllLib\obj\Release\cDllLib.dll
-D:\proD\GeneralTools\checkSyntax\cDllLib\obj\Release\cDllLib.pdb

@@ -1,4 +1,0 @@
-D:\proD\GeneralTools\checkSyntax\cStrings\bin\Release\cStrings.exe
-D:\proD\GeneralTools\checkSyntax\cStrings\bin\Release\cStrings.pdb
-D:\proD\GeneralTools\checkSyntax\cStrings\obj\x86\Release\cStrings.exe
-D:\proD\GeneralTools\checkSyntax\cStrings\obj\x86\Release\cStrings.pdb

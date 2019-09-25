@@ -1,7 +1,0 @@
-E:\proD\GeneralTools\checkSyntax\Delegate\chkDelegate\bin\Debug\chkDelegate.exe.config
-E:\proD\GeneralTools\checkSyntax\Delegate\chkDelegate\bin\Debug\chkDelegate.exe
-E:\proD\GeneralTools\checkSyntax\Delegate\chkDelegate\bin\Debug\chkDelegate.pdb
-E:\proD\GeneralTools\checkSyntax\Delegate\chkDelegate\obj\Debug\chkDelegate.csproj.CoreCompileInputs.cache
-E:\proD\GeneralTools\checkSyntax\Delegate\chkDelegate\obj\Debug\chkDelegate.exe
-E:\proD\GeneralTools\checkSyntax\Delegate\chkDelegate\obj\Debug\chkDelegate.pdb
-E:\proD\GeneralTools\checkSyntax\Delegate\chkDelegate\obj\Debug\chkDelegate.csprojAssemblyReference.cache

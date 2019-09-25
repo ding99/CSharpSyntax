@@ -1,4 +1,0 @@
-D:\proD\GeneralTools\checkSyntax\cCharact\bin\Release\cCharact.exe
-D:\proD\GeneralTools\checkSyntax\cCharact\bin\Release\cCharact.pdb
-D:\proD\GeneralTools\checkSyntax\cCharact\obj\x86\Release\cCharact.exe
-D:\proD\GeneralTools\checkSyntax\cCharact\obj\x86\Release\cCharact.pdb

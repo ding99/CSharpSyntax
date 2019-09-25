@@ -1,7 +1,0 @@
-E:\proD\GeneralTools\checkSyntax\cProperty\bin\Debug\cProperty.exe.config
-E:\proD\GeneralTools\checkSyntax\cProperty\bin\Debug\cProperty.exe
-E:\proD\GeneralTools\checkSyntax\cProperty\bin\Debug\cProperty.pdb
-E:\proD\GeneralTools\checkSyntax\cProperty\obj\Debug\cProperty.csprojAssemblyReference.cache
-E:\proD\GeneralTools\checkSyntax\cProperty\obj\Debug\cProperty.csproj.CoreCompileInputs.cache
-E:\proD\GeneralTools\checkSyntax\cProperty\obj\Debug\cProperty.exe
-E:\proD\GeneralTools\checkSyntax\cProperty\obj\Debug\cProperty.pdb

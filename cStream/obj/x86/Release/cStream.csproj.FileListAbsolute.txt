@@ -1,4 +1,0 @@
-D:\proD\GeneralTools\checkSyntax\cStream\bin\Release\cStream.exe
-D:\proD\GeneralTools\checkSyntax\cStream\bin\Release\cStream.pdb
-D:\proD\GeneralTools\checkSyntax\cStream\obj\x86\Release\cStream.exe
-D:\proD\GeneralTools\checkSyntax\cStream\obj\x86\Release\cStream.pdb

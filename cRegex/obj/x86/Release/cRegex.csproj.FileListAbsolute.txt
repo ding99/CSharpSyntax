@@ -1,4 +1,0 @@
-D:\proD\GeneralTools\checkSyntax\cRegex\bin\Release\cRegex.exe
-D:\proD\GeneralTools\checkSyntax\cRegex\bin\Release\cRegex.pdb
-D:\proD\GeneralTools\checkSyntax\cRegex\obj\x86\Release\cRegex.exe
-D:\proD\GeneralTools\checkSyntax\cRegex\obj\x86\Release\cRegex.pdb

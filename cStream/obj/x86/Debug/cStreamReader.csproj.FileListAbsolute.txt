@@ -1,4 +1,0 @@
-D:\proD\GeneralTools\checkSyntax\cStreamReader\bin\Debug\cStreamReader.exe
-D:\proD\GeneralTools\checkSyntax\cStreamReader\bin\Debug\cStreamReader.pdb
-D:\proD\GeneralTools\checkSyntax\cStreamReader\obj\x86\Debug\cStreamReader.exe
-D:\proD\GeneralTools\checkSyntax\cStreamReader\obj\x86\Debug\cStreamReader.pdb
