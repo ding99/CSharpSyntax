@@ -39,6 +39,7 @@
     <Compile Include="Source\Biref.cs" />
     <Compile Include="Source\cArrayList.cs" />
     <Compile Include="Source\cList.cs" />
+    <Compile Include="Source\cLoop.cs" />
     <Compile Include="Source\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Source\index.cs" />
