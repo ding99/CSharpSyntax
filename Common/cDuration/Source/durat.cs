@@ -40,28 +40,11 @@ namespace cDuration {
 			foreach(string f in Directory.GetFiles(path)) {
 				fi = new FileInfo(f);
 				Console.WriteLine("  " + fi.FullName);
-				if(Path.GetExtension(fi.Name).ToUpper() == ".MOV")
-					this.byDirect(fi.FullName);
 			}
 
 			foreach(string d in Directory.GetDirectories(path)) {
 				Console.WriteLine("- " + d);
 				this.getdir(d);
-			}
-		}
-
-		private void byDirect(string path) {
-
-			try {
-				Microsoft.DirectX.AudioVideoPlayback.Video v =
-					new Microsoft.DirectX.AudioVideoPlayback.Video(path);
-
-				double du = v.Duration;
-				Console.WriteLine(path + "  " + du);
-			}
-			catch(Exception e) {
-				Console.WriteLine("*** " + e.Message);
-				Console.WriteLine("    " + e.StackTrace);
 			}
 		}
 	}
@@ -77,7 +60,6 @@ namespace cDuration {
 			d.byShell(path);
 
 			//Console.WriteLine();
-			//d.byDirectX(path);
 		}
 	}
 }
