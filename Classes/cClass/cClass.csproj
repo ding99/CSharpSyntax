@@ -41,6 +41,7 @@
     </Compile>
     <Compile Include="Source\chkClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\Program.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
