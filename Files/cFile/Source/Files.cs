@@ -35,12 +35,12 @@ namespace cFile
 		}
 		public bool names()
 		{
-			this.name(@"c:\aaa\bbb\cccc.ext");
+			this.name(@"d:\aaa\bbb\cccc.ext");
 			this.name(@"file01.ext");
 			this.name(@"file 02.txt");
 			this.name(@"file 02.first.txt");
-			this.name(@"c:\aaa\bbb\cccc");
-			this.name(@"c:\aaa\bbb\cccc.");
+			this.name(@"d:\aaa\bbb\cccc");
+			this.name(@"d:\aaa\bbb\cccc.");
 			return true;
 		}
 

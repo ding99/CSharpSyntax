@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace cPath.Source
+namespace cPath
 {
 	class Program
 	{

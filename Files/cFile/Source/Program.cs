@@ -8,10 +8,10 @@ namespace cFile
 
 			bool ret = false;
 			
-			//ret = f.filecopy();
+			ret = f.filecopy();
 			ret = f.names();
 
-			//if(args.Length > 0) ret = f.finfo(args[0]);
+			if(args.Length > 0) ret = f.finfo(args[0]);
 
 			Console.WriteLine(ret ? "Successful" : "Failed");
 		}
