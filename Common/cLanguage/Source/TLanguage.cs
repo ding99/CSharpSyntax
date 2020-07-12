@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Collections.Generic;
 
-namespace cLanguage {
-	public class TLanguage {
+namespace cLanguage
+{
+	public class TLanguage
+	{
 
 		#region arabic
 		private static string khalf = "[ !\"#$%&\'()*+,-./:;<=>?0123456789@[\\]^_{|}~]+";
@@ -15,12 +17,14 @@ namespace cLanguage {
 
 		private CommonLogs.CommonLog re;
 
-		public TLanguage() {
+		public TLanguage()
+		{
 			this.re = new CommonLogs.CommonLog(@"D:\workFolder\Santex\san.log", "");
 		}
 
 		#region lanuage detection
-		private void detect(string s) {
+		private void detect(string s)
+		{
 			string regCH = @"^[\u4E00-\u9FA5\s]+$";
 			//string regEN = @"^[\W]+$";
 			string regEN = @"^([\u00C0-\u01FFa-zA-Z0-9 '])+$";
@@ -35,7 +39,8 @@ namespace cLanguage {
 			Console.WriteLine((Regex.IsMatch(s, regCH) ? "" : "Not ") + "Chinese");
 		}
 
-		public void whatlang() {
+		public void whatlang()
+		{
 			this.detect("Education in School 85 ");
 			this.detect("مرحبا! كيف حالكم؟");
 			this.detect("用中文表示");
@@ -43,16 +48,18 @@ namespace cLanguage {
 		#endregion
 
 		#region code page
-		private void dbin(string s) {
+		private void dbin(string s)
+		{
 			string m = String.Empty;
 			byte[] bs = new byte[s.Length * sizeof(char)];
 			System.Buffer.BlockCopy(s.ToCharArray(), 0, bs, 0, bs.Length);
-			
-			for(int i = 0; i < bs.Length; i++)
+
+			for (int i = 0; i < bs.Length; i++)
 				m += (bs[i]).ToString("x") + (i + 1 == bs.Length ? "" : " ");
 			Console.WriteLine("[" + m + "] (" + s.Length + ")");
 		}
-		public void codepage() {
+		public void codepage()
+		{
 			Encoding en = Encoding.GetEncoding(20269);
 			Console.WriteLine(en.EncodingName + ", " + en.CodePage + ", " + en.HeaderName);
 			Console.WriteLine();
@@ -73,21 +80,25 @@ namespace cLanguage {
 			this.dbin(sn);
 		}
 
-		private void dspch(string s) {
+		private void dspch(string s)
+		{
 			Console.WriteLine("[" + s + "] size(" + s.Length + ")");
 
 			string m = String.Empty;
-			for(int i = 0; i < s.Length; i++)
+			for (int i = 0; i < s.Length; i++)
 				m += Convert.ToInt32(s[i]).ToString("x") + (i + 1 == s.Length ? "" : " ");
 			Console.WriteLine("[" + m + "]");
 		}
-		public void encoding() {
+		public void encoding()
+		{
 			StreamWriter sw = null;
-			try {
+			try
+			{
 				FileStream fs = new FileStream(@"d:\workFolder\test1.txt", FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
 				sw = new StreamWriter(fs);
 			}
-			catch(Exception) {
+			catch (Exception)
+			{
 				return;
 			}
 
@@ -99,20 +110,21 @@ namespace cLanguage {
 			byte[] b = new byte[32768];
 			int cn = 0;
 			iso6937 fmt = new iso6937();
-			if(!fmt.encode(ref b, ref cn, ref m, s)) {
+			if (!fmt.encode(ref b, ref cn, ref m, s))
+			{
 				Console.WriteLine("message [" + m + "]");
 				sw.WriteLine("message [" + m + "]");
 			}
 
 			m = "[";
-			for(int i = 0; i < cn; i++)
+			for (int i = 0; i < cn; i++)
 				m += b[i].ToString("x2") + (i + 1 == cn ? "" : " ");
 			m += "]";
 			Console.WriteLine("-- destination" + Environment.NewLine + m + " (" + cn + ")");
 			sw.WriteLine("-- destination" + Environment.NewLine + m + " (" + cn + ")");
 
 			m = String.Empty;
-			for(int i = 0; i < cn; i++)
+			for (int i = 0; i < cn; i++)
 				m += fmt.dec(b, ref i);
 
 			Console.WriteLine("[" + m + "] size(" + m.Length + ")");
@@ -123,14 +135,17 @@ namespace cLanguage {
 		#endregion
 
 		#region enc_dec
-		public class iso6937 {
+		public class iso6937
+		{
 
-			public class inner {
+			public class inner
+			{
 				public byte low8 { get; set; }
 				public int ucode { get; set; }
 			}
 
-			public class outer {
+			public class outer
+			{
 				public byte high { get; set; }
 				public inner[] pair { get; set; }
 			}
@@ -139,7 +154,8 @@ namespace cLanguage {
 			private outer[] tbla;
 
 			#region public
-			public iso6937() {
+			public iso6937()
+			{
 				#region outer table
 				this.tbl = new char[] {
 					' ','!','"','#','¤','%','&','\'','(',')','*','+',',','-','.','/',  //2f
@@ -362,35 +378,41 @@ namespace cLanguage {
 				#endregion
 			}
 
-			public bool encode(ref byte[] b, ref int p, ref string msg, string s) {
+			public bool encode(ref byte[] b, ref int p, ref string msg, string s)
+			{
 				msg = String.Empty;
 
-				for(int i = 0; i < s.Length; i++)
-					if(!this.enc(ref b, ref p, ref msg, Convert.ToInt32(s[i])) && !String.IsNullOrWhiteSpace(msg))
+				for (int i = 0; i < s.Length; i++)
+					if (!this.enc(ref b, ref p, ref msg, Convert.ToInt32(s[i])) && !String.IsNullOrWhiteSpace(msg))
 						return false;
 				return true;
 			}
-			public string dec(byte[] b, ref int p) {
-				if(p + 1 >= b.Length)
+			public string dec(byte[] b, ref int p)
+			{
+				if (p + 1 >= b.Length)
 					return String.Empty;
 
-				foreach(outer r in this.tbla)
-					if(b[p] == r.high){
-						if(++p < b.Length)
-							foreach(inner e in r.pair)
-								if(b[p] == e.low8)
+				foreach (outer r in this.tbla)
+					if (b[p] == r.high)
+					{
+						if (++p < b.Length)
+							foreach (inner e in r.pair)
+								if (b[p] == e.low8)
 									return Convert.ToChar(e.ucode).ToString();
-						
+
 						return String.Empty;
 					}
 
 				return this.tbl[b[p] - 0x20].ToString();
 			}
-			private bool enc(ref byte[] b, ref int p, ref string m, int v) {
-				foreach(outer r in this.tbla)
-					foreach(inner e in r.pair)
-						if(e.ucode == v){
-							if(p + 2 > b.Length) {
+			private bool enc(ref byte[] b, ref int p, ref string m, int v)
+			{
+				foreach (outer r in this.tbla)
+					foreach (inner e in r.pair)
+						if (e.ucode == v)
+						{
+							if (p + 2 > b.Length)
+							{
 								m = "Memory (size " + b.Length + " bytes) overflow for encoding";
 								return false;
 							}
@@ -399,9 +421,11 @@ namespace cLanguage {
 							return true;
 						}
 
-				for(int k = 0; k < this.tbl.Length; k++)
-					if(this.tbl[k] == v) {
-						if(p >= b.Length) {
+				for (int k = 0; k < this.tbl.Length; k++)
+					if (this.tbl[k] == v)
+					{
+						if (p >= b.Length)
+						{
 							m = "Memory (size " + b.Length + " bytes) overflow for encoding";
 							return false;
 						}
@@ -415,13 +439,15 @@ namespace cLanguage {
 		}
 		#endregion
 
-		public void int2char() {
+		public void int2char()
+		{
 			Console.WriteLine("size of char : " + sizeof(char));
 			int v1 = 0x11b;
 			string s = String.Empty + Convert.ToChar(v1);
 
-			using(FileStream fs = new FileStream(@"d:\workFolder\test.txt", FileMode.Create, FileAccess.Write, FileShare.ReadWrite))
-			using(StreamWriter sw = new StreamWriter(fs)) {
+			using (FileStream fs = new FileStream(@"d:\workFolder\test.txt", FileMode.Create, FileAccess.Write, FileShare.ReadWrite))
+			using (StreamWriter sw = new StreamWriter(fs))
+			{
 				sw.WriteLine(s);
 				sw.Close();
 			}
@@ -431,61 +457,65 @@ namespace cLanguage {
 		}
 
 		#region arabic_code
-		private string real(string s) {
+		private string real(string s)
+		{
 			MatchCollection mc = (new Regex(kreal)).Matches(s);
 			int n = mc.Count;
 
-			if(n < 1) return s;
+			if (n < 1) return s;
 
-			if(n == 1 && mc[0].Length == s.Length)
+			if (n == 1 && mc[0].Length == s.Length)
 				return String.Empty;
 
-			if(mc[n - 1].Index + mc[n - 1].Length == s.Length)
+			if (mc[n - 1].Index + mc[n - 1].Length == s.Length)
 				s = s.Substring(0, s.Length - mc[n - 1].Length);
-			
+
 			return mc[0].Index == 0 && n > 1 ? s.Substring(mc[0].Length) : s;
 		}
-		private bool join(string s) {
+		private bool join(string s)
+		{
 			MatchCollection mc = (new Regex(khalf)).Matches(s);
-			if(mc.Count < 1) return false;
+			if (mc.Count < 1) return false;
 			return mc[0].Value == s;
 		}
-		private void seg(string s) {
+		private void seg(string s)
+		{
 			this.re.log(s);
 			this.re.log("characters " + s.Length);
 
 			MatchCollection mc = (new Regex(kfull)).Matches(s);
 			int n = mc.Count;
-			if(mc.Count < 1) return;
+			if (mc.Count < 1) return;
 
 			List<string> rst = new List<string>();
 			string sub = String.Empty, ssub = String.Empty;
-			if(mc[0].Index > 0 && !this.join(sub = s.Substring(0, mc[0].Index)))
+			if (mc[0].Index > 0 && !this.join(sub = s.Substring(0, mc[0].Index)))
 				rst.Add(sub);
-			if(n > 1)
-				for(int i = 1; i < n; i++)
-					if(mc[i - 1].Index + mc[i - 1].Length < mc[i].Index && 
+			if (n > 1)
+				for (int i = 1; i < n; i++)
+					if (mc[i - 1].Index + mc[i - 1].Length < mc[i].Index &&
 						!this.join(sub = s.Substring(mc[i - 1].Index + mc[i - 1].Length,
 							mc[i].Index - mc[i - 1].Length - mc[i - 1].Index)))
 						rst.Add(sub);
 
-			if(mc[n - 1].Index + mc[n - 1].Length < s.Length && !this.join(sub =
+			if (mc[n - 1].Index + mc[n - 1].Length < s.Length && !this.join(sub =
 				s.Substring(mc[n - 1].Index + mc[n - 1].Length)))
 				rst.Add(sub);
 
 			this.re.log("------ " + rst.Count);
 
 			List<string> rl = new List<string>();
-			foreach(string r in rst)
-				if(!String.IsNullOrWhiteSpace(sub = this.real(r)))
+			foreach (string r in rst)
+				if (!String.IsNullOrWhiteSpace(sub = this.real(r)))
 					rl.Add(sub);
 
-			foreach(string r in rl)
+			foreach (string r in rl)
 				this.re.log("{" + r + "} " + r.Length);
 			this.re.log("====== " + rl.Count);
 		}
 
-		public void segs() {
+		public void segs()
+		{
 			Console.WriteLine("segs");
 			this.seg("شريك مؤسس لموقع الترفيه‎‏‎،\"Reddit\" ،‎والأخبار الاجتماعية");
 			this.seg("شريك مؤسس لموقع الترفيه‎‏‎،Reddit ،‎والأخبار الاجتماعية");
@@ -495,25 +525,5 @@ namespace cLanguage {
 			this.seg("اليافع الطائرة إلى‎ \" Aaron Swartz\" ‏ركب‎><‏‎.‎لحضور جلسات المحكمة العليا‎ \"‎واشنطن‎\"");
 		}
 		#endregion
-	}
-	
-	class Entrance {
-
-		static void Main(string[] args) {
-
-			Console.WriteLine("=== start");
-			TLanguage tl = new TLanguage();
-
-			//tl.whatlang();
-			//tl.codepage();
-			//tl.encoding();
-			//tl.int2char();
-			tl.segs();
-
-			Console.WriteLine();
-			Console.WriteLine("=== end");
-
-		}
-
 	}
 }
