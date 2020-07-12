@@ -40,7 +40,7 @@
     <Compile Include="Source\chkParser.cs" />
     <Compile Include="Source\chkSpace.cs" />
     <Compile Include="Source\chkString.cs" />
-    <Compile Include="Source\entry.cs" />
+    <Compile Include="Source\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Source\chkColors.cs" />
     <Compile Include="Source\chkPac.cs" />

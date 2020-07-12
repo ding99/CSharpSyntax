@@ -47,7 +47,7 @@ namespace cCharact {
 		public void dsp() {
 			int i = 0;
 
-			using(StreamWriter sw = new StreamWriter(@"c:\test\testscc\chrs.txt", false, System.Text.Encoding.Unicode)) {
+			using(StreamWriter sw = new StreamWriter(@"d:\test\testscc\chrs.txt", false, System.Text.Encoding.Unicode)) {
 
 				sw.WriteLine("-- Standard Characters");
 				for(i = 0; i < stds.Length; i++) {

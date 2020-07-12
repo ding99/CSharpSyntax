@@ -8,9 +8,9 @@ namespace cEnvironment {
             Console.WriteLine("== Start");
 
             Env env = new Env();
-            //env.encVari();
-            //env.display();
-            env.seten();
+			env.encVari();
+			env.display();
+			env.seten();
 
             Console.WriteLine("== End");
         }

@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 
-namespace cArray {
+namespace cArray
+{
 
 	public class GArray {
 		public GArray() {
@@ -109,21 +109,5 @@ namespace cArray {
 			return true;
 		}
 
-	}
-
-	class Entrance {
-		static void Main(string[] args) {
-
-			Console.WriteLine("== start");
-
-			GArray ga = new GArray();
-			bool ret = true;
-
-			//ret = ga.Partial();
-			//ret = ga.toString();
-			ret = ga.replaceBin();
-
-			Console.WriteLine(Environment.NewLine + "== end");
-		}
 	}
 }
