@@ -297,18 +297,4 @@ namespace cClass {
 		}
 	}
 	#endregion
-
-	class Program {
-		static void Main(string[] args) {
-
-			Console.WriteLine("== Start");
-			//(new chkClass()).className();
-			//(new chkClass()).classMember();
-			//(new chkClass()).initClass();
-			//(new tCmp()).toCmp();
-			//(new tCmp()).declaration();
-			(new GTree()).multit();
-			Console.WriteLine("== End");
-		}
-	}
 }
