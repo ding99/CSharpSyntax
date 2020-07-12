@@ -5,16 +5,16 @@ namespace cCharact {
         static void Main(string[] args) {
             Console.WriteLine("== start");
 
-            //charct ct = new charct();
-            //ct.dsp();
-            //ct.oddParity();
-            //ct.charUnic();
-            //ct.char2byte();
-            //ct.value();
+			charct ct = new charct();
+			ct.dsp(); //To double check: exception here
+			ct.oddParity();
+			ct.charUnic();
+			ct.char2byte();
+			ct.value();
 
-            //Console.WriteLine("size of byte " + sizeof(byte));
+			Console.WriteLine("size of byte " + sizeof(byte));
 
-            new ConstTest().test();
+			new ConstTest().test();
 
             Console.WriteLine("== end");
         }

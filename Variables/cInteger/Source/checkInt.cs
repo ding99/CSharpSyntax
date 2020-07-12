@@ -8,10 +8,10 @@ namespace cInt {
             Console.WriteLine("== Start");
 
 			Source.Program test = new Source.Program();
-			//test.shift();
-            test.max();
+			test.shift();
+			test.max();
 
-			//new DecTest().test();
+			new DecTest().test();
 
 			Console.WriteLine("== End");
         }
