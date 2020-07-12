@@ -25,8 +25,6 @@ namespace cRegex {
 			this.one("Hi.<br/>-Hi.");
 			this.one("-Hi.<br  />-Hi.");
 			this.one("-Hi.-Hi.");
-
-			Console.ReadKey();
 		}
 	}
 }

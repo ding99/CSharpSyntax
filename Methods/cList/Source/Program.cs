@@ -8,28 +8,28 @@ namespace cList {
 
             Console.WriteLine("== start");
 
-			//checkNew cn = new checkNew();
-			//cn.startTest();
-			//cn.which();
-			//cn.vari();
-			//cn.all();
+			checkNew cn = new checkNew();
+			cn.startTest();
+			cn.which();
+			cn.vari();
+			cn.all();
 
-			//checkIndex idx = new checkIndex();
-			//idx.index();
-			//idx.which();
+			checkIndex idx = new checkIndex();
+			idx.index();
+			idx.which();
 
-			//NPV npv = new NPV();
-			//npv.commonList();
+			NPV npv = new NPV();
+			npv.commonList();
 
-			//chkJoin join = new chkJoin();
-			//join.join();
+			chkJoin join = new chkJoin();
+			join.join();
 
-			//checkArrayList arr = new checkArrayList();
-			//arr.test();
+			checkArrayList arr = new checkArrayList();
+			arr.test();
 
-			//Brief b = new Brief();
-			////b.list();
-			//b.less();
+			Brief b = new Brief();
+			b.list();
+			b.less();
 
 			new cLoop().LoopStart();
 

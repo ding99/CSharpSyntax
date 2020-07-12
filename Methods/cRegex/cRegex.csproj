@@ -39,7 +39,7 @@
   <ItemGroup>
     <Compile Include="Source\capRegex.cs" />
     <Compile Include="Source\chkRegex.cs" />
-    <Compile Include="Source\entry.cs" />
+    <Compile Include="Source\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Source\npvRegex.cs" />
     <Compile Include="Source\timeRegex.cs" />
