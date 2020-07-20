@@ -59,7 +59,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cMethod", "Methods\cMethod\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cCmd", "Common\cCmd\cCmd.csproj", "{C53E4F5C-846E-4D96-8AFA-066EB4F4856F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cVariable", "cVariable\cVariable\cVariable.csproj", "{6CDFBF3C-81F1-47BB-A8B8-A05E2B0A73FB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cVariable", "Variables\cVariable\cVariable.csproj", "{6CDFBF3C-81F1-47BB-A8B8-A05E2B0A73FB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cArray", "Variables\cArray\cArray.csproj", "{A55A0CC0-0EB2-4505-A2B1-1B600E88A599}"
 EndProject
@@ -113,6 +113,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Public", "Public", "{24BC7B
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{986A02E3-6846-4F8C-B904-CC5DD20D3CBD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GUI", "GUI", "{0432C925-9DD6-4B95-BEB3-073C82887DB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
