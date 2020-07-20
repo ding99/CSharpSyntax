@@ -136,6 +136,7 @@ namespace cTime {
 			this.dRound(59.94);
 			this.dRound(60);
 			this.dRound(2.5);
+			this.dRound(3.5);
 			this.dRound(22.49);
 			this.dRound(22.5);
 			this.dRound(22.51);
@@ -408,27 +409,5 @@ namespace cTime {
 			Console.WriteLine((new DateTime(tm.Ticks)).ToString("HH:mm:ss"));
 		}
 		#endregion
-	}
-
-	class Program {
-		static void Main(string[] args) {
-			Console.WriteLine("== Start");
-			chkTime ct = new chkTime();
-
-			//(new chkTime()).estimate();
-			//(new chkTime()).testRound();
-			//(new chkTime()).testTF();
-			//(new chkTime()).seeRound();
-			//(new chkTime()).cal();
-			//(new chkTime()).tspan();
-			//(new chkTime()).dspyear();
-			//(new chkTime()).rere();
-			(new chkTime()).sub();
-
-			//ct.getratios();
-			//ct.dspDate();
-
-			Console.WriteLine("== End");
-		}
 	}
 }
