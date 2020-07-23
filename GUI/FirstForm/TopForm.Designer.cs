@@ -1,6 +1,6 @@
-﻿namespace HelloForm
+﻿namespace FirstForm
 {
-	partial class Form1
+	partial class TopForm
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -34,9 +34,9 @@
 			// 
 			// btnClickThis
 			// 
-			this.btnClickThis.Location = new System.Drawing.Point(142, 52);
+			this.btnClickThis.Location = new System.Drawing.Point(120, 45);
 			this.btnClickThis.Name = "btnClickThis";
-			this.btnClickThis.Size = new System.Drawing.Size(75, 23);
+			this.btnClickThis.Size = new System.Drawing.Size(162, 41);
 			this.btnClickThis.TabIndex = 0;
 			this.btnClickThis.Text = "Click This";
 			this.btnClickThis.UseVisualStyleBackColor = true;
@@ -45,7 +45,7 @@
 			// lblHello
 			// 
 			this.lblHello.AutoSize = true;
-			this.lblHello.Location = new System.Drawing.Point(142, 104);
+			this.lblHello.Location = new System.Drawing.Point(117, 106);
 			this.lblHello.Name = "lblHello";
 			this.lblHello.Size = new System.Drawing.Size(38, 13);
 			this.lblHello.TabIndex = 1;
@@ -55,7 +55,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(352, 170);
+			this.ClientSize = new System.Drawing.Size(404, 160);
 			this.Controls.Add(this.lblHello);
 			this.Controls.Add(this.btnClickThis);
 			this.Name = "Form1";
