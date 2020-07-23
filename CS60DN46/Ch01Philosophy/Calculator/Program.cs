@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Calculator
 {
@@ -10,7 +6,12 @@ namespace Calculator
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Hello Philosophy");
+			Calc c = new Calc();
+			int a = 10, b = 84;
+
+			Console.WriteLine("{0} + {1} is {2}.", a, b, c.Add(a, b));
+
+			Console.ReadLine();
 		}
 	}
 }

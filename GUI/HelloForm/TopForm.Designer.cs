@@ -34,7 +34,7 @@
 			// 
 			// btnClickThis
 			// 
-			this.btnClickThis.Location = new System.Drawing.Point(59, 52);
+			this.btnClickThis.Location = new System.Drawing.Point(142, 52);
 			this.btnClickThis.Name = "btnClickThis";
 			this.btnClickThis.Size = new System.Drawing.Size(75, 23);
 			this.btnClickThis.TabIndex = 0;
@@ -45,21 +45,21 @@
 			// lblHello
 			// 
 			this.lblHello.AutoSize = true;
-			this.lblHello.Location = new System.Drawing.Point(59, 104);
+			this.lblHello.Location = new System.Drawing.Point(142, 104);
 			this.lblHello.Name = "lblHello";
-			this.lblHello.Size = new System.Drawing.Size(35, 13);
+			this.lblHello.Size = new System.Drawing.Size(38, 13);
 			this.lblHello.TabIndex = 1;
-			this.lblHello.Text = "label1";
+			this.lblHello.Text = "Ready";
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(216, 230);
+			this.ClientSize = new System.Drawing.Size(352, 170);
 			this.Controls.Add(this.lblHello);
 			this.Controls.Add(this.btnClickThis);
 			this.Name = "Form1";
-			this.Text = "Form1";
+			this.Text = "Main Form";
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
