@@ -1,6 +1,6 @@
 ﻿namespace FirstForm
 {
-	partial class Form1
+	partial class TopForm
 	{
 		/// <summary>
 		/// Required designer variable.
