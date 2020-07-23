@@ -1,5 +1,7 @@
 ﻿using System;
 
+//csc .\Program.cs .\Calc.cs /out:new.exe
+
 namespace Calculator
 {
 	class Program
