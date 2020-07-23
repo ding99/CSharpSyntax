@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HelloForm.Properties
+namespace FirstForm.Properties
 {
 
 
