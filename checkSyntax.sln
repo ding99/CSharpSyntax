@@ -118,6 +118,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GUI", "GUI", "{0432C925-9DD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstForm", "GUI\FirstForm\FirstForm.csproj", "{8A9432FC-ACC6-4537-8DE3-8416737FF445}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CS60DN46", "CS60DN46", "{B599F668-236A-4D7A-A51B-F383D94A5154}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ch01Philosophy", "Ch01Philosophy", "{E90E2F1A-AE10-40A7-941E-6412A3A6105A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "CS60DN46\Ch01Philosophy\Calculator\Calculator.csproj", "{4AA506E8-99AF-41AB-992D-DD3E227C957B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
