@@ -8,8 +8,8 @@ namespace Temp01
 		{
 			Console.WriteLine("== Start");
 
-			Do a = new Do();
-			a.Start();
+			Entrance entry = new Entrance();
+			entry.Start();
 
 			Console.WriteLine("== End");
 		}
