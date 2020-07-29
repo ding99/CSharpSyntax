@@ -4,7 +4,7 @@ namespace Temp01
 {
 	public class Verify01
 	{
-        public int binaryPatternMatching(string pattern, string s)
+        public int StringPatternMatching(string pattern, string s)
         {
             int lp = pattern.Length, ls = s.Length;
             if (lp > ls)
@@ -12,13 +12,13 @@ namespace Temp01
 
             int n = 0;
             for (int i = 0; i + lp <= ls; i++)
-                if (match(pattern, s.Substring(i, lp)))
+                if (SubMatch(pattern, s.Substring(i, lp)))
                     n++;
 
             return n;
         }
 
-        bool match(string p, string sub)
+        bool SubMatch(string p, string sub)
         {
             int l = p.Length;
             string t;

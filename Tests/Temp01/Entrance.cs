@@ -2,7 +2,7 @@
 
 namespace Temp01
 {
-	public class Do
+	public class Entrance
 	{
 		public bool Start()
 		{
@@ -10,7 +10,7 @@ namespace Temp01
 
 			Verify01 v01 = new Verify01();
 			string pattern = "010", source = "amazing";
-			int number = v01.binaryPatternMatching(pattern, source);
+			int number = v01.StringPatternMatching(pattern, source);
 
 			Console.WriteLine("-- result");
 			Console.WriteLine("Pattern: " + pattern);
