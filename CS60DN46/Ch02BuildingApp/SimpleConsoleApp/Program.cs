@@ -12,6 +12,8 @@ namespace SimpleConsoleApp
 			Console.WriteLine("*************************************");
 			Console.WriteLine("***** Welcome to My Rocking App *****");
 			Console.WriteLine("*************************************");
+
+			Console.ResetColor();
 		}
 	}
 }
