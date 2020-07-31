@@ -32,6 +32,10 @@ namespace BasicConsoleIO
 			Console.WriteLine("X format: {0:X}", 99999);
 			Console.WriteLine("x format: {0:x}", 99999);
 
+			Console.ForegroundColor = ConsoleColor.Green;
+			string userMessage = string.Format("10000 in hex is {0:x}", 100000);
+			Console.WriteLine(userMessage);
+
 			Console.ResetColor();
 		}
 
