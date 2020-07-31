@@ -14,7 +14,10 @@ namespace SimpleCSharpApp
 			Console.WriteLine("Hello Core Constructure I!");
 			Console.WriteLine();
 
-//			return -1;
+			string[] theArgs = Environment.GetCommandLineArgs();
+			foreach (string arg in theArgs)
+				Console.WriteLine("Arg: {0}", arg);
+
 		}
 	}
 }
