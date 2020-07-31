@@ -12,12 +12,31 @@ namespace BasicConsoleIO
 		{
 			Console.WriteLine("***** Basic Console I/O *****");
 			GetUserData();
+			FormatNumericalData();
+		}
+
+		private static void FormatNumericalData()
+		{
+			Console.ForegroundColor = ConsoleColor.Blue;
+
+			Console.WriteLine("The vaule 99999in various formates:");
+			Console.WriteLine("c format: {0:c}", 99999);
+			Console.WriteLine("d9 format: {0:d9}", 99999);
+			Console.WriteLine("f3 format: {0:f3}", 99999);
+			Console.WriteLine("n format: {0:n}", 99999);
+
+			Console.ForegroundColor = ConsoleColor.Red;
+			Console.WriteLine("-- Notice that upper- or lowercasing for hex determines if letters are upper- or lowercase.");
+			Console.WriteLine("E format: {0:E}", 99999);
+			Console.WriteLine("e format: {0:e}", 99999);
+			Console.WriteLine("X format: {0:X}", 99999);
+			Console.WriteLine("x format: {0:x}", 99999);
+
+			Console.ResetColor();
 		}
 
 		private static void GetUserData()
 		{
-			Console.ForegroundColor = ConsoleColor.Blue;
-
 			Console.Write("Please enter your name: ");
 			string userName = Console.ReadLine();
 			Console.Write("Please enter your age: ");
@@ -26,10 +45,11 @@ namespace BasicConsoleIO
 			ConsoleColor prevColor = Console.ForegroundColor;
 			Console.ForegroundColor = ConsoleColor.Yellow;
 
-			Console.WriteLine("Hello {0}! You are {1} years old.", userName, userAge);
+			Console.WriteLine("Hello {0}! You are {1} years old ({1:D}).", userName, userAge);
+			Console.WriteLine("Hello {0}! You are {1:D3} years old ({1:c}, {1:n}).",
+				userName, int.Parse(userAge));
 
 			Console.ForegroundColor = prevColor;
-			Console.ResetColor();
 		}
 	}
 }
