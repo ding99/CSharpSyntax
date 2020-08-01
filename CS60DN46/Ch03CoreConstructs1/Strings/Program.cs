@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Security.Cryptography;
+using System.Text;
+using System.Threading;
 
 namespace Strings
 {
@@ -11,6 +13,48 @@ namespace Strings
 			VerBatimStrings();
 			StringEqulity();
 			StringsAreImmutable();
+			FunWithStringBuilder();
+			StringInterpolation();
+		}
+
+		private static void StringInterpolation()
+		{
+			Console.ForegroundColor = ConsoleColor.Green;
+
+			Console.WriteLine("=> String Interpolatoin");
+			int age = 4;
+			string name = "Soren";
+			string greeting = string.Format("Hello {0} you are {1} years old.", name, age);
+			string greeting2 = $"Hello {name} you are {age} years old.";
+			Console.WriteLine(greeting);
+			Console.WriteLine(greeting2);
+
+			Console.WriteLine();
+
+			Console.ResetColor();
+		}
+
+		private static void FunWithStringBuilder()
+		{
+			Console.ForegroundColor = ConsoleColor.Yellow;
+
+			Console.WriteLine("=> Using the StringBuilder:");
+			StringBuilder sb = new StringBuilder("**** Fantastic Games ****");
+			sb.Append("\n");
+			sb.AppendLine("Half Life");
+			sb.AppendLine("Morrowind");
+			sb.AppendLine("Deus Ex" + "2");
+			sb.AppendLine("System Shock");
+			Console.WriteLine(sb.ToString());
+
+			sb.Replace("2", " invisible War");
+			Console.WriteLine(sb.ToString());
+			Console.WriteLine("Its length: {0}", sb.ToString().Length);
+
+			Console.WriteLine("sb has {0} chars.", sb.Length);
+			Console.WriteLine();
+
+			Console.ResetColor();
 		}
 
 		private static void StringsAreImmutable()
@@ -24,6 +68,11 @@ namespace Strings
 			Console.WriteLine("upperString = {0}", upperString);
 			Console.WriteLine("s1 = {0}", s1);
 			Console.WriteLine();
+
+			string s2 = "The first time";
+			Console.WriteLine("s2 = {0}", s2);
+			s2 = "The second time";
+			Console.WriteLine("s2 = {0}", s2); //for ildasm.exe
 
 			Console.ResetColor();
 		}
