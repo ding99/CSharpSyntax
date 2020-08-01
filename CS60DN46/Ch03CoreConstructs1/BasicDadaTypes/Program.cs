@@ -12,6 +12,25 @@ namespace BasicDadaTypes
 			ObjectFunctionality();
 			DataTypeFunctionality();
 			CharFunctionality();
+			ParseFromStrings();
+		}
+
+		static void ParseFromStrings()
+		{
+			Console.ForegroundColor = ConsoleColor.Cyan;
+
+			Console.WriteLine("=> Data type parsing:");
+			bool b = bool.Parse("True");
+			Console.WriteLine("Value of b: {0}", b);
+			double d = double.Parse("99.884");
+			Console.WriteLine("Value of d: {0}", d);
+			double i = int.Parse("8");
+			Console.WriteLine("Value of i: {0}", i);
+			char c = Char.Parse("w");
+			Console.WriteLine("Value of c: {0}", c);
+			Console.WriteLine();
+
+			Console.ResetColor();
 		}
 
 		static void CharFunctionality()
@@ -45,6 +64,7 @@ namespace BasicDadaTypes
 
 			Console.WriteLine("bool.FalseString: {0}", bool.FalseString);
 			Console.WriteLine("bool.TrueString: {0}", bool.TrueString);
+			Console.WriteLine();
 
 			Console.ResetColor();
 		}
