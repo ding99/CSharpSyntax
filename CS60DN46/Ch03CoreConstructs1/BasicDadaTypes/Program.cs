@@ -9,6 +9,21 @@ namespace BasicDadaTypes
 		{
 			LocalVarDeclarations();
 			NewingDataType();
+			ObjectFunctionality();
+		}
+
+		static void ObjectFunctionality()
+		{
+			Console.ForegroundColor = ConsoleColor.Blue;
+
+			Console.WriteLine("=> System.Object Functionality:");
+			Console.WriteLine("12.GetHashCode() = {0}", 12.GetHashCode());
+			Console.WriteLine("12.Equals(23) = {0}", 12.Equals(23));
+			Console.WriteLine("12.ToString() = {0}", 12.ToString());
+			Console.WriteLine("12.GetType() = {0}", 12.GetType());
+			Console.WriteLine();
+
+			Console.ResetColor();
 		}
 
 		static void NewingDataType()
