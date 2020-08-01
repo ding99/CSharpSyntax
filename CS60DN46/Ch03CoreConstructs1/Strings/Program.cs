@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Security.Cryptography;
 using System.Text;
-using System.Threading;
 
 namespace Strings
 {
@@ -67,12 +65,12 @@ namespace Strings
 			string upperString = s1.ToUpper();
 			Console.WriteLine("upperString = {0}", upperString);
 			Console.WriteLine("s1 = {0}", s1);
-			Console.WriteLine();
 
 			string s2 = "The first time";
 			Console.WriteLine("s2 = {0}", s2);
 			s2 = "The second time";
 			Console.WriteLine("s2 = {0}", s2); //for ildasm.exe
+			Console.WriteLine();
 
 			Console.ResetColor();
 		}
