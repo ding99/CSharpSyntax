@@ -10,6 +10,22 @@ namespace Strings
 			BasicStringFunctionality();
 			VerBatimStrings();
 			StringEqulity();
+			StringsAreImmutable();
+		}
+
+		private static void StringsAreImmutable()
+		{
+			Console.ForegroundColor = ConsoleColor.Cyan;
+
+			Console.WriteLine("=> Strings are immutable");
+			string s1 = "This is my string";
+			Console.WriteLine("s1 = {0}", s1);
+			string upperString = s1.ToUpper();
+			Console.WriteLine("upperString = {0}", upperString);
+			Console.WriteLine("s1 = {0}", s1);
+			Console.WriteLine();
+
+			Console.ResetColor();
 		}
 
 		private static void StringEqulity()
