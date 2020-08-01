@@ -26,6 +26,9 @@ namespace BasicDadaTypes
 			Console.WriteLine("double.PositiveInfinity: {0}", double.PositiveInfinity);
 			Console.WriteLine("double.NegativeInfinity: {0}", double.NegativeInfinity);
 
+			Console.WriteLine("bool.FalseString: {0}", bool.FalseString);
+			Console.WriteLine("bool.TrueString: {0}", bool.TrueString);
+
 			Console.ResetColor();
 		}
 		static void ObjectFunctionality()
