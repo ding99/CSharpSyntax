@@ -11,14 +11,36 @@ namespace TypeConversions
 			NoError();
 			NarrowingAttempt();
 			ExplicitCast();
+			ProcessBytes();
 
 			Console.ResetColor();
+		}
+
+		private static void ProcessBytes()
+		{
+			Console.ForegroundColor = ConsoleColor.Cyan;
+
+			Console.WriteLine("=> checked");
+			byte b1 = 100, b2 = 200;
+			Console.WriteLine($"To calculate the sum of byte {b1} and byte {b2}");
+			try
+			{
+				checked
+				{
+					byte sum = (byte)Add(b1, b2);
+					Console.WriteLine("sum = {0}", sum);
+				}
+			}
+			catch(OverflowException ex)
+			{
+				Console.WriteLine(ex.Message);
+			}
 		}
 
 		private static void ExplicitCast()
 		{
 			Console.ForegroundColor = ConsoleColor.Yellow;
-			Console.WriteLine("=> Explicit Casting with Lossing Data");
+			Console.WriteLine("=> Explicit Casting with Loss of Data");
 			short n1 = 30000, n2 = 30000;
 			short answer = (short)Add(n1, n2);
 			Console.WriteLine($"{n1} + {n2} = {answer}");
