@@ -8,7 +8,50 @@ namespace Decisions
 		{
 			Console.WriteLine("***** Decisions *****");
 			SwitchOnString();
+			SwitchOnEnum();
 			Console.ResetColor();
+		}
+
+		static void SwitchOnEnum()
+		{
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("Enter your favorite day of the week: ");
+			DayOfWeek day;
+
+			try
+			{
+				day = (DayOfWeek)Enum.Parse(typeof(DayOfWeek), Console.ReadLine());
+			}
+			catch (Exception)
+			{
+				Console.WriteLine("Bad input!");
+				return;
+			}
+
+			switch (day)
+			{
+				case DayOfWeek.Friday:
+					Console.WriteLine("Yes, Friday rules!");
+					break;
+				case DayOfWeek.Monday:
+					Console.WriteLine("Another day, another dollar");
+					break;
+				case DayOfWeek.Saturday:
+					Console.WriteLine("Great day indeed.");
+					break;
+				case DayOfWeek.Sunday:
+					Console.WriteLine("Football!!");
+					break;
+				case DayOfWeek.Thursday:
+					Console.WriteLine("Almost Friday...");
+					break;
+				case DayOfWeek.Tuesday:
+					Console.WriteLine("At least it is not Monday");
+					break;
+				case DayOfWeek.Wednesday:
+					Console.WriteLine("A fine day.");
+					break;
+			}
 		}
 
 		static void SwitchOnString()
