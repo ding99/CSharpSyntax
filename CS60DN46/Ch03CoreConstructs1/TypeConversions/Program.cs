@@ -40,7 +40,7 @@ namespace TypeConversions
 		private static void ExplicitCast()
 		{
 			Console.ForegroundColor = ConsoleColor.Yellow;
-			Console.WriteLine("=> Explicit Casting with Loss of Data");
+			Console.WriteLine("=> Explicit Casting with Data Loss");
 			short n1 = 30000, n2 = 30000;
 			short answer = (short)Add(n1, n2);
 			Console.WriteLine($"{n1} + {n2} = {answer}");
