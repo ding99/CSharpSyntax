@@ -13,6 +13,8 @@ namespace Strings
 			StringsAreImmutable();
 			FunWithStringBuilder();
 			StringInterpolation();
+
+			Console.ResetColor();
 		}
 
 		private static void StringInterpolation()
@@ -26,10 +28,7 @@ namespace Strings
 			string greeting2 = $"Hello {name} you are {age} years old.";
 			Console.WriteLine(greeting);
 			Console.WriteLine(greeting2);
-
 			Console.WriteLine();
-
-			Console.ResetColor();
 		}
 
 		private static void FunWithStringBuilder()
@@ -51,8 +50,6 @@ namespace Strings
 
 			Console.WriteLine("sb has {0} chars.", sb.Length);
 			Console.WriteLine();
-
-			Console.ResetColor();
 		}
 
 		private static void StringsAreImmutable()
@@ -71,8 +68,6 @@ namespace Strings
 			s2 = "The second time";
 			Console.WriteLine("s2 = {0}", s2); //for ildasm.exe
 			Console.WriteLine();
-
-			Console.ResetColor();
 		}
 
 		private static void StringEqulity()
@@ -93,9 +88,8 @@ namespace Strings
 			Console.WriteLine("Yo!.Equals(s2): {0}", "Yo!".Equals(s2));
 			Console.WriteLine("Yo! == s2: {0}", "Yo!" == s2);
 			Console.WriteLine();
-
-			Console.ResetColor();
 		}
+
 		private static void VerBatimStrings()
 		{
 			Console.ForegroundColor = ConsoleColor.Yellow;
@@ -109,8 +103,6 @@ namespace Strings
 			Console.WriteLine(myLongString);
 			Console.WriteLine(@"Cerebus said ""Darrr! Pret-ty sun-sets""");
 			Console.WriteLine();
-
-			Console.ResetColor();
 		}
 
 		private static void BasicStringFunctionality()
@@ -124,11 +116,18 @@ namespace Strings
 			Console.WriteLine("firstName in uppercase: {0}", firstName.ToUpper());
 			Console.WriteLine("firstName in lowercase: {0}", firstName.ToLower());
 			Console.WriteLine("firstName contains the letter y?: {0}", firstName.Contains("y"));
+
+			Console.WriteLine("Insert AAA to firstName: {0}", firstName.Insert(3, "AAA"));
+			Console.WriteLine("PadLeft AAA to firstName: {0}", firstName.PadLeft(16, 'A'));
+			Console.WriteLine("PadRight AAA to firstName: {0}", firstName.PadRight(16, 'A'));
+
 			Console.WriteLine("firstName after replace: {0}", firstName.Replace("dy", ""));
 			Console.WriteLine("Value of firstName: {0}", firstName);
-			Console.WriteLine();
 
-			Console.ResetColor();
+			Console.WriteLine("Compare firstName to \"Freddy\": {0}", firstName.CompareTo("Freddy"));
+			Console.WriteLine("Compare firstName to \"redd\": {0}", firstName.CompareTo("redd"));
+			Console.WriteLine("Compare firstName to \"AAA\": {0}", firstName.CompareTo("AAA"));
+			Console.WriteLine();
 		}
 	}
 }
