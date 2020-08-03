@@ -19,6 +19,7 @@ namespace FunWithMethods
 
 		static void Naming()
 		{
+			Console.WriteLine("=> Named Parameters");
 			DisplayFancyMessage(message: "Wow! Very Fancy indeed!", text: ConsoleColor.DarkRed, back: ConsoleColor.White);
 			DisplayFancyMessage(back: ConsoleColor.Green, message: "Testing...", text: ConsoleColor.DarkBlue);
 		}
