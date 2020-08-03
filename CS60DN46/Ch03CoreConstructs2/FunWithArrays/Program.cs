@@ -13,8 +13,34 @@ namespace FunWithArrays
 			ArrayOfObjects();
 			RectMultidimensionalArray();
 			JaggedMultidimensionalArray();
+			SystemArrayFunctionality();
 
 			Console.ResetColor();
+		}
+
+		static void SystemArrayFunctionality()
+		{
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
+			Console.WriteLine("=> Working with System.Array.");
+			string[] gothicBands = { "Tones on Tail", "Bauhaus", "Sisters of Mercy" };
+			Console.Write("-> Here is the array:");
+			for (int i = 0; i < gothicBands.Length; i++) Console.Write($" {gothicBands[i]},");
+			Console.WriteLine();
+			Console.Write("-> Cleared out all but one...");
+			Array.Clear(gothicBands, 1, 2);
+			for (int i = 0; i < gothicBands.Length; i++) Console.Write($" {gothicBands[i]}, ");
+			Console.WriteLine();
+
+			double[] ds = { 2.2, 1.1, 3.3 };
+			Console.Write("Before Clear:"); foreach (var d in ds) Console.Write($" {d},"); Console.WriteLine();
+			double[] d2 = new double[3]; ds.CopyTo(d2, 0);
+			Console.Write("Copied:"); foreach (var d in d2) Console.Write($" {d},"); Console.WriteLine();
+			Array.Reverse(ds);
+			Console.Write("Reverted:"); foreach (var d in ds) Console.Write($" {d},"); Console.WriteLine();
+			Array.Sort(ds);
+			Console.Write("Sorted:"); foreach (var d in ds) Console.Write($" {d},"); Console.WriteLine();
+			Array.Clear(ds, 0, ds.Length);
+			Console.Write("After Clear:"); foreach (var d in ds) Console.Write($" {d},"); Console.WriteLine();
 		}
 
 		static void JaggedMultidimensionalArray()
