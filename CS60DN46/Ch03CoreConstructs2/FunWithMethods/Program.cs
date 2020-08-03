@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.OleDb;
 
 namespace FunWithMethods
 {
@@ -11,8 +12,28 @@ namespace FunWithMethods
 			Adding();
 			Swaping();
 			Summing();
+			Naming();
 
 			Console.ResetColor();
+		}
+
+		static void Naming()
+		{
+			DisplayFancyMessage(message: "Wow! Very Fancy indeed!", text: ConsoleColor.DarkRed, back: ConsoleColor.White);
+			DisplayFancyMessage(back: ConsoleColor.Green, message: "Testing...", text: ConsoleColor.DarkBlue);
+		}
+
+		static void DisplayFancyMessage(ConsoleColor text, ConsoleColor back, string message)
+		{
+			ConsoleColor oldText = Console.ForegroundColor;
+			ConsoleColor oldBack = Console.BackgroundColor;
+
+			Console.ForegroundColor = text;
+			Console.BackgroundColor = back;
+			Console.WriteLine(message);
+
+			Console.ForegroundColor = oldText;
+			Console.BackgroundColor = oldBack;
 		}
 
 		static void Summing()
