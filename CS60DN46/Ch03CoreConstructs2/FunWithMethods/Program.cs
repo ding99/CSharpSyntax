@@ -8,10 +8,38 @@ namespace FunWithMethods
 		{
 			Console.WriteLine("***** Fun with Methods *****");
 
-			Operation1();
+			Adding();
 			Swaping();
+			Summing();
 
 			Console.ResetColor();
+		}
+
+		static void Summing()
+		{
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("=> Params");
+			double average;
+			average = CalculateAverage(4.0, 3.2, 5.7, 64.22, 87.2);
+			Console.WriteLine("Average of datga is: {0}", average);
+
+			double[] data = { 4.0, 3.2, 5.7 };
+			average = CalculateAverage(data);
+			Console.WriteLine("Average of datga is: {0}", average);
+
+			Console.WriteLine("Average of data is: {0}", CalculateAverage());
+			Console.WriteLine();
+		}
+
+		static double CalculateAverage(params double[] values)
+		{
+			Console.WriteLine("You send me {0} doubles.", values.Length);
+			double sum = 0;
+			if (values.Length == 0)
+				return sum;
+			for (int i = 0; i < values.Length; i++)
+				sum += values[i];
+			return sum / values.Length;
 		}
 
 		static void Swaping()
@@ -23,6 +51,7 @@ namespace FunWithMethods
 			Console.WriteLine("Before: {0}, {1}", s1, s2);
 			SwapStrings(ref s1, ref s2);
 			Console.WriteLine("Before: {0}, {1}", s1, s2);
+			Console.WriteLine();
 		}
 
 		static void SwapStrings(ref string s1, ref string s2)
@@ -32,7 +61,7 @@ namespace FunWithMethods
 			s2 = temp;
 		}
 
-		static void Operation1()
+		static void Adding()
 		{
 			Console.ForegroundColor = ConsoleColor.Green;
 			Console.WriteLine("=> Addition");
@@ -41,7 +70,7 @@ namespace FunWithMethods
 			Console.WriteLine("Before call: X {0}, Y {1}", x, y);
 			Console.WriteLine("Answer is {0}", Add(x, y));
 			Console.WriteLine("After call: X {0}, Y {1}", x, y);
-
+			Console.WriteLine();
 		}
 
 		static int Add(int x, int y)
