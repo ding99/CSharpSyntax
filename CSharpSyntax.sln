@@ -168,6 +168,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithMethods", "CS60DN46\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodOverLoading", "CS60DN46\Ch03CoreConstructs2\MethodOverLoading\MethodOverLoading.csproj", "{13B548EA-298B-48F1-9F34-84B0C2351619}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithArrays", "CS60DN46\Ch03CoreConstructs2\FunWithArrays\FunWithArrays.csproj", "{C0E7F1D5-BF8C-4B0A-B689-2BE05F8C89B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1052,6 +1054,22 @@ Global
 		{13B548EA-298B-48F1-9F34-84B0C2351619}.Release|x64.Build.0 = Release|Any CPU
 		{13B548EA-298B-48F1-9F34-84B0C2351619}.Release|x86.ActiveCfg = Release|Any CPU
 		{13B548EA-298B-48F1-9F34-84B0C2351619}.Release|x86.Build.0 = Release|Any CPU
+		{C0E7F1D5-BF8C-4B0A-B689-2BE05F8C89B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0E7F1D5-BF8C-4B0A-B689-2BE05F8C89B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0E7F1D5-BF8C-4B0A-B689-2BE05F8C89B4}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C0E7F1D5-BF8C-4B0A-B689-2BE05F8C89B4}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C0E7F1D5-BF8C-4B0A-B689-2BE05F8C89B4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C0E7F1D5-BF8C-4B0A-B689-2BE05F8C89B4}.Debug|x64.Build.0 = Debug|Any CPU
+		{C0E7F1D5-BF8C-4B0A-B689-2BE05F8C89B4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C0E7F1D5-BF8C-4B0A-B689-2BE05F8C89B4}.Debug|x86.Build.0 = Debug|Any CPU
+		{C0E7F1D5-BF8C-4B0A-B689-2BE05F8C89B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0E7F1D5-BF8C-4B0A-B689-2BE05F8C89B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0E7F1D5-BF8C-4B0A-B689-2BE05F8C89B4}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C0E7F1D5-BF8C-4B0A-B689-2BE05F8C89B4}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{C0E7F1D5-BF8C-4B0A-B689-2BE05F8C89B4}.Release|x64.ActiveCfg = Release|Any CPU
+		{C0E7F1D5-BF8C-4B0A-B689-2BE05F8C89B4}.Release|x64.Build.0 = Release|Any CPU
+		{C0E7F1D5-BF8C-4B0A-B689-2BE05F8C89B4}.Release|x86.ActiveCfg = Release|Any CPU
+		{C0E7F1D5-BF8C-4B0A-B689-2BE05F8C89B4}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1123,6 +1141,7 @@ Global
 		{9C3A59EF-BBFA-48A6-8C1C-860C2443347D} = {B599F668-236A-4D7A-A51B-F383D94A5154}
 		{34EE864C-4D5E-450A-919B-EB3975055173} = {9C3A59EF-BBFA-48A6-8C1C-860C2443347D}
 		{13B548EA-298B-48F1-9F34-84B0C2351619} = {9C3A59EF-BBFA-48A6-8C1C-860C2443347D}
+		{C0E7F1D5-BF8C-4B0A-B689-2BE05F8C89B4} = {9C3A59EF-BBFA-48A6-8C1C-860C2443347D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7C00B1AC-1A8A-4B50-9373-585713E1AED0}
