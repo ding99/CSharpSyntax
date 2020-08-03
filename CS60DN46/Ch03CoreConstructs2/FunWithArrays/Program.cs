@@ -12,8 +12,23 @@ namespace FunWithArrays
 			DeclareImplicitArrays();
 			ArrayOfObjects();
 			RectMultidimensionalArray();
+			JaggedMultidimensionalArray();
 
 			Console.ResetColor();
+		}
+
+		static void JaggedMultidimensionalArray()
+		{
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.WriteLine("=> Jagged multidimensional array.");
+			int[][] myJagArray = new int[5][];
+			for (int i = 0; i < myJagArray.Length; i++) myJagArray[i] = new int[i + 7];
+			for(int i = 0; i < 5; i++)
+			{
+				for (int j = 0; j < myJagArray[i].Length; j++) Console.Write($" {myJagArray[i][j]}");
+				Console.WriteLine();
+			}
+			Console.WriteLine();
 		}
 
 		static void RectMultidimensionalArray()
