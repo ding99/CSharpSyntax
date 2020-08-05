@@ -14,8 +14,24 @@ namespace FunWithStructs
 			ReferenceTypeAssignment();
 			ValueTypeContainingRefType();
 			PassingValue();
+			PassingRef();
 
 			Console.ResetColor();
+		}
+
+		static void PassingRef()
+		{
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
+			Console.WriteLine("=> Passing Person object by reference");
+
+			Person m1 = new Person("Me1", 23);
+			Console.Write("Before by ref call: "); m1.Display();
+			SendPersonByRef(ref m1);
+			Console.Write("After  by ref call: "); m1.Display();
+		}
+		static void SendPersonByRef(ref Person p)
+		{
+			p.age = 555; p = new Person("Nikki", 999);
 		}
 
 		static void PassingValue()
