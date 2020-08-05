@@ -19,7 +19,7 @@ namespace SimpleClass
 		static void CtorFlow()
 		{
 			Console.ForegroundColor = ConsoleColor.Cyan;
-			Motor m = new Motor(3);
+			MotorFlow m = new MotorFlow(3);
 			Console.WriteLine($"Rider name is [{m.name}]");
 
 			m.SetDriverName("Tiny");

@@ -2,21 +2,21 @@
 
 namespace SimpleClass
 {
-	class Motor
+	class MotorFlow
 	{
 		public int intensity;
 		public string name;
 
-		public Motor() { Console.WriteLine("In default ctor"); }
-		public Motor(int intensity) : this(intensity, "")
+		public MotorFlow() { Console.WriteLine("In default ctor"); }
+		public MotorFlow(int intensity) : this(intensity, "")
 		{
 			Console.WriteLine("In ctor taking an int");
 		}
-		public Motor(string name) : this(0, name)
+		public MotorFlow(string name) : this(0, name)
 		{
 			Console.WriteLine("In ctor taking a string");
 		}
-		public Motor(int intensity, string name)
+		public MotorFlow(int intensity, string name)
 		{
 			Console.WriteLine("In master ctor ");
 			this.intensity = intensity > 10 ? 10 : intensity;
