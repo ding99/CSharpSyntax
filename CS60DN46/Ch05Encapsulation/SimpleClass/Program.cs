@@ -11,8 +11,20 @@ namespace SimpleClass
 
 			Speeding();
 			ThisKeyword();
+			CtorFlow();
 
 			Console.ResetColor();
+		}
+
+		static void CtorFlow()
+		{
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Motor m = new Motor(3);
+			Console.WriteLine($"Rider name is [{m.name}]");
+
+			m.SetDriverName("Tiny");
+			m.PopAWheely();
+			Console.WriteLine($"Rider name is [{m.name}]");
 		}
 
 		static void ThisKeyword()
