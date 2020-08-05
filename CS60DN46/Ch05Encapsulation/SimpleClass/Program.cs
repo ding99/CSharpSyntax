@@ -18,7 +18,9 @@ namespace SimpleClass
 		static void ThisKeyword()
 		{
 			Console.ForegroundColor = ConsoleColor.Yellow;
-			Motorcycle c = new Motorcycle(5);
+			Motorcycle c = new Motorcycle(5, "Jason");
+			Console.WriteLine($"Rider name is [{c.name}]");
+
 			c.SetDriverName("Tiny");
 			c.PopAWheely();
 			Console.WriteLine($"Rider name is [{c.name}]");

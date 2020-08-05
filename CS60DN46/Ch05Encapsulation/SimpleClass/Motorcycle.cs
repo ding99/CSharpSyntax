@@ -5,7 +5,7 @@
 		public int driverIntensity;
 		public string name;
 
-		public Motorcycle(int intensity) { driverIntensity = intensity; }
+		public Motorcycle(int intensity, string name) { driverIntensity = intensity; name = name; }
 		public void SetDriverName(string name) { name = name; }
 		public void PopAWheely()
 		{
