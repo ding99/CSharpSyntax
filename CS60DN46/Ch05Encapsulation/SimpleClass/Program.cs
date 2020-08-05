@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace SimpleClass
 {
@@ -12,8 +11,22 @@ namespace SimpleClass
 			Speeding();
 			ThisKeyword();
 			CtorFlow();
+			MakeSomeBikes();
 
 			Console.ResetColor();
+		}
+
+		static void MakeSomeBikes()
+		{
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			MotorOptional m1 = new MotorOptional();
+			Console.WriteLine($"name = [{m1.name}], intensity = {m1.intensity}");
+
+			MotorOptional m2 = new MotorOptional(name: "Tiny");
+			Console.WriteLine($"name = [{m2.name}], intensity = {m2.intensity}");
+
+			MotorOptional m3 = new MotorOptional(5);
+			Console.WriteLine($"name = [{m3.name}], intensity = {m3.intensity}");
 		}
 
 		static void CtorFlow()
