@@ -11,10 +11,7 @@ namespace SimpleClass
 		public Car(string pn) { name = pn;  }
 		public Car(string pn, int cs) { name = pn; speed = cs; }
 
-		public void PrintState()
-		{
-			Console.WriteLine($"{name} is going {speed} MPH.");
-		}
+		public void PrintState() { Console.WriteLine($"{name} is going {speed} MPH."); }
 
 		public void SpeedUp(int delta) { speed += delta; }
 	}
