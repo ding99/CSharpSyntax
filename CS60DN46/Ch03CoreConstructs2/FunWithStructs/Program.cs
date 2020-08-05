@@ -12,8 +12,23 @@ namespace FunWithStructs
 			FirstLook();
 			ValueTypeAssignment();
 			ReferenceTypeAssignment();
+			ValueTypeContainingRefType();
 
 			Console.ResetColor();
+		}
+
+		static void ValueTypeContainingRefType()
+		{
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.WriteLine("-> Creating r1");
+			Rectangle r1 = new Rectangle("First Rect", 10, 10, 50, 50);
+			Console.WriteLine("-> Assigning r2 to r1");
+			Rectangle r2 = r1;
+			r1.Display(); r2.Display();
+
+			Console.WriteLine("-> Changing values of r2");
+			r2.rect.infoString = "This is new infor"; r2.rectBottom = 4444;
+			r1.Display(); r2.Display();
 		}
 
 		static void ReferenceTypeAssignment()
@@ -70,6 +85,27 @@ namespace FunWithStructs
 			public void Increment() { X++; Y++; }
 			public void Decrement() { X--; Y--; }
 			public void Display() { Console.WriteLine($"X = {X}, Y = {Y}"); }
+		}
+
+		struct Rectangle
+		{
+			public Shape rect;
+			public int rectTop, rectLeft, rectBottom, rectRight;
+			public Rectangle(string info, int top, int left, int bottom, int right)
+			{
+				rect = new Shape(info);
+				rectTop = top; rectLeft = left; rectBottom = bottom; rectRight = right;
+			}
+			public void Display()
+			{
+				Console.WriteLine($"String = {rect.infoString}, Top = {rectTop}, Bottom = {rectBottom}, Left = {rectLeft}, Right = {rectRight}");
+			}
+		}
+
+		class Shape
+		{
+			public string infoString;
+			public Shape(string info) { infoString = info; }
 		}
 	}
 }
