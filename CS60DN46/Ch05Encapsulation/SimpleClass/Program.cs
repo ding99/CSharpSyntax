@@ -16,8 +16,9 @@ namespace SimpleClass
 		static void Speeding()
 		{
 			Console.ForegroundColor = ConsoleColor.Green;
-			Car car = new Car(); car.name = "Henry"; car.speed = 10;
-			for(int i = 0; i<= 10; i++) { car.SpeedUp(5); car.PrintState(); }
+			Car car = new Car(); car.PrintState();
+			car.name = "Henry"; car.speed = 50;
+			for(int i = 0; i< 3; i++) { car.SpeedUp(5); car.PrintState(); }
 		}
 	}
 }
