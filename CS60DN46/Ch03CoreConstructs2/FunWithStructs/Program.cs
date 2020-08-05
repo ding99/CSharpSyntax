@@ -13,8 +13,25 @@ namespace FunWithStructs
 			ValueTypeAssignment();
 			ReferenceTypeAssignment();
 			ValueTypeContainingRefType();
+			PassingValue();
 
 			Console.ResetColor();
+		}
+
+		static void PassingValue()
+		{
+			Console.ForegroundColor = ConsoleColor.Blue;
+			Console.WriteLine("=> Passing Person object by value");
+
+			Person fred = new Person("Fred", 12);
+			Console.Write("Before by value call, Person is: "); fred.Display();
+
+			SendPersonByValue(fred);
+			Console.Write("After  by value call, Person is: "); fred.Display();
+		}
+		static void SendPersonByValue(Person p)
+		{
+			p.age = 90; p = new Person("Nikki", 99);
 		}
 
 		static void ValueTypeContainingRefType()
@@ -106,6 +123,13 @@ namespace FunWithStructs
 		{
 			public string infoString;
 			public Shape(string info) { infoString = info; }
+		}
+
+		class Person
+		{
+			public string name; public int age;
+			public Person(string _name, int _age) { name = _name; age = _age; }
+			public void Display() { Console.WriteLine($"Name: {name}, Age: {age}"); }
 		}
 	}
 }
