@@ -162,19 +162,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iterations", "CS60DN46\Ch03
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decisions", "CS60DN46\Ch03CoreConstructs1\Decisions\Decisions.csproj", "{768B4E9C-C6F7-4127-B25F-B6AAC6DFC93B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ch03CoreConstructs2", "Ch03CoreConstructs2", "{9C3A59EF-BBFA-48A6-8C1C-860C2443347D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ch04CoreConstructs2", "Ch04CoreConstructs2", "{9C3A59EF-BBFA-48A6-8C1C-860C2443347D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithMethods", "CS60DN46\Ch03CoreConstructs2\FunWithMethods\FunWithMethods.csproj", "{34EE864C-4D5E-450A-919B-EB3975055173}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithMethods", "CS60DN46\Ch04CoreConstructs2\FunWithMethods\FunWithMethods.csproj", "{34EE864C-4D5E-450A-919B-EB3975055173}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodOverLoading", "CS60DN46\Ch03CoreConstructs2\MethodOverLoading\MethodOverLoading.csproj", "{13B548EA-298B-48F1-9F34-84B0C2351619}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodOverLoading", "CS60DN46\Ch04CoreConstructs2\MethodOverLoading\MethodOverLoading.csproj", "{13B548EA-298B-48F1-9F34-84B0C2351619}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithArrays", "CS60DN46\Ch03CoreConstructs2\FunWithArrays\FunWithArrays.csproj", "{C0E7F1D5-BF8C-4B0A-B689-2BE05F8C89B4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithArrays", "CS60DN46\Ch04CoreConstructs2\FunWithArrays\FunWithArrays.csproj", "{C0E7F1D5-BF8C-4B0A-B689-2BE05F8C89B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithEnums", "CS60DN46\Ch03CoreConstructs2\FunWithEnums\FunWithEnums.csproj", "{BBA6842B-9628-4A0D-A840-C270C0726CF0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithEnums", "CS60DN46\Ch04CoreConstructs2\FunWithEnums\FunWithEnums.csproj", "{BBA6842B-9628-4A0D-A840-C270C0726CF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithStructs", "CS60DN46\Ch03CoreConstructs2\FunWithStructs\FunWithStructs.csproj", "{C23C2115-A0E3-4BBD-820C-FD5B01B0CE44}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithStructs", "CS60DN46\Ch04CoreConstructs2\FunWithStructs\FunWithStructs.csproj", "{C23C2115-A0E3-4BBD-820C-FD5B01B0CE44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NullableTypes", "CS60DN46\Ch03CoreConstructs2\NullableTypes\NullableTypes.csproj", "{786C92A8-D3E5-4333-8282-AA68221EDEC1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NullableTypes", "CS60DN46\Ch04CoreConstructs2\NullableTypes\NullableTypes.csproj", "{786C92A8-D3E5-4333-8282-AA68221EDEC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
