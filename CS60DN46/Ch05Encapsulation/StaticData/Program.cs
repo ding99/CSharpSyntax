@@ -4,12 +4,26 @@ namespace StaticData
 {
 	class Program
 	{
-		static void Main(string[] args)
+		static void Main()
 		{
 			Console.WriteLine("***** Fun with Static Data *****");
 			StaticData();
 			StaticInit();
+			StaticCtor();
 			Console.ResetColor();
+		}
+
+		static void StaticCtor()
+		{
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			SavingsAccount3 s1 = new SavingsAccount3(50);
+			Console.WriteLine($"Interest Rate is {SavingsAccount3.GetInterestRate()}");
+
+			SavingsAccount3.SetInterestRate(0.08);
+			Console.WriteLine($"Interest Rate is {SavingsAccount3.GetInterestRate()}");
+
+			SavingsAccount3 s2 = new SavingsAccount3(100);
+			Console.WriteLine($"Interest Rate is {SavingsAccount3.GetInterestRate()}");
 		}
 
 		static void StaticInit()
