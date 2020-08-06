@@ -9,7 +9,7 @@ namespace SimpleUtility
 			WriteLine(Now.ToShortTimeString());
 		}
 		public static void PrintDate() {
-			WriteLine(Now.ToShortDateString());
+			WriteLine(Today.ToShortDateString());
 		}
 	}
 }
