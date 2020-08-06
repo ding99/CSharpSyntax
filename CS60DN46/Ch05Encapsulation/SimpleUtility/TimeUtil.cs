@@ -1,14 +1,16 @@
 ﻿using System;
+using static System.Console;
+using static System.DateTime;
 
 namespace SimpleUtility
 {
 	static class TimeUtil
 	{
 		public static void PrintTime() {
-			Console.WriteLine(DateTime.Now.ToShortTimeString());
+			WriteLine(Now.ToShortTimeString());
 		}
 		public static void PrintDate() {
-			Console.WriteLine(DateTime.Now.ToShortDateString());
+			WriteLine(Now.ToShortDateString());
 		}
 	}
 }
