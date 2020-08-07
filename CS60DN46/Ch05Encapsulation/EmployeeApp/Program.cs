@@ -8,7 +8,22 @@ namespace EmployeeApp
 		{
 			Console.WriteLine("***** Employee *****");
 			Traditional();
+			ByProperties();
 			Console.ResetColor();
+		}
+
+		static void ByProperties()
+		{
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("=> Using .NET Properties");
+
+			EmployeeTra emp = new EmployeeTra("Marvin", 456, 30000);
+			emp.GiveBonus(1000);
+			emp.Display();
+
+			Console.WriteLine("-> Set a new name");
+			emp.SetName("Marv");
+			emp.Display();
 		}
 
 		static void Traditional()

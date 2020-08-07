@@ -33,5 +33,4 @@ namespace EmployeeApp
 			Console.WriteLine($"Pay: {pay}");
 		}
 	}
-
 }
