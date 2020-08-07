@@ -7,11 +7,14 @@ namespace EmployeeApp
 		private string name;
 		private int id;
 		private float pay;
+		private int age;
 
 		public EmployeePro() { }
 		public EmployeePro(string name, int id, float pay)
+			: this(name, 0, id, pay) { }
+		public EmployeePro(string name, int age, int id, float pay)
 		{
-			this.name = name; this.id = id; this.pay = pay;
+			this.name = name; this.age = age; this.id = id; this.pay = pay;
 		}
 
 		public string Name
@@ -23,6 +26,8 @@ namespace EmployeeApp
 				else name = value;
 			}
 		}
+
+		public int Age { get { return age; } set { age = value; } }
 
 		public float Pay {  get { return pay; } set { pay = value; } }
 
@@ -37,6 +42,7 @@ namespace EmployeeApp
 		{
 			Console.WriteLine($"Name: {name}");
 			Console.WriteLine($"ID: {id}");
+			Console.WriteLine($"Age: {age}");
 			Console.WriteLine($"Pay: {pay}");
 		}
 	}

@@ -17,12 +17,13 @@ namespace EmployeeApp
 			Console.ForegroundColor = ConsoleColor.Yellow;
 			Console.WriteLine("=> Using .NET Properties");
 
-			EmployeePro emp = new EmployeePro("Marvin", 456, 30000);
+			EmployeePro emp = new EmployeePro("Marvin", 20, 456, 30000);
 			emp.GiveBonus(1000);
 			emp.Display();
 
 			Console.WriteLine("-> Set a new name");
 			emp.Name = "Marv";
+			emp.Age++;
 			emp.Display();
 		}
 
