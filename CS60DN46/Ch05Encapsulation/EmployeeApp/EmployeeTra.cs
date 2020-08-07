@@ -2,14 +2,14 @@
 
 namespace EmployeeApp
 {
-	class Employee
+	class EmployeeTra
 	{
 		private string name;
 		private int id;
 		private float pay;
 
-		public Employee() { }
-		public Employee(string name, int id, float pay)
+		public EmployeeTra() { }
+		public EmployeeTra(string name, int id, float pay)
 		{
 			this.name = name; this.id = id; this.pay = pay;
 		}

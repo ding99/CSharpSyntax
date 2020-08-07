@@ -16,7 +16,7 @@ namespace EmployeeApp
 			Console.ForegroundColor = ConsoleColor.Green;
 			Console.WriteLine("=> Traditional accessors and mutators");
 
-			Employee emp = new Employee("Marvin", 456, 30000);
+			EmployeeTra emp = new EmployeeTra("Marvin", 456, 30000);
 			emp.GiveBonus(1000);
 			emp.Display();
 
