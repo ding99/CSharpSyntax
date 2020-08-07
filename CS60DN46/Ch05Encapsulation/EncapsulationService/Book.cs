@@ -8,5 +8,6 @@ namespace EncapsulationService
 {
 	class Book
 	{
+		public int numberOfPages;
 	}
 }

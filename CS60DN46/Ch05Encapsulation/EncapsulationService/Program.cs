@@ -6,7 +6,7 @@ namespace EncapsulationService
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("***** Encapsulotion Services");
+			Console.WriteLine("***** Encapsulotion Services *****");
 			Reading();
 			Console.ResetColor();
 		}
@@ -15,7 +15,7 @@ namespace EncapsulationService
 		{
 			Console.ForegroundColor = ConsoleColor.Green;
 			Book miniNovel = new Book();
-			miniNovel.numberOfPages = 30000000;
+			miniNovel.numberOfPages = 30000000; //not verify the number
 		}
 	}
 }
