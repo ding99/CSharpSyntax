@@ -7,11 +7,11 @@ namespace ObjectInitializers
 		static void Main(string[] args)
 		{
 			Console.WriteLine("***** Object Init Syntax *****");
-			Manually();
+			Initializations();
 			Console.ResetColor();
 		}
 
-		static void Manually()
+		static void Initializations()
 		{
 			Console.ForegroundColor = ConsoleColor.Green;
 			
