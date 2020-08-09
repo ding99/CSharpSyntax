@@ -14,7 +14,11 @@ namespace EmployeeApp
 			: this(name, 0, id, pay) { }
 		public EmployeePro(string name, int age, int id, float pay)
 		{
-			this.name = name; this.age = age; this.id = id; this.pay = pay;
+			if(name.Length > 15)
+				Console.WriteLine("Error! Name length exceeds 15 characters!");
+			else  this.name = name;
+			
+			this.age = age; this.id = id; this.pay = pay;
 		}
 
 		public string Name
