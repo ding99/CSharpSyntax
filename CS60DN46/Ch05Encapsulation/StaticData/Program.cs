@@ -44,15 +44,15 @@ namespace StaticData
 		{
 			Console.ForegroundColor = ConsoleColor.Green;
 
-			SavingsAccount s1 = new SavingsAccount(50);
-			Console.WriteLine($"Interest Rate is {SavingsAccount.GetInterestRate()}");
+			SavingsAccount1 s1 = new SavingsAccount1(50);
+			Console.WriteLine($"Interest Rate is {SavingsAccount1.GetInterestRate()}");
 
-			SavingsAccount.SetInterestRate(0.05);
-			SavingsAccount s2 = new SavingsAccount(100);
-			Console.WriteLine($"Interest Rate is {SavingsAccount.GetInterestRate()}");
+			SavingsAccount1.SetInterestRate(0.05);
+			SavingsAccount1 s2 = new SavingsAccount1(100);
+			Console.WriteLine($"Interest Rate is {SavingsAccount1.GetInterestRate()}");
 			
-			SavingsAccount s3 = new SavingsAccount(10000.75);
-			Console.WriteLine($"Interest Rate is {SavingsAccount.GetInterestRate()}");
+			SavingsAccount1 s3 = new SavingsAccount1(10000.75);
+			Console.WriteLine($"Interest Rate is {SavingsAccount1.GetInterestRate()}");
 		}
 	}
 }
