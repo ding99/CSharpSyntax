@@ -4,7 +4,7 @@ namespace EmployeeApp
 {
 	class Program
 	{
-		static void Main(string[] args)
+		static void Main()
 		{
 			Console.WriteLine("***** Employee *****");
 			Traditional();
@@ -22,6 +22,7 @@ namespace EmployeeApp
 			emp.Display();
 
 			Console.WriteLine("-> Set a new name");
+			emp.Name = "MarvMarvMarvMarv";
 			emp.Name = "Marv";
 			emp.Age++;
 			emp.Display();
