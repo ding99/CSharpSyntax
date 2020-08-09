@@ -9,7 +9,19 @@ namespace ObjectInitializers
 			Console.WriteLine("***** Object Init Syntax *****");
 			NormalInit();
 			CustomCtor();
+			LessKeystrokes();
 			Console.ResetColor();
+		}
+
+		static void LessKeystrokes()
+		{
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Rectangle rect = new Rectangle
+			{
+				TopLeft = new Point { X = 10, Y = 10 },
+				BottomRight = new Point { X = 200, Y = 200 }
+			};
+			rect.Display();
 		}
 
 		static void CustomCtor()
