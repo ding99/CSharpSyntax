@@ -10,7 +10,15 @@ namespace StaticData
 			StaticData();
 			StaticInit();
 			StaticCtor();
+			StaticProperty();
 			Console.ResetColor();
+		}
+
+		static void StaticProperty()
+		{
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			SavingsAccountStatic ss = new SavingsAccountStatic(200);
+			Console.WriteLine($"Interest Rate is : {SavingsAccountStatic.InterestRate}");
 		}
 
 		static void StaticCtor()

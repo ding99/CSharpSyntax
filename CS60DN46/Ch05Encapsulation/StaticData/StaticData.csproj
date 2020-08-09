@@ -48,6 +48,7 @@
     <Compile Include="SavingsAccount1.cs" />
     <Compile Include="SavingsAccount2.cs" />
     <Compile Include="SavingsAccount3.cs" />
+    <Compile Include="SavingsAccountStatic.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
