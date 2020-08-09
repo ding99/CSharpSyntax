@@ -17,7 +17,8 @@ namespace EmployeeApp
 			Console.ForegroundColor = ConsoleColor.Yellow;
 			Console.WriteLine("=> Using .NET Properties");
 
-			EmployeePro emp = new EmployeePro("Marvin", 20, 456, 30000);
+			EmployeePro emp = new EmployeePro("Marvinaaaaaaaaaa", 20, 456, 30000);
+			emp = new EmployeePro("Marvin", 20, 456, 30000);
 			emp.GiveBonus(1000);
 			emp.Display();
 
