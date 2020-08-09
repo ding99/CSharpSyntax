@@ -4,14 +4,21 @@ namespace ObjectInitializers
 {
 	class Program
 	{
-		static void Main(string[] args)
+		static void Main()
 		{
 			Console.WriteLine("***** Object Init Syntax *****");
-			Initializations();
+			NormalInit();
+			CustomCtor();
 			Console.ResetColor();
 		}
 
-		static void Initializations()
+		static void CustomCtor()
+		{
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			new Point(PointColor.Blue) { X = 90, Y = 20 }.Display();
+		}
+
+		static void NormalInit()
 		{
 			Console.ForegroundColor = ConsoleColor.Green;
 			
@@ -20,6 +27,7 @@ namespace ObjectInitializers
 			Point p3 = new Point { X = 30, Y = 30 }; p3.Display();
 			Point p5 = new Point { X = 50 }; p5.Display();
 			new Point { Y = 60 }.Display();
+			new Point(70, 70) { X = 80 }.Display();
 		}
 	}
 }
