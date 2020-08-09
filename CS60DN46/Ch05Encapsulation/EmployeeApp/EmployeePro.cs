@@ -14,7 +14,7 @@ namespace EmployeeApp
 			: this(name, 0, id, pay) { }
 		public EmployeePro(string name, int age, int id, float pay)
 		{
-			this.name = name; this.age = age; this.id = id; this.pay = pay;
+			Name = name; Age = age; ID = id; Pay = pay;
 		}
 
 		public string Name
