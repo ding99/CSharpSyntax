@@ -8,13 +8,14 @@ namespace EmployeeApp
 		private int id;
 		private float pay;
 		private int age;
+		private string ssn;
 
 		public EmployeePro() { }
 		public EmployeePro(string name, int id, float pay)
-			: this(name, 0, id, pay) { }
-		public EmployeePro(string name, int age, int id, float pay)
+			: this(name, 0, id, pay, "") { }
+		public EmployeePro(string name, int age, int id, float pay, string ssn)
 		{
-			Name = name; Age = age; ID = id; Pay = pay;
+			Name = name; Age = age; ID = id; Pay = pay; this.ssn = ssn;
 		}
 
 		public string Name
@@ -33,17 +34,17 @@ namespace EmployeeApp
 
 		public int ID { get { return id;  } set { id = value; } }
 
-		public void GiveBonus(float amount)
-		{
-			pay += amount;
-		}
+		public string SSN { get { return ssn; } }
+
+		public void GiveBonus(float amount) { pay += amount; }
 
 		public void Display()
 		{
-			Console.WriteLine($"Name: {name}");
-			Console.WriteLine($"ID: {id}");
-			Console.WriteLine($"Age: {age}");
-			Console.WriteLine($"Pay: {pay}");
+			Console.WriteLine($"Name: {Name}");
+			Console.WriteLine($"ID: {ID}");
+			Console.WriteLine($"Age: {Age}");
+			Console.WriteLine($"Pay: {Pay}");
+			Console.WriteLine($"SSN: {SSN}");
 		}
 	}
 }

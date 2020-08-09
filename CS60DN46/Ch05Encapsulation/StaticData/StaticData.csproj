@@ -45,9 +45,10 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SavingsAccount.cs" />
+    <Compile Include="SavingsAccount1.cs" />
     <Compile Include="SavingsAccount2.cs" />
     <Compile Include="SavingsAccount3.cs" />
+    <Compile Include="SavingsAccountStatic.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
