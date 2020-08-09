@@ -2,14 +2,10 @@
 {
 	class Garage
 	{
-		public int NumberofCars { get; set; }
-		public Car Auto { get; set; }
+		public int NumberofCars { get; set; } = 1;
+		public Car Auto { get; set; } = new Car();
 
-		public Garage()
-		{
-			Auto = new Car();
-			NumberofCars = 1;
-		}
+		public Garage() {}
 
 		public Garage(Car car, int number)
 		{

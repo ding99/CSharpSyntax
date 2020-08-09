@@ -9,7 +9,22 @@ namespace AutoProps
 			Console.WriteLine("***** Automatic Properties *****");
 			CarStatus();
 			ClassDefault();
+			PropInitialization();
 			Console.ResetColor();
+		}
+
+		static void PropInitialization()
+		{
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine("=> Initialization of Automatic Properties");
+
+			Garage g1 = new Garage();
+			Console.Write($"G1: Number of Cars {g1.NumberofCars}. ");
+			g1.Auto.Display();
+
+			Garage g2 = new Garage(new Car { Name = "David", Color = "Red", Speed = 60 }, 2);
+			Console.Write($"G2: Number of Cars {g2.NumberofCars}. ");
+			g2.Auto.Display();
 		}
 
 		static void ClassDefault()

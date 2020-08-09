@@ -10,7 +10,7 @@ namespace AutoProps
 
 		public void Display()
 		{
-			Console.WriteLine($"Car Name {Name}, Speed {Speed}, Color {Color}");
+			Console.WriteLine($"Car Name <{Name}>, Speed <{Speed}>, Color <{Color}>");
 		}
 	}
 }
