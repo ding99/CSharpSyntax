@@ -8,9 +8,19 @@ namespace Employees
 		{
 			Console.WriteLine("***** The Employee Class Hierarchy *****");
 			Subclasses();
+			Containment();
 			Console.ResetColor();
 		}
 
+		static void Containment()
+		{
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("=> Containment and Delegation");
+
+			Manager david = new Manager("David", 51, 91, 100001, "333221111", 9001);
+			double cost = david.GetBenefitCost();
+			Console.WriteLine($"cost: {cost}");
+		}
 		static void Subclasses()
 		{
 			Console.ForegroundColor = ConsoleColor.Green;

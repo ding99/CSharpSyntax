@@ -14,5 +14,10 @@ namespace Employees
 			Console.WriteLine($"Pay: {Pay}");
 			Console.WriteLine($"SSN: {SSN}");
 		}
+
+		public double GetBenefitCost()
+		{
+			return benefits.PayDeduction();
+		}
 	}
 }
