@@ -14,9 +14,14 @@ namespace Employees
 		public Employee() { }
 		public Employee(string name, int id, float pay)
 			: this(name, 0, id, pay, "") { }
-		public Employee(string name, int age, int id, float pay, string ssn)
+		public Employee(string name, int age, int id, float pay)
 		{
-			Name = name; Age = age; ID = id; Pay = pay; this.ssn = ssn;
+			Name = name; Age = age; ID = id; Pay = pay;
+		}
+		public Employee(string name, int age, int id, float pay, string ssn)
+			: this(name, age, id, pay)
+		{
+			this.ssn = ssn;
 		}
 		#endregion
 
