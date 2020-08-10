@@ -43,9 +43,9 @@ namespace Employees
 
 		public string SSN { get { return ssn; } }
 
-		public BenefitPackage Benefits {
-			get { return benefits; }
-			set { benefits = value; }
-		}
+		//public BenefitPackage Benefits {
+		//	get { return benefits; }
+		//	set { benefits = value; }
+		//}
 	}
 }
