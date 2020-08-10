@@ -22,8 +22,13 @@ namespace BasicInheritance
 
 			MiniVan van = new MiniVan();
 			van.Speed = 10;
-			Console.WriteLine($"My van is going {van.Speed} MPH, max is {car.maxSpeed}.");
+			Console.WriteLine($"My van is going {van.Speed} MPH, max is {van.maxSpeed}.");
 			van.CurrSpeed();
+
+			SpecVan spec = new SpecVan();
+			spec.Speed = 25;
+			Console.WriteLine($"My spec van is going {spec.Speed} MPH, max is {spec.maxSpeed}.");
+			spec.CurrSpeed();
 		}
 	}
 }

@@ -1,6 +1,6 @@
 ﻿namespace BasicInheritance
 {
-	class MiniVan : Car
+	class SpecVan : MiniVan
 	{
 	}
 }
