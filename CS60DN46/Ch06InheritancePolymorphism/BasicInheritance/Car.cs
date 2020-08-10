@@ -12,5 +12,10 @@
 			get { return currSpeed; }
 			set { currSpeed = value > maxSpeed ? maxSpeed : value; }
 		}
+
+		public void CurrSpeed()
+		{
+			System.Console.WriteLine($"private variable (currSpeed): {this.currSpeed}");
+		}
 	}
 }
