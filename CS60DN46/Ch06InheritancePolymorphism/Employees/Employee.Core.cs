@@ -4,11 +4,11 @@ namespace Employees
 {
 	partial class Employee
 	{
-		private string name;
-		private int id;
-		private float pay;
-		private int age;
-		private string ssn;
+		protected string name;
+		protected int id;
+		protected float pay;
+		protected int age;
+		protected string ssn;
 
 		#region ctors
 		public Employee() { }
