@@ -9,6 +9,7 @@ namespace Employees
 		protected float pay;
 		protected int age;
 		protected string ssn;
+		protected BenefitPackage benefits = new BenefitPackage();
 
 		#region ctors
 		public Employee() { }
@@ -41,5 +42,10 @@ namespace Employees
 		public int ID { get { return id; } set { id = value; } }
 
 		public string SSN { get { return ssn; } }
+
+		public BenefitPackage Benefits {
+			get { return benefits; }
+			set { benefits = value; }
+		}
 	}
 }
