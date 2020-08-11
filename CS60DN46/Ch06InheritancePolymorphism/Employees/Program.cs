@@ -27,7 +27,17 @@ namespace Employees
 			GivePromotion(moon); GivePromotion(jill);
 			GivePromotion((Manager)frank);
 
-			Console.WriteLine($"Types: frank <{frank.GetType().Name}>, moon <{moon.GetType()}>, jill <{jill.GetType().Name}>");
+			object obj = new object();
+			try
+			{
+				GivePromotion((Manager)obj);
+			}
+			catch(Exception e)
+			{
+				Console.WriteLine($"Erorr for GiveGromotion(obj): {e.Message}");
+			}
+
+			Console.WriteLine($"Types: frank <{frank.GetType().Name}>, moon <{moon.GetType()}>, jill <{jill.GetType().Name}>, obj <{obj.GetType()}>");
 		}
 		
 		static void GivePromotion(Employee emp)
