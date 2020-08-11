@@ -9,7 +9,25 @@ namespace Employees
 			Console.WriteLine("***** The Employee Class Hierarchy *****");
 			Subclasses();
 			Containment();
+			Nesting();
 			Console.ResetColor();
+		}
+
+		static void Nesting()
+		{
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine("=> Nesting and nested");
+
+			Outer.PublicInner inner;
+			inner = new Outer.PublicInner();
+			double bene1 = inner.GetBenefit();
+			Console.WriteLine($"Benefit value: {bene1}");
+
+			Outer outer = new Outer();
+			Console.WriteLine($"Private value: {outer.PrivateValue()}");
+
+			Employee.BenefitNest.BenefitLevel bLevel = Employee.BenefitNest.BenefitLevel.Platinum;
+			Console.WriteLine($"Benefit level: {bLevel}");
 		}
 
 		static void Containment()
