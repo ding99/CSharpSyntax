@@ -11,7 +11,25 @@ namespace Employees
 			Containment();
 			Nesting();
 			Bonus();
+			Casting();
 			Console.ResetColor();
+		}
+
+		static void Casting()
+		{
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
+			Console.WriteLine("=> Casting Rules");
+
+			object frank = new Manager("Frank", 9, 3000, 40000, "111111111", 5);
+			Employee moon = new Manager("Moon", 2, 3001, 20000, "101111111", 10);
+			SalesPerson jill = new PTSalesPerson("Jill", 834, 3002, 100002,"102111111", 90);
+
+			GivePromotion(moon); GivePromotion(jill);
+		}
+		
+		static void GivePromotion(Employee emp)
+		{
+			Console.WriteLine($"{emp.Name} was promoted!");
 		}
 
 		static void Bonus()
