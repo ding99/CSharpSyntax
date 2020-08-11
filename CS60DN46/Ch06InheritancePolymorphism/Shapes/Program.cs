@@ -9,9 +9,29 @@ namespace Shapes
 			Console.WriteLine("***** Polymorphic Interface *****");
 			Abstract();
 			SubArray();
+			Shadowing();
+			Casting();
 			Console.ResetColor();
 		}
 
+		static void Casting()
+		{
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.WriteLine("=> Casting Rules");
+			ThreeDCircle threed = new ThreeDCircle();
+			Console.Write("Drawing via New Class: "); threed.Draw();
+			Console.Write("Drawing via Base Class: "); ((Circle)threed).Draw();
+		}
+
+		static void Shadowing()
+		{
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine("=> Shadowing");
+
+			ThreeDCircle threed = new ThreeDCircle();
+			threed.Draw();
+		}
+	
 		static void SubArray()
 		{
 			Console.ForegroundColor = ConsoleColor.Yellow;
