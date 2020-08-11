@@ -18,10 +18,8 @@ namespace Employees
 			Console.ForegroundColor = ConsoleColor.Cyan;
 			Console.WriteLine("=> Nesting and nested");
 
-			Outer.PublicInner inner;
-			inner = new Outer.PublicInner();
-			double bene1 = inner.GetBenefit();
-			Console.WriteLine($"Benefit value: {bene1}");
+			Outer.PublicInner inner = new Outer.PublicInner();
+			Console.WriteLine($"Benefit value: {inner.GetBenefit()}");
 
 			Outer outer = new Outer();
 			Console.WriteLine($"Private value: {outer.PrivateValue()}");

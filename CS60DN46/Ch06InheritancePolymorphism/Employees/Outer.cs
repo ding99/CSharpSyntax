@@ -6,23 +6,23 @@
 			public double GetBenefit() { return 50.0; }
 		}
 
-		private string GetPrivateString()
+		private class PrivateInner
 		{
-			return "Private string in Nesting";
-		}
-
-		private class PrivateInner {
-			public double InnerValue() {  return 35.0; }
+			public double InnerValue() { return 35.0; }
 			public string UpperString()
 			{
 				return new Outer().GetPrivateString();
 			}
 		}
 
+		private string GetPrivateString()
+		{
+			return "Private string in Nesting";
+		}
+
 		public double PrivateValue()
 		{
-			PrivateInner privateInner = new PrivateInner();
-			return privateInner.InnerValue();
+			return new PrivateInner().InnerValue();
 		}
 
 		public string PrivateString()
