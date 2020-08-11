@@ -25,6 +25,9 @@ namespace Employees
 			SalesPerson jill = new PTSalesPerson("Jill", 834, 3002, 100002,"102111111", 90);
 
 			GivePromotion(moon); GivePromotion(jill);
+			GivePromotion((Manager)frank);
+
+			Console.WriteLine($"Types: frank <{frank.GetType().Name}>, moon <{moon.GetType()}>, jill <{jill.GetType().Name}>");
 		}
 		
 		static void GivePromotion(Employee emp)
