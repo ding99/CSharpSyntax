@@ -12,7 +12,21 @@ namespace Employees
 			Nesting();
 			Bonus();
 			Casting();
+			AsKeyword();
 			Console.ResetColor();
+		}
+
+		static void AsKeyword()
+		{
+			Console.ForegroundColor = ConsoleColor.Red;
+			Console.WriteLine("=> as keyword");
+
+			object[] things = new object[4] { new Hexagon(), false, new Manager(), "Last thing" };
+			foreach (object item in things) {
+				Hexagon h = item as Hexagon;
+				if (h == null) Console.WriteLine("Item is not a hexagon");
+				else h.Draw();
+			}
 		}
 
 		static void Casting()
