@@ -2,7 +2,7 @@
 
 namespace Employees
 {
-	partial class Employee
+	abstract partial class Employee
 	{
 		protected string name;
 		protected int id;
