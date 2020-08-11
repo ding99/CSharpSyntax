@@ -10,15 +10,11 @@ namespace Employees
 			public double PayDeduction() { return 150.0; }
 		}
 
-		public void GiveBonus(float amount) { pay += amount; }
+		public virtual void GiveBonus(float amount) { pay += amount; }
 
-		public void Display()
+		public virtual void Display()
 		{
-			Console.WriteLine($"Name: {Name}");
-			Console.WriteLine($"ID: {ID}");
-			Console.WriteLine($"Age: {Age}");
-			Console.WriteLine($"Pay: {Pay}");
-			Console.WriteLine($"SSN: {SSN}");
+			Console.WriteLine($"Name: {Name}, ID: {ID}, Age: {Age}, Pay: {Pay}, SSN: {SSN}");
 		}
 
 		public double GetBenefitCost()
