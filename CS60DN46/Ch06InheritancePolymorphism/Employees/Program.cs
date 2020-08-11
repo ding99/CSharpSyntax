@@ -25,6 +25,7 @@ namespace Employees
 
 			Outer outer = new Outer();
 			Console.WriteLine($"Private value: {outer.PrivateValue()}");
+			Console.WriteLine($"Private string: <{outer.PrivateString()}>");
 
 			Employee.BenefitNest.BenefitLevel bLevel = Employee.BenefitNest.BenefitLevel.Platinum;
 			Console.WriteLine($"Benefit level: {bLevel}");
