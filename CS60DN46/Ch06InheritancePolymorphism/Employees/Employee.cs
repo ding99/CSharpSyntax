@@ -14,11 +14,7 @@ namespace Employees
 
 		public void Display()
 		{
-			Console.WriteLine($"Name: {Name}");
-			Console.WriteLine($"ID: {ID}");
-			Console.WriteLine($"Age: {Age}");
-			Console.WriteLine($"Pay: {Pay}");
-			Console.WriteLine($"SSN: {SSN}");
+			Console.WriteLine($"Name: {Name}, ID: {ID}, Age: {Age}, Pay: {Pay}, SSN: {SSN}");
 		}
 
 		public double GetBenefitCost()

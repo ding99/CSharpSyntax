@@ -10,7 +10,24 @@ namespace Employees
 			Subclasses();
 			Containment();
 			Nesting();
+			Bonus();
 			Console.ResetColor();
+		}
+
+		static void Bonus()
+		{
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.WriteLine("=> Bonus");
+
+			Manager chucky = new Manager("Chucky", 52, 92, 100002, "333221112", 9002);
+			chucky.Display();
+			chucky.GiveBonus(500);
+			chucky.Display();
+
+			SalesPerson fran = new SalesPerson("Fran", 43, 93, 5003, "933221111", 31);
+			fran.Display();
+			fran.GiveBonus(300);
+			fran.Display();
 		}
 
 		static void Nesting()
