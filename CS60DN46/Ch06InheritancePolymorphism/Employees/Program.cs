@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 
 namespace Employees
 {
@@ -11,7 +12,58 @@ namespace Employees
 			Containment();
 			Nesting();
 			Bonus();
+			Casting();
+			AsIsKeywords();
 			Console.ResetColor();
+		}
+
+		static void AsIsKeywords()
+		{
+			Console.ForegroundColor = ConsoleColor.Red;
+			Console.WriteLine("=> as keyword");
+
+			object[] things = new object[4] { new Hexagon(), false, new Manager(), "Last thing" };
+			foreach (object item in things) {
+				Console.Write("({0}Hexagon) ", item is Hexagon? "" : "Not ");
+				Hexagon h = item as Hexagon;
+				if (h == null) Console.WriteLine("Item is not a hexagon");
+				else h.Draw();
+			}
+		}
+
+		static void Casting()
+		{
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
+			Console.WriteLine("=> Casting Rules");
+
+			object frank = new Manager("Frank", 9, 3000, 40000, "111111111", 5);
+			Employee moon = new Manager("Moon", 2, 3001, 20000, "101111111", 10);
+			SalesPerson jill = new PTSalesPerson("Jill", 834, 3002, 100002,"102111111", 90);
+
+			GivePromotion(moon); GivePromotion(jill);
+			GivePromotion((Manager)frank);
+
+			object obj = new object();
+			try
+			{
+				GivePromotion((Manager)obj);
+			}
+			catch(Exception e)
+			{
+				Console.WriteLine($"Erorr for GiveGromotion(obj): {e.Message}");
+			}
+
+			Console.WriteLine($"Types: frank <{frank.GetType().Name}>, moon <{moon.GetType()}>, jill <{jill.GetType().Name}>, obj <{obj.GetType()}>");
+		}
+		
+		static void GivePromotion(Employee emp)
+		{
+			Console.Write($"{emp.Name} was promoted!");
+			if(emp is SalesPerson)
+				Console.Write($" {emp.Name} made {((SalesPerson)emp).SalesNumber} sale(s)!");
+			if (emp is Manager)
+				Console.Write($" {emp.Name} had {((Manager)emp).StockOptions} stock options...");
+			Console.WriteLine();
 		}
 
 		static void Bonus()
