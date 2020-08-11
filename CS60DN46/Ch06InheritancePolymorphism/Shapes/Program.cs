@@ -8,7 +8,17 @@ namespace Shapes
 		{
 			Console.WriteLine("***** Polymorphic Interface *****");
 			Abstract();
+			SubArray();
 			Console.ResetColor();
+		}
+
+		static void SubArray()
+		{
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("=> Array SubClass");
+
+			Shape[] shapes = { new Hexagon(), new Circle(), new Hexagon("Mick"), new Circle("Beth"), new Hexagon("Linda") };
+			foreach (Shape s in shapes) s.Draw();
 		}
 
 		static void Abstract()
