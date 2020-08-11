@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 
 namespace Employees
 {
@@ -12,17 +13,18 @@ namespace Employees
 			Nesting();
 			Bonus();
 			Casting();
-			AsKeyword();
+			AsIsKeywords();
 			Console.ResetColor();
 		}
 
-		static void AsKeyword()
+		static void AsIsKeywords()
 		{
 			Console.ForegroundColor = ConsoleColor.Red;
 			Console.WriteLine("=> as keyword");
 
 			object[] things = new object[4] { new Hexagon(), false, new Manager(), "Last thing" };
 			foreach (object item in things) {
+				Console.Write("({0}Hexagon) ", item is Hexagon? "" : "Not ");
 				Hexagon h = item as Hexagon;
 				if (h == null) Console.WriteLine("Item is not a hexagon");
 				else h.Draw();
@@ -56,7 +58,12 @@ namespace Employees
 		
 		static void GivePromotion(Employee emp)
 		{
-			Console.WriteLine($"{emp.Name} was promoted!");
+			Console.Write($"{emp.Name} was promoted!");
+			if(emp is SalesPerson)
+				Console.Write($" {emp.Name} made {((SalesPerson)emp).SalesNumber} sale(s)!");
+			if (emp is Manager)
+				Console.Write($" {emp.Name} had {((Manager)emp).StockOptions} stock options...");
+			Console.WriteLine();
 		}
 
 		static void Bonus()
