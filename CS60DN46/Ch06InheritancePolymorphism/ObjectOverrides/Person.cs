@@ -21,14 +21,16 @@
 
 		public override bool Equals(object obj)
 		{
-			if (obj is Person && obj != null)
-			{
-				Person temp = (Person)obj;
-				return temp.FirstName == this.FirstName
-					&& temp.LastName == this.LastName
-					&& temp.Age == this.Age;
-			}
-			return false;
+			//if (obj is Person && obj != null)
+			//{
+			//	Person temp = (Person)obj;
+			//	return temp.FirstName == this.FirstName
+			//		&& temp.LastName == this.LastName
+			//		&& temp.Age == this.Age;
+			//}
+			//return false;
+
+			return obj.ToString() == this.ToString();
 		}
 	}
 }
