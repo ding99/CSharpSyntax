@@ -16,8 +16,9 @@ namespace ObjectOverrides
 			Console.ForegroundColor = ConsoleColor.Green;
 			Console.WriteLine("=> Original Methods");
 
-			Person p1 = new Person();
+			Person p1 = new Person("David","Audru", 35);
 			Console.WriteLine($"ToString: {p1.ToString()}");
+			Console.WriteLine($"ToString: {p1}");
 			Console.WriteLine($"Hash Code: {p1.GetHashCode()}");
 			Console.WriteLine($"Type: {p1.GetType()}");
 
