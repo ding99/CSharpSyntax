@@ -4,12 +4,44 @@ namespace ObjectOverrides
 {
 	class Program
 	{
-		static void Main(string[] args)
+		static void Main()
 		{
 			Console.WriteLine("***** System.Object *****");
 			OrigMethods();
 			CheckHash();
+			ModifiedClass();
+			StaticObject();
 			Console.ResetColor();
+		}
+
+		static void StaticObject()
+		{
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.WriteLine("=> Static Members");
+			Person p3 = new Person("Sally", "Jones", 4);
+			Person p4 = new Person("Sally", "Jones", 4);
+			Console.WriteLine($"p3 and p4 have same state: {object.Equals(p3,p4)}");
+			Console.WriteLine($"p3 and p4 are pointing to same object: {object.ReferenceEquals(p3, p4)}");
+		}
+
+		static void ModifiedClass()
+		{
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine("=> Testing Modified Person Class");
+
+			Person p1 = new Person("Homer", "Simpson", 50);
+			Person p2 = new Person("Homer", "Simpson", 50);
+
+			Console.WriteLine($"ToString: {p1.ToString()} / {p2.ToString()}");
+			Console.WriteLine($"Equality: {p1.Equals(p2)}");
+			Console.WriteLine($"HashCode: {p1.GetHashCode()} / {p2.GetHashCode()}");
+			Console.WriteLine($"Same HashCode: {p1.GetHashCode() == p2.GetHashCode()}");
+
+			p2.Age = 45;
+			Console.WriteLine($"ToString: {p1.ToString()} / {p2.ToString()}");
+			Console.WriteLine($"Equality: {p1.Equals(p2)}");
+			Console.WriteLine($"HashCode: {p1.GetHashCode()} / {p2.GetHashCode()}");
+			Console.WriteLine($"Same HashCode: {p1.GetHashCode() == p2.GetHashCode()}");
 		}
 
 		static void CheckHash()

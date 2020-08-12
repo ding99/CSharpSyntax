@@ -32,5 +32,10 @@
 
 			return obj.ToString() == this.ToString();
 		}
+
+		public override int GetHashCode()
+		{
+			return ToString().GetHashCode();
+		}
 	}
 }
