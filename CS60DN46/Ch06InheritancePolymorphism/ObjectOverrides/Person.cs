@@ -1,0 +1,6 @@
+﻿namespace ObjectOverrides
+{
+	class Person
+	{
+	}
+}
