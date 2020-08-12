@@ -8,7 +8,16 @@ namespace ObjectOverrides
 		{
 			Console.WriteLine("***** System.Object *****");
 			OrigMethods();
+			CheckHash();
 			Console.ResetColor();
+		}
+
+		static void CheckHash()
+		{
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			string s1 = "Hello2", s2 = "Hello2";
+			Console.WriteLine($"HashCode: {s1.GetHashCode()}, {s2.GetHashCode()}");
+			Console.WriteLine($"Equality: {s2.Equals(s2)}");
 		}
 
 		static void OrigMethods()
