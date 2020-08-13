@@ -9,7 +9,16 @@ namespace SimpleException
 		{
 			Console.WriteLine("***** Simple Exception *****");
 			CreatingCar();
+			SystemException();
 			Console.ResetColor();
+		}
+
+		static void SystemException()
+		{
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("=> System Exception");
+			NullReferenceException e = new NullReferenceException();
+			Console.WriteLine($"NullReferenceException is-a SystemException: {e is SystemException}");
 		}
 
 		static void CreatingCar()
