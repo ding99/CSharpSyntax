@@ -30,7 +30,7 @@ namespace CustomException
 				{
 					CurrSpeed = 0;
 					carIsDead = true;
-					CarIsDeadException ex = new CarIsDeadException(string.Format($"{PetName} has overheated!"), "You have a lead foot", DateTime.Now);
+					CarIsDeadException1 ex = new CarIsDeadException1(string.Format($"{PetName} has overheated!"), "You have a lead foot", DateTime.Now);
 					ex.HelpLink = @"http://www.carsrus.com";
 					throw ex;
 				}

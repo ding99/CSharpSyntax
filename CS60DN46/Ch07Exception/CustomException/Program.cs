@@ -8,7 +8,26 @@ namespace CustomException
 		{
 			Console.WriteLine("***** Custom Exception *****");
 			Custom1();
+			Custom2();
 			Console.ResetColor();
+		}
+
+		static void Custom2()
+		{
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("=> Custom Exception Take 2");
+
+			Car car = new Car("Rushy", 90);
+			try
+			{
+				car.Accelerate(50);
+			}
+			catch (CarIsDeadException1 e)
+			{
+				Console.WriteLine(e.Message);
+				Console.WriteLine(e.ErrorTimeStamp);
+				Console.WriteLine(e.CauseOfError);
+			}
 		}
 
 		static void Custom1()
@@ -21,7 +40,7 @@ namespace CustomException
 			{
 				car.Accelerate(50);
 			}
-			catch(CarIsDeadException e)
+			catch(CarIsDeadException1 e)
 			{
 				Console.WriteLine(e.Message);
 				Console.WriteLine(e.ErrorTimeStamp);
