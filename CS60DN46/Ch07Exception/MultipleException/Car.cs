@@ -19,8 +19,11 @@ namespace MultipleException
 			theMusicBox.TrunOn(state);
 		}
 
-		public void Accelerate2(int delta)
+		public void Accelerate(int delta)
 		{
+			if (delta < 0)
+				throw new ArgumentOutOfRangeException("delta", "Speed must be greater than zero!");
+
 			if (carIsDead)
 				Console.WriteLine($"{PetName} is out of order...");
 			else
@@ -30,7 +33,7 @@ namespace MultipleException
 				{
 					CurrSpeed = 0;
 					carIsDead = true;
-					CarIsDeadException2 ex = new CarIsDeadException2(string.Format($"{PetName} has overheated!"), "You have a lead foot", DateTime.Now);
+					CarIsDeadException ex = new CarIsDeadException(string.Format($"{PetName} has overheated!"));
 					ex.HelpLink = @"http://www.carsrus.com";
 					throw ex;
 				}
