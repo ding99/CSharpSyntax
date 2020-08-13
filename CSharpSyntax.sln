@@ -210,6 +210,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleException", "CS60DN46
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomException", "CS60DN46\Ch07Exception\CustomException\CustomException.csproj", "{393A868E-25B9-4DB8-8370-23A27D636225}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleException", "CS60DN46\Ch07Exception\MultipleException\MultipleException.csproj", "{27E56B3C-A9D3-4FC6-8D0A-06E8E7E1BF70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1382,6 +1384,22 @@ Global
 		{393A868E-25B9-4DB8-8370-23A27D636225}.Release|x64.Build.0 = Release|Any CPU
 		{393A868E-25B9-4DB8-8370-23A27D636225}.Release|x86.ActiveCfg = Release|Any CPU
 		{393A868E-25B9-4DB8-8370-23A27D636225}.Release|x86.Build.0 = Release|Any CPU
+		{27E56B3C-A9D3-4FC6-8D0A-06E8E7E1BF70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27E56B3C-A9D3-4FC6-8D0A-06E8E7E1BF70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27E56B3C-A9D3-4FC6-8D0A-06E8E7E1BF70}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{27E56B3C-A9D3-4FC6-8D0A-06E8E7E1BF70}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{27E56B3C-A9D3-4FC6-8D0A-06E8E7E1BF70}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{27E56B3C-A9D3-4FC6-8D0A-06E8E7E1BF70}.Debug|x64.Build.0 = Debug|Any CPU
+		{27E56B3C-A9D3-4FC6-8D0A-06E8E7E1BF70}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{27E56B3C-A9D3-4FC6-8D0A-06E8E7E1BF70}.Debug|x86.Build.0 = Debug|Any CPU
+		{27E56B3C-A9D3-4FC6-8D0A-06E8E7E1BF70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27E56B3C-A9D3-4FC6-8D0A-06E8E7E1BF70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27E56B3C-A9D3-4FC6-8D0A-06E8E7E1BF70}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{27E56B3C-A9D3-4FC6-8D0A-06E8E7E1BF70}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{27E56B3C-A9D3-4FC6-8D0A-06E8E7E1BF70}.Release|x64.ActiveCfg = Release|Any CPU
+		{27E56B3C-A9D3-4FC6-8D0A-06E8E7E1BF70}.Release|x64.Build.0 = Release|Any CPU
+		{27E56B3C-A9D3-4FC6-8D0A-06E8E7E1BF70}.Release|x86.ActiveCfg = Release|Any CPU
+		{27E56B3C-A9D3-4FC6-8D0A-06E8E7E1BF70}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1474,6 +1492,7 @@ Global
 		{18ED757A-5354-431A-99F3-2C5A1A5073EC} = {B599F668-236A-4D7A-A51B-F383D94A5154}
 		{0CFBF4F8-65EA-4C92-835B-C84DB4B3BA7F} = {18ED757A-5354-431A-99F3-2C5A1A5073EC}
 		{393A868E-25B9-4DB8-8370-23A27D636225} = {18ED757A-5354-431A-99F3-2C5A1A5073EC}
+		{27E56B3C-A9D3-4FC6-8D0A-06E8E7E1BF70} = {18ED757A-5354-431A-99F3-2C5A1A5073EC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7C00B1AC-1A8A-4B50-9373-585713E1AED0}
