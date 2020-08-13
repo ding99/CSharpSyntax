@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SimpleException
 {
@@ -36,6 +32,8 @@ namespace SimpleException
 					carIsDead = true;
 					Exception ex = new Exception(string.Format($"{PetName} has overheated!"));
 					ex.HelpLink = @"http://www.cars.com";
+					ex.Data.Add("TimeStamp", string.Format($"The car exploded at {DateTime.Now}"));
+					ex.Data.Add("Cause", "You have a lead foot.");
 					throw ex;
 				}
 				else

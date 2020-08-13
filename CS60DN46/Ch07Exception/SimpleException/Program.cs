@@ -30,13 +30,17 @@ namespace SimpleException
 				Console.WriteLine($"Method: {e.TargetSite}");
 				Console.WriteLine($"Message: {e.Message}");
 				Console.WriteLine($"Source: {e.Source}");
-				Console.WriteLine($"Data: <{e.Data.Count}>; Keys: <{e.Data.Keys.Count}>");
 				Console.WriteLine($"StackTrace: <{e.StackTrace}>");
 				Console.WriteLine($"HelpLink: <{e.HelpLink}>");
-				Console.WriteLine($"-> Member name: {e.TargetSite}");
+				Console.WriteLine($"-- TargetSite");
+				Console.WriteLine($"Member name: {e.TargetSite}");
 				Console.WriteLine($"Member type: {e.TargetSite.MemberType}");
 				Console.WriteLine($"Reflected type: {e.TargetSite.ReflectedType}");
 				Console.WriteLine($"Class defining member: {e.TargetSite.DeclaringType}");
+				Console.WriteLine("-- Data");
+				Console.WriteLine($"Data: <{e.Data.Count}>; Keys: <{e.Data.Keys.Count}>");
+				foreach(DictionaryEntry d in e.Data)
+					Console.WriteLine($"  {d.Key} : {d.Value}");
 			}
 
 			Console.WriteLine("----- Out of exception logic -----");
