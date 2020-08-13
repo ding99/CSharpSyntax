@@ -58,5 +58,25 @@ namespace CustomException
 					Console.WriteLine($"=> CurrentSpeed = {CurrSpeed}");
 			}
 		}
+
+		public void AccelerateBest(int delta)
+		{
+			if (carIsDead)
+				Console.WriteLine($"{PetName} is out of order...");
+			else
+			{
+				CurrSpeed += delta;
+				if (CurrSpeed >= MaxSpeed)
+				{
+					CurrSpeed = 0;
+					carIsDead = true;
+					CarIsDeadExceptionBest ex = new CarIsDeadExceptionBest(string.Format($"{PetName} has overheated!"));
+					ex.HelpLink = @"http://www.carsrus.com";
+					throw ex;
+				}
+				else
+					Console.WriteLine($"=> CurrentSpeed = {CurrSpeed}");
+			}
+		}
 	}
 }

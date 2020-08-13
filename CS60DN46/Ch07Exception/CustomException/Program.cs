@@ -9,7 +9,24 @@ namespace CustomException
 			Console.WriteLine("***** Custom Exception *****");
 			Custom1();
 			Custom2();
+			CustomBest();
 			Console.ResetColor();
+		}
+
+		static void CustomBest()
+		{
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine("=> Custom Exception Take 3, Best");
+
+			Car car = new Car("Rushy", 90);
+			try
+			{
+				car.AccelerateBest(50);
+			}
+			catch (CarIsDeadExceptionBest e)
+			{
+				Console.WriteLine(e.Message);
+			}
 		}
 
 		static void Custom2()
