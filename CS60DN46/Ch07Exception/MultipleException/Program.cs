@@ -9,7 +9,42 @@ namespace MultipleException
 			Console.WriteLine("***** Handling Multiple Exceptions *****");
 			Multi();
 			General();
+			ReThrow();
 			Console.ResetColor();
+		}
+
+		static void ReThrow()
+		{
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine("=> ReThrow Exception");
+
+			try
+			{
+				FirstThrow();
+			}
+			catch (ArgumentOutOfRangeException e)
+			{
+				Console.WriteLine($"Argument Out Of Range Exception: {e.Message}");
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine($"Exception(Re): {e.Message}");
+				throw;
+			}
+		}
+
+		static void FirstThrow()
+		{
+			Car car = new Car("Rushy", 70);
+			try
+			{
+				car.Accelerate(-20);
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine($"Exception: {e.Message}");
+				throw;
+			}
 		}
 
 		static void General()
