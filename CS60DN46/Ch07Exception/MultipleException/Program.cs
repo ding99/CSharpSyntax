@@ -68,6 +68,8 @@ namespace MultipleException
 			Console.WriteLine("=> Multiple Exception");
 
 			Car car = new Car("Rushy", 90);
+			car.CrankTunes(true);
+
 			try
 			{
 				car.Accelerate(-10);
@@ -83,6 +85,10 @@ namespace MultipleException
 			catch (Exception e)
 			{
 				Console.WriteLine($"Exception: {e.Message}");
+			}
+			finally
+			{
+				car.
 			}
 		}
 	}
