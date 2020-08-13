@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections;
 
 namespace SimpleException
 {
 	class Program
 	{
-		static void Main(string[] args)
+		static void Main()
 		{
 			Console.WriteLine("***** Simple Exception *****");
 			CreatingCar();
@@ -18,8 +19,21 @@ namespace SimpleException
 			Car car = new Car("Zippy", 20);
 			car.CrankTunes(true);
 
-			for (int i = 0; i < 10; i++)
-				car.Accelerate(10);
+			try
+			{
+				for (int i = 0; i < 10; i++)
+					car.Accelerate(10);
+			}
+			catch(Exception e)
+			{
+				Console.WriteLine("--- Error! ---");
+				Console.WriteLine($"Method: {e.TargetSite}");
+				Console.WriteLine($"Message: {e.Message}");
+				Console.WriteLine($"Source: {e.Source}");
+				Console.WriteLine($"Data: <{e.Data.Count}>; Keys: <{e.Data.Keys.Count}>");
+			}
+
+			Console.WriteLine("----- Out of exception logic -----");
 		}
 	}
 }

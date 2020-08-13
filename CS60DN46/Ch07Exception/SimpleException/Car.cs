@@ -30,11 +30,11 @@ namespace SimpleException
 			else
 			{
 				CurrSpeed += delta;
-				if(CurrSpeed > MaxSpeed)
+				if(CurrSpeed >= MaxSpeed)
 				{
-					Console.WriteLine($"{PetName} has overheated!");
 					CurrSpeed = 0;
 					carIsDead = true;
+					throw new Exception(string.Format($"{PetName} has overheated!"));
 				}
 				else
 					Console.WriteLine($"=> CurrentSpeed = {CurrSpeed}");
