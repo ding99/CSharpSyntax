@@ -31,8 +31,11 @@ namespace SimpleException
 				Console.WriteLine($"Message: {e.Message}");
 				Console.WriteLine($"Source: {e.Source}");
 				Console.WriteLine($"Data: <{e.Data.Count}>; Keys: <{e.Data.Keys.Count}>");
-				Console.WriteLine($"Member name: {e.TargetSite}");
+				Console.WriteLine($"StackTrace: <{e.StackTrace}>");
+				Console.WriteLine($"HelpLink: <{e.HelpLink}>");
+				Console.WriteLine($"-> Member name: {e.TargetSite}");
 				Console.WriteLine($"Member type: {e.TargetSite.MemberType}");
+				Console.WriteLine($"Reflected type: {e.TargetSite.ReflectedType}");
 				Console.WriteLine($"Class defining member: {e.TargetSite.DeclaringType}");
 			}
 

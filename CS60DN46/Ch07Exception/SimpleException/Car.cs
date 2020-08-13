@@ -34,7 +34,9 @@ namespace SimpleException
 				{
 					CurrSpeed = 0;
 					carIsDead = true;
-					throw new Exception(string.Format($"{PetName} has overheated!"));
+					Exception ex = new Exception(string.Format($"{PetName} has overheated!"));
+					ex.HelpLink = @"http://www.cars.com";
+					throw ex;
 				}
 				else
 					Console.WriteLine($"=> CurrentSpeed = {CurrSpeed}");
