@@ -31,6 +31,9 @@ namespace SimpleException
 				Console.WriteLine($"Message: {e.Message}");
 				Console.WriteLine($"Source: {e.Source}");
 				Console.WriteLine($"Data: <{e.Data.Count}>; Keys: <{e.Data.Keys.Count}>");
+				Console.WriteLine($"Member name: {e.TargetSite}");
+				Console.WriteLine($"Member type: {e.TargetSite.MemberType}");
+				Console.WriteLine($"Class defining member: {e.TargetSite.DeclaringType}");
 			}
 
 			Console.WriteLine("----- Out of exception logic -----");
