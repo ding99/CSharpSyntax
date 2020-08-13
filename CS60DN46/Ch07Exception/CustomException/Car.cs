@@ -19,7 +19,7 @@ namespace CustomException
 			theMusicBox.TrunOn(state);
 		}
 
-		public void Accelerate(int delta)
+		public void Accelerate1(int delta)
 		{
 			if(carIsDead)
 				Console.WriteLine($"{PetName} is out of order...");
@@ -31,6 +31,26 @@ namespace CustomException
 					CurrSpeed = 0;
 					carIsDead = true;
 					CarIsDeadException1 ex = new CarIsDeadException1(string.Format($"{PetName} has overheated!"), "You have a lead foot", DateTime.Now);
+					ex.HelpLink = @"http://www.carsrus.com";
+					throw ex;
+				}
+				else
+					Console.WriteLine($"=> CurrentSpeed = {CurrSpeed}");
+			}
+		}
+
+		public void Accelerate2(int delta)
+		{
+			if (carIsDead)
+				Console.WriteLine($"{PetName} is out of order...");
+			else
+			{
+				CurrSpeed += delta;
+				if (CurrSpeed >= MaxSpeed)
+				{
+					CurrSpeed = 0;
+					carIsDead = true;
+					CarIsDeadException2 ex = new CarIsDeadException2(string.Format($"{PetName} has overheated!"), "You have a lead foot", DateTime.Now);
 					ex.HelpLink = @"http://www.carsrus.com";
 					throw ex;
 				}

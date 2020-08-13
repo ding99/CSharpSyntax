@@ -20,9 +20,9 @@ namespace CustomException
 			Car car = new Car("Rushy", 90);
 			try
 			{
-				car.Accelerate(50);
+				car.Accelerate2(50);
 			}
-			catch (CarIsDeadException1 e)
+			catch (CarIsDeadException2 e)
 			{
 				Console.WriteLine(e.Message);
 				Console.WriteLine(e.ErrorTimeStamp);
@@ -38,7 +38,7 @@ namespace CustomException
 			Car car = new Car("Rusty", 90);
 			try
 			{
-				car.Accelerate(50);
+				car.Accelerate1(50);
 			}
 			catch(CarIsDeadException1 e)
 			{
