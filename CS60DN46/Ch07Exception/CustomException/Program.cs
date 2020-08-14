@@ -8,7 +8,7 @@ namespace CustomException
 		{
 			Console.WriteLine("***** Custom Exception *****");
 			Custom1();
-			Custom2();
+			Custom2When();
 			CustomBest();
 			Console.ResetColor();
 		}
@@ -29,7 +29,7 @@ namespace CustomException
 			}
 		}
 
-		static void Custom2()
+		static void Custom2When()
 		{
 			Console.ForegroundColor = ConsoleColor.Yellow;
 			Console.WriteLine("=> Custom Exception Take 2");
@@ -39,11 +39,15 @@ namespace CustomException
 			{
 				car.Accelerate2(50);
 			}
-			catch (CarIsDeadException2 e)
+			catch (CarIsDeadException2 e) when (e.ErrorTimeStamp.DayOfWeek == DayOfWeek.Friday)
 			{
-				Console.WriteLine(e.Message);
+				Console.WriteLine($"CarIsDead Exceptiong: {e.Message}");
 				Console.WriteLine(e.ErrorTimeStamp);
 				Console.WriteLine(e.CauseOfError);
+			}
+			catch(Exception e)
+			{
+				Console.WriteLine($"Exception: {e.Message}");
 			}
 		}
 
