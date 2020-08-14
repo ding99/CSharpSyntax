@@ -11,7 +11,28 @@ namespace CustomInterface
 			DetermineInterface();
 			ByAs();
 			ByIs();
+			ReturnInterface();
 			Console.ResetColor();
+		}
+
+		static void ReturnInterface()
+		{
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
+			Console.WriteLine("=> Interface as Return Values");
+
+			Shape[] shapes = { new Hexagon(), new Circle(), new Triangle("Joe"), new Circle("JoJo") };
+			IPointy first = FindFirstPointyShape(shapes);
+			if (first == null)
+				Console.WriteLine("Not found Pointy shape");
+			else
+				Console.WriteLine($"The item {first.GetType().Name} has {first.Points} points");
+		}
+		static IPointy FindFirstPointyShape(Shape[] shapes)
+		{
+			foreach (Shape s in shapes)
+				if (s is IPointy)
+					return s as IPointy;
+			return null;
 		}
 
 		static void ByIs()
