@@ -12,7 +12,18 @@ namespace CustomInterface
 			ByAs();
 			ByIs();
 			ReturnInterface();
+			InterfaceArray();
 			Console.ResetColor();
+		}
+
+		static void InterfaceArray()
+		{
+			Console.ForegroundColor = ConsoleColor.Green;
+			Console.WriteLine("=> Array of Interface Types");
+
+			IPointy[] entities = { new Hexagon(), new Knife(), new Triangle(), new Fork(), new PitchFork() };
+			foreach(IPointy p in entities)
+				Console.WriteLine($"   Object has {p.Points} points.");
 		}
 
 		static void ReturnInterface()
