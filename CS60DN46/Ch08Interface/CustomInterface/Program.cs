@@ -26,7 +26,14 @@ namespace CustomInterface
 				if(shapes[i] is IPointy)
 					Console.WriteLine($"-> Points: {((IPointy)shapes[i]).Points}");
 				else Console.WriteLine($"-> {shapes[i].PetName}\'s not pointy!");
+				if (shapes[i] is IDraw3D)
+					DrawIn3D((IDraw3D)shapes[i]);
 			}
+		}
+		static void DrawIn3D(IDraw3D i3d)
+		{
+			Console.WriteLine($"-> Drawing IDraw3D compatible type {i3d.GetType().Name}");
+			i3d.Draw3D();
 		}
 
 		static void ByAs()

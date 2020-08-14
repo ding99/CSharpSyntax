@@ -6,8 +6,4 @@
 		public Shape(string name = "Noname") { PetName = name; }
 		public abstract void Draw();
 	}
-
-	public class Class1
-	{
-	}
 }
