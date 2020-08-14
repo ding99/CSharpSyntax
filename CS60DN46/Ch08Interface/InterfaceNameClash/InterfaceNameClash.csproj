@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1A46CE8B-2798-4568-B0AE-AC6B3F97DF37}</ProjectGuid>
+    <ProjectGuid>{8C18C296-23EF-488C-B884-0B1DEC809B03}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CustomInterface</RootNamespace>
-    <AssemblyName>CustomInterface</AssemblyName>
+    <RootNamespace>InterfaceNameClash</RootNamespace>
+    <AssemblyName>InterfaceNameClash</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,18 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Circle.cs" />
-    <Compile Include="Fork.cs" />
-    <Compile Include="Hexagon.cs" />
-    <Compile Include="IDraw3D.cs" />
-    <Compile Include="IPointy.cs" />
-    <Compile Include="Knife.cs" />
-    <Compile Include="PitchFork.cs" />
+    <Compile Include="IDrawToForm.cs" />
+    <Compile Include="IDrawToMemory.cs" />
+    <Compile Include="IDrawToPrinter.cs" />
+    <Compile Include="Octagon.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Shape.cs" />
-    <Compile Include="ThreeDCircle.cs" />
-    <Compile Include="Triangle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

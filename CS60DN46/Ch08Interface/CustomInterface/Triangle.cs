@@ -8,7 +8,7 @@ namespace CustomInterface
 		public Triangle(string name) : base(name) { }
 		public override void Draw()
 		{
-			Console.WriteLine($"Drawing {PetName} the Triangle");
+			Console.WriteLine($"-- Drawing {PetName} the Triangle");
 		}
 
 		public byte Points { get { return 3; } }
