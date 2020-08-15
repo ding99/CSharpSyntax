@@ -19,6 +19,7 @@ namespace CustomEnumeratorWithYield
 				yield return c;
 		}
 
+		/* When building a named iterator, be aware that the method will return the IEnumerable interface, rather than the expected IEnumerator-compatible type. */
 		public IEnumerable GetTheCars(bool ReturnRevesed)
 		{
 			if (ReturnRevesed)
