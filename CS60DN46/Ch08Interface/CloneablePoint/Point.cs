@@ -22,7 +22,11 @@ namespace CloneablePoint
 
 		public object Clone()
 		{
-			return this.MemberwiseClone();
+			Point newPoint = (Point)MemberwiseClone();
+			PointDescription newDesc = new PointDescription();
+			newDesc.PetName = desc.PetName;
+			newPoint.desc = newDesc;
+			return newPoint;
 		}
 	}
 }
