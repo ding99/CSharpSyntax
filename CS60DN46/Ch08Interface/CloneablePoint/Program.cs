@@ -9,19 +9,26 @@ namespace CloneablePoint
 			Console.WriteLine("***** Object Cloning *****");
 			Referencs();
 			Cloning();
+			Deeping();
 			Console.ResetColor();
 		}
 
-		static void Referencs()
+		static void Deeping()
 		{
-			Console.ForegroundColor = ConsoleColor.Green;
-			Console.WriteLine("=> reference value assignment");
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine("=> Regarding internal reference value");
 
-			Point p1 = new Point(50, 50);
-			Point p2 = p1;
-			p2.X = 20;
-			Console.WriteLine($"P1: {p1}");
-			Console.WriteLine($"P2: {p2}");
+			Point p5 = new Point(100, 100, "Jane");
+			Point p6 = (Point)p5.Clone();
+			Console.WriteLine($"Before modification:");
+			Console.WriteLine($"  p5 {p5}");
+			Console.WriteLine($"  p6 {p6}");
+
+			p6.desc.PetName = "New Point"; p6.X = 9;
+			Console.WriteLine($"(Changed p6.desc.petName and p6.X)");
+			Console.WriteLine($"After midification:");
+			Console.WriteLine($"  p5 {p5}");
+			Console.WriteLine($"  p6 {p6}");
 		}
 
 		static void Cloning()
@@ -42,6 +49,18 @@ namespace CloneablePoint
 			p4_2.X = 60;
 			Console.WriteLine($"P3_2: {p3_2}");
 			Console.WriteLine($"P4_2: {p4_2}");
+		}
+
+		static void Referencs()
+		{
+			Console.ForegroundColor = ConsoleColor.Green;
+			Console.WriteLine("=> reference value assignment");
+
+			Point p1 = new Point(50, 50);
+			Point p2 = p1;
+			p2.X = 20;
+			Console.WriteLine($"P1: {p1}");
+			Console.WriteLine($"P2: {p2}");
 		}
 	}
 }

@@ -2,7 +2,7 @@
 
 namespace CloneablePoint
 {
-	class Point2 : ICloneable
+	public class Point2 : ICloneable
 	{
 		public int X { get; set; }
 		public int Y { get; set; }
@@ -17,7 +17,7 @@ namespace CloneablePoint
 
 		public object Clone()
 		{
-			return this.MemberwiseClone();
+			return new Point2(X, Y);
 		}
 	}
 }
