@@ -1,9 +1,13 @@
 ﻿using System;
+using System.Collections;
 
 namespace ComparableCar
 {
 	public class Car : IComparable
 	{
+		//Property to return the PetNameComparer.
+		public static IComparer SortByPetName { get { return (IComparer)new PetNameComparer(); } }
+
 		public int CarID { get; set; }
 		public const int MaxSpeed = 100;
 		public int CurrSpeed { get; set; } = 0;
