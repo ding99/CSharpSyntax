@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace CustomEnumerator
 {
@@ -19,6 +20,15 @@ namespace CustomEnumerator
 			Garage carLot = new Garage();
 			foreach(Car c in carLot)
 				Console.WriteLine($"{c.PetName} is going {c.CurrSpeed} MPH");
+
+			Console.ForegroundColor = ConsoleColor.DarkGreen;
+			Console.WriteLine("-> use custom enumerator manually");
+			IEnumerator enumerator = carLot.GetEnumerator();
+			while (enumerator.MoveNext())
+			{
+				Car car = (Car)enumerator.Current;
+				Console.WriteLine($"{car.PetName} is going {car.CurrSpeed} MPH (M)");
+			}
 		}
 	}
 }
