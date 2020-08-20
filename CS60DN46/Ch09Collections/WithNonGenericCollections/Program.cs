@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Runtime.CompilerServices;
 
 namespace WithNonGenericCollections
 {
@@ -19,29 +18,25 @@ namespace WithNonGenericCollections
 			Console.ForegroundColor = ConsoleColor.Yellow;
 			Console.WriteLine("=> Simple Box Unbox Operation");
 
-			int myInt = 25;
+			int myInt = 25, unboxedInt = 0;
+			long myLong = 35, unboxedLong1 = 0, unboxedLong2 = 0;
 			//Box the int into an object reference
 			object boxedInt = myInt;
-			//Unbox the reference back into a corresponding int.
-			int unboxedInt = (int)boxedInt;
-
-			long myLong = 35;
 			object boxedLong = myLong;
 
-			long unboxedLong1 = 0, unboxedLong2 = 0;
-			try
-			{
-				if (boxedInt.GetType() == typeof(long))
-					unboxedLong1 = (long)boxedInt;
-				if (boxedLong.GetType() == typeof(long))
-					unboxedLong2 = (long)boxedLong;
-			}
-			catch (InvalidCastException e)
-			{
-				Console.WriteLine($"Invalid Cast exception: {e.Message}");
-			}
+			Console.WriteLine("-> Before Unboxing");
+			Console.WriteLine($"unboxedInt: {unboxedInt}; unboxedLong1: {unboxedLong1}; unboxedLong2: {unboxedLong2}");
 
-			Console.WriteLine($"unboxedLong1: {unboxedLong1}; unboxedLong2: {unboxedLong2}");
+			//Unbox the reference back into a corresponding int.
+			unboxedInt = (int)boxedInt;
+			if (boxedInt.GetType() == typeof(long))
+				unboxedLong1 = (long)boxedInt;
+			if (boxedLong.GetType() == typeof(long))
+				unboxedLong2 = (long)boxedLong;
+			//avoid InvalidCastException
+
+			Console.WriteLine("-> After Unboxing");
+			Console.WriteLine($"unboxedInt: {unboxedInt}; unboxedLong1: {unboxedLong1}; unboxedLong2: {unboxedLong2}");
 		}
 
 		static void ArrayList()
