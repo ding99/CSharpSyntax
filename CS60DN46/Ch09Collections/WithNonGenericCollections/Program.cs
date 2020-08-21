@@ -10,7 +10,27 @@ namespace WithNonGenericCollections
 			Console.WriteLine("***** Non-Generic Collection *****");
 			ArrayList();
 			BoxUnbox();
+			WorkWithArrayList();
 			Console.ResetColor();
+		}
+
+		static void WorkWithArrayList()
+		{
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine("unbox to int");
+
+			ArrayList ints = new ArrayList();
+			ints.Add(10);
+			ints.Add(20);
+			ints.Add(35);
+
+			foreach (int a in ints)
+				Console.Write($" {a}");
+			Console.WriteLine();
+
+			int i = (int)ints[0]; // need to unbox
+			Console.WriteLine($"unboxed i {i}");
+
 		}
 
 		static void BoxUnbox()
