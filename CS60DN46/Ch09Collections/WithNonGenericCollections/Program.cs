@@ -11,13 +11,30 @@ namespace WithNonGenericCollections
 			ArrayList();
 			BoxUnbox();
 			WorkWithArrayList();
+			CustomCollection();
 			Console.ResetColor();
+		}
+
+		static void CustomCollection()
+		{
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.WriteLine("=> Custom People Collection");
+
+			PersonCollection coll = new PersonCollection();
+			coll.AddPerson(new Person("Homer", "Simpson", 40));
+			coll.AddPerson(new Person("Marge", "Simpson", 38));
+			coll.AddPerson(new Person("Lisa", "Simpson", 9));
+			coll.AddPerson(new Person("Bart", "Simpson", 7));
+			coll.AddPerson(new Person("Maggie", "Simpson", 2));
+
+			foreach(Person p in coll)
+				Console.WriteLine(p);
 		}
 
 		static void WorkWithArrayList()
 		{
 			Console.ForegroundColor = ConsoleColor.Cyan;
-			Console.WriteLine("unbox to int");
+			Console.WriteLine("=> unbox to int");
 
 			ArrayList ints = new ArrayList();
 			ints.Add(10);
