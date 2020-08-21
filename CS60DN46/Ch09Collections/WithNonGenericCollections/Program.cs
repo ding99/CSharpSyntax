@@ -29,6 +29,9 @@ namespace WithNonGenericCollections
 
 			foreach(Person p in coll)
 				Console.WriteLine(p);
+
+			Person sel = coll.GetPerson(2);
+			Console.WriteLine($"Second Person {{sel}}");
 		}
 
 		static void WorkWithArrayList()
