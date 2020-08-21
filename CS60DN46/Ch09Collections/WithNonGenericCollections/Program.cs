@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace WithNonGenericCollections
 {
@@ -12,7 +13,24 @@ namespace WithNonGenericCollections
 			BoxUnbox();
 			WorkWithArrayList();
 			CustomCollection();
+			UseGenericList();
 			Console.ResetColor();
+		}
+
+		static void UseGenericList()
+		{
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
+			Console.WriteLine("=> Generic LIst");
+
+			List<Person> morePeople = new List<Person>();
+			morePeople.Add(new Person("Frank", "Black", 50));
+			Console.WriteLine($"The first item: <{morePeople[0]}>");
+
+			List<int> moreInts = new List<int>();
+			moreInts.Add(10);
+			moreInts.Add(2);
+			int sum = moreInts[0] + moreInts[1];
+			Console.WriteLine($"Sum: {sum}");
 		}
 
 		static void CustomCollection()
@@ -29,6 +47,9 @@ namespace WithNonGenericCollections
 
 			foreach(Person p in coll)
 				Console.WriteLine(p);
+
+			Person sel = coll.GetPerson(2);
+			Console.WriteLine($"Second Person <{sel}>");
 		}
 
 		static void WorkWithArrayList()
