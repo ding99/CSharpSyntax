@@ -14,7 +14,34 @@ namespace WithNonGenericCollections
 			WorkWithArrayList();
 			CustomCollection();
 			UseGenericList();
+			GenericMember();
 			Console.ResetColor();
+		}
+
+		static void GenericMember()
+		{
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("=> Generic method in nongeneric class");
+
+			Console.WriteLine("-> use nongeneric static Sort()");
+			int[] ints1 = { 10, 4, 2, 33, 93 };
+			foreach (int i in ints1)
+				Console.Write($" {i}");
+			Console.WriteLine();
+			Array.Sort(ints1);
+			foreach(int i in ints1)
+				Console.Write($" {i}");
+			Console.WriteLine();
+
+			Console.WriteLine("-> use generic counterpart Sort()");
+			int[] ints2 = { 10, 4, 2, 33, 93 };
+			foreach (int i in ints2)
+				Console.Write($" {i}");
+			Console.WriteLine();
+			Array.Sort<int> (ints2);
+			foreach (int i in ints2)
+				Console.Write($" {i}");
+			Console.WriteLine();
 		}
 
 		static void UseGenericList()
