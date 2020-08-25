@@ -23,6 +23,9 @@ namespace cGeneric {
 
 
         public void testdele() {
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("=> Practice Generic Delegate");
+
             NumberChanger<int> nc1 = new NumberChanger<int>(AddNum);
             NumberChanger<int> nc2 = new NumberChanger<int>(MultNum);
 

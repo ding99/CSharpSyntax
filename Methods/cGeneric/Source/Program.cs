@@ -2,7 +2,7 @@
 
 namespace cGeneric {
     class Program {
-        static void Main(string[] args) {
+        static void Main() {
             Console.WriteLine("== Start");
 
 			CheckBase gene = new CheckBase();
@@ -14,6 +14,7 @@ namespace cGeneric {
 			CheckDele dele = new CheckDele();
             dele.testdele();
 
+            Console.ResetColor();
             Console.WriteLine("== End");
         }
     }

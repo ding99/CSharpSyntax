@@ -32,9 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Source\delegate.cs" />
-    <Compile Include="Source\base.cs" />
-    <Compile Include="Source\swap.cs" />
+    <Compile Include="Source\Delegates.cs" />
+    <Compile Include="Source\Base.cs" />
+    <Compile Include="Source\SubClasses.cs" />
+    <Compile Include="Source\Swap.cs" />
     <Compile Include="Source\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
