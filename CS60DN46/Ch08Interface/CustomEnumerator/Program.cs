@@ -9,7 +9,18 @@ namespace CustomEnumerator
 		{
 			Console.WriteLine("***** IEnumerable and IEnumerator *****");
 			Enumerators();
+			Enumerators2();
 			Console.ResetColor();
+		}
+
+		static void Enumerators2()
+		{
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("=> custom enumerator 2");
+
+			Garage2 carLot = new Garage2();
+			foreach (Car c in carLot)
+				Console.WriteLine($"{c.PetName} is going {c.CurrSpeed} MPH");
 		}
 
 		static void Enumerators()
@@ -43,6 +54,11 @@ namespace CustomEnumerator
 		Clunker is going 55 MPH (M)
 		Zippy is going 30 MPH (M)
 		Fred is going 30 MPH (M)
+		=> custom enumerator 2
+		Rusty2 is going 30 MPH
+		Clunker2 is going 55 MPH
+		Zippy2 is going 30 MPH
+		Fred2 is going 30 MPH
 		**/
 	}
 }
