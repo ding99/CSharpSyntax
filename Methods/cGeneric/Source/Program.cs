@@ -1,4 +1,5 @@
-﻿using System;
+﻿using cGeneric.Source;
+using System;
 
 namespace cGeneric {
     class Program {
@@ -13,6 +14,8 @@ namespace cGeneric {
 
 			CheckDele dele = new CheckDele();
             dele.testdele();
+
+            new PracticeGeneric().Start();
 
             Console.ResetColor();
             Console.WriteLine("== End");
