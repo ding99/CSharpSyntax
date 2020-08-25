@@ -10,7 +10,37 @@ namespace WithGenericCollections
 			Console.WriteLine("***** Generic Collection *****");
 			GenericSorting();
 			InitList();
+			InitStack();
 			Console.ResetColor();
+		}
+
+		static void InitStack()
+		{
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine("=> Stack<T> initialization");
+
+			Stack<Person> people = new Stack<Person>();
+
+			people.Push(new Person { FirstName = "Homer", LastName = "Simpson", Age = 47 });
+			people.Push(new Person { FirstName = "Marge", LastName = "Simpson", Age = 45 });
+			people.Push(new Person { FirstName = "Lisa", LastName = "Simpson", Age = 9 });
+
+			Console.WriteLine($"First person: <{people.Peek()}>");
+			Console.WriteLine($"   Popped of: <{people.Pop()}>");
+			Console.WriteLine($"First person: <{people.Peek()}>");
+			Console.WriteLine($"   Popped of: <{people.Pop()}>");
+			Console.WriteLine($"First person: <{people.Peek()}>");
+			Console.WriteLine($"   Popped of: <{people.Pop()}>");
+
+			try
+			{
+				Console.WriteLine($"First person: <{people.Peek()}>");
+				Console.WriteLine($"   Popped of: <{people.Pop()}>");
+			}
+			catch (InvalidOperationException e)
+			{
+				Console.WriteLine($"Error! {e.Message}");
+			}
 		}
 
 		static void InitList()
@@ -34,7 +64,6 @@ namespace WithGenericCollections
 			Person[] arrayOfPeople = people.ToArray();
 			for(int i = 0; i < arrayOfPeople.Length; i++)
 				Console.WriteLine($"First Name <{arrayOfPeople[i].FirstName}>");
-
 		}
 
 		static void GenericSorting()
