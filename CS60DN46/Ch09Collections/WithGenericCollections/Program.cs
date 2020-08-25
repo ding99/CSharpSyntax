@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace WithGenericCollections
 {
@@ -8,7 +9,32 @@ namespace WithGenericCollections
 		{
 			Console.WriteLine("***** Generic Collection *****");
 			GenericSorting();
+			InitList();
 			Console.ResetColor();
+		}
+
+		static void InitList()
+		{
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("=> List<T> initialization");
+
+			List<Person> people = new List<Person>
+			{
+				new Person{FirstName = "Homer", LastName="Simpson", Age=47},
+				new Person{FirstName = "Marge", LastName="Simpson", Age=45},
+				new Person{FirstName = "Lisa", LastName="Simpson", Age=9},
+				new Person{FirstName = "Bart", LastName="Simpson", Age=8}
+			};
+
+			Console.WriteLine($"Items in list: {people.Count}");
+			Console.WriteLine("Inserting new person.");
+			people.Insert(2, new Person { FirstName = "Maggie", LastName = "Simpson", Age = 2 });
+			Console.WriteLine($"Items in list: {people.Count}");
+
+			Person[] arrayOfPeople = people.ToArray();
+			for(int i = 0; i < arrayOfPeople.Length; i++)
+				Console.WriteLine($"First Name <{arrayOfPeople[i].FirstName}>");
+
 		}
 
 		static void GenericSorting()
