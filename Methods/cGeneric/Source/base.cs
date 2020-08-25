@@ -21,8 +21,12 @@ namespace cGeneric {
         }
 
         public void testbase() {
+            Console.ForegroundColor = ConsoleColor.Green;
+			Console.WriteLine("=> Practice Generic Class");
             int n = 5;
+
             #region integer
+            Console.WriteLine("-> for int type");
             GenericArray<int> intArray = new GenericArray<int>(n);
             for(int i = 0; i < n; i++)
                 intArray.setItem(i, i * n);
@@ -32,6 +36,7 @@ namespace cGeneric {
             #endregion
 
             #region character
+            Console.WriteLine("-> for char type");
             GenericArray<char> charArray = new GenericArray<char>(n);
             for(int i = 0; i < n; i++)
                 charArray.setItem(i, (char)(i + 97));

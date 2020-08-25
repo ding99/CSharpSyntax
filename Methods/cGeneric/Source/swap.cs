@@ -10,6 +10,9 @@ namespace cGeneric {
         }
 
         public void testswap() {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("=> Practice Generic Method");
+ 
             int a = 10, b = 20;
             char c = 'I', d = 'V';
 
