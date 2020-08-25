@@ -7,11 +7,11 @@ namespace WithGenericCollections
 		static void Main()
 		{
 			Console.WriteLine("***** Generic Collection *****");
-			ObjectSorting();
+			GenericSorting();
 			Console.ResetColor();
 		}
 
-		static void ObjectSorting()
+		static void GenericSorting()
 		{
 			Console.ForegroundColor = ConsoleColor.Green;
 			Console.WriteLine("=> Object Sorting");
