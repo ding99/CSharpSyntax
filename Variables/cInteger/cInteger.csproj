@@ -32,10 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Source\checkInt.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Source\decimal.cs" />
     <Compile Include="Source\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\CheckDecimal.cs" />
+    <Compile Include="Source\CheckInt.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
