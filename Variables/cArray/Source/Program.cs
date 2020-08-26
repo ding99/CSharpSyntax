@@ -10,8 +10,8 @@ namespace cArray
 
 			CheckArray ca = new CheckArray();
 			ca.Partial();
-			ca.toString();
-			ca.replaceBin();
+			ca.DspString();
+			ca.ReplaceBin();
 			Console.WriteLine();
 
 			new Assign().Assigning();
