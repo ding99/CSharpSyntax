@@ -2,8 +2,8 @@
 
 namespace cInt {
 
-    public class DecTest {
-        public DecTest() { }
+    public class CheckDecimal {
+        public CheckDecimal() { }
 
         public void test() {
             decimal vd = 100;
