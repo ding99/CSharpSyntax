@@ -11,7 +11,38 @@ namespace WithGenericCollections
 			GenericSorting();
 			InitList();
 			InitStack();
+			InitQueue();
 			Console.ResetColor();
+		}
+
+		static void InitQueue()
+		{
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.WriteLine("=> Queue<T> initialization");
+
+			Queue<Person> people = new Queue<Person>();
+			people.Enqueue(new Person { FirstName = "Homer", LastName = "Simpson", Age = 47 });
+			people.Enqueue(new Person { FirstName = "Marge", LastName = "Simpson", Age = 45 });
+			people.Enqueue(new Person { FirstName = "Lisa", LastName = "Simpson", Age = 9 });
+
+			Console.WriteLine($"<{people.Peek().FirstName}> is first in line!");
+			GetCoffee(people.Dequeue());
+			GetCoffee(people.Dequeue());
+			GetCoffee(people.Dequeue());
+
+			try
+			{
+				GetCoffee(people.Dequeue());
+			}
+			catch (InvalidOperationException e)
+			{
+				Console.WriteLine($"Error! {e.Message}");
+			}
+		}
+
+		static void GetCoffee(Person p)
+		{
+			Console.WriteLine($"{p.FirstName} got coffee!");
 		}
 
 		static void InitStack()
