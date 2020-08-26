@@ -4,7 +4,7 @@ namespace cClass
 {
 	class Program
 	{
-		static void Main(string[] args)
+		static void Main()
 		{
 
 			Console.WriteLine("== Start");
@@ -18,7 +18,10 @@ namespace cClass
 			t.declaration();
 			
 			(new GTree()).multit();
-			
+
+			new OverLaod().Test();
+
+			Console.ResetColor();
 			Console.WriteLine("== End");
 		}
 	}
