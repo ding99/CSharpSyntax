@@ -9,16 +9,40 @@ namespace WithGenericCollections
 		{
 			Console.WriteLine("***** Generic Collection *****");
 			GenericSorting();
-			InitList();
-			InitStack();
-			InitQueue();
+			PracticeList();
+			PracticeStack();
+			PracticeQueue();
+			PracticeSortedSet();
 			Console.ResetColor();
 		}
 
-		static void InitQueue()
+		static void PracticeSortedSet()
+		{
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
+			Console.WriteLine("=> Working with SortedSet<T>");
+
+			SortedSet<Person> people = new SortedSet<Person>(new SortPeopleByAge())
+			{
+				new Person{FirstName = "Marge", LastName="Simpson", Age=45},
+				new Person{FirstName = "Bart", LastName="Simpson", Age=8},
+				new Person{FirstName = "Lisa", LastName="Simpson", Age=9},
+				new Person{FirstName = "Homer", LastName="Simpson", Age=47}
+			};
+
+			foreach(var p in people)
+				Console.WriteLine(p);
+
+			Console.WriteLine("-> Added two people");
+			people.Add(new Person { FirstName = "Saku", LastName = "Jones", Age = 1 });
+			people.Add(new Person { FirstName = "Mikko", LastName = "Jones", Age = 32 });
+			foreach (var p in people)
+				Console.WriteLine(p);
+		}
+
+		static void PracticeQueue()
 		{
 			Console.ForegroundColor = ConsoleColor.DarkYellow;
-			Console.WriteLine("=> Queue<T> initialization");
+			Console.WriteLine("=> Working with Queue<T>");
 
 			Queue<Person> people = new Queue<Person>();
 			people.Enqueue(new Person { FirstName = "Homer", LastName = "Simpson", Age = 47 });
@@ -45,10 +69,10 @@ namespace WithGenericCollections
 			Console.WriteLine($"{p.FirstName} got coffee!");
 		}
 
-		static void InitStack()
+		static void PracticeStack()
 		{
 			Console.ForegroundColor = ConsoleColor.Cyan;
-			Console.WriteLine("=> Stack<T> initialization");
+			Console.WriteLine("=> Working with Stack<T>");
 
 			Stack<Person> people = new Stack<Person>();
 
@@ -74,10 +98,10 @@ namespace WithGenericCollections
 			}
 		}
 
-		static void InitList()
+		static void PracticeList()
 		{
 			Console.ForegroundColor = ConsoleColor.Yellow;
-			Console.WriteLine("=> List<T> initialization");
+			Console.WriteLine("=> Working with List<T>");
 
 			List<Person> people = new List<Person>
 			{
