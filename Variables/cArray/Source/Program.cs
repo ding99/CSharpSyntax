@@ -4,19 +4,20 @@ namespace cArray
 {
 	class Entrance
 	{
-		static void Main(string[] args)
+		static void Main()
 		{
-
 			Console.WriteLine("== start");
 
-			GArray ga = new GArray();
-			bool ret = true;
+			CheckArray ca = new CheckArray();
+			ca.Partial();
+			ca.toString();
+			ca.replaceBin();
+			Console.WriteLine();
 
-			ret = ga.Partial();
-			ret = ga.toString();
-			ret = ga.replaceBin();
+			new Assign().Assigning();
 
-			Console.WriteLine(Environment.NewLine + ret + Environment.NewLine + "== end");
+			Console.ResetColor();
+			Console.WriteLine("== end");
 		}
 	}
 }

@@ -3,15 +3,15 @@
 namespace cArray
 {
 
-	public class GArray {
-		public GArray() {
+	public class CheckArray {
+		public CheckArray() {
 		}
 
 		#region partial
 		private void dsp(byte[] b, string s) {
 			Console.WriteLine(s + " : " + BitConverter.ToString(b).Replace("-", " "));
 		}
-		public bool Partial() {
+		public void Partial() {
 			Console.WriteLine(Environment.NewLine + "--- Partial");
 
 			byte[] ori = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8 };
@@ -36,12 +36,10 @@ namespace cArray
 			byte[] dst = new byte[16];
 			ori.CopyTo(dst, 2);
 			this.dsp(dst, "CopyTo  ");
-
-			return true;
 		}
 		#endregion
 
-		public bool toString() {
+		public void toString() {
 			Console.WriteLine(Environment.NewLine + "--- toString");
 
 			byte[] ori = new byte[] { 111, 112, 113, 114, 115, 116, 117, 118 };
@@ -52,8 +50,6 @@ namespace cArray
 
 			string dst2 = Convert.ToBase64String(ori);
 			Console.WriteLine("ToBase64    : " +  dst2);
-
-			return true;
 		}
 
 		public int FindBin(byte[] src, byte[] key) {
@@ -95,7 +91,7 @@ namespace cArray
 			return dst;
 		}
 
-		public bool replaceBin() {
+		public void replaceBin() {
 
 			byte[] b = { 0, 1, 2, 3, 5, 4, 5, 6, 7, 8, 3, 5, 6, 3};
 			this.dsp(b, "source");
@@ -105,8 +101,6 @@ namespace cArray
 			this.dsp(b, "second");
 			c = this.reBin(b, new byte[] { 2, 0xb }, new byte[] { 15, 15 });
 			this.dsp(c, "third ");
-
-			return true;
 		}
 
 	}
