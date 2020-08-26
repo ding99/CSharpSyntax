@@ -9,14 +9,99 @@ namespace WithGenericCollections
 		{
 			Console.WriteLine("***** Generic Collection *****");
 			GenericSorting();
-			InitList();
+			PracticeList();
+			PracticeStack();
+			PracticeQueue();
+			PracticeSortedSet();
 			Console.ResetColor();
 		}
 
-		static void InitList()
+		static void PracticeSortedSet()
+		{
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
+			Console.WriteLine("=> Working with SortedSet<T>");
+
+			SortedSet<Person> people = new SortedSet<Person>(new SortPeopleByAge())
+			{
+				new Person{FirstName = "Marge", LastName="Simpson", Age=45},
+				new Person{FirstName = "Bart", LastName="Simpson", Age=8},
+				new Person{FirstName = "Lisa", LastName="Simpson", Age=9},
+				new Person{FirstName = "Homer", LastName="Simpson", Age=47}
+			};
+
+			foreach(var p in people)
+				Console.WriteLine(p);
+
+			Console.WriteLine("-> Added two people");
+			people.Add(new Person { FirstName = "Saku", LastName = "Jones", Age = 1 });
+			people.Add(new Person { FirstName = "Mikko", LastName = "Jones", Age = 32 });
+			foreach (var p in people)
+				Console.WriteLine(p);
+		}
+
+		static void PracticeQueue()
+		{
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.WriteLine("=> Working with Queue<T>");
+
+			Queue<Person> people = new Queue<Person>();
+			people.Enqueue(new Person { FirstName = "Homer", LastName = "Simpson", Age = 47 });
+			people.Enqueue(new Person { FirstName = "Marge", LastName = "Simpson", Age = 45 });
+			people.Enqueue(new Person { FirstName = "Lisa", LastName = "Simpson", Age = 9 });
+
+			Console.WriteLine($"<{people.Peek().FirstName}> is first in line!");
+			GetCoffee(people.Dequeue());
+			GetCoffee(people.Dequeue());
+			GetCoffee(people.Dequeue());
+
+			try
+			{
+				GetCoffee(people.Dequeue());
+			}
+			catch (InvalidOperationException e)
+			{
+				Console.WriteLine($"Error! {e.Message}");
+			}
+		}
+
+		static void GetCoffee(Person p)
+		{
+			Console.WriteLine($"{p.FirstName} got coffee!");
+		}
+
+		static void PracticeStack()
+		{
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine("=> Working with Stack<T>");
+
+			Stack<Person> people = new Stack<Person>();
+
+			people.Push(new Person { FirstName = "Homer", LastName = "Simpson", Age = 47 });
+			people.Push(new Person { FirstName = "Marge", LastName = "Simpson", Age = 45 });
+			people.Push(new Person { FirstName = "Lisa", LastName = "Simpson", Age = 9 });
+
+			Console.WriteLine($"First person: <{people.Peek()}>");
+			Console.WriteLine($"   Popped of: <{people.Pop()}>");
+			Console.WriteLine($"First person: <{people.Peek()}>");
+			Console.WriteLine($"   Popped of: <{people.Pop()}>");
+			Console.WriteLine($"First person: <{people.Peek()}>");
+			Console.WriteLine($"   Popped of: <{people.Pop()}>");
+
+			try
+			{
+				Console.WriteLine($"First person: <{people.Peek()}>");
+				Console.WriteLine($"   Popped of: <{people.Pop()}>");
+			}
+			catch (InvalidOperationException e)
+			{
+				Console.WriteLine($"Error! {e.Message}");
+			}
+		}
+
+		static void PracticeList()
 		{
 			Console.ForegroundColor = ConsoleColor.Yellow;
-			Console.WriteLine("=> List<T> initialization");
+			Console.WriteLine("=> Working with List<T>");
 
 			List<Person> people = new List<Person>
 			{
@@ -34,7 +119,6 @@ namespace WithGenericCollections
 			Person[] arrayOfPeople = people.ToArray();
 			for(int i = 0; i < arrayOfPeople.Length; i++)
 				Console.WriteLine($"First Name <{arrayOfPeople[i].FirstName}>");
-
 		}
 
 		static void GenericSorting()
