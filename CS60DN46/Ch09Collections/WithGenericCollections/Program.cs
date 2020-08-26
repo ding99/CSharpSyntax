@@ -13,7 +13,29 @@ namespace WithGenericCollections
 			PracticeStack();
 			PracticeQueue();
 			PracticeSortedSet();
+			PracticeDictionary();
 			Console.ResetColor();
+		}
+
+		static void PracticeDictionary()
+		{
+			Console.ForegroundColor = ConsoleColor.DarkGreen;
+			Console.WriteLine("=> Working with Dictionary<T>");
+
+			Dictionary<string, Person> people = new Dictionary<string, Person>
+			{
+				{ "Homer", new Person{FirstName = "Homer", LastName="Simpson", Age=47} },
+				{"Marge", new Person{FirstName = "Marge", LastName="Simpson", Age=45} },
+				{"Lisa",  new Person{FirstName = "Lisa", LastName="Simpson", Age=9} }
+			};
+
+			people.Add("Bart", new Person { FirstName = "Bart", LastName = "Simpson", Age = 8 });
+
+			foreach(var p in people)
+				Console.WriteLine($"[{p.Key}]: {p.Value}");
+
+			Person lisa = people["Lisa"];
+			Console.WriteLine($"lisa: {lisa}");
 		}
 
 		static void PracticeSortedSet()
