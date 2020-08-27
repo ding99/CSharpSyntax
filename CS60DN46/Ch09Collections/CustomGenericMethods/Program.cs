@@ -29,7 +29,7 @@ namespace CustomGenericMethods
 			Person p1 = new Person { FirstName = "Steve", LastName = "Wang", Age = 55 };
 			Person p2 = new Person { FirstName = "Mike", LastName = "Lee", Age = 37 };
 			Console.WriteLine($"Before swap: <{p1}>, <{p2}>");
-			Swap(ref p1, ref p2);
+			Swap<Person>(ref p1, ref p2);
 			Console.WriteLine($"After  swap: <{p1}>, <{p2}>");
 		}
 
