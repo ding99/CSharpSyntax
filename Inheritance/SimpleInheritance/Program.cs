@@ -16,15 +16,15 @@ namespace BasicInheritance
 			Console.ForegroundColor = ConsoleColor.Cyan;
 			Console.WriteLine("=> MiniVan inherite Car");
 
-			Car car = new Car(80);
+			Car car = new Car();
 			car.Speed = 50;
-			car.SetMax(90);
+			car.SetMax(60);
 			Console.WriteLine($"The max speed of car is {car.maxSpeed}");
 			Console.WriteLine($"The car is going {car.Speed} MPH");
 
 			MiniVan van = new MiniVan();
 			van.Speed = 30;
-			van.SetMax(35);
+			van.SetMax(60);
 			Console.WriteLine($"The max speed of van is {van.maxSpeed}");
 			Console.WriteLine($"The van is going {van.Speed} MPH");
 		}
