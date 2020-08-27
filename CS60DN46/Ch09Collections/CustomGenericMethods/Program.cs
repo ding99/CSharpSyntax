@@ -9,7 +9,29 @@ namespace CustomGenericMethods
 			Console.WriteLine("***** Custom Generic Methods *****");
 			GenericMethod();
 			Inference();
+			InstanceLevel();
 			Console.ResetColor();
+		}
+
+		static void InstanceLevel()
+		{
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.WriteLine("=> non-static custom generic methods");
+
+			MyGenericMethods c = new MyGenericMethods();
+
+			string s1 = "Tokyo", s2 = "Nagoya";
+			Console.WriteLine($"Before swap: <{s1}>, <{s2}>");
+			c.Swap<string>(ref s1, ref s2);
+			c.DisplayBaseClass<string>();
+			Console.WriteLine($"After  swap: <{s1}>, <{s2}>");
+
+			Person p1 = new Person { FirstName = "Steve", LastName = "Wang", Age = 55 };
+			Person p2 = new Person { FirstName = "Mike", LastName = "Lee", Age = 37 };
+			Console.WriteLine($"Before swap: <{p1}>, <{p2}>");
+			c.Swap<Person>(ref p1, ref p2);
+			c.DisplayBaseClass<Person>();
+			Console.WriteLine($"After  swap: <{p1}>, <{p2}>");
 		}
 
 		static void Inference()
