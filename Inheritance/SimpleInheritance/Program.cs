@@ -11,6 +11,10 @@ namespace BasicInheritance
 			Console.ResetColor();
 		}
 
+		/**
+		 * A regular class may be inherited
+		 * A virtual method in a regular class may be updated in the derived class.
+		 */
 		static void SimpleInheritance()
 		{
 			Console.ForegroundColor = ConsoleColor.Cyan;
