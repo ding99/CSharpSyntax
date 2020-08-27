@@ -2,7 +2,7 @@
 {
 	class Car
 	{
-		public readonly int maxSpeed;
+		public int maxSpeed;
 		private int speed;
 
 		public Car() { maxSpeed = 55; }
@@ -12,5 +12,7 @@
 			get { return speed; }
 			set { speed = value; if (speed > maxSpeed) speed = maxSpeed; }
 		}
+
+		public virtual void SetMax(int max) { maxSpeed = max; }
 	}
 }
