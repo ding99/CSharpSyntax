@@ -242,6 +242,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObservableCollection", "CS6
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomGenericMethods", "CS60DN46\Ch09Collections\CustomGenericMethods\CustomGenericMethods.csproj", "{44B0F181-0FD7-4EEF-943F-8B578C43A555}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericPoint", "CS60DN46\Ch09Collections\GenericPoint\GenericPoint.csproj", "{7CB23CAD-B2EA-43C3-8B65-9CC98E938AD0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1638,6 +1640,22 @@ Global
 		{44B0F181-0FD7-4EEF-943F-8B578C43A555}.Release|x64.Build.0 = Release|Any CPU
 		{44B0F181-0FD7-4EEF-943F-8B578C43A555}.Release|x86.ActiveCfg = Release|Any CPU
 		{44B0F181-0FD7-4EEF-943F-8B578C43A555}.Release|x86.Build.0 = Release|Any CPU
+		{7CB23CAD-B2EA-43C3-8B65-9CC98E938AD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CB23CAD-B2EA-43C3-8B65-9CC98E938AD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CB23CAD-B2EA-43C3-8B65-9CC98E938AD0}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{7CB23CAD-B2EA-43C3-8B65-9CC98E938AD0}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{7CB23CAD-B2EA-43C3-8B65-9CC98E938AD0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7CB23CAD-B2EA-43C3-8B65-9CC98E938AD0}.Debug|x64.Build.0 = Debug|Any CPU
+		{7CB23CAD-B2EA-43C3-8B65-9CC98E938AD0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7CB23CAD-B2EA-43C3-8B65-9CC98E938AD0}.Debug|x86.Build.0 = Debug|Any CPU
+		{7CB23CAD-B2EA-43C3-8B65-9CC98E938AD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CB23CAD-B2EA-43C3-8B65-9CC98E938AD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CB23CAD-B2EA-43C3-8B65-9CC98E938AD0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{7CB23CAD-B2EA-43C3-8B65-9CC98E938AD0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{7CB23CAD-B2EA-43C3-8B65-9CC98E938AD0}.Release|x64.ActiveCfg = Release|Any CPU
+		{7CB23CAD-B2EA-43C3-8B65-9CC98E938AD0}.Release|x64.Build.0 = Release|Any CPU
+		{7CB23CAD-B2EA-43C3-8B65-9CC98E938AD0}.Release|x86.ActiveCfg = Release|Any CPU
+		{7CB23CAD-B2EA-43C3-8B65-9CC98E938AD0}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1746,6 +1764,7 @@ Global
 		{6F59F9AA-313E-40A1-9C18-0DC142DF1D0B} = {8FDD64A8-663E-4BCD-9FC3-5F2DCF2599AC}
 		{E31326E8-75D0-4A0E-991F-4D8EF8780AAF} = {8FDD64A8-663E-4BCD-9FC3-5F2DCF2599AC}
 		{44B0F181-0FD7-4EEF-943F-8B578C43A555} = {8FDD64A8-663E-4BCD-9FC3-5F2DCF2599AC}
+		{7CB23CAD-B2EA-43C3-8B65-9CC98E938AD0} = {8FDD64A8-663E-4BCD-9FC3-5F2DCF2599AC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7C00B1AC-1A8A-4B50-9373-585713E1AED0}
