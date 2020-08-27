@@ -30,6 +30,12 @@ namespace GenericPoint
 			Console.WriteLine($"string type: <{p3}>");
 			p3.ResetPoint();
 			Console.WriteLine($"string type (reset): <{p3}>");
+
+			Console.WriteLine("-> use properties");
+			Point2<double> p5 = new Point2<double>(3.3, 6.61);
+			Console.WriteLine($"double type: <{p5}>");
+			p5.ResetPoint();
+			Console.WriteLine($"double type (reset): <{p5}>");
 		}
 	}
 }
