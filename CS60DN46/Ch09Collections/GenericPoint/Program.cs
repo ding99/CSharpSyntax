@@ -25,6 +25,11 @@ namespace GenericPoint
 			Console.WriteLine($"double type: <{p2}>");
 			p2.ResetPoint();
 			Console.WriteLine($"double type (reset): <{p2}>");
+
+			Point<string> p3 = new Point<string>("x-value", "y-value");
+			Console.WriteLine($"string type: <{p3}>");
+			p3.ResetPoint();
+			Console.WriteLine($"string type (reset): <{p3}>");
 		}
 	}
 }
