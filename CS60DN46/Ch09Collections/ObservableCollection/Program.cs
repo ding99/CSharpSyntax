@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 
 namespace ObservableCollection
 {
@@ -14,7 +15,7 @@ namespace ObservableCollection
 
 		static void Observable()
 		{
-			Console.ForegroundColor = ConsoleColor.Green;
+			Console.ForegroundColor = ConsoleColor.Yellow;
 			Console.WriteLine("=> Observable collection");
 
 			ObservableCollection<Person> people = new ObservableCollection<Person>
@@ -22,27 +23,49 @@ namespace ObservableCollection
 				new Person{ FirstName="Peter", LastName="Murphy", Age=52},
 				new Person{ FirstName="Kevin", LastName="Key", Age=48},
 			};
-
-			Console.WriteLine("-> original collection:");
-			foreach(var a in people)
-				Console.WriteLine(a);
+			display(people, "original");
 
 			people.CollectionChanged += people_CollectionChanged;
 
 			Person newPerson = new Person { FirstName = "Jason", LastName = "Pu", Age = 35 };
-			Console.WriteLine($"-  add <{newPerson}>");
-			Console.WriteLine($"-  remove the 2nd item");
+			Console.WriteLine($"-   add <{newPerson}>");
 			people.Add(newPerson);
+			display(people, "modified");
+
+			Console.WriteLine($"-   remove the 2nd item");
 			people.RemoveAt(1);
-			Console.WriteLine("-> modified collection:");
-			foreach (var a in people)
-				Console.WriteLine(a);
+			display(people, "modified");
+
+			Console.WriteLine($"-   clear");
+			people.Clear();
+			display(people, "modified");
 		}
 
-		static void people_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+		static void display(ObservableCollection<Person> list, string msg)
 		{
-			Console.WriteLine($"#### Action {e.Action}");
-			//throw new NotImplementedException();
+			Console.BackgroundColor = ConsoleColor.DarkBlue;
+			Console.WriteLine($"-> {msg} collection:");
+			if(list.Count > 0)
+			foreach (var a in list)
+				Console.WriteLine($"   {a}");
+			else Console.WriteLine("   <no items>");
+			Console.BackgroundColor = ConsoleColor.Black;
+		}
+
+		static void people_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+		{
+			Console.WriteLine($"--- Action {e.Action}; OldStart {e.OldStartingIndex} / NewStart {e.NewStartingIndex}");
+			switch (e.Action)
+			{
+				case NotifyCollectionChangedAction.Add:
+					foreach (var a in e.NewItems)
+						Console.WriteLine($"  NewItem <{a}>");
+					break;
+				case NotifyCollectionChangedAction.Remove:
+					foreach (var a in e.OldItems)
+						Console.WriteLine($"  OldItem <{a}>");
+					break;
+			}
 		}
 	}
 }
