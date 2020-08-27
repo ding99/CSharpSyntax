@@ -8,7 +8,22 @@ namespace CustomGenericMethods
 		{
 			Console.WriteLine("***** Custom Generic Methods *****");
 			GenericMethod();
+			Inference();
 			Console.ResetColor();
+		}
+
+		static void Inference()
+		{
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine("=> Unable to infer");
+
+			DisplayBaseClass<int>();
+			DisplayBaseClass<string>();
+		}
+
+		static void DisplayBaseClass<T>()
+		{
+			Console.WriteLine($"Base class of {typeof(T)} is : {typeof(T).BaseType}");
 		}
 
 		static void GenericMethod()
