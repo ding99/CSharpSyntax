@@ -21,6 +21,13 @@
 		{
 			listOfHandlers += methodToCall;
 		}
+		public void RegisterWithCarEngineAlternative(CarEngineHandler methodToCall)
+		{
+			if (listOfHandlers == null)
+				listOfHandlers = methodToCall;
+			else
+				System.Delegate.Combine(listOfHandlers, methodToCall);
+		}
 
 		public void Accelerate(int delta)
 		{
