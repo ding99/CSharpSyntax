@@ -74,7 +74,7 @@ namespace CarDelegate
 		{
 			ConsoleColor fore = Console.ForegroundColor;
 			Console.ForegroundColor = ConsoleColor.Green;
-			Console.WriteLine($"-> {msg}");
+			Console.WriteLine($"-> {msg.ToUpper()}");
 			Console.ForegroundColor = fore;
 		}
 	}
