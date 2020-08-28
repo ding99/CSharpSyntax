@@ -1,19 +1,25 @@
-using System;
-using cInt.Source;
+﻿using System;
 
-namespace cInt {
-
-    class Program {
-        static void Main(string[] args) {
-            Console.WriteLine("== Start");
-
-			Source.Program test = new Source.Program();
-			test.shift();
-			test.max();
-
-			new DecTest().test();
-
-			Console.WriteLine("== End");
+namespace cInt.Source
+{
+	public class CheckInt
+	{
+        private void sone(int n)
+        {
+            Console.WriteLine(n + "  " + ((n + 3) >> 2 << 2));
         }
+        public void shift()
+        {
+            sone(4);
+            sone(5);
+            sone(6);
+            sone(7);
+            sone(8);
+        }
+
+        public void max()
+		{
+            Console.WriteLine("Max int is [" + Int32.MaxValue + "]");
+		}
     }
 }
