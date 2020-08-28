@@ -8,6 +8,8 @@ namespace SimpleDelegate
 	{
 		public static int Add(int x, int y) { return x + y; }
 		public static int Subtract(int x, int y) { return x - y; }
+		public int AddObject(int x, int y) { return x + y; }
+		public int SubtractObject(int x, int y) { return x - y; }
 	}
 
 	class Program
@@ -23,9 +25,12 @@ namespace SimpleDelegate
 		static void InvestigateObject()
 		{
 			Console.ForegroundColor = ConsoleColor.Green;
-			Console.WriteLine("=> Investigate Delegate Object");
+			Console.WriteLine("=> Investigate Delegate Object (static method)");
 			BinaryOp b = new BinaryOp(SimpleMath.Add);
 			DisplayDelegateInfo(b);
+			Console.WriteLine("-> Investigate Delegate Object (non-static method)");
+			BinaryOp b2 = new BinaryOp(new SimpleMath().AddObject);
+			DisplayDelegateInfo(b2);
 		}
 
 		static void DisplayDelegateInfo(Delegate deleg)
