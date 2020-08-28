@@ -29,6 +29,11 @@
 				System.Delegate.Combine(listOfHandlers, methodToCall);
 		}
 
+		public void UnRegisterWithCarEngine(CarEngineHandler methodToCall)
+		{
+			listOfHandlers -= methodToCall;
+		}
+
 		public void Accelerate(int delta)
 		{
 			if (carIsDead)
@@ -46,6 +51,11 @@
 			if (Speed >= MaxSpeed)
 				carIsDead = true;
 			else System.Console.WriteLine($"Current Speed = {Speed}");
+		}
+
+		public void StatusReset()
+		{
+			carIsDead = false;
 		}
 	}
 }
