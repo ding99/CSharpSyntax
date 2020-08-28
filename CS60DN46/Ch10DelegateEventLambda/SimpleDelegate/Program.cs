@@ -17,8 +17,8 @@ namespace SimpleDelegate
 		static void Main()
 		{
 			Console.WriteLine("***** Simple Delegate Example *****");
-			InvestigateObject();
 			BySimpleDelegate();
+			InvestigateObject();
 			Console.ResetColor();
 		}
 
