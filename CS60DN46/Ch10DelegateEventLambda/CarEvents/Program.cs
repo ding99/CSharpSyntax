@@ -5,7 +5,23 @@ namespace CarEvents {
 		static void Main() {
 			Console.WriteLine("***** Car Events *****");
 			EventKeyword();
+			NullConditional();
 			Console.ResetColor();
+		}
+
+		static void NullConditional() {
+			Console.ForegroundColor = ConsoleColor.Green;
+			Console.WriteLine("=> Events with Null-Conditional Operator");
+
+			Car c1 = new Car("SlugBug", 100, 10);
+			c1.AboutToBlow += CarIsAlmostDoomed; //method group conversion
+			c1.AboutToBlow += CarAboutToBlow;
+
+			Car.CarEngineHandler d = new Car.CarEngineHandler(CarExploded);
+			c1.Exploaded += d;
+
+			Console.WriteLine("===== Speeding up");
+			for (int i = 0; i < 7; i++) c1.Accelerate2(20);
 		}
 
 		static void EventKeyword() {
@@ -31,6 +47,7 @@ namespace CarEvents {
 			for (int i = 0; i < 7; i++) c1.Accelerate(20);
 		}
 
+		#region handlers
 		public static void CarExploded(string msg) {
 			ConsoleColor fore = Console.ForegroundColor;
 			Console.ForegroundColor = ConsoleColor.DarkYellow;
@@ -44,5 +61,6 @@ namespace CarEvents {
 			Console.WriteLine($"=> Critical Message from Car: {msg}");
 			Console.ForegroundColor = fore;
 		}
+		#endregion
 	}
 }

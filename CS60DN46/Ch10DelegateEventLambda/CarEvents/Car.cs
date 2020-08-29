@@ -33,6 +33,20 @@ namespace CarEvents {
 			else Console.WriteLine($"Current Speed = {Speed}");
 		}
 
+		public void Accelerate2(int delta) {
+			if (carIsDead) {
+				Exploaded?.Invoke("Sorry, this car is dead...");
+			} else {
+				Speed += delta;
+
+				if (10 >= (MaxSpeed - Speed))
+					AboutToBlow?.Invoke("Careful buddy! Gonna blow!");
+			}
+
+			if (Speed >= MaxSpeed) carIsDead = true;
+			else Console.WriteLine($"Current Speed = {Speed}");
+		}
+
 		public void Reset() {
 			carIsDead = false;
 			Speed = 10;
