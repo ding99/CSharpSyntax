@@ -13,7 +13,7 @@ namespace CarEvents {
 			Console.WriteLine("=> Events");
 
 			Car c1 = new Car("SlugBug", 100, 10);
-			//c1.AboutToBlow += CarIsAlmostDoomed;
+			//c1.AboutToBlow += CarIsAlmostDoomed; //method group conversion
 			//c1.AboutToBlow += CarAboutToBlow;
 			c1.AboutToBlow += new Car.CarEngineHandler(CarIsAlmostDoomed);
 			c1.AboutToBlow += new Car.CarEngineHandler(CarAboutToBlow);
