@@ -6,7 +6,21 @@ namespace CarEvents {
 			Console.WriteLine("***** Car Events *****");
 			EventKeyword();
 			NullConditional();
+			CustomArgs();
 			Console.ResetColor();
+		}
+
+		static void CustomArgs() {
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
+			Console.WriteLine("=> Custom Event Arguments");
+
+			CarCustom c1 = new CarCustom("SlugBug", 100, 10);
+			c1.AboutToBlow += CarIsAlmostDoomed;
+			c1.AboutToBlow += CarAboutToBlow;
+			c1.Exploaded += CarExploded;
+
+			Console.WriteLine("===== Speeding up");
+			for (int i = 0; i < 7; i++) c1.Accelerate(20);
 		}
 
 		static void NullConditional() {
@@ -14,7 +28,7 @@ namespace CarEvents {
 			Console.WriteLine("=> Events with Null-Conditional Operator");
 
 			Car c1 = new Car("SlugBug", 100, 10);
-			c1.AboutToBlow += CarIsAlmostDoomed; //method group conversion
+			c1.AboutToBlow += CarIsAlmostDoomed;
 			c1.AboutToBlow += CarAboutToBlow;
 
 			Car.CarEngineHandler d = new Car.CarEngineHandler(CarExploded);
@@ -59,6 +73,20 @@ namespace CarEvents {
 			ConsoleColor fore = Console.ForegroundColor;
 			Console.ForegroundColor = ConsoleColor.Cyan;
 			Console.WriteLine($"=> Critical Message from Car: {msg}");
+			Console.ForegroundColor = fore;
+		}
+
+		public static void CarExploded(object sender, CarEventArgs e) {
+			ConsoleColor fore = Console.ForegroundColor;
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.WriteLine($"   {e.msg} at {e.time}");
+			Console.ForegroundColor = fore;
+		}
+		public static void CarAboutToBlow(object sender, CarEventArgs e) { Console.WriteLine($"   {e.msg} at {e.time}"); }
+		public static void CarIsAlmostDoomed(object sender, CarEventArgs e) {
+			ConsoleColor fore = Console.ForegroundColor;
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine($"=> Critical Message from Car: {e.msg} at {e.time}");
 			Console.ForegroundColor = fore;
 		}
 		#endregion
