@@ -19,14 +19,16 @@ namespace CarEvents {
 			Console.ForegroundColor = ConsoleColor.Red;
 			Console.WriteLine("=> Anonymous Method");
 
-			string methoder = "MethodM";
+			int methoder = 1;
 
 			CarCustom c1 = new CarCustom("SlugOne", 80, 10);
-			c1.AboutToBlow += delegate { Console.WriteLine("Eek! Going too fast!"); };
+			c1.AboutToBlow += delegate { methoder++; Console.WriteLine("Eek! Going too fast!"); };
 			c1.AboutToBlow += delegate(object sender, CarEventArgs e){
-				Console.WriteLine($"Message from Car: {e.msg} at {e.time}");
+				methoder++;
+				Console.WriteLine($"Message from Car: {e.msg} at {e.time}. {methoder}");
 			};
 			c1.Exploaded += delegate (object sender, CarEventArgs e) {
+				methoder++;
 				ConsoleColor fore = Console.ForegroundColor;
 				Console.ForegroundColor = ConsoleColor.DarkYellow;
 				Console.WriteLine($"Fatal Message from Car: {e.msg} at {e.time}. {classer} / {methoder}");
