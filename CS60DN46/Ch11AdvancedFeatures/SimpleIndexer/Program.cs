@@ -21,6 +21,9 @@ namespace SimpleIndexer {
 
 			for(int i = 0; i < people.Count; i++)
 				Console.WriteLine($"Person Number: {i}, Name: {people[i].FirstName} {people[i].LastName}, Age: {people[i].Age}");
+
+			foreach (Person p in people)
+				Console.WriteLine($"Person Name: {p.FirstName} {p.LastName}, Age: {p.Age}");
 		}
 	}
 }
