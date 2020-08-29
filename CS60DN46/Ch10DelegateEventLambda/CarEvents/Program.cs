@@ -7,7 +7,21 @@ namespace CarEvents {
 			EventKeyword();
 			NullConditional();
 			CustomArgs();
+			GenericArgs();
 			Console.ResetColor();
+		}
+
+		static void GenericArgs() {
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("=> Generic EventHandler<T> Delegate");
+
+			CarGeneric c1 = new CarGeneric("SlugBug", 100, 10);
+			c1.AboutToBlow += CarIsAlmostDoomed;
+			c1.AboutToBlow += CarAboutToBlow;
+			c1.Exploaded += CarExploded;
+
+			Console.WriteLine("===== Speeding up");
+			for (int i = 0; i < 7; i++) c1.Accelerate(20);
 		}
 
 		static void CustomArgs() {
@@ -84,6 +98,20 @@ namespace CarEvents {
 		}
 		public static void CarAboutToBlow(object sender, CarEventArgs e) { Console.WriteLine($"   {e.msg} at {e.time}"); }
 		public static void CarIsAlmostDoomed(object sender, CarEventArgs e) {
+			ConsoleColor fore = Console.ForegroundColor;
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine($"=> Critical Message from Car: {e.msg} at {e.time}");
+			Console.ForegroundColor = fore;
+		}
+
+		public static void CarExploded(object sender, CarGenericArgs e) {
+			ConsoleColor fore = Console.ForegroundColor;
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.WriteLine($"   {e.msg} at {e.time}");
+			Console.ForegroundColor = fore;
+		}
+		public static void CarAboutToBlow(object sender, CarGenericArgs e) { Console.WriteLine($"   {e.msg} at {e.time}"); }
+		public static void CarIsAlmostDoomed(object sender, CarGenericArgs e) {
 			ConsoleColor fore = Console.ForegroundColor;
 			Console.ForegroundColor = ConsoleColor.Cyan;
 			Console.WriteLine($"=> Critical Message from Car: {e.msg} at {e.time}");
