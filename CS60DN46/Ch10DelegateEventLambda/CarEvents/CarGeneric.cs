@@ -19,8 +19,6 @@ namespace CarEvents {
 			Speed = speed; MaxSpeed = max; Name = name;
 		}
 
-		//public delegate void EventHandler(object sender, EventArgs e);
-
 		public event EventHandler<CarGenericArgs> Exploaded;
 		public event EventHandler<CarGenericArgs> AboutToBlow;
 
