@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 
 namespace SimpleIndexer {
 	class Program {
@@ -21,7 +20,7 @@ namespace SimpleIndexer {
 			people[4] = new Person("Maggie", "Simpson", 2);
 
 			for(int i = 0; i < people.Count; i++)
-				Console.WriteLine($"Person: Number {i}, Name {people[i].FirstName} {people[i].LastName}, Age {people[i].Age}");
+				Console.WriteLine($"Person Number {i}, Name: {people[i].FirstName} {people[i].LastName}, Age: {people[i].Age}");
 		}
 	}
 }

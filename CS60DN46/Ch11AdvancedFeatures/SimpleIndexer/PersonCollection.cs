@@ -5,6 +5,11 @@ namespace SimpleIndexer {
 	{
 		private ArrayList people = new ArrayList();
 
+		public Person this[int index] {
+			get { return (Person)people[index]; }
+			set { people.Insert(index, value); }
+		}
+
 		public Person GetPerson(int pos) { return (Person)people[pos]; }
 		public void AddPerson(Person p) { people.Add(p); }
 		public void ClearPeople() { people.Clear(); }
