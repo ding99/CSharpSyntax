@@ -2,13 +2,41 @@
 
 namespace CarEvents {
 	class Program {
+
+		static string classer = "ClassM";
+
 		static void Main() {
 			Console.WriteLine("***** Car Events *****");
 			EventKeyword();
 			NullConditional();
 			CustomArgs();
 			GenericArgs();
+			AnonymousMethod();
 			Console.ResetColor();
+		}
+
+		static void AnonymousMethod() {
+			Console.ForegroundColor = ConsoleColor.Red;
+			Console.WriteLine("=> Anonymous Method");
+
+			int methoder = 1;
+
+			CarCustom c1 = new CarCustom("SlugOne", 80, 10);
+			c1.AboutToBlow += delegate { methoder++; Console.WriteLine("Eek! Going too fast!"); };
+			c1.AboutToBlow += delegate(object sender, CarEventArgs e){
+				methoder++;
+				Console.WriteLine($"Message from Car: {e.msg} at {e.time}. {methoder}");
+			};
+			c1.Exploaded += delegate (object sender, CarEventArgs e) {
+				methoder++;
+				ConsoleColor fore = Console.ForegroundColor;
+				Console.ForegroundColor = ConsoleColor.DarkYellow;
+				Console.WriteLine($"Fatal Message from Car: {e.msg} at {e.time}. {classer} / {methoder}");
+				Console.ForegroundColor = fore;
+			};
+
+			Console.WriteLine("===== Speeding up");
+			for (int i = 0; i < 6; i++) c1.Accelerate(20);
 		}
 
 		static void GenericArgs() {
