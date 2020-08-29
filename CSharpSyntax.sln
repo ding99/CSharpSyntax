@@ -262,6 +262,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicInheritance", "Inherit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActionAndFunc", "CS60DN46\Ch10DelegateEventLambda\ActionAndFunc\ActionAndFunc.csproj", "{FF854D57-CC7B-4BBC-8924-12FF687B729D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarEvents", "CS60DN46\Ch10DelegateEventLambda\CarEvents\CarEvents.csproj", "{EF5B76CC-A4D2-4461-BD88-FFEC89361CC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1786,6 +1788,22 @@ Global
 		{FF854D57-CC7B-4BBC-8924-12FF687B729D}.Release|x64.Build.0 = Release|Any CPU
 		{FF854D57-CC7B-4BBC-8924-12FF687B729D}.Release|x86.ActiveCfg = Release|Any CPU
 		{FF854D57-CC7B-4BBC-8924-12FF687B729D}.Release|x86.Build.0 = Release|Any CPU
+		{EF5B76CC-A4D2-4461-BD88-FFEC89361CC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF5B76CC-A4D2-4461-BD88-FFEC89361CC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF5B76CC-A4D2-4461-BD88-FFEC89361CC4}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{EF5B76CC-A4D2-4461-BD88-FFEC89361CC4}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{EF5B76CC-A4D2-4461-BD88-FFEC89361CC4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EF5B76CC-A4D2-4461-BD88-FFEC89361CC4}.Debug|x64.Build.0 = Debug|Any CPU
+		{EF5B76CC-A4D2-4461-BD88-FFEC89361CC4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EF5B76CC-A4D2-4461-BD88-FFEC89361CC4}.Debug|x86.Build.0 = Debug|Any CPU
+		{EF5B76CC-A4D2-4461-BD88-FFEC89361CC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF5B76CC-A4D2-4461-BD88-FFEC89361CC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF5B76CC-A4D2-4461-BD88-FFEC89361CC4}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{EF5B76CC-A4D2-4461-BD88-FFEC89361CC4}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{EF5B76CC-A4D2-4461-BD88-FFEC89361CC4}.Release|x64.ActiveCfg = Release|Any CPU
+		{EF5B76CC-A4D2-4461-BD88-FFEC89361CC4}.Release|x64.Build.0 = Release|Any CPU
+		{EF5B76CC-A4D2-4461-BD88-FFEC89361CC4}.Release|x86.ActiveCfg = Release|Any CPU
+		{EF5B76CC-A4D2-4461-BD88-FFEC89361CC4}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1903,6 +1921,7 @@ Global
 		{EB25BD36-6D67-4EBA-8BF8-87BFEB9D9DD6} = {6248C226-2A10-413C-A3AE-BE1705380800}
 		{9D0F0DA7-E91B-40DF-B4D2-511F6FEDB8CF} = {6311EEBB-8F31-4891-B728-D117831B99BF}
 		{FF854D57-CC7B-4BBC-8924-12FF687B729D} = {6248C226-2A10-413C-A3AE-BE1705380800}
+		{EF5B76CC-A4D2-4461-BD88-FFEC89361CC4} = {6248C226-2A10-413C-A3AE-BE1705380800}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7C00B1AC-1A8A-4B50-9373-585713E1AED0}
