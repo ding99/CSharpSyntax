@@ -8,7 +8,28 @@ namespace CarEvents {
 			NullConditional();
 			CustomArgs();
 			GenericArgs();
+			AnonymousMethod();
 			Console.ResetColor();
+		}
+
+		static void AnonymousMethod() {
+			Console.ForegroundColor = ConsoleColor.Red;
+			Console.WriteLine("=> Anonymous Method");
+
+			CarCustom c1 = new CarCustom("SlugOne", 80, 10);
+			c1.AboutToBlow += delegate { Console.WriteLine("Eek! Going too fast!"); };
+			c1.AboutToBlow += delegate(object sender, CarEventArgs e){
+				Console.WriteLine($"Message from Car: {e.msg} at {e.time}");
+			};
+			c1.Exploaded += delegate (object sender, CarEventArgs e) {
+				ConsoleColor fore = Console.ForegroundColor;
+				Console.ForegroundColor = ConsoleColor.DarkYellow;
+				Console.WriteLine($"Fatal Message from Car: {e.msg} at {e.time}");
+				Console.ForegroundColor = fore;
+			};
+
+			Console.WriteLine("===== Speeding up");
+			for (int i = 0; i < 6; i++) c1.Accelerate(20);
 		}
 
 		static void GenericArgs() {
