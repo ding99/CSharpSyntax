@@ -6,7 +6,25 @@ namespace SimpleLambdaExpressions {
 		static void Main() {
 			Console.WriteLine("***** Lambdas *****");
 			TraditionalDelegateSyntax();
+			AnonymousMethodSyntax();
 			Console.ResetColor();
+		}
+
+		static void AnonymousMethodSyntax() {
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine("=> Anonymous Method Syntax");
+
+			List<int> list = new List<int>();
+			list.AddRange(new int[] { 20, 1, 4, 8, 9, 44 });
+			Console.Write("Here are original numbers :");
+			foreach (int e in list) Console.Write($" {e}");
+			Console.WriteLine();
+
+			List<int> evens = list.FindAll(delegate(int i) { return (i % 2) == 0; });
+
+			Console.Write("Here are your even numbers:");
+			foreach (int e in evens) Console.Write($" {e}");
+			Console.WriteLine();
 		}
 
 		static void TraditionalDelegateSyntax() {
@@ -15,7 +33,7 @@ namespace SimpleLambdaExpressions {
 
 			List<int> list = new List<int>();
 			list.AddRange(new int[] {20,1,4,8,9,44});
-			Console.Write("Here are original numbers:");
+			Console.Write("Here are original numbers :");
 			foreach (int e in list) Console.Write($" {e}");
 			Console.WriteLine();
 
