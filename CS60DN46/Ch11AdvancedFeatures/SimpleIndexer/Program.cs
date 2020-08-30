@@ -19,6 +19,10 @@ namespace SimpleIndexer {
 			people["Homer"] = new Person("Homer", "Simpson", 39);
 			people["Marge"] = new Person("Marge", "Simpson", 37);
 
+			foreach(KeyValuePair<string, Person> p in people) {
+				Console.WriteLine($"  {p.Key} : <{p.Value}>");
+			}
+
 			Person homer = people["Homer"];
 
 			Console.WriteLine(homer.ToString());
