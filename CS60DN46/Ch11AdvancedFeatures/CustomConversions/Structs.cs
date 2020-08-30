@@ -42,5 +42,11 @@ namespace CustomConversions {
 		public static explicit operator Square(Rectangle r) {
 			return new Square { Length = r.Height };
 		}
+
+		public static explicit operator Square(int sideLength) {
+			Square sq = new Square { Length = sideLength };
+			return sq;
+		}
+		public static explicit operator int (Square s) { return s.Length; }
 	}
 }

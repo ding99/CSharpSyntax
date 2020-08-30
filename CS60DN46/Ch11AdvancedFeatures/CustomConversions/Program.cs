@@ -6,7 +6,17 @@ namespace CustomConversions {
 			Console.WriteLine("***** Custom Conversion *****");
 			StructConversion();
 			ConvertRectangle();
+			ExplicitConversion();
 			Console.ResetColor();
+		}
+
+		static void ExplicitConversion() {
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.WriteLine("=> Conversion between a square and an integer");
+
+			int size = 50; Console.WriteLine($"Original integer: {size}");
+			Square sq = (Square)size; Console.WriteLine($"Square: {sq}");
+			int side = (int)sq; Console.WriteLine($"Side length of the square: {side}");
 		}
 
 		static void ConvertRectangle() {
