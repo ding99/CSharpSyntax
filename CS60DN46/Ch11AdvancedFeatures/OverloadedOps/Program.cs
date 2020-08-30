@@ -8,7 +8,17 @@ namespace OverloadedOps {
 			ShortHandAssign();
 			Unary();
 			OverrideEquals();
+			Comparison();
 			Console.ResetColor();
+		}
+
+		static void Comparison() {
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.WriteLine("=> Overloading Comparison Operators");
+
+			Point ptOne = new Point(100, 100), ptTwo = new Point(30, 30);
+			Console.WriteLine($"ptOne = {ptOne}; ptTwo = {ptTwo}");
+			Console.WriteLine($"ptOne < ptTwo: {ptOne < ptTwo}; ptOne > ptTwo: {ptOne > ptTwo}");
 		}
 
 		static void OverrideEquals() {
