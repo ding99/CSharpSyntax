@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace SimpleIndexer {
 	class Program {
@@ -8,7 +9,27 @@ namespace SimpleIndexer {
 			SimpleIndexing();
 			UseGenericList();
 			IndexingUsingString();
+			MultiIndexer();
 			Console.ResetColor();
+		}
+
+		static void MultiIndexer() {
+			Console.ForegroundColor = ConsoleColor.Green;
+			Console.WriteLine("=> Multi Indexer with DataTable");
+
+			//Make a DataTable with 3 columns
+			DataTable table = new DataTable();
+			table.Columns.Add(new DataColumn("FirstName"));
+			table.Columns.Add(new DataColumn("LastName"));
+			table.Columns.Add(new DataColumn("Age"));
+
+			//Add a row to the table
+			table.Rows.Add("Mel", "Appleby", 60);
+
+			//Use multidimension indexer to get details of first row
+			Console.WriteLine($"First Name: {table.Rows[0][0]}");
+			Console.WriteLine($"Last  Name: {table.Rows[0][1]}");
+			Console.WriteLine($"Age       : {table.Rows[0][2]}");
 		}
 
 		static void IndexingUsingString() {
