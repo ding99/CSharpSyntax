@@ -10,7 +10,27 @@ namespace SimpleIndexer {
 			UseGenericList();
 			IndexingUsingString();
 			MultiIndexer();
+			OnInterface();
 			Console.ResetColor();
+		}
+
+		static void OnInterface() {
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
+			Console.WriteLine("=> Indexer Definition on Interface Types");
+
+			SomeClass people = new SomeClass();
+			people[0] = "Homer";
+			people[0] = "Marge";
+
+			Console.Write("List using for:");
+			for (int i = 0; i < people.Count; i++)
+				Console.Write($" {people[i]}");
+			Console.WriteLine();
+
+			Console.Write("List using foreach:");
+			foreach (string s in people)
+				Console.Write($" {s}");
+			Console.WriteLine();
 		}
 
 		static void MultiIndexer() {
