@@ -7,7 +7,21 @@ namespace SimpleIndexer {
 			Console.WriteLine("***** Indexer Methods *****");
 			SimpleIndexing();
 			UseGenericList();
+			IndexingUsingString();
 			Console.ResetColor();
+		}
+
+		static void IndexingUsingString() {
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.WriteLine("=> Indexing data using string values");
+
+			PersonCollectionDic people = new PersonCollectionDic();
+			people["Homer"] = new Person("Homer", "Simpson", 39);
+			people["Marge"] = new Person("Marge", "Simpson", 37);
+
+			Person homer = people["Homer"];
+
+			Console.WriteLine(homer.ToString());
 		}
 
 		static void UseGenericList() {
