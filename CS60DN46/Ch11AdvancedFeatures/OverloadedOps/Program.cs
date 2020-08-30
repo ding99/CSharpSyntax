@@ -7,7 +7,17 @@ namespace OverloadedOps {
 			TwoPoints();
 			ShortHandAssign();
 			Unary();
+			OverrideEquals();
 			Console.ResetColor();
+		}
+
+		static void OverrideEquals() {
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
+			Console.WriteLine("=> Overloading Equality Operators"); ;
+
+			Point ptOne = new Point(100, 100), ptTwo = new Point(30, 30);
+			Console.WriteLine($"ptOne = {ptOne}; ptTwo = {ptTwo}");
+			Console.WriteLine($"ptOne == ptTwo: {ptOne == ptTwo}; ptOne != ptTwo : {ptOne != ptTwo}");
 		}
 
 		static void Unary() {
