@@ -17,6 +17,8 @@ namespace OverloadedOps {
 
 			Console.WriteLine($"phOne + ptTwo: {ptOne + ptTwo}");
 			Console.WriteLine($"phOne + ptTwo: {ptOne - ptTwo}");
+			Console.WriteLine($"phOne + 10: {ptOne + 10}");
+			Console.WriteLine($"10 + phOne: {10 + ptOne}");
 		}
 	}
 }
