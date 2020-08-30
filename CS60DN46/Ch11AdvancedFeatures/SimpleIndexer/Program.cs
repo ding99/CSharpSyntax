@@ -27,9 +27,7 @@ namespace SimpleIndexer {
 			table.Rows.Add("Mel", "Appleby", 60);
 
 			//Use multidimension indexer to get details of first row
-			Console.WriteLine($"First Name: {table.Rows[0][0]}");
-			Console.WriteLine($"Last  Name: {table.Rows[0][1]}");
-			Console.WriteLine($"Age       : {table.Rows[0][2]}");
+			Console.WriteLine($"First Name: {table.Rows[0][0]}, Last Name: {table.Rows[0][1]}, Age: {table.Rows[0][2]}");
 		}
 
 		static void IndexingUsingString() {
