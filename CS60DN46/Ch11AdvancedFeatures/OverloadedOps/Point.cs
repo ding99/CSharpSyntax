@@ -17,5 +17,12 @@
 		public static Point operator +(int change, Point p1) {
 			return new Point(p1.X + change, p1.Y + change);
 		}
+
+		public static Point operator ++(Point p1) {
+			return new Point(p1.X + 1, p1.Y + 1);
+		}
+		public static Point operator --(Point p1) {
+			return new Point(p1.X - 1, p1.Y - 1);
+		}
 	}
 }

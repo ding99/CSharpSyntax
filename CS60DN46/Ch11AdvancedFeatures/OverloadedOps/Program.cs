@@ -6,7 +6,19 @@ namespace OverloadedOps {
 			Console.WriteLine("***** Overloading Binary Operators");
 			TwoPoints();
 			ShortHandAssign();
+			Unary();
 			Console.ResetColor();
+		}
+
+		static void Unary() {
+			Console.ForegroundColor = ConsoleColor.Green;
+			Console.WriteLine("=> Overloading Unary Operators");
+
+			Point ptFive = new Point(1, 1);
+			Console.WriteLine($"ptFive {ptFive}; ++ptFive = {++ptFive}, --ptFive = {--ptFive}; ptFive {ptFive}");
+
+			Point ptSix = new Point(20, 20);
+			Console.WriteLine($"ptSix {ptSix}; ptSix++ = {ptSix++}, ptSix-- = {ptSix--}; ptSix: {ptSix}");
 		}
 
 		static void ShortHandAssign() {
