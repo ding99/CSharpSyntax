@@ -70,3 +70,44 @@ namespace AnonymousTypes {
 		}
 	}
 }
+
+/**
+***** Anonymous Types *****
+=> Defining an Anonymous Types
+My car is a Bright Pink Saab.
+You have a Black BWM going 90 MPH
+ToString() == { Make = BWM, Color = Black, Speed = 90 }
+
+=> Internal Representation of Anonymous Types
+obj is an instance of: <>f__AnonymousType0`3
+Base class of <>f__AnonymousType0`3 is System.Object
+obj.ToString() == { Color = Pink, Make = Saab, Speed = 55 }
+obj.GetHashCode() == 1152314597
+
+=> Equality test
+-> Same definitions with same order
+Same anonymous objects(by Equals()): True
+Same anonymous objects(by ==): False
+We are both the same type: True
+obj is an instance of: <>f__AnonymousType0`3
+Base class of <>f__AnonymousType0`3 is System.Object
+obj.ToString() == { Color = Black, Make = Saab, Speed = 55 }
+obj.GetHashCode() == -1268376977
+obj is an instance of: <>f__AnonymousType0`3
+Base class of <>f__AnonymousType0`3 is System.Object
+obj.ToString() == { Color = Black, Make = Saab, Speed = 55 }
+obj.GetHashCode() == -1268376977
+
+-> Same definitions with different order
+Same anonymous objects(by Equals()): False
+Same anonymous objects(by ==): False
+We are both the same type: False
+obj is an instance of: <>f__AnonymousType0`3
+Base class of <>f__AnonymousType0`3 is System.Object
+obj.ToString() == { Color = Black, Make = Saab, Speed = 55 }
+obj.GetHashCode() == -1268376977
+obj is an instance of: <>f__AnonymousType1`3
+Base class of <>f__AnonymousType1`3 is System.Object
+obj.ToString() == { Make = Saab, Color = Black, Speed = 55 }
+obj.GetHashCode() == 387154663
+**/
