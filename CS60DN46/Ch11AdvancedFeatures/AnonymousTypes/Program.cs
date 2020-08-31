@@ -6,7 +6,35 @@ namespace AnonymousTypes {
 			Console.WriteLine("***** Anonymous Types *****");
 			UseAnonymousType();
 			ReflectInfo();
+			EqualityTest();
 			Console.ResetColor();
+		}
+
+		static void EqualityTest() {
+			Console.WriteLine("=> Equality test");
+
+			Console.ForegroundColor = ConsoleColor.Red;
+			Console.WriteLine("-> Same definitions with same order");
+			var firstCar = new { Color = "Black", Make = "Saab", Speed = 55 };
+			var secondCar = new { Color = "Black", Make = "Saab", Speed = 55 };
+			Prints(firstCar, secondCar);
+
+			Console.ForegroundColor = ConsoleColor.Green;
+			Console.WriteLine("-> Same definitions with different order");
+			var thirdCar = new { Make = "Saab", Color = "Black", Speed = 55 };
+			Prints(firstCar, thirdCar);
+		}
+
+		static void Prints(object a, object b) {
+			Console.WriteLine($"Same anonymous objects(by Equals()): {a.Equals(b)}");
+			Console.WriteLine($"Same anonymous objects(by ==): {a == b}");
+			Console.WriteLine($"We are both the same type: {a.GetType().Name == b.GetType().Name}");
+
+			Console.BackgroundColor = ConsoleColor.Yellow;
+			ReflectOverAnonymousType(a);
+			Console.BackgroundColor = ConsoleColor.White;
+			ReflectOverAnonymousType(b);
+			Console.BackgroundColor = ConsoleColor.Black;
 		}
 
 		static void ReflectInfo() {
