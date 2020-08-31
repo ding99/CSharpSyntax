@@ -6,7 +6,28 @@ namespace UnsafeCode {
 			Console.WriteLine("***** Pointer Types *****");
 			UnsafeScope();
 			PrintValueAndAddress();
+			Swaps();
 			Console.ResetColor();
+		}
+
+		static void Swaps() {
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.WriteLine("=> Unsafe and Safe Swap functions");
+
+			int i = 10, j = 20; Console.WriteLine($"i {i}, j {j}");
+			
+			Console.WriteLine("-> Safe swap"); SafeSwap(ref i, ref j);
+			Console.WriteLine($"i {i}, j {j}");
+
+			Console.WriteLine("-> Unsafe swap"); unsafe { UnsafeSwap(&i, &j); }
+			Console.WriteLine($"i {i}, j {j}");
+		}
+
+		unsafe static void UnsafeSwap(int* i, int* j) {
+			int temp = *i; *i = *j; *j = temp;
+		}
+		static void SafeSwap(ref int i, ref int j) {
+			int temp = i; i = j; j = temp;
 		}
 
 		unsafe static void PrintValueAndAddress() {
