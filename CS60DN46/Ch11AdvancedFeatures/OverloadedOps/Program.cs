@@ -6,7 +6,39 @@ namespace OverloadedOps {
 			Console.WriteLine("***** Overloading Binary Operators");
 			TwoPoints();
 			ShortHandAssign();
+			Unary();
+			OverrideEquals();
+			Comparison();
 			Console.ResetColor();
+		}
+
+		static void Comparison() {
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.WriteLine("=> Overloading Comparison Operators");
+
+			Point ptOne = new Point(100, 100), ptTwo = new Point(30, 30);
+			Console.WriteLine($"ptOne = {ptOne}; ptTwo = {ptTwo}");
+			Console.WriteLine($"ptOne < ptTwo: {ptOne < ptTwo}; ptOne > ptTwo: {ptOne > ptTwo}");
+		}
+
+		static void OverrideEquals() {
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
+			Console.WriteLine("=> Overloading Equality Operators"); ;
+
+			Point ptOne = new Point(100, 100), ptTwo = new Point(30, 30);
+			Console.WriteLine($"ptOne = {ptOne}; ptTwo = {ptTwo}");
+			Console.WriteLine($"ptOne == ptTwo: {ptOne == ptTwo}; ptOne != ptTwo : {ptOne != ptTwo}");
+		}
+
+		static void Unary() {
+			Console.ForegroundColor = ConsoleColor.Green;
+			Console.WriteLine("=> Overloading Unary Operators");
+
+			Point ptFive = new Point(1, 1);
+			Console.WriteLine($"ptFive {ptFive}; ++ptFive = {++ptFive}, --ptFive = {--ptFive}; ptFive {ptFive}");
+
+			Point ptSix = new Point(20, 20);
+			Console.WriteLine($"ptSix {ptSix}; ptSix++ = {ptSix++}, ptSix-- = {ptSix--}; ptSix: {ptSix}");
 		}
 
 		static void ShortHandAssign() {
