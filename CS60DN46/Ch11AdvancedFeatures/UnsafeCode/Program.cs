@@ -5,7 +5,19 @@ namespace UnsafeCode {
 		static void Main() {
 			Console.WriteLine("***** Pointer Types *****");
 			UnsafeScope();
+			PrintValueAndAddress();
 			Console.ResetColor();
+		}
+
+		unsafe static void PrintValueAndAddress() {
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine("=> Working with * and & operators");
+
+			int myInt;
+			int* ptrInt = &myInt;
+			*ptrInt = 123;
+
+			Console.WriteLine($"Value of myInt {myInt} / {*ptrInt}; Address of myInt {(int)ptrInt} / {(int)*(&ptrInt)}; Address of ptrInt {(int)&ptrInt}");
 		}
 
 		static void UnsafeScope() {
