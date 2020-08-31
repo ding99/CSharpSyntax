@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CustomConversions {
 	struct Rectangle {
@@ -22,6 +18,10 @@ namespace CustomConversions {
 
 		public override string ToString() {
 			return $"[Width = {Width}; Height = {Height}]";
+		}
+
+		public static implicit operator Rectangle(Square s) {
+			return new Rectangle { Height = s.Length, Width = s.Length * 2 };
 		}
 	}
 

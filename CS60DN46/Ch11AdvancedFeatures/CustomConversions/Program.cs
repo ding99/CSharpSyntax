@@ -7,7 +7,23 @@ namespace CustomConversions {
 			StructConversion();
 			ConvertRectangle();
 			ExplicitConversion();
+			ImplicitConversion();
 			Console.ResetColor();
+		}
+
+		static void ImplicitConversion() {
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
+			Console.WriteLine("=> Implicit Conversion Routines");
+
+			Square s = new Square(); s.Length = 7;
+			Console.WriteLine($"Square: {s}");
+			Rectangle rect = s;
+			Console.WriteLine($"Implicit converted Rectanle: {rect}");
+
+			Square s2 = new Square(); s2.Length = 4;
+			Console.WriteLine($"Square: {s2}");
+			Rectangle rect2 = (Rectangle)s2;
+			Console.WriteLine($"\'Explicitly\' converted rectangle: {rect2}");
 		}
 
 		static void ExplicitConversion() {
