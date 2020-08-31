@@ -17,7 +17,9 @@ namespace UnsafeCode {
 			int* ptrInt = &myInt;
 			*ptrInt = 123;
 
-			Console.WriteLine($"Value of myInt {myInt} / {*ptrInt}; Address of myInt {(int)ptrInt} / {(int)*(&ptrInt)}; Address of ptrInt {(int)&ptrInt}");
+			Console.WriteLine("statement: int* ptrInt = &myInt;");
+			Console.WriteLine($"myInt : Value {myInt} / {*ptrInt}, Address: {(int)&myInt} / {(int)ptrInt}");
+			Console.WriteLine($"ptrInt: Value {(int)ptrInt} / {(int)*(&ptrInt)}, Address: {(int)&ptrInt}");
 		}
 
 		static void UnsafeScope() {
@@ -41,3 +43,15 @@ namespace UnsafeCode {
 		}
 	}
 }
+
+/**
+***** Pointer Types *****
+=> Unsage scope
+myInt: 25
+myInt2: 10
+=> Working with * and & operators
+statement: int* ptrInt = &myInt;
+myInt : Value 123 / 123, Address: 9696424 / 9696424
+ptrInt: Value 9696424 / 9696424, Address: 9696420
+Press any key to continue . . .
+ **/
