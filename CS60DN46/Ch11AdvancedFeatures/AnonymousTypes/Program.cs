@@ -30,10 +30,8 @@ namespace AnonymousTypes {
 			Console.WriteLine($"Same anonymous objects(by ==): {a == b}");
 			Console.WriteLine($"We are both the same type: {a.GetType().Name == b.GetType().Name}");
 
-			Console.BackgroundColor = ConsoleColor.Yellow;
-			ReflectOverAnonymousType(a);
-			Console.BackgroundColor = ConsoleColor.White;
-			ReflectOverAnonymousType(b);
+			Console.BackgroundColor = ConsoleColor.Yellow; ReflectOverAnonymousType(a);
+			Console.BackgroundColor = ConsoleColor.White; ReflectOverAnonymousType(b);
 			Console.BackgroundColor = ConsoleColor.Black;
 		}
 
