@@ -7,7 +7,21 @@ namespace AnonymousTypes {
 			UseAnonymousType();
 			ReflectInfo();
 			EqualityTest();
+			NestedAnonymousTypes();
 			Console.ResetColor();
+		}
+
+		static void NestedAnonymousTypes() {
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.WriteLine("=> Anonymous Types containing Anonymous Types");
+
+			var purchaseItem = new {
+				Time = DateTime.Now,
+				Item = new { Color = "Red", Make = "Saab", Speed = 55 },
+				Price = 34
+			};
+
+			ReflectOverAnonymousType(purchaseItem);
 		}
 
 		static void EqualityTest() {
