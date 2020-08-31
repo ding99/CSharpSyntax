@@ -7,7 +7,19 @@ namespace UnsafeCode {
 			UnsafeScope();
 			PrintValueAndAddress();
 			Swaps();
+			UsePointerToPoint();
 			Console.ResetColor();
+		}
+
+		unsafe static void UsePointerToPoint() {
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
+			Console.WriteLine("=> Field Access via Pointers");
+
+			Point point; Point* p = &point;
+			p->x = 10; p->y = 20; Console.WriteLine(p->ToString());
+
+			Point point2; Point* p2 = &point2;
+			(*p2).x = 50; (*p2).y = 60; Console.WriteLine((*p2).ToString());
 		}
 
 		static void Swaps() {
