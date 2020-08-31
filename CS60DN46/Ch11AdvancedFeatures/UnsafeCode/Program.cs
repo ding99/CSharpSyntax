@@ -8,7 +8,18 @@ namespace UnsafeCode {
 			PrintValueAndAddress();
 			Swaps();
 			UsePointerToPoint();
+			UnsafeStackAlloc();
 			Console.ResetColor();
+		}
+
+		unsafe static void UnsafeStackAlloc() {
+			Console.ForegroundColor = ConsoleColor.Green;
+			Console.WriteLine("=> stackalloc keyword");
+
+			char* p = stackalloc char[16];
+			for (int k = 0; k < 16; k++) p[k] = (char)k;
+			for (int k = 0; k < 16; k++) Console.Write($" {k}");
+			Console.WriteLine();
 		}
 
 		unsafe static void UsePointerToPoint() {
