@@ -25,6 +25,13 @@ namespace LinqOverArray {
 			Console.Write($"-> subset (size {subset.Count()}):");
 			foreach (int a in subset) Console.Write($" {a}");
 			Console.WriteLine();
+			ReflectOverQueryResults(subset);
+
+			var subset2 = from i in numbers where i < 10 select i;
+			Console.Write($"-> Implicit typing subset (size {subset2.Count()}):");
+			foreach (int a in subset2) Console.Write($" {a}");
+			Console.WriteLine();
+			ReflectOverQueryResults(subset2);
 		}
 
 		static void QueryOverStrings() {
