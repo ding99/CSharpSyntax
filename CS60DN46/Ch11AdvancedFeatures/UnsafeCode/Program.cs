@@ -4,12 +4,31 @@ namespace UnsafeCode {
 	class Program {
 		static void Main() {
 			Console.WriteLine("***** Pointer Types *****");
-			UnsafeScope();
-			PrintValueAndAddress();
-			Swaps();
-			UsePointerToPoint();
-			UnsafeStackAlloc();
+			unsafe {
+				UnsafeScope();
+				PrintValueAndAddress();
+				Swaps();
+				UsePointerToPoint();
+				UnsafeStackAlloc();
+				UseAndPinPoint();
+			}
 			Console.ResetColor();
+		}
+
+		unsafe static void UseAndPinPoint() {
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("=> Pinning a Type via the fixed Keyword");
+
+			PointRef pt = new PointRef();
+			pt.x = 5; pt.y = 6;
+			
+			//Pin pt in place so it will not be moved or GC-ed.
+			fixed (int* p = &pt.x) {
+				// Use int* variable here.
+			}
+
+			//pt is now unpinned.
+			Console.WriteLine($"Point is: {pt}");
 		}
 
 		unsafe static void UnsafeStackAlloc() {
