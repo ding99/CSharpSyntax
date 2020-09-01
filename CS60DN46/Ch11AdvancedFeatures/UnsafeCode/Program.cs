@@ -11,8 +11,20 @@ namespace UnsafeCode {
 				UsePointerToPoint();
 				UnsafeStackAlloc();
 				UseAndPinPoint();
+				Sizeof();
 			}
 			Console.ResetColor();
+		}
+
+		static void Sizeof() {
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine("-> Safe sizeof()");
+			Console.WriteLine($"sizeof: short {sizeof(short)}, int {sizeof(int)}, long {sizeof(long)}");
+
+			Console.WriteLine("-> Unsafe sizeof()");
+			unsafe {
+				Console.WriteLine($"The size of Point is {sizeof(Point)}");
+			}
 		}
 
 		unsafe static void UseAndPinPoint() {
