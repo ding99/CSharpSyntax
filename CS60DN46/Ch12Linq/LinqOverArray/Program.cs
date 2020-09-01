@@ -29,7 +29,7 @@ namespace LinqOverArray {
 
 			var subset2 = from i in numbers where i < 10 select i;
 			Console.Write($"-> Implicit typing subset (size {subset2.Count()}):");
-			foreach (int a in subset2) Console.Write($" {a}");
+			foreach (var a in subset2) Console.Write($" {a}");
 			Console.WriteLine();
 			ReflectOverQueryResults(subset2);
 		}
