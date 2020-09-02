@@ -9,7 +9,31 @@ namespace LinqOverArray {
 			QueryOverStrings();
 			QueryOverInts();
 			ImmediateExcution();
+			ReturnValues();
 			Console.ResetColor();
+		}
+
+		static void ReturnValues() {
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
+			Console.WriteLine("=> Linq return values");
+
+			IEnumerable<string> subset = GetStringSubset();
+
+			Console.Write($"-> Returned subset (size {subset.Count()}):");
+			foreach (string item in subset)
+				Console.Write($" <{item}>");
+			Console.WriteLine();
+		}
+
+		static IEnumerable<string> GetStringSubset() {
+			string[] colors = { "Light Red", "Green", "Yellow", "Dark Red", "Red", "Purple" };
+
+			Console.Write($"-> Original array (size {colors.Length}):");
+			foreach (string s in colors) Console.Write($" <{s}>");
+			Console.WriteLine();
+
+			IEnumerable<string> reds = from c in colors where c.Contains("Red") select c;
+			return reds;
 		}
 
 		static void ImmediateExcution() {
