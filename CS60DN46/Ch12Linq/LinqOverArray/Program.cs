@@ -30,6 +30,16 @@ namespace LinqOverArray {
 			Console.Write($"-> Implicit typing subset (size {subset2.Count()}):");
 			foreach (var a in subset2) Console.Write($" {a}");
 			Console.WriteLine();
+
+			numbers[0] = 4;
+			Console.Write($"-> Implicit typing subset(Deferred) (size {subset2.Count()}):");
+			foreach (var a in subset2) Console.Write($" {a}");
+			Console.WriteLine();
+
+			Console.Write($"-> subset(Deferred) (size {subset.Count()}):");
+			foreach (int a in subset) Console.Write($" {a}");
+			Console.WriteLine();
+
 			ReflectOverQueryResults(subset2);
 		}
 
