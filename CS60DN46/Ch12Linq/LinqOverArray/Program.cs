@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 
 namespace LinqOverArray {
 	class Program {
@@ -50,7 +49,14 @@ namespace LinqOverArray {
 			Console.WriteLine();
 
 			ReflectOverQueryResults(subset);
+
+			Console.WriteLine();
+			Console.WriteLine("-> extension methods");
+			//utility class extension methods
+			Console.WriteLine($"Aggregate: <{games.Aggregate((one, two) => one + ", " + two)}>");		
+			Console.WriteLine($"Max <{games.Max()}>, Min <{games.Min()}>, First <{games.First()}>, Last <{games.Last()}>");
 		}
+
 		static void ReflectOverQueryResults(object resultSet) {
 			Console.WriteLine("-> Info about your query");
 			Console.WriteLine($"resultSet is of type: <{resultSet.GetType().Name}>, location: <{resultSet.GetType().Assembly.GetName().Name}>");
