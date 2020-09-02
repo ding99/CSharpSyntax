@@ -9,6 +9,7 @@ namespace LinqOverArray {
 			QueryOverStrings();
 			QueryOverInts();
 			ImmediateExcution();
+			ClassField();
 			ReturnValues();
 			Console.ResetColor();
 		}
@@ -23,6 +24,12 @@ namespace LinqOverArray {
 			foreach (string item in subset)
 				Console.Write($" <{item}>");
 			Console.WriteLine();
+		}
+
+		static void ClassField() {
+			Console.ForegroundColor = ConsoleColor.Green;
+			Console.WriteLine("=> Linq based fields are clunky");
+			new LinqBasedFieldsAreClunky().PrintGames();
 		}
 
 		static IEnumerable<string> GetStringSubset() {
