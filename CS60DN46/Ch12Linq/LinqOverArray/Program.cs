@@ -19,19 +19,28 @@ namespace LinqOverArray {
 			Console.WriteLine("=> Linq return values");
 
 			IEnumerable<string> subset = GetStringSubset();
-
 			Console.Write($"-> Returned subset (size {subset.Count()}):");
 			foreach (string item in subset)
 				Console.Write($" <{item}>");
 			Console.WriteLine();
+
+			string[] subsetArray = GetStringSubsetArray();
+			Console.Write($"-> Returned subsetArray (size {subsetArray.Count()}):");
+			foreach (string item in subsetArray)
+				Console.Write($" <{item}>");
+			Console.WriteLine();
 		}
 
-		static void ClassField() {
-			Console.ForegroundColor = ConsoleColor.Green;
-			Console.WriteLine("=> Linq based fields are clunky");
-			new LinqBasedFieldsAreClunky().PrintGames();
-		}
+		static string[] GetStringSubsetArray() {
+			string[] colors = { "Light Red", "Green", "Yellow", "Dark Red", "Red", "Purple" };
 
+			Console.Write($"-> Original array (size {colors.Length}):");
+			foreach (string s in colors) Console.Write($" <{s}>");
+			Console.WriteLine();
+
+			var reds = from c in colors where c.Contains("Red") select c;
+			return reds.ToArray();
+		}
 		static IEnumerable<string> GetStringSubset() {
 			string[] colors = { "Light Red", "Green", "Yellow", "Dark Red", "Red", "Purple" };
 
@@ -41,6 +50,12 @@ namespace LinqOverArray {
 
 			IEnumerable<string> reds = from c in colors where c.Contains("Red") select c;
 			return reds;
+		}
+
+		static void ClassField() {
+			Console.ForegroundColor = ConsoleColor.Green;
+			Console.WriteLine("=> Linq based fields are clunky");
+			new LinqBasedFieldsAreClunky().PrintGames();
 		}
 
 		static void ImmediateExcution() {
