@@ -8,7 +8,38 @@ namespace LinqOverArray {
 			Console.WriteLine("***** Linq to Object *****");
 			QueryOverStrings();
 			QueryOverInts();
+			ImmediateExcution();
 			Console.ResetColor();
+		}
+
+		static void ImmediateExcution() {
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.WriteLine("=> The Role of Immediate Exection");
+			int[] numbers = { 10, 20, 30, 40, 1, 2, 3, 8 };
+
+			Console.Write($"-> original array (size {numbers.Length}):");
+			foreach (int a in numbers) Console.Write($" {a}");
+			Console.WriteLine();
+
+			int[] subsetArray = (from i in numbers where i < 10 select i).ToArray<int>();
+			Console.Write($"-> subsetArray (size {subsetArray.Count()}):");
+			foreach (int a in subsetArray) Console.Write($" {a}");
+			Console.WriteLine();
+
+			List<int> subsetList= (from i in numbers where i < 10 select i).ToList<int>();
+			Console.Write($"-> subsetList (size {subsetList.Count()}):");
+			foreach (int a in subsetList) Console.Write($" {a}");
+			Console.WriteLine();
+
+			numbers[0] = 4;
+			List<int> subsetList2 = (from i in numbers where i < 10 select i).ToList<int>();
+			Console.Write($"-> subsetList2 (size {subsetList2.Count()}):");
+			foreach (int a in subsetList2) Console.Write($" {a}");
+			Console.WriteLine();
+
+			Console.Write($"-> subsetList (size {subsetList.Count()}):");
+			foreach (int a in subsetList) Console.Write($" {a}");
+			Console.WriteLine();
 		}
 
 		static void QueryOverInts() {
@@ -32,6 +63,7 @@ namespace LinqOverArray {
 			Console.WriteLine();
 			ReflectOverQueryResults(subset2);
 
+			Console.WriteLine("=> The Role of Deferred Exection");
 			numbers[0] = 4;
 
 			Console.Write($"-> Implicit typing subset(Deferred) (size {subset2.Count()}):");
