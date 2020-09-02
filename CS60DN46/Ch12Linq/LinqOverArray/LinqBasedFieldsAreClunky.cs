@@ -9,8 +9,15 @@ namespace LinqOverArray {
 		private IEnumerable<string> subset = from g in games where g.Contains(" ") orderby g select g;
 
 		public void PrintGames() {
+			Console.Write($"-> target (size {games.Length}):");
+			foreach (var item in games)
+				Console.Write($" <{item}>");
+			Console.WriteLine();
+
+			Console.Write($"-> subset (size {subset.Count()}):");
 			foreach(var item in subset)
-				Console.WriteLine(item);
+				Console.Write($" <{item}>");
+			Console.WriteLine();
 		}
 	}
 }
