@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LinqExpressions {
 	class Program {
@@ -32,7 +28,18 @@ namespace LinqExpressions {
 			Console.ForegroundColor = ConsoleColor.Green; OverStacks(items);
 			Console.ForegroundColor = ConsoleColor.DarkYellow; NewDataTypes(items);
 			Console.ForegroundColor = ConsoleColor.DarkCyan; ReturnAsArray(items);
+			Console.ForegroundColor = ConsoleColor.Red; Reverse(items);
 		}
+
+		static void Reverse(ProductInfo[] products) {
+			Console.WriteLine("-> Reverse result sets (overstock)");
+			var reverses = (from p in products where p.Number > 25 select p).Reverse();
+			Console.Write($"Items (size {reverses.Count()})");
+			foreach (var p in reverses)
+				Console.Write($" <{p.Name}>");
+			Console.WriteLine();
+		}
+
 		static void ReturnAsArray(ProductInfo[] products) {
 			Array objs = GetSubSet(products);
 			Console.WriteLine("-> Return as Array (overstock)");
@@ -43,6 +50,7 @@ namespace LinqExpressions {
 		static Array GetSubSet(ProductInfo[] products) {
 			return (from p in products where p.Number > 25 select new { p.Name, p.Desc }).ToArray();
 		}
+
 		static void NewDataTypes(ProductInfo[] products) {
 			Console.WriteLine("-> New data types (Name and Desc)");
 			var nameDesc = from p in products select new { p.Name, p.Desc };
@@ -50,6 +58,7 @@ namespace LinqExpressions {
 			foreach (var p in nameDesc)
 				Console.WriteLine($" {p}");
 		}
+
 		static void OverStacks(ProductInfo[] products) {
 			Console.WriteLine("-> Basic Where Syntax (overstock)");
 			var overstocks = from p in products where p.Number > 25 select p;
@@ -58,6 +67,7 @@ namespace LinqExpressions {
 				Console.Write($" <{p.Name}>");
 			Console.WriteLine();
 		}
+
 		static void ListNames(ProductInfo[] products) {
 			Console.WriteLine("-> Basic Select Syntax");
 
