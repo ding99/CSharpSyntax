@@ -9,7 +9,23 @@ namespace LinqOverCollections {
 			Console.WriteLine("***** Linq Queries to Collection Objects *****");
 			GenericCollections();
 			LinqOverArrayList();
+			OfTypeAsFilter();
 			Console.ResetColor();
+		}
+
+		static void OfTypeAsFilter() {
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
+			Console.WriteLine("=> OfType as filter");
+
+			ArrayList stuff = new ArrayList();
+			stuff.AddRange(new object[] { 10, 400, 8, false, new Car(), "String data",200 });
+			Console.WriteLine($" {stuff.Count} items totally in the original arraylist");
+
+			var ints = stuff.OfType<int>();
+			Console.Write($" {ints.Count()} numerical data:");
+			foreach (var i in ints)
+				Console.Write($" {i}");
+			Console.WriteLine();
 		}
 
 		static void LinqOverArrayList() {
