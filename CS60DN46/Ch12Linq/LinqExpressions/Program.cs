@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -27,9 +28,20 @@ namespace LinqExpressions {
 			foreach(var p in items)
 				Console.WriteLine($" {p}");
 
-			ListNames(items);
-			OverStacks(items);
-			NewDataTypes(items);
+			Console.ForegroundColor = ConsoleColor.Cyan; ListNames(items);
+			Console.ForegroundColor = ConsoleColor.Green; OverStacks(items);
+			Console.ForegroundColor = ConsoleColor.DarkYellow; NewDataTypes(items);
+			Console.ForegroundColor = ConsoleColor.DarkCyan; ReturnAsArray(items);
+		}
+		static void ReturnAsArray(ProductInfo[] products) {
+			Array objs = GetSubSet(products);
+			Console.WriteLine("-> Return as Array (overstock)");
+			Console.WriteLine($"Items (size {objs.Length})");
+			foreach (var p in objs)
+				Console.WriteLine($" {p}");
+		}
+		static Array GetSubSet(ProductInfo[] products) {
+			return (from p in products where p.Number > 25 select new { p.Name, p.Desc }).ToArray();
 		}
 		static void NewDataTypes(ProductInfo[] products) {
 			Console.WriteLine("-> New data types (Name and Desc)");
@@ -39,7 +51,7 @@ namespace LinqExpressions {
 				Console.WriteLine($" {p}");
 		}
 		static void OverStacks(ProductInfo[] products) {
-			Console.WriteLine("-> Basic Where Syntax");
+			Console.WriteLine("-> Basic Where Syntax (overstock)");
 			var overstocks = from p in products where p.Number > 25 select p;
 			Console.Write($"Items (size {overstocks.Count()})");
 			foreach (var p in overstocks)
