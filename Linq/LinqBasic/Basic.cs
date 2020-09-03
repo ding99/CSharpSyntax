@@ -28,6 +28,12 @@ namespace LinqBasic {
 			Console.Write($"Excellent (size {excellence2.Count()}):");
 			foreach (var a in excellence2) Console.Write($" <{a}>");
 			Console.WriteLine();
+
+			int n = 1;
+			var passed = (from score in scores where score > 60 orderby score descending select new { Number = n++, Score = score }).ToList();
+			Console.Write($"Passed (size {passed.Count()}):");
+			foreach (var a in passed) Console.Write($" <{a.Number}-{a.Score}>");
+			Console.WriteLine();
 		}
 	}
 }
