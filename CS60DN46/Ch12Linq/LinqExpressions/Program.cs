@@ -25,10 +25,18 @@ namespace LinqExpressions {
 
 			Console.WriteLine($"Items (size {items.Count()})");
 			foreach(var p in items)
-				Console.WriteLine(p.ToString());
+				Console.WriteLine($" {p}");
 
 			ListNames(items);
 			OverStacks(items);
+			NewDataTypes(items);
+		}
+		static void NewDataTypes(ProductInfo[] products) {
+			Console.WriteLine("-> New data types (Name and Desc)");
+			var nameDesc = from p in products select new { p.Name, p.Desc };
+			Console.WriteLine($"Items (size {nameDesc.Count()})");
+			foreach (var p in nameDesc)
+				Console.WriteLine($" {p}");
 		}
 		static void OverStacks(ProductInfo[] products) {
 			Console.WriteLine("-> Basic Where Syntax");
