@@ -29,6 +29,16 @@ namespace LinqExpressions {
 			Console.ForegroundColor = ConsoleColor.DarkYellow; NewDataTypes(items);
 			Console.ForegroundColor = ConsoleColor.DarkCyan; ReturnAsArray(items);
 			Console.ForegroundColor = ConsoleColor.Red; Reverse(items);
+			Console.ForegroundColor = ConsoleColor.Blue; Sorting(items);
+		}
+
+		static void Sorting(ProductInfo[] products) {
+			Console.WriteLine("-> Sorting Expression (overstock)");
+			var sorts = from p in products where p.Number > 25 orderby p.Name select p;
+			Console.Write($"Items (size {sorts.Count()})");
+			foreach (var p in sorts)
+				Console.Write($" <{p.Name}>");
+			Console.WriteLine();
 		}
 
 		static void Reverse(ProductInfo[] products) {
