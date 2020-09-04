@@ -15,6 +15,20 @@ namespace LinqUsingEnumerable {
 		static void QueryStringsWithAnonymousMethods() {
 			Console.ForegroundColor = ConsoleColor.DarkYellow;
 			Console.WriteLine("=> Using anonymous Methods");
+
+			string[] games = { "Morrowind", "Uncharted 2", "Fallout 3", "Daxter", "System Shock 2" };
+			Console.Write($"-> Games (size {games.Count()}):");
+			foreach (var g in games) Console.Write($" <{g}>");
+			Console.WriteLine();
+
+			Func<string, bool> searchFilter = delegate (string game) { return game.Contains(" "); };
+			Func<string, string> itemToProcess = delegate (string s) { return s; };
+
+			var subset = games.Where(searchFilter).OrderBy(itemToProcess).Select(itemToProcess);
+
+			Console.Write($"-> Containing Space (size {subset.Count()}):");
+			foreach (var g in subset) Console.Write($" <{g}>");
+			Console.WriteLine();
 		}
 
 		static void QueryStringsWithEnumerableAndLambdas2() {
