@@ -291,6 +291,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqOverCollections", "CS60DN46\Ch12Linq\LinqOverCollections\LinqOverCollections.csproj", "{82D31FFC-E3BA-408E-AC68-C6D5C997E063}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqExpressions", "CS60DN46\Ch12Linq\LinqExpressions\LinqExpressions.csproj", "{63D78346-9E88-48E5-B260-B659A60FE42A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Linq", "Linq", "{99467DA8-D11E-4049-B6D4-18EC55094077}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqBasic", "Linq\LinqBasic\LinqBasic.csproj", "{58CFE898-A876-4066-AE2B-F9D5DA64479F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqUsingEnumerable", "CS60DN46\Ch12Linq\LinqUsingEnumerable\LinqUsingEnumerable.csproj", "{B0C36515-6ADD-4942-933C-F5DFF4DAE05E}"
 EndProject
