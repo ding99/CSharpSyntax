@@ -9,7 +9,14 @@ namespace LinqUsingEnumerable {
 			QueryStringsWithEnumerableAndLambdas();
 			QueryStringsWithEnumerableAndLambdas2();
 			QueryStringsWithAnonymousMethods();
+			RawDelegate();
 			Console.ResetColor();
+		}
+
+		static void RawDelegate() {
+			Console.ForegroundColor = ConsoleColor.Green;
+			Console.WriteLine("=> Using Enumerable / Raw Delegate");
+			VeryComplexQueryStringsWithOperators.QueryStringWithRawDelegates();
 		}
 
 		static void QueryStringsWithAnonymousMethods() {
