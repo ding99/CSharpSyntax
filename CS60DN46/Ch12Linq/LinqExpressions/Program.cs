@@ -1,12 +1,34 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace LinqExpressions {
 	class Program {
 		static void Main() {
 			Console.WriteLine("***** Query Expressions *****");
 			Expression();
+			ExtensionMethods();
 			Console.ResetColor();
+		}
+
+		static void ExtensionMethods() {
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("=> Linq as a Better Venn Diagramming Tool");
+
+			List<string> myCars = new List<string> { "Yugo", "Aztec", "BMW" };
+			List<string> urCars = new List<string> { "BMW", "Saab", "Aztec" };
+			Console.Write($"My cars (size {myCars.Count()}):");
+			foreach (var a in myCars) Console.Write($" <{a}>");
+			Console.WriteLine();
+			Console.Write($"Your cars (size {urCars.Count()}):");
+			foreach (var a in urCars) Console.Write($" <{a}>");
+			Console.WriteLine();
+
+			Console.WriteLine("-> Diff via Except");
+			var diff = (from c in myCars select c).Except(from c2 in urCars select c2);
+			Console.Write($"Here is what you don't have, but I do (size {diff.Count()}):");
+			foreach (var a in diff) Console.Write($" <{a}>");
+			Console.WriteLine();
 		}
 
 		static void Expression() {
