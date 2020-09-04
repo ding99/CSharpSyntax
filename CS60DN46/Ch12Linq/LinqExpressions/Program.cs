@@ -47,6 +47,12 @@ namespace LinqExpressions {
 			Console.Write($"Concatenation (size {concat.Count()}):");
 			foreach (var a in concat) Console.Write($" <{a}>");
 			Console.WriteLine();
+
+			Console.WriteLine("-> Removing Duplicates");
+			var distinct = (from c in myCars select c).Concat(from c2 in urCars select c2).Distinct();
+			Console.Write($"Concat the distinct (size {distinct.Count()}):");
+			foreach (var a in distinct) Console.Write($" <{a}>");
+			Console.WriteLine();
 		}
 
 		static void Expression() {
