@@ -41,6 +41,12 @@ namespace LinqExpressions {
 			Console.Write($"Here is everything (size {union.Count()}):");
 			foreach (var a in union) Console.Write($" <{a}>");
 			Console.WriteLine();
+
+			Console.WriteLine("-> Concatnation via Concat");
+			var concat = (from c in myCars select c).Concat(from c2 in urCars select c2);
+			Console.Write($"Concatenation (size {concat.Count()}):");
+			foreach (var a in concat) Console.Write($" <{a}>");
+			Console.WriteLine();
 		}
 
 		static void Expression() {
