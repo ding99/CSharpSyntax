@@ -1,12 +1,75 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 namespace LinqExpressions {
 	class Program {
 		static void Main() {
 			Console.WriteLine("***** Query Expressions *****");
 			Expression();
+			ExtensionMethods();
+			Aggregation();
 			Console.ResetColor();
+		}
+
+		static void Aggregation() {
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine();
+
+			double[] temps = { 2.0, -21.3, 8, -4, 0, 8.2 };
+			Console.Write($"Original Temps (size {temps.Count()}):");
+			foreach (var n in temps) Console.Write($" <{n}>");
+			Console.WriteLine();
+
+			Console.WriteLine($"Max: {(from t in temps select t).Max()}");
+			Console.WriteLine($"Min: {(from t in temps select t).Min()}");
+			Console.WriteLine($"Average: {(from t in temps select t).Average()}");
+			Console.WriteLine($"Sum: {(from t in temps select t).Sum()}");
+		}
+
+		static void ExtensionMethods() {
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("=> Linq as a Better Venn Diagramming Tool");
+
+			List<string> myCars = new List<string> { "Yugo", "Aztec", "BMW" };
+			List<string> urCars = new List<string> { "BMW", "Saab", "Aztec" };
+			Console.Write($"My cars (size {myCars.Count()}):");
+			foreach (var a in myCars) Console.Write($" <{a}>");
+			Console.WriteLine();
+			Console.Write($"Your cars (size {urCars.Count()}):");
+			foreach (var a in urCars) Console.Write($" <{a}>");
+			Console.WriteLine();
+
+			Console.WriteLine("-> Diff via Except");
+			var diff = (from c in myCars select c).Except(from c2 in urCars select c2);
+			Console.Write($"Here is what you don't have, but I do (size {diff.Count()}):");
+			foreach (var a in diff) Console.Write($" <{a}>");
+			Console.WriteLine();
+
+			Console.WriteLine("-> Common via Intersect");
+			var common = (from c in myCars select c).Intersect(from c2 in urCars select c2);
+			Console.Write($"Here is what we have in common (size {common.Count()}):");
+			foreach (var a in common) Console.Write($" <{a}>");
+			Console.WriteLine();
+
+			Console.WriteLine("-> Union via Union");
+			var union = (from c in myCars select c).Union(from c2 in urCars select c2);
+			Console.Write($"Here is everything (size {union.Count()}):");
+			foreach (var a in union) Console.Write($" <{a}>");
+			Console.WriteLine();
+
+			Console.WriteLine("-> Concatnation via Concat");
+			var concat = (from c in myCars select c).Concat(from c2 in urCars select c2);
+			Console.Write($"Concatenation (size {concat.Count()}):");
+			foreach (var a in concat) Console.Write($" <{a}>");
+			Console.WriteLine();
+
+			Console.WriteLine("-> Removing Duplicates");
+			var distinct = (from c in myCars select c).Concat(from c2 in urCars select c2).Distinct();
+			Console.Write($"Concat the distinct (size {distinct.Count()}):");
+			foreach (var a in distinct) Console.Write($" <{a}>");
+			Console.WriteLine();
 		}
 
 		static void Expression() {
