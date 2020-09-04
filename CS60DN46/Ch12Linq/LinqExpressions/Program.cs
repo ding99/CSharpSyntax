@@ -29,6 +29,18 @@ namespace LinqExpressions {
 			Console.Write($"Here is what you don't have, but I do (size {diff.Count()}):");
 			foreach (var a in diff) Console.Write($" <{a}>");
 			Console.WriteLine();
+
+			Console.WriteLine("-> Common via Intersect");
+			var common = (from c in myCars select c).Intersect(from c2 in urCars select c2);
+			Console.Write($"Here is what we have in common (size {common.Count()}):");
+			foreach (var a in common) Console.Write($" <{a}>");
+			Console.WriteLine();
+
+			Console.WriteLine("-> Union via Union");
+			var union = (from c in myCars select c).Union(from c2 in urCars select c2);
+			Console.Write($"Here is everything (size {union.Count()}):");
+			foreach (var a in union) Console.Write($" <{a}>");
+			Console.WriteLine();
 		}
 
 		static void Expression() {
