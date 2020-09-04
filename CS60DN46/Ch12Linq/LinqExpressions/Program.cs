@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 namespace LinqExpressions {
 	class Program {
@@ -8,7 +9,23 @@ namespace LinqExpressions {
 			Console.WriteLine("***** Query Expressions *****");
 			Expression();
 			ExtensionMethods();
+			Aggregation();
 			Console.ResetColor();
+		}
+
+		static void Aggregation() {
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine();
+
+			double[] temps = { 2.0, -21.3, 8, -4, 0, 8.2 };
+			Console.Write($"Original Temps (size {temps.Count()}):");
+			foreach (var n in temps) Console.Write($" <{n}>");
+			Console.WriteLine();
+
+			Console.WriteLine($"Max: {(from t in temps select t).Max()}");
+			Console.WriteLine($"Min: {(from t in temps select t).Min()}");
+			Console.WriteLine($"Average: {(from t in temps select t).Average()}");
+			Console.WriteLine($"Sum: {(from t in temps select t).Sum()}");
 		}
 
 		static void ExtensionMethods() {
