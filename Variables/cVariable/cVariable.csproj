@@ -35,6 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Source\calculation.cs" />
+    <Compile Include="Source\Program.cs" />
     <Compile Include="Source\questionmark.cs" />
     <Compile Include="Source\valuable.cs" />
     <Compile Include="Source\entry.cs" />
