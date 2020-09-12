@@ -1,7 +1,6 @@
 ﻿using System;
 
 namespace cVariable {
-
 	public class Vari {
 		public Vari() {
 		}
@@ -74,28 +73,6 @@ namespace cVariable {
 
 			a = null;
 			Console.WriteLine("3 a " + a.HasValue + (a.HasValue ? " " + a : ""));
-		}
-	}
-
-	class Entrance {
-		static void Main(string[] args) {
-			Console.WriteLine("== start");
-			bool ret = true;
-
-            //Vari v = new Vari();
-            //ret = v.bytedef();
-            //ret = v.rows();
-            //ret = v.toFloat();
-            //v.sel();
-            //v.valuable();
-
-            //ret = new Marks().TestMark();
-
-            //ret = new NullAble().TestValue();
-
-            new Calculate().test();
-
-            Console.WriteLine("== end (" + (ret ? "success)" : "failuer)"));
 		}
 	}
 }
