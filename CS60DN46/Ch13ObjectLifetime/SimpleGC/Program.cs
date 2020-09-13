@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.AccessControl;
 
 namespace SimpleGC {
 	class Program {
@@ -14,12 +15,27 @@ namespace SimpleGC {
 			Console.ForegroundColor = ConsoleColor.DarkYellow;
 			Console.WriteLine("=> Trigger GC");
 
-			Console.WriteLine($"Bytes on heap: <{GC.GetTotalMemory(true)}> ");
-			System.Threading.Thread.Sleep(1000);
-			GC.Collect();
+			Console.WriteLine($"Bytes on heap: <{GC.GetTotalMemory(false)}> ");
+
+			Car car = new Car("Zippy", 100);
+			Console.WriteLine($"Generation of <{car}> is: <{GC.GetGeneration(car)}>");
+
+			int n = 50000;
+			object[] objects = new object[n];
+			for (int i = 0; i < n; i++) objects[i] = new object();
+
+			GC.Collect(0, GCCollectionMode.Forced);
 			GC.WaitForPendingFinalizers();
-			Console.WriteLine("-> GC finished");
-			Console.WriteLine($"Bytes on heap: <{GC.GetTotalMemory(true)}> ");
+			Console.WriteLine("Forced GC 0");
+			Console.WriteLine($"Bytes on heap: <{GC.GetTotalMemory(false)}> ");
+			Console.WriteLine($"Generation of <{car}> is: <{GC.GetGeneration(car)}>");
+
+			if(objects[9000] != null)
+				Console.WriteLine($"Generaton of objects[9000] is <{GC.GetGeneration(objects[9000])}>");
+			else Console.WriteLine("objecs[9000] is no longer alive.");
+
+			Console.WriteLine($"Swept times: Gen0 <{GC.CollectionCount(0)}>, Gen1 <{GC.CollectionCount(1)}>, Gen2 <{GC.CollectionCount(2)}>");
+			Console.WriteLine($"Bytes on heap: <{GC.GetTotalMemory(false)}> ");
 		}
 
 		static void ExamineGC() {
@@ -31,7 +47,6 @@ namespace SimpleGC {
 
 			Car car = new Car("Zippy", 100);
 			Console.WriteLine($"<{car.ToString()}>: Generation of car is <{GC.GetGeneration(car)}>");
-
 		}
 
 		static void GCBasics() {
