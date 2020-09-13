@@ -6,7 +6,20 @@ namespace SimpleGC {
 			Console.WriteLine("***** Classs, Objects and References *****");
 			GCBasics();
 			ExamineGC();
+			ForcingGC();
 			Console.ResetColor();
+		}
+
+		static void ForcingGC() {
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.WriteLine("=> Trigger GC");
+
+			Console.WriteLine($"Bytes on heap: <{GC.GetTotalMemory(true)}> ");
+			System.Threading.Thread.Sleep(1000);
+			GC.Collect();
+			GC.WaitForPendingFinalizers();
+			Console.WriteLine("-> GC finished");
+			Console.WriteLine($"Bytes on heap: <{GC.GetTotalMemory(true)}> ");
 		}
 
 		static void ExamineGC() {
