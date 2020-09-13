@@ -5,7 +5,20 @@ namespace SimpleGC {
 		static void Main() {
 			Console.WriteLine("***** Classs, Objects and References *****");
 			GCBasics();
+			ExamineGC();
 			Console.ResetColor();
+		}
+
+		static void ExamineGC() {
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine("=> System.GC");
+
+			Console.WriteLine($"Estimated bytes on heap: <{GC.GetTotalMemory(false)}> ");
+			Console.WriteLine($"This OS has {(GC.MaxGeneration + 1)} object generations.");
+
+			Car car = new Car("Zippy", 100);
+			Console.WriteLine($"<{car.ToString()}>: Generation of car is <{GC.GetGeneration(car)}>");
+
 		}
 
 		static void GCBasics() {
