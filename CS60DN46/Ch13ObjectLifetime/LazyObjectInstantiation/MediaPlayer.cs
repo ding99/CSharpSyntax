@@ -5,10 +5,12 @@ namespace LazyObjectInstantiation {
 		public void Play() { /* Play a song*/ Console.WriteLine("- Playback"); }
 		public void Pause() { /*Pause the song */ Console.WriteLine("- Pause"); }
 		public void Stop() { /* Stop playback */ Console.WriteLine("- Stop"); }
-		private AllTracks allSongs = new AllTracks();
+
+		private Lazy<AllTracks> allSongs = new Lazy<AllTracks>();
 
 		public AllTracks GetAllTracks() {
-			return allSongs;
+			Console.WriteLine("- Get All Tracks");
+			return allSongs.Value;
 		}
 	}
 }
