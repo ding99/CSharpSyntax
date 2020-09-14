@@ -10,7 +10,7 @@ namespace LazyObjectInstantiation {
 
 		public AllTracks GetAllTracks() {
 			Console.WriteLine("- Get All Tracks");
-			return allSongs.Value;
+			return allSongs?.Value;
 		}
 	}
 }

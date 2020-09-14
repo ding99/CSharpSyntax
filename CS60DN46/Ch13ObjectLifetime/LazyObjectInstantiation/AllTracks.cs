@@ -13,5 +13,7 @@ namespace LazyObjectInstantiation {
 		}
 
 		public void Choose(int n) { Console.WriteLine($"[{allSongs[n].Artist} / {allSongs[n].Trackname}]"); }
+
+		public int Size() { return allSongs.Length; }
 	}
 }

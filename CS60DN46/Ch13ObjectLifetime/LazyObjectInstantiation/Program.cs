@@ -17,8 +17,13 @@ namespace LazyObjectInstantiation {
 
 			MediaPlayer yourPlayer = new MediaPlayer();
 			AllTracks yourMusic = yourPlayer.GetAllTracks();
-			yourMusic.Choose(0);
-			yourMusic.Choose(1);
+			if (yourMusic == null)
+				Console.WriteLine("GetAllTracks() return null");
+			else {
+				Console.WriteLine($"Songs size <{yourMusic.Size()}>");
+				yourMusic.Choose(0);
+				yourMusic.Choose(1);
+			}
 		}
 	}
 }
