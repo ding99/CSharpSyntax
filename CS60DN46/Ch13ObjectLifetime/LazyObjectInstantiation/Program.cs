@@ -17,6 +17,8 @@ namespace LazyObjectInstantiation {
 
 			MediaPlayer yourPlayer = new MediaPlayer();
 			AllTracks yourMusic = yourPlayer.GetAllTracks();
+			yourMusic.Choose(0);
+			yourMusic.Choose(1);
 		}
 	}
 }
