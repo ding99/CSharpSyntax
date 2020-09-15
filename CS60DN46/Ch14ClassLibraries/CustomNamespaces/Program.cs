@@ -1,5 +1,7 @@
-﻿using MyShapes;
-using System;
+﻿using System;
+using MyShapes;
+using My3DShapes;
+using Cricle3D = My3DShapes.Circle;
 
 namespace CustomNamespaces {
 	class Program {
@@ -13,9 +15,13 @@ namespace CustomNamespaces {
 			Console.ForegroundColor = ConsoleColor.Yellow;
 			Console.WriteLine("=> Use other namespaces");
 
-			Circle c = new Circle(); c.Print();
-			Hexagon h = new Hexagon(); h.Print();
-			Square s = new Square(); s.Print();
+			MyShapes.Circle c = new MyShapes.Circle(); c.Print();
+			MyShapes.Hexagon h = new MyShapes.Hexagon(); h.Print();
+			MyShapes.Square s = new MyShapes.Square(); s.Print();
+
+			Cricle3D c3 = new Cricle3D(); c3.Print();
+			My3DShapes.Hexagon h3 = new My3DShapes.Hexagon(); h3.Print();
+			My3DShapes.Square s3 = new My3DShapes.Square(); s3.Print();
 		}
 	}
 }

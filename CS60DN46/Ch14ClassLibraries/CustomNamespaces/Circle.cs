@@ -2,6 +2,6 @@
 
 namespace MyShapes {
 	public class Circle {
-		public void Print() { Console.WriteLine("- Circle"); }
+		public void Print() { Console.WriteLine("---  Circle"); }
 	}
 }
