@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MyShapes {
+namespace Chapter14.MyShapes {
 	public class Circle {
 		public void Print() { Console.WriteLine("---  Circle"); }
 	}
