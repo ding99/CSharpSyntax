@@ -310,6 +310,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalizableDisposable", "CS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LazyObjectInstantiation", "CS60DN46\Ch13ObjectLifetime\LazyObjectInstantiation\LazyObjectInstantiation.csproj", "{B482E219-1E3C-4D25-99B9-B95104161570}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ch14ClassLibraries", "Ch14ClassLibraries", "{E9E2E7AB-00E5-4D78-9A9F-F8328DAB959A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomNamespaces", "CS60DN46\Ch14ClassLibraries\CustomNamespaces\CustomNamespaces.csproj", "{8497FC47-A68F-486A-98A5-7A5FD85ABF03}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -2154,6 +2158,22 @@ Global
 		{B482E219-1E3C-4D25-99B9-B95104161570}.Release|x64.Build.0 = Release|Any CPU
 		{B482E219-1E3C-4D25-99B9-B95104161570}.Release|x86.ActiveCfg = Release|Any CPU
 		{B482E219-1E3C-4D25-99B9-B95104161570}.Release|x86.Build.0 = Release|Any CPU
+		{8497FC47-A68F-486A-98A5-7A5FD85ABF03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8497FC47-A68F-486A-98A5-7A5FD85ABF03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8497FC47-A68F-486A-98A5-7A5FD85ABF03}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{8497FC47-A68F-486A-98A5-7A5FD85ABF03}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{8497FC47-A68F-486A-98A5-7A5FD85ABF03}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8497FC47-A68F-486A-98A5-7A5FD85ABF03}.Debug|x64.Build.0 = Debug|Any CPU
+		{8497FC47-A68F-486A-98A5-7A5FD85ABF03}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8497FC47-A68F-486A-98A5-7A5FD85ABF03}.Debug|x86.Build.0 = Debug|Any CPU
+		{8497FC47-A68F-486A-98A5-7A5FD85ABF03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8497FC47-A68F-486A-98A5-7A5FD85ABF03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8497FC47-A68F-486A-98A5-7A5FD85ABF03}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{8497FC47-A68F-486A-98A5-7A5FD85ABF03}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{8497FC47-A68F-486A-98A5-7A5FD85ABF03}.Release|x64.ActiveCfg = Release|Any CPU
+		{8497FC47-A68F-486A-98A5-7A5FD85ABF03}.Release|x64.Build.0 = Release|Any CPU
+		{8497FC47-A68F-486A-98A5-7A5FD85ABF03}.Release|x86.ActiveCfg = Release|Any CPU
+		{8497FC47-A68F-486A-98A5-7A5FD85ABF03}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -2293,6 +2313,8 @@ Global
 		{51CE0EDD-A4B3-43B9-8647-0DF071070F1F} = {23ADE7CF-1186-49CF-8CD4-532AF583DF75}
 		{FF36D09D-C191-4E0B-80B8-C2EE1A2D00B7} = {23ADE7CF-1186-49CF-8CD4-532AF583DF75}
 		{B482E219-1E3C-4D25-99B9-B95104161570} = {23ADE7CF-1186-49CF-8CD4-532AF583DF75}
+		{E9E2E7AB-00E5-4D78-9A9F-F8328DAB959A} = {B599F668-236A-4D7A-A51B-F383D94A5154}
+		{8497FC47-A68F-486A-98A5-7A5FD85ABF03} = {E9E2E7AB-00E5-4D78-9A9F-F8328DAB959A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7C00B1AC-1A8A-4B50-9373-585713E1AED0}
