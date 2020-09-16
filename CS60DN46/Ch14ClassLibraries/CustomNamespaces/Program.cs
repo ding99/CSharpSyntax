@@ -1,6 +1,4 @@
 ﻿using System;
-using Chapter14.MyShapes;
-using Chapter14.My3DShapes;
 using Cricle3D = Chapter14.My3DShapes.Circle;
 
 namespace CustomNamespaces {
