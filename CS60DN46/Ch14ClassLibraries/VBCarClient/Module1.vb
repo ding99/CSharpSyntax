@@ -14,6 +14,7 @@ Module Module1
         Console.ForegroundColor = ConsoleColor.Yellow
         Console.WriteLine("Use VB class which derives from C# class")
         Dim dream As New PerformanceCar()
+        dream.Name = "Hank"
         dream.TurboBoost()
     End Sub
 
