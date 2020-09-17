@@ -1,4 +1,6 @@
-﻿namespace CarLibrary {
+﻿using System.Windows.Forms;
+
+namespace CarLibrary {
 	public enum EngineState {  engineAlive, engineDead }
 
     public abstract class Car {
@@ -10,7 +12,15 @@
         public EngineState EngineState { get { return egnState; } }
         public abstract void TurboBoost();
 
-        public Car() { }
-        public Car(string name, int max, int speed) { Name = name; MaxSpeed = max; Speed = speed; }
+        public Car() { MessageBox.Show("CarLib Version 2.0"); }
+        public Car(string name, int max, int speed) {
+            MessageBox.Show("CarLib Version 2.0");
+            Name = name; MaxSpeed = max; Speed = speed;
+        }
+
+        public void TurnOnRadio(bool musicOn, MusicMedia mm) {
+            if (musicOn) MessageBox.Show($"Jamming {mm}");
+            else MessageBox.Show("Quiet time...");
+		}
     }
 }

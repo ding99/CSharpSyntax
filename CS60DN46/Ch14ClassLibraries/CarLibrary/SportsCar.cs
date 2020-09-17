@@ -5,7 +5,7 @@ namespace CarLibrary {
 		public SportsCar() { }
 		public SportsCar(string name, int max, int speed) : base(name, max, speed) { }
 		public override void TurboBoost() {
-			MessageBox.Show("Ramming speed", "Faster is better...");
+			MessageBox.Show("Ramming.V2 speed", "Faster is better...");
 		}
 	}
 }
