@@ -36,6 +36,7 @@
     <Reference Include="CarLibrary, Version=1.0.0.1, Culture=neutral, PublicKeyToken=f7d28bcce216ee8c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\CarLibrary\bin\Debug\CarLibrary.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

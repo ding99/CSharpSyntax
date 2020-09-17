@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CarLibrary;
+﻿using CarLibrary;
+using System;
 
 namespace SharedCarLibClient {
 	class Program {
@@ -17,11 +13,8 @@ namespace SharedCarLibClient {
 			Console.ForegroundColor = ConsoleColor.Yellow;
 			Console.WriteLine("=> use shared assembly");
 
-			SportsCar viper = new SportsCar("Shared", 150, 60);
-			viper.TurboBoost();
-
-			MiniVan van = new MiniVan();
-			van.TurboBoost();
+			SportsCar sport = new SportsCar("Shared", 150, 60);
+			sport.TurboBoost();
 
 			Console.WriteLine("Done");
 		}
