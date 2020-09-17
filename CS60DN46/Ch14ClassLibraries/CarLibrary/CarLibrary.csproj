@@ -34,7 +34,7 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>WKeyPair.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>DKeyPair.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -54,7 +54,7 @@
     <Compile Include="SportsCar.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="WKeyPair.snk" />
+    <None Include="DKeyPair.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
