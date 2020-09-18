@@ -12,9 +12,9 @@ namespace CarLibrary {
         public EngineState EngineState { get { return egnState; } }
         public abstract void TurboBoost();
 
-        public Car() { MessageBox.Show("CarLib Version 2.0"); }
+        public Car() { MessageBox.Show("CarLib Version 2.0.0.2"); }
         public Car(string name, int max, int speed) {
-            MessageBox.Show("CarLib Version 2.0");
+            MessageBox.Show("CarLib Version 2.0.0.2");
             Name = name; MaxSpeed = max; Speed = speed;
         }
 
