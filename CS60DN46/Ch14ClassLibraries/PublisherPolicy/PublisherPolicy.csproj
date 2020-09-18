@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0F8B5A2E-D83A-434F-81D7-F9442DD46004}</ProjectGuid>
+    <ProjectGuid>{75C9D2F9-5411-4BD7-A62B-5F0A273C7468}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SharedCarLibClient</RootNamespace>
-    <AssemblyName>SharedCarLibClient</AssemblyName>
+    <RootNamespace>PublisherPolicy</RootNamespace>
+    <AssemblyName>PublisherPolicy</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
