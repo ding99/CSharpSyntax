@@ -6,8 +6,13 @@ namespace MyTypeViewer {
 	class Program {
 		static void Main() {
 			Console.WriteLine("***** Custom Metadata Viewer *****");
-//			ListMethods();
+			MyType();
 			Console.ResetColor();
+		}
+
+		static void MyType() {
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			String typeName = "";
 		}
 
 		static void ListMethods(Type t) {
@@ -45,10 +50,19 @@ namespace MyTypeViewer {
 		static void ListInterfaces(Type t) {
 			Console.WriteLine("=> Interfaces");
 
-			var ifaces = from n in t.GetProperties() select n.Name;
-			foreach (var name in ifaces)
-				Console.WriteLine($" {name}");
+			var ifaces = from n in t.GetInterfaces() select n;
+			foreach (Type i in ifaces)
+				Console.WriteLine($" {i.Name}");
 			Console.WriteLine();
+		}
+
+		static void ListStats(Type t) {
+			Console.WriteLine("=> Various Statistics");
+			Console.WriteLine($"Base class: {t.BaseType}");
+			Console.WriteLine($"Is type abstract: {t.IsAbstract}");
+			Console.WriteLine($"Is type sealed  : {t.IsSealed}");
+			Console.WriteLine($"Is type generic : {t.IsGenericTypeDefinition}");
+			Console.WriteLine($"Is type a class type: {t.IsClass}");
 		}
 	}
 }
