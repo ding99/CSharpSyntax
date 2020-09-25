@@ -36,8 +36,17 @@ namespace MyTypeViewer {
 		static void ListProps(Type t) {
 			Console.WriteLine("=> Properties");
 
-			var propNames = from n in t.GetFields() select n.Name;
+			var propNames = from n in t.GetProperties() select n.Name;
 			foreach (var name in propNames)
+				Console.WriteLine($" {name}");
+			Console.WriteLine();
+		}
+
+		static void ListInterfaces(Type t) {
+			Console.WriteLine("=> Interfaces");
+
+			var ifaces = from n in t.GetProperties() select n.Name;
+			foreach (var name in ifaces)
 				Console.WriteLine($" {name}");
 			Console.WriteLine();
 		}
