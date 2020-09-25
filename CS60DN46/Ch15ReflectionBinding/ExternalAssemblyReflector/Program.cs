@@ -26,8 +26,9 @@ namespace ExternalAssemblyReflector {
 
 				try {
 					DisplayTypesInAsm(Assembly.Load(asmName));
+					//Assembly.LoadFrom(asmName) for absolute path
 				}
-				catch(Exception e) {
+				catch (Exception e) {
 					Console.WriteLine($"Sorry, can't find assembly. {e.Message}");
 				}
 			} while (true);
@@ -36,10 +37,8 @@ namespace ExternalAssemblyReflector {
 		static void DisplayTypesInAsm(Assembly asm) {
 			Console.WriteLine($"-> Types in Assembly <{asm.FullName}>");
 			Type[] types = asm.GetTypes();
-			Console.Write($"Types:");
 			foreach (Type t in types)
-				Console.Write($" <{t}>");
-			Console.WriteLine();
+				Console.WriteLine($"Type: <{t}>");
 		}
 	}
 }
