@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Reflection;
+using System.Text;
 
 namespace MyTypeViewer {
 	class Program {
@@ -41,8 +42,17 @@ namespace MyTypeViewer {
 			Console.WriteLine("=> Methods");
 			
 			MethodInfo[] mi = t.GetMethods();
-			foreach(MethodInfo m in mi)
-				Console.Write($" <{m.Name}>");
+			foreach (MethodInfo m in mi) {
+				StringBuilder b = new StringBuilder("(");
+				foreach (ParameterInfo p in m.GetParameters())
+					b.Append(b.Length < 2 ? "":",").Append($"{p.ParameterType}");
+				Console.Write($" <{m.ReturnType.FullName} {m.Name}{b.Append(")")}>");
+			}
+			Console.WriteLine();
+
+			var names = from n in t.GetMethods() select n;
+			foreach (var n in names)
+				Console.Write($" <{n}>");
 			Console.WriteLine();
 		}
 
