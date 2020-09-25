@@ -12,20 +12,37 @@ namespace MyTypeViewer {
 
 		static void MyType() {
 			Console.ForegroundColor = ConsoleColor.Yellow;
-			String typeName = "";
+			String typeName;
+
+			do {
+				Console.WriteLine("Enter a type name to avaluate");
+				Console.Write("or enter Q to quit:");
+				typeName = Console.ReadLine();
+
+				if (typeName.Length < 1) continue;
+				if (typeName.ToUpper().Equals("Q")) break;
+
+				try {
+					Type t = Type.GetType(typeName);
+					ListStats(t);
+					ListFields(t);
+					ListProps(t);
+					ListMethods(t);
+					ListInterfaces(t);
+				}
+				catch(Exception e) {
+					Console.WriteLine($"Sorry, can't find type. {e.Message}");
+				}
+
+			} while (true);
 		}
 
-		static void ListMethods(Type t) {
+		public static void ListMethods(Type t) {
 			Console.WriteLine("=> Methods");
 			
 			MethodInfo[] mi = t.GetMethods();
 			foreach(MethodInfo m in mi)
-				Console.Write($" {m.Name}");
-			Console.WriteLine();
-
-			var methodNames = from n in t.GetMethods() select n.Name;
-			foreach(var name in methodNames)
-				Console.WriteLine($" {name}");
+				Console.Write($" <{m.Name}>");
 			Console.WriteLine();
 		}
 
@@ -34,7 +51,7 @@ namespace MyTypeViewer {
 
 			var fieldNames = from n in t.GetFields() select n.Name;
 			foreach (var name in fieldNames)
-				Console.WriteLine($" {name}");
+				Console.Write($" <{name}>");
 			Console.WriteLine();
 		}
 
@@ -43,7 +60,7 @@ namespace MyTypeViewer {
 
 			var propNames = from n in t.GetProperties() select n.Name;
 			foreach (var name in propNames)
-				Console.WriteLine($" {name}");
+				Console.Write($" <{name}>");
 			Console.WriteLine();
 		}
 
@@ -52,7 +69,7 @@ namespace MyTypeViewer {
 
 			var ifaces = from n in t.GetInterfaces() select n;
 			foreach (Type i in ifaces)
-				Console.WriteLine($" {i.Name}");
+				Console.Write($" <{i.Name}>");
 			Console.WriteLine();
 		}
 
