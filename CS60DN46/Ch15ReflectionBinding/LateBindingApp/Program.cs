@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 using System.Reflection;
 
@@ -31,7 +27,7 @@ namespace LateBindingApp {
 			try {
 				Type miniVan = asm.GetType("CarLibrary.MiniVan");
 				object obj = Activator.CreateInstance(miniVan);
-				Console.WriteLine($"Created a {obj} using late binding");
+				Console.WriteLine($"Created a <{obj}> using late binding");
 			} catch(Exception e) {
 				Console.WriteLine(e.Message);
 			}
