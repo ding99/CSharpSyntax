@@ -45,7 +45,7 @@ namespace MyTypeViewer {
 			foreach (MethodInfo m in mi) {
 				StringBuilder b = new StringBuilder("(");
 				foreach (ParameterInfo p in m.GetParameters())
-					b.Append(b.Length < 2 ? "":",").Append($"{p.ParameterType}");
+					b.Append(b.Length == 1 ? "":",").Append($"{p.ParameterType}");
 				Console.Write($" <{m.ReturnType.FullName} {m.Name}{b.Append(")")}>");
 			}
 			Console.WriteLine();
