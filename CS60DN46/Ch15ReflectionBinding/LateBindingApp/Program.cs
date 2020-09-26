@@ -28,6 +28,9 @@ namespace LateBindingApp {
 				Type miniVan = asm.GetType("CarLibrary.MiniVan");
 				object obj = Activator.CreateInstance(miniVan);
 				Console.WriteLine($"Created a <{obj}> using late binding");
+
+				MethodInfo mi = miniVan.GetMethod("TurboBoost");
+				mi.Invoke(obj, null); //Invoke method for no parameters
 			} catch(Exception e) {
 				Console.WriteLine(e.Message);
 			}
