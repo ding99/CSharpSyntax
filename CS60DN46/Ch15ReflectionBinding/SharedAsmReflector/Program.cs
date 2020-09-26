@@ -27,7 +27,7 @@ namespace SharedAsmReflector {
 		}
 
 		static void DisplayInfo(Assembly a) {
-			Console.WriteLine($"=> Infor about Assembly.");
+			Console.WriteLine($"=> Info about Assembly.");
 			Console.WriteLine($"Loaded from GAC? {a.GlobalAssemblyCache}");
 			Console.WriteLine($"Asm Name   : {a.GetName().Name}");
 			Console.WriteLine($"Asm Version: {a.GetName().Version}");
