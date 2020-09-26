@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Reflection;
+using System.Linq;
 
 namespace LateBindingApp {
 	class Program {
@@ -18,6 +19,7 @@ namespace LateBindingApp {
 			Assembly a = null;
 			try {
 				a = Assembly.Load("CarLibrary");
+				DisplayInfo(a);
 			}
 			catch (FileNotFoundException e) {
 				Console.WriteLine(e.Message);
@@ -25,6 +27,21 @@ namespace LateBindingApp {
 			}
 			if (a != null)
 				InvokeMethodWithArgs(a);
+		}
+
+		static void DisplayInfo(Assembly a) {
+			Console.WriteLine($"=> Info about Assembly.");
+			Console.WriteLine($"Loaded from GAC? {a.GlobalAssemblyCache}");
+			Console.WriteLine($"Asm Name   : {a.GetName().Name}");
+			Console.WriteLine($"Asm Version: {a.GetName().Version}");
+			Console.WriteLine($"Asm Culture: {a.GetName().CultureInfo.DisplayName}");
+
+			Type[] types = a.GetTypes();
+			var publicEnums = from pe in types where pe.IsEnum && pe.IsPublic select pe;
+			Console.Write($"Here are the public enums (size {publicEnums.Count()}):");
+			foreach (var pe in publicEnums)
+				Console.Write($" <{pe}>");
+			Console.WriteLine();
 		}
 
 		static void InvokeMethodWithArgs(Assembly asm) {
