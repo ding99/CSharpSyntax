@@ -7,7 +7,33 @@ namespace LateBindingApp {
 		static void Main() {
 			Console.WriteLine("***** Late Binding *****");
 			LateBind();
+			LateBindParams();
 			Console.ResetColor();
+		}
+
+		static void LateBindParams() {
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Assembly a = null;
+			try {
+				a = Assembly.Load("CarLibrary");
+			}
+			catch (FileNotFoundException e) {
+				Console.WriteLine(e.Message);
+				return;
+			}
+			if (a != null)
+				InvokeMethodWithArgs(a);
+		}
+
+		static void InvokeMethodWithArgs(Assembly asm) {
+			try {
+				Type sport = asm.GetType("CarLibrary.SportsCar");
+				object obj = Activator.CreateInstance(sport);
+				MethodInfo mi = sport.GetMethod("TurnOnRadio");
+				mi.Invoke(obj, new object[] { true, 2 });
+			} catch(Exception e) {
+				Console.WriteLine(e.Message);
+			}
 		}
 
 		static void LateBind() {
@@ -29,6 +55,7 @@ namespace LateBindingApp {
 				object obj = Activator.CreateInstance(miniVan);
 				Console.WriteLine($"Created a <{obj}> using late binding");
 
+				Console.WriteLine("Invoke <TurboBoost> method without parameters");
 				MethodInfo mi = miniVan.GetMethod("TurboBoost");
 				mi.Invoke(obj, null); //Invoke method for no parameters
 			} catch(Exception e) {
