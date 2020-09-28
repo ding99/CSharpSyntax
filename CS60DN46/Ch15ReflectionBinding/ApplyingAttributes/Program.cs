@@ -12,6 +12,8 @@ namespace ApplyingAttributes {
 			Console.ForegroundColor = ConsoleColor.Yellow;
 
 			Motorcycle motor = new Motorcycle();
+
+			HorseAndBuggy mule = new HorseAndBuggy();
 		}
 	}
 }
