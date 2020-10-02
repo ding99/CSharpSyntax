@@ -1,6 +1,5 @@
-﻿using System;
-using System.ComponentModel;
-using AttributedCarLibrary;
+﻿using AttributedCarLibrary;
+using System;
 
 namespace ApplyingAttributes {
 	[Serializable]
