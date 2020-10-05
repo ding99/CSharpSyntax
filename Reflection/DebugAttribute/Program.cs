@@ -14,7 +14,7 @@ namespace DebugAttribute {
 			foreach (Object attribute in type.GetCustomAttributes(false)) {
 				DebugInfoAttribute dbi = attribute as DebugInfoAttribute;
 				if(dbi != null)
-					Console.WriteLine($"Bug no {dbi.BugNo}, Developer {dbi.Developer}, Last Review {dbi.LastReview}, Remarks <{dbi.message}>");
+					Console.WriteLine($"Bug no {dbi.BugNo}, Developer {dbi.Developer}, Last Review {dbi.LastReview}, Remarks <{dbi.Message}>");
 			}
 
 			Console.ForegroundColor = ConsoleColor.Cyan;
@@ -23,7 +23,7 @@ namespace DebugAttribute {
 				foreach(Attribute a in m.GetCustomAttributes(true)) {
 					DebugInfoAttribute dbi = a as DebugInfoAttribute;
 					if(dbi != null)
-						Console.WriteLine($"Method <{m.Name}>: Bug no {dbi.BugNo}, Developer {dbi.Developer}, Last Review {dbi.LastReview}, Remarks <{dbi.message}>");
+						Console.WriteLine($"Method <{m.Name}>: Bug no {dbi.BugNo}, Developer {dbi.Developer}, Last Review {dbi.LastReview}, Remarks <{dbi.Message}>");
 				}
 
 			Console.ResetColor();
