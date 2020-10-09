@@ -6,8 +6,19 @@ using System.Threading.Tasks;
 
 namespace List {
 	class ExamineList {
-		public void Start() {
+		public void Sort() {
+			Console.ForegroundColor = ConsoleColor.Yellow;
 			Console.WriteLine("-- Examine List");
+
+			int[] ints = { 10, 4, 2, 33, 93 };
+			Console.Write("Orig:");
+			foreach (var i in ints) Console.Write(" " + i);
+			Console.WriteLine();
+
+			Array.Sort<int>(ints);
+			Console.Write("Sorted:");
+			foreach (var i in ints) Console.Write(" " + i);
+			Console.WriteLine();
 		}
 	}
 }

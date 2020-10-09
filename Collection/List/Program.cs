@@ -5,7 +5,7 @@ namespace List {
 		static void Main() {
 			Console.WriteLine("== Start");
 			ExamineList examer = new ExamineList();
-			examer.Start();
+			examer.Sort();
 			Console.ResetColor();
 			Console.WriteLine("== End");
 		}
