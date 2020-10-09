@@ -51,6 +51,11 @@ namespace SortedSet {
 			Console.Write($"SortedSet Elements (size {set.Count}):");
 			foreach (var v in set) Console.Write(" <" + v + ">");
 			Console.WriteLine();
+
+			set.UnionWith(new List<string> ( new string[] {"jason", "sam" } ));
+			Console.Write($"UnionWith Elements (size {set.Count}):");
+			foreach (var v in set) Console.Write(" <" + v + ">");
+			Console.WriteLine();
 		}
 	}
 }
