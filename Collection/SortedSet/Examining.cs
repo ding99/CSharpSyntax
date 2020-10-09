@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SortedList {
-	class ExamineSortedList {
+namespace SortedSet {
+	class Examining {
 		public void Start() {
 			Console.ForegroundColor = ConsoleColor.Yellow;
-			Console.WriteLine("-- Examine SortedList");
+			Console.WriteLine("-- Examine SortedSet");
 		}
 	}
 }

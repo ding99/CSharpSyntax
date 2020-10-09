@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace SortedList {
+namespace SortedSet {
 	class Program {
 		static void Main() {
 			Console.WriteLine("== Start");
-			ExamineSortedList exam = new ExamineSortedList();
+			Examining exam = new Examining();
 			exam.Start();
 			Console.ResetColor();
 			Console.WriteLine("== End");

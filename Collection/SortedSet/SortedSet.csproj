@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4E88AFFE-2117-494B-9A4A-E6C1BF4C23E8}</ProjectGuid>
+    <ProjectGuid>{E2728FA0-4F3D-468E-986F-FDCECD75231B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SortedList</RootNamespace>
-    <AssemblyName>SortedList</AssemblyName>
+    <RootNamespace>SortedSet</RootNamespace>
+    <AssemblyName>SortedSet</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExamineSortedList.cs" />
+    <Compile Include="Examining.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
