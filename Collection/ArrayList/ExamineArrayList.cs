@@ -66,8 +66,25 @@ namespace ArrayListApp {
 			foreach (var i in list) Console.Write(" " + i);
 			Console.WriteLine();
 
-			list.Add("abc");
+			list.Add("efg");
 			list.Add(55);
+
+			Console.WriteLine($"Capacity: {list.Capacity}, Count: {list.Count}");
+			Console.Write("Content :");
+			foreach (var i in list) Console.Write(" " + i);
+			Console.WriteLine();
+
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.WriteLine("< Self comparer >");
+			list.Sort(new MyComparer());
+			Console.Write("Sorted  :");
+			foreach (var i in list) Console.Write(" " + i);
+			Console.WriteLine();
+
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("<Insert 1 at position 2, and \"abc\" at position 2>");
+			list.Insert(2, 1);
+			list.Insert(2, "abc");
 
 			Console.WriteLine($"Capacity: {list.Capacity}, Count: {list.Count}");
 			Console.Write("Content :");
