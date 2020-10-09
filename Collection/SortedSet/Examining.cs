@@ -23,6 +23,19 @@ namespace SortedSet {
 
 			if (set1.Contains(1001)) Console.WriteLine("set1 contains 1001");
 			if (!set2.Contains(1001)) Console.WriteLine("set2 does not contain 1001");
+
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine("-- Examine SortedSet with string");
+
+			SortedSet<string> set3 = new SortedSet<string>();
+			set3.Add("DDD");
+			set3.Add("aaa");
+			set3.Add("abcdef");
+			set3.Add("AA");
+			Console.Write("set3 Elements:");
+			foreach (var v in set3) Console.Write(" " + v);
+			Console.WriteLine();
 		}
 	}
 }
+
