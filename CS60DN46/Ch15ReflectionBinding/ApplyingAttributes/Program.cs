@@ -10,6 +10,7 @@ namespace ApplyingAttributes {
 
 		static void ApplyAttributes() {
 			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("=> Apply Attributes to classes");
 
 			Motorcycle motor = new Motorcycle();
 
