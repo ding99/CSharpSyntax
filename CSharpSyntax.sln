@@ -350,7 +350,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DebugAttribute", "Reflectio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Collection", "Collection", "{A54B9841-0C19-4A7E-9096-F1F4594910DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayListApp", "Collection\ArrayListApp\ArrayListApp.csproj", "{5B7A6772-5BDB-4DC0-A226-B04D8CBFC1B5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayList", "Collection\ArrayListApp\ArrayList.csproj", "{5B7A6772-5BDB-4DC0-A226-B04D8CBFC1B5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashTable", "Collection\HashTable\HashTable.csproj", "{16FB3F47-0965-457A-8A78-9F9FC42D9DA8}"
 EndProject
