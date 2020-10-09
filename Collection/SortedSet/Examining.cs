@@ -36,6 +36,22 @@ namespace SortedSet {
 			foreach (var v in set3) Console.Write(" " + v);
 			Console.WriteLine();
 		}
+
+		public void ByList() {
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.WriteLine("-- SortedSet from List");
+			List<string> list = new List<string>();
+			list.AddRange(new string[] {"sam","perls","allen","perls" });
+
+			Console.Write($"List Elements (size {list.Count}):");
+			foreach (var v in list) Console.Write(" <" + v + ">");
+			Console.WriteLine();
+
+			SortedSet<string> set = new SortedSet<string>(list);
+			Console.Write($"SortedSet Elements (size {set.Count}):");
+			foreach (var v in set) Console.Write(" <" + v + ">");
+			Console.WriteLine();
+		}
 	}
 }
 

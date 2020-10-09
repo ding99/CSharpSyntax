@@ -6,6 +6,7 @@ namespace SortedSet {
 			Console.WriteLine("== Start");
 			Examining exam = new Examining();
 			exam.Start();
+			exam.ByList();
 			Console.ResetColor();
 			Console.WriteLine("== End");
 		}
