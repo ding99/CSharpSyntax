@@ -5,7 +5,9 @@ namespace ArrayListApp {
 		static void Main() {
 			Console.WriteLine("== Start");
 
-			new ExamineArrayList().Start();
+			ExamineArrayList compare = new ExamineArrayList();
+			compare.SameType();
+			compare.SelfComparer();
 			Console.ResetColor();
 
 			Console.WriteLine("== End");
