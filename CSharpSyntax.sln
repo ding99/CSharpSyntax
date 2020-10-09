@@ -348,6 +348,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttributeAppl", "Reflection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DebugAttribute", "Reflection\DebugAttribute\DebugAttribute.csproj", "{8EE5992D-910F-4AA3-9AA4-B540AD390AC2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Collection", "Collection", "{A54B9841-0C19-4A7E-9096-F1F4594910DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
