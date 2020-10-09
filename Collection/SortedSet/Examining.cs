@@ -37,24 +37,18 @@ namespace SortedSet {
 			Console.WriteLine();
 		}
 
-		public void ByList() {
+		public void unionwith() {
 			Console.ForegroundColor = ConsoleColor.DarkYellow;
-			Console.WriteLine("-- SortedSet from List");
-			List<string> list = new List<string>();
-			list.AddRange(new string[] {"sam","perls","allen","perls" });
+			Console.WriteLine("-- Examinie UnionWith");
 
-			Console.Write($"List Elements (size {list.Count}):");
-			foreach (var v in list) Console.Write(" <" + v + ">");
+			SortedSet<string> sset = new SortedSet<string> { "sam", "perls", "allen", "perls" };
+			Console.Write($"SortedSet Elements (size {sset.Count}):");
+			foreach (var v in sset) Console.Write(" <" + v + ">");
 			Console.WriteLine();
 
-			SortedSet<string> set = new SortedSet<string>(list);
-			Console.Write($"SortedSet Elements (size {set.Count}):");
-			foreach (var v in set) Console.Write(" <" + v + ">");
-			Console.WriteLine();
-
-			set.UnionWith(new List<string> ( new string[] {"jason", "sam" } ));
-			Console.Write($"UnionWith Elements (size {set.Count}):");
-			foreach (var v in set) Console.Write(" <" + v + ">");
+			sset.UnionWith(new SortedSet<string> {"jason", "sam" } );
+			Console.Write($"UnionWith Elements (size {sset.Count}):");
+			foreach (var v in sset) Console.Write(" <" + v + ">");
 			Console.WriteLine();
 		}
 	}
