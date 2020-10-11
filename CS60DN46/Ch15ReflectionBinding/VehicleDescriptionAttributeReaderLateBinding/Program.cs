@@ -29,7 +29,7 @@ namespace VehicleDescriptionAttributeReaderLateBinding {
 				foreach(Type t in types) {
 					object[] objs = t.GetCustomAttributes(vehicleDesc, false);
 					foreach(object o in objs)
-						Console.WriteLine($"-> {t.Name}: {propDesc.GetValue(o, null)})");
+						Console.WriteLine($"-> {t.Name}: {propDesc.GetValue(o, null)}");
 				}
 			}
 			catch(Exception e) {
