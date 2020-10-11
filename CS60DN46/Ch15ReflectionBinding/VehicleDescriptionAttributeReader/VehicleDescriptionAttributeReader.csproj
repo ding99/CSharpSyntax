@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AttributedCarLibrary\AttributedCarLibrary.csproj">
+      <Project>{f03fdbe2-b7e8-4cdb-90b0-62e2ab9d5a65}</Project>
+      <Name>AttributedCarLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
