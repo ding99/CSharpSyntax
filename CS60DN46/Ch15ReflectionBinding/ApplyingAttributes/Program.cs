@@ -1,6 +1,5 @@
 ﻿using AttributedCarLibrary;
 using System;
-using System.Reflection;
 
 namespace ApplyingAttributes {
 	class Program {
@@ -12,48 +11,34 @@ namespace ApplyingAttributes {
 
 		static void ApplyAttributes() {
 			Console.WriteLine("=> Apply Attributes to classes");
+			CheckAttributes(typeof(Motorcycle), ConsoleColor.Yellow);
+			CheckAttributes(typeof(HorseAndBuggy), ConsoleColor.Cyan);
+			CheckAttributes(typeof(Winnebago), ConsoleColor.DarkYellow);
+		}
 
-			Console.WriteLine($"-> class attributes");
+		static void CheckAttributes(Type type, ConsoleColor color) {
+			Console.ForegroundColor = color;
+			Console.WriteLine($"-> Class <{type.Name}>, serializable <{type.IsSerializable}>");
 
-			Console.ForegroundColor = ConsoleColor.Yellow;
-			Motorcycle motor = new Motorcycle();
-			Type type = typeof(Motorcycle);
-			Console.WriteLine($"-- Class <{type.Name}>:");
-			Console.WriteLine($"The class is serializable <{type.IsSerializable}>");
+			Console.WriteLine($"Class attributes:");
 			foreach (var attr in type.GetCustomAttributes(true)) {
 				VehicleDescriptionAttribute v = attr as VehicleDescriptionAttribute;
 				if (v != null)
-					Console.WriteLine($"Description <{v.Description}>");
+					Console.WriteLine($"  Description <{v.Description}>");
+				ObsoleteAttribute o = attr as ObsoleteAttribute;
+				if (o != null)
+					Console.WriteLine($"  Obsolete attribute message <{o.Message}>, is error <{o.IsError}>");
+				SerializableAttribute s = attr as SerializableAttribute;
+				if (s != null)
+					Console.WriteLine($"  Serializable default <{s.IsDefaultAttribute()}>");
 			}
 
-			Console.ForegroundColor = ConsoleColor.Cyan;
-			HorseAndBuggy mule = new HorseAndBuggy();
-			type = typeof(HorseAndBuggy);
-			Console.WriteLine($"-- Class <{type.Name}>:");
-			Console.WriteLine($"The class is serializable <{type.IsSerializable}>");
-			foreach (var attr in type.GetCustomAttributes(true)) {
-				VehicleDescriptionAttribute v = attr as VehicleDescriptionAttribute;
-				if (v != null)
-					Console.WriteLine($"Description <{v.Description}>");
-			}
-
-			Console.ForegroundColor = ConsoleColor.DarkYellow;
-			Winnebago wb = new Winnebago();
-			type = typeof(Winnebago);
-			Console.WriteLine($"-- Class <{type.Name}>:");
-			Console.WriteLine($"The class is serializable <{type.IsSerializable}>");
-			foreach (var attr in type.GetCustomAttributes(true)) {
-				VehicleDescriptionAttribute v = attr as VehicleDescriptionAttribute;
-				if (v != null)
-					Console.WriteLine($"Description <{v.Description}>");
-			}
-
-			Console.WriteLine($"-> method attributes");
+			Console.WriteLine($"Method attributes:");
 			foreach (var m in type.GetMethods())
-				foreach(var a in m.GetCustomAttributes(true)) {
-				VehicleDescriptionAttribute v = a as VehicleDescriptionAttribute;
-				if (v != null)
-					Console.WriteLine($"Method <{m.Name}>: Description <{v.Description}>");
+				foreach (var a in m.GetCustomAttributes(true)) {
+					VehicleDescriptionAttribute v = a as VehicleDescriptionAttribute;
+					if (v != null)
+						Console.WriteLine($"  Method <{m.Name}>: Description <{v.Description}>");
 				}
 		}
 	}
