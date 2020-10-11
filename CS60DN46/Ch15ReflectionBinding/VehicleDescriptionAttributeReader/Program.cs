@@ -15,8 +15,14 @@ namespace VehicleDescriptionAttributeReader {
 
 			Type t = typeof(Winnebago);
 			object[] attrs = t.GetCustomAttributes(false);
-			 foreach(VehicleDescriptionAttribute v in attrs)
-				Console.WriteLine($"-> {v.Description}");
+			foreach (var v in attrs) {
+				VehicleDescriptionAttribute a = v as VehicleDescriptionAttribute;
+				if(a != null)
+					Console.WriteLine($"-> Description <{a.Description}>");
+				else Console.WriteLine("-> Not a VehicleDescriptionAttribute");
+			}
+			//foreach (VehicleDescriptionAttribute v in attrs)
+			//	Console.WriteLine($"-> {v.Description}");
 		}
 	}
 }

@@ -1,4 +1,7 @@
-﻿namespace AttributedCarLibrary {
+﻿using System;
+
+namespace AttributedCarLibrary {
+	[Serializable]
 	[VehicleDescription("A very long, slow, but feature-rich auto")]
 	public class Winnebago {
 
