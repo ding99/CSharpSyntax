@@ -27,7 +27,7 @@ namespace ApplyingAttributes {
 			}
 
 			Console.ForegroundColor = ConsoleColor.Cyan;
-			HorseAndBuggy mule = new HorseAndBuggy();
+			HorseAndBuggy mule = new HorseAndBuggy(); //obsolete attribute
 			type = typeof(HorseAndBuggy);
 			Console.WriteLine($"-- Class <{type.Name}>:");
 			Console.WriteLine($"The class is serializable <{type.IsSerializable}>");
