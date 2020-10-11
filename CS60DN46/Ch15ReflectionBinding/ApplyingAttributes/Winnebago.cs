@@ -4,7 +4,7 @@ namespace ApplyingAttributes {
 	[VehicleDescription("A very long, slow, but feature-rich auto")]
 	class Winnebago {
 
-		[VehicleDescription(Description = "Setup radio")]
+		[VehicleDescription("My rocking CD player")]
 		public void PlayMusic(bool On) {
 			System.Console.WriteLine($"Radio {On}");
 		}
