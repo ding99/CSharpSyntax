@@ -21,8 +21,6 @@ namespace VehicleDescriptionAttributeReader {
 					Console.WriteLine($"-> Description <{a.Description}>");
 				else Console.WriteLine("-> Not a VehicleDescriptionAttribute");
 			}
-			//foreach (VehicleDescriptionAttribute v in attrs)
-			//	Console.WriteLine($"-> {v.Description}");
 		}
 	}
 }
