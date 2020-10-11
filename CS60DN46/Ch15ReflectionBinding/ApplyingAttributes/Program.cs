@@ -1,8 +1,11 @@
 ﻿using AttributedCarLibrary;
 using System;
 
+[assembly: CLSCompliant(true)]
+
 namespace ApplyingAttributes {
 	class Program {
+
 		static void Main() {
 			Console.WriteLine("***** Applying Attributes *****");
 			ApplyAttributes();
