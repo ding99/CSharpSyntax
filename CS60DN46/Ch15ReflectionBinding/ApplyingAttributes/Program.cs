@@ -5,6 +5,7 @@ using System;
 
 namespace ApplyingAttributes {
 	class Program {
+
 		static void Main() {
 			Console.WriteLine("***** Applying Attributes *****");
 			ApplyAttributes();
