@@ -21,6 +21,10 @@ namespace DynamicKeyword {
 			a.Add(90);
 			//This would be a compile-time error!
 			//a = "Hello";
+
+			Console.Write($"List (size {a.Count}):");
+			foreach (var v in a) Console.Write(" " + v);
+			Console.WriteLine();
 		}
 	}
 }
