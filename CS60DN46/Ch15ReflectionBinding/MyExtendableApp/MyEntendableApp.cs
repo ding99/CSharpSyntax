@@ -38,14 +38,28 @@ namespace MyExtendableApp {
 								where t.IsClass &&
 								(t.GetInterface("IAppFunctionality") != null)
 								select t;
+
 			foreach (Type t in theClassTypes) {
 				foundSnapIn = true;
 				IAppFunctionality itfApp = (IAppFunctionality)theSnapInAsm.CreateInstance(t.FullName, true);
 				itfApp.DoIt();
 				lstLoadedSnapIns.Items.Add(t.FullName);
+
+				//show company info
+				DisplayCompanyData(t);
 			}
 
 			return foundSnapIn;
+		}
+
+		private void DisplayCompanyData(Type t) {
+			//Get [CompanyInfo] data
+			var compinfo = from ci in t.GetCustomAttributes(false) where (ci.GetType() == typeof(CompanyInfoAttribute))
+						   select ci;
+
+			//show data
+			foreach (CompanyInfoAttribute c in compinfo)
+				MessageBox.Show(c.CompanyUrl, $"More info about {c.CompanyName} can be found at");
 		}
 	}
 }
