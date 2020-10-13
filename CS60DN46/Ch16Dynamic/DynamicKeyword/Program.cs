@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using System.Collections.Generic;
 
 namespace DynamicKeyword {
@@ -8,7 +9,43 @@ namespace DynamicKeyword {
 			ImplicitlyTypeVariable();
 			ThreeWays();
 			Binder();
+			LateBound();
 			Console.ResetColor();
+		}
+
+		private static void LateBound() {
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("=> Late Bound");
+
+			Assembly a = null;
+			try {
+				a = Assembly.Load("CarLibrary");  //chapter 14
+				Console.WriteLine($"Assembly FullName <{a.FullName}>");
+				Console.WriteLine($"Assembly Type <{a.GetType().FullName}>");
+			} catch(Exception e) {
+				Console.WriteLine(e.Message);
+				return;
+			}
+
+			if (a != null)
+				CreateUsingLateBinding(a);
+		}
+
+		private static void CreateUsingLateBinding(Assembly asm) {
+			try {
+				//get metadata for the Minivan type
+				Type miniVan = asm.GetType("CarLibrary.MiniVan");
+				Console.WriteLine($"mimiVan type name <{miniVan.FullName}>");
+				//create the minivan on the fly
+				object obj = Activator.CreateInstance(miniVan);
+				//get info for TurboBoost
+				MethodInfo mi = miniVan.GetMethod("TurboBoost");
+				Console.WriteLine($"Method name <{mi.Name}>");
+				//Invoke method ("null" for no parameters)
+				mi.Invoke(obj, null);
+			} catch(Exception e) {
+				Console.WriteLine(e.Message);
+			}
 		}
 
 		private static void Binder() {
