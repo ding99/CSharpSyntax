@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Reflection;
 
 namespace LateBindingWithDynamic {
@@ -48,6 +44,7 @@ namespace LateBindingWithDynamic {
 			try {
 				//get metadata for SimpleMath type
 				Type math = asm.GetType(className);
+
 				//create a SimpleMath on the fly
 				object obj = Activator.CreateInstance(math);
 
