@@ -17,9 +17,10 @@ namespace DynamicKeyword {
 			Console.ForegroundColor = ConsoleColor.Yellow;
 			Console.WriteLine("=> Late Bound");
 
-			Assembly a = null;
+			Assembly a;
+			string dllName = "CarLibrary";
 			try {
-				a = Assembly.Load("CarLibrary");  //chapter 14
+				a = Assembly.Load(dllName);  //chapter 14
 				Console.WriteLine($"Assembly FullName <{a.FullName}>");
 				Console.WriteLine($"Assembly Type <{a.GetType().FullName}>");
 			} catch(Exception e) {
@@ -32,15 +33,16 @@ namespace DynamicKeyword {
 		}
 
 		private static void CreateUsingLateBinding(Assembly asm) {
+			string className = "CarLibrary.MiniVan", methodName = "TurboBoost";
 			try {
 				//get metadata for the Minivan type
-				Type miniVan = asm.GetType("CarLibrary.MiniVan");
-				Console.WriteLine($"mimiVan type name <{miniVan.FullName}>");
+				Type miniVan = asm.GetType(className);
+				Console.WriteLine($"Class(Type) <{miniVan.FullName}>");
 				//create the minivan on the fly
 				object obj = Activator.CreateInstance(miniVan);
 				//get info for TurboBoost
-				MethodInfo mi = miniVan.GetMethod("TurboBoost");
-				Console.WriteLine($"Method name <{mi.Name}>");
+				MethodInfo mi = miniVan.GetMethod(methodName);
+				Console.WriteLine($"Method <{mi.Name}>");
 				//Invoke method ("null" for no parameters)
 				mi.Invoke(obj, null);
 			} catch(Exception e) {
