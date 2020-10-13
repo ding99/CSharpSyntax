@@ -384,6 +384,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicKeyword", "CS60DN46\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LateBindingWithDynamic", "CS60DN46\Ch16Dynamic\LateBindingWithDynamic\LateBindingWithDynamic.csproj", "{8E0F0352-7385-4C45-97B7-BA50E79A8B0E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathLibrary", "CS60DN46\Ch16Dynamic\MathLibrary\MathLibrary.csproj", "{48E75645-0D59-4305-AE91-CB1C151C8E8B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -2740,6 +2742,22 @@ Global
 		{8E0F0352-7385-4C45-97B7-BA50E79A8B0E}.Release|x64.Build.0 = Release|Any CPU
 		{8E0F0352-7385-4C45-97B7-BA50E79A8B0E}.Release|x86.ActiveCfg = Release|Any CPU
 		{8E0F0352-7385-4C45-97B7-BA50E79A8B0E}.Release|x86.Build.0 = Release|Any CPU
+		{48E75645-0D59-4305-AE91-CB1C151C8E8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48E75645-0D59-4305-AE91-CB1C151C8E8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48E75645-0D59-4305-AE91-CB1C151C8E8B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{48E75645-0D59-4305-AE91-CB1C151C8E8B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{48E75645-0D59-4305-AE91-CB1C151C8E8B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{48E75645-0D59-4305-AE91-CB1C151C8E8B}.Debug|x64.Build.0 = Debug|Any CPU
+		{48E75645-0D59-4305-AE91-CB1C151C8E8B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{48E75645-0D59-4305-AE91-CB1C151C8E8B}.Debug|x86.Build.0 = Debug|Any CPU
+		{48E75645-0D59-4305-AE91-CB1C151C8E8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48E75645-0D59-4305-AE91-CB1C151C8E8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48E75645-0D59-4305-AE91-CB1C151C8E8B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{48E75645-0D59-4305-AE91-CB1C151C8E8B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{48E75645-0D59-4305-AE91-CB1C151C8E8B}.Release|x64.ActiveCfg = Release|Any CPU
+		{48E75645-0D59-4305-AE91-CB1C151C8E8B}.Release|x64.Build.0 = Release|Any CPU
+		{48E75645-0D59-4305-AE91-CB1C151C8E8B}.Release|x86.ActiveCfg = Release|Any CPU
+		{48E75645-0D59-4305-AE91-CB1C151C8E8B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -2915,6 +2933,7 @@ Global
 		{A6CB3611-B073-456C-8204-C8443CD8C7B3} = {B599F668-236A-4D7A-A51B-F383D94A5154}
 		{191D3DB4-78B0-44B6-9DC7-8C14A9067AF2} = {A6CB3611-B073-456C-8204-C8443CD8C7B3}
 		{8E0F0352-7385-4C45-97B7-BA50E79A8B0E} = {A6CB3611-B073-456C-8204-C8443CD8C7B3}
+		{48E75645-0D59-4305-AE91-CB1C151C8E8B} = {A6CB3611-B073-456C-8204-C8443CD8C7B3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7C00B1AC-1A8A-4B50-9373-585713E1AED0}
