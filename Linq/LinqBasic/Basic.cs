@@ -20,6 +20,11 @@ namespace LinqBasic {
 			Console.WriteLine($"First Names (size {firsts.Count()}):");
 			foreach (var a in firsts) Console.Write($"<{a}> ");
 			Console.WriteLine();
+
+			firsts = from name in names let first = name.Split(' ')[0] orderby first descending select first;
+			Console.WriteLine($"First (descending) Names (size {firsts.Count()}):");
+			foreach (var a in firsts) Console.Write($"<{a}> ");
+			Console.WriteLine();
 		}
 
 		private void Select() {
