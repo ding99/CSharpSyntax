@@ -68,9 +68,15 @@ namespace ProcessManipulator {
 			ProcessThreadCollection theThds = theProc.Threads;
 
 			foreach(ProcessThread t in theThds) {
-				string info = $"Thread ID {t.Id}\tTime {t.StartTime.ToShortTimeString()}\tPriority {t.PriorityLevel}";
+				string info = $"Thread ID {t.Id},{Spaces(t.Id)}\tTime {t.StartTime.ToShortTimeString()},\tState {t.ThreadState},\tPriority {t.PriorityLevel}";
 				Console.WriteLine(info);
 			}
+		}
+		private static string Spaces(int id) {
+			string s = string.Empty;
+			for (int i = id.ToString().Length; i < 5; i++)
+				s += " ";
+			return s;
 		}
 	}
 }
