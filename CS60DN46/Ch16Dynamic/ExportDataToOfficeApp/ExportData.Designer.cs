@@ -66,6 +66,7 @@
 			this.btnExportToExcel.TabIndex = 2;
 			this.btnExportToExcel.Text = "Export Current Inventory to Excel";
 			this.btnExportToExcel.UseVisualStyleBackColor = true;
+			this.btnExportToExcel.Click += new System.EventHandler(this.btnExportToExcel_Click);
 			// 
 			// ExportData
 			// 
