@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 
@@ -49,6 +43,7 @@ namespace ExportDataToOfficeApp {
 		static void ExportToExcel(List<Car> carsInStock) {
 			//Load up Excel, then make a new empty workbook
 			Excel.Application excelApp = new Excel.Application();
+			//excelApp.Visible = true; //make excel visible on the computer
 			excelApp.Workbooks.Add();
 
 			//this example uses a single workSheet
