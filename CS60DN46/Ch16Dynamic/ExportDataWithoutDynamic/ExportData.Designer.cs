@@ -1,4 +1,6 @@
-﻿namespace ExportDataWithoutDynamic {
+﻿using System.Runtime.InteropServices;
+
+namespace ExportDataWithoutDynamic {
 	partial class ExportData {
 		/// <summary>
 		/// Required designer variable.
@@ -23,22 +25,22 @@
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
-			this.label1 = new System.Windows.Forms.Label();
+			this.lblInstructions = new System.Windows.Forms.Label();
 			this.dataGridCars = new System.Windows.Forms.DataGridView();
-			this.button1 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
+			this.btnAddNewCar = new System.Windows.Forms.Button();
+			this.btnExportToExcel = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridCars)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(15, 7);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(148, 20);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "Current Inventory";
+			this.lblInstructions.AutoSize = true;
+			this.lblInstructions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblInstructions.Location = new System.Drawing.Point(15, 7);
+			this.lblInstructions.Name = "label1";
+			this.lblInstructions.Size = new System.Drawing.Size(148, 20);
+			this.lblInstructions.TabIndex = 0;
+			this.lblInstructions.Text = "Current Inventory";
 			// 
 			// dataGridCars
 			// 
@@ -50,45 +52,47 @@
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(19, 227);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(247, 23);
-			this.button1.TabIndex = 2;
-			this.button1.Text = "Add New Entry to Inventory";
-			this.button1.UseVisualStyleBackColor = true;
+			this.btnAddNewCar.Location = new System.Drawing.Point(19, 227);
+			this.btnAddNewCar.Name = "button1";
+			this.btnAddNewCar.Size = new System.Drawing.Size(247, 23);
+			this.btnAddNewCar.TabIndex = 2;
+			this.btnAddNewCar.Text = "Add New Entry to Inventory";
+			this.btnAddNewCar.UseVisualStyleBackColor = true;
+			this.btnAddNewCar.Click += new System.EventHandler(this.btnAddNewCar_Click);
 			// 
 			// button2
 			// 
-			this.button2.Location = new System.Drawing.Point(272, 225);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(246, 23);
-			this.button2.TabIndex = 3;
-			this.button2.Text = "Export Current Inventory to Excel";
-			this.button2.UseVisualStyleBackColor = true;
+			this.btnExportToExcel.Location = new System.Drawing.Point(272, 225);
+			this.btnExportToExcel.Name = "button2";
+			this.btnExportToExcel.Size = new System.Drawing.Size(246, 23);
+			this.btnExportToExcel.TabIndex = 3;
+			this.btnExportToExcel.Text = "Export Current Inventory to Excel";
+			this.btnExportToExcel.UseVisualStyleBackColor = true;
+			this.btnExportToExcel.Click += new System.EventHandler(this.btnExportToExcel_Click);
 			// 
 			// ExportData
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(544, 281);
-			this.Controls.Add(this.button2);
-			this.Controls.Add(this.button1);
+			this.Controls.Add(this.btnExportToExcel);
+			this.Controls.Add(this.btnAddNewCar);
 			this.Controls.Add(this.dataGridCars);
-			this.Controls.Add(this.label1);
+			this.Controls.Add(this.lblInstructions);
 			this.Name = "ExportData";
-			this.Text = "Export Data Without Dynamic !";
+			this.Text = "The Office COM Interop App !";
 			((System.ComponentModel.ISupportInitialize)(this.dataGridCars)).EndInit();
+			this.Load += new System.EventHandler(this.ExportData_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
-
 		}
 
 		#endregion
 
-		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label lblInstructions;
 		private System.Windows.Forms.DataGridView dataGridCars;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button btnAddNewCar;
+		private System.Windows.Forms.Button btnExportToExcel;
 	}
 }
 
