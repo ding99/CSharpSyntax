@@ -38,42 +38,48 @@ namespace ExportDataWithoutDynamic {
 			if (d.ShowDialog() == DialogResult.OK) {
 				carsInStock.Add(d.theCar);
 				UpdateGrid();
-
 			}
 		}
 
 		private void btnExportToExcel_Click(object sender, EventArgs e) {
-			ExportToExcel(carsInStock);
+			ExportToExcel2008(carsInStock);
 		}
 
-		static void ExportToExcel(List<Car> carsInStock) {
-			//Load up Excel, then make a new empty workbook
+		static void ExportToExcel2008(List<Car> carsInStock) {
 			Excel.Application excelApp = new Excel.Application();
-			//excelApp.Visible = true; //make excel visible on the computer
-			excelApp.Workbooks.Add();
+			//make mark missing params!
+			excelApp.Workbooks.Add(Type.Missing);
 
-			//this example uses a single workSheet
-			Excel._Worksheet workSheet = excelApp.ActiveSheet;
+			//must cast Object as _Worksheet!
+			Excel._Worksheet workSheet = (Excel._Worksheet)excelApp.ActiveSheet;
 
-			//establish column headings in cells
-			workSheet.Cells[1, "A"] = "Make";
-			workSheet.Cells[1, "B"] = "Color";
-			workSheet.Cells[1, "C"] = "Pet Name";
+			//must cast each Object as Range object then
+			//call low-level Value2 property
+			((Excel.Range)excelApp.Cells[1, "A"]).Value2 = "Make";
+			((Excel.Range)excelApp.Cells[1, "B"]).Value2 = "Color";
+			((Excel.Range)excelApp.Cells[1, "C"]).Value2 = "Pet Name";
 
-			//map all data in List<Car> to the cells of the spreadsheet
+			//must cast each Object as Range and call low-level Value2 prop!
 			int row = 1;
 			foreach (Car c in carsInStock) {
 				row++;
-				workSheet.Cells[row, "A"] = c.Make;
-				workSheet.Cells[row, "B"] = c.Color;
-				workSheet.Cells[row, "C"] = c.Name;
+				((Excel.Range)workSheet.Cells[row, "A"]).Value2 = c.Make;
+				((Excel.Range)workSheet.Cells[row, "B"]).Value2 = c.Color;
+				((Excel.Range)workSheet.Cells[row, "C"]).Value2 = c.Name;
 			}
 
-			//give our table data a nice look and fell
-			workSheet.Range["A1"].AutoFormat(Excel.XlRangeAutoFormat.xlRangeAutoFormat3DEffects2);
+			//must call get_Range method and then specify all missing args!
+			excelApp.get_Range("A1", Type.Missing).AutoFormat(
+				Excel.XlRangeAutoFormat.xlRangeAutoFormatClassic2,
+				Type.Missing, Type.Missing, Type.Missing,
+				Type.Missing, Type.Missing, Type.Missing);
 
-			//save the file, quit Excel, and display message to user
-			workSheet.SaveAs(string.Format(@"{0}\Inventory.xlsx", Environment.CurrentDirectory));
+			//must specify all missing optional args!
+			workSheet.SaveAs(string.Format(@"{0}\Inventory.xlsx", Environment.CurrentDirectory),
+				Type.Missing, Type.Missing, Type.Missing,
+				Type.Missing, Type.Missing, Type.Missing,
+				Type.Missing, Type.Missing, Type.Missing);
+
 			excelApp.Quit();
 			MessageBox.Show("The Inventory.xslx file has been saved to your app folder", "Export completed!");
 		}
