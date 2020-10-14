@@ -49,6 +49,7 @@ namespace ExportDataToOfficeApp {
 		static void ExportToExcel(List<Car> carsInStock) {
 			//Load up Excel, then make a new empty workbook
 			Excel.Application excelApp = new Excel.Application();
+			//excelApp.Visible = true; //make excel visible on the computer
 			excelApp.Workbooks.Add();
 
 			//this example uses a single workSheet
