@@ -1,9 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 
-namespace ExportDataToOfficeApp {
+namespace ExportDataWithoutDynamic {
 	public partial class ExportData : Form {
 		List<Car> carsInStock = null;
 
@@ -29,7 +35,7 @@ namespace ExportDataToOfficeApp {
 
 		private void btnAddNewCar_Click(object sender, EventArgs e) {
 			NewCarDialog d = new NewCarDialog();
-			if(d.ShowDialog() == DialogResult.OK) {
+			if (d.ShowDialog() == DialogResult.OK) {
 				carsInStock.Add(d.theCar);
 				UpdateGrid();
 
@@ -56,7 +62,7 @@ namespace ExportDataToOfficeApp {
 
 			//map all data in List<Car> to the cells of the spreadsheet
 			int row = 1;
-			foreach(Car c in carsInStock) {
+			foreach (Car c in carsInStock) {
 				row++;
 				workSheet.Cells[row, "A"] = c.Make;
 				workSheet.Cells[row, "B"] = c.Color;
