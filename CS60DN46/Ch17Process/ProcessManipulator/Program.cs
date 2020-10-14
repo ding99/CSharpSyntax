@@ -64,11 +64,11 @@ namespace ProcessManipulator {
 			catch (ArgumentException e)
 			{ Console.WriteLine(e.Message); return; }
 
-			Console.WriteLine($"Here are the threads used by {theProc.ProcessName} with pID {pID}");
+			Console.WriteLine($"-> Here are the threads used by {theProc.ProcessName} with pID {pID}");
 			ProcessThreadCollection theThds = theProc.Threads;
 
 			foreach(ProcessThread t in theThds) {
-				string info = $"Thread ID {t.Id}, Time {t.StartTime.ToShortTimeString()}, Priority {t.PriorityLevel}";
+				string info = $"Thread ID {t.Id}\tTime {t.StartTime.ToShortTimeString()}\tPriority {t.PriorityLevel}";
 				Console.WriteLine(info);
 			}
 		}
