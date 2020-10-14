@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 
@@ -75,13 +69,13 @@ namespace ExportDataWithoutDynamic {
 				Type.Missing, Type.Missing, Type.Missing);
 
 			//must specify all missing optional args!
-			workSheet.SaveAs(string.Format(@"{0}\Inventory.xlsx", Environment.CurrentDirectory),
+			workSheet.SaveAs(string.Format(@"{0}\Inventory1.xlsx", Environment.CurrentDirectory),
 				Type.Missing, Type.Missing, Type.Missing,
 				Type.Missing, Type.Missing, Type.Missing,
 				Type.Missing, Type.Missing, Type.Missing);
 
 			excelApp.Quit();
-			MessageBox.Show("The Inventory.xslx file has been saved to your app folder", "Export completed!");
+			MessageBox.Show("The Inventory1.xslx file has been saved to your app folder", "Export completed!");
 		}
 	}
 }
