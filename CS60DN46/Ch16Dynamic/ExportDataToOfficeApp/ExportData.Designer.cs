@@ -27,8 +27,18 @@
 			this.btnAddNewCar = new System.Windows.Forms.Button();
 			this.btnExportToExcel = new System.Windows.Forms.Button();
 			this.lblInstructions = new System.Windows.Forms.Label();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridCars)).BeginInit();
+			//((System.ComponentModel.ISupportInitialize)(this.dataGridCars)).BeginInit();
 			this.SuspendLayout();
+			// 
+			// label1
+			// 
+			this.lblInstructions.AutoSize = true;
+			this.lblInstructions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblInstructions.Location = new System.Drawing.Point(13, 25);
+			this.lblInstructions.Name = "label1";
+			this.lblInstructions.Size = new System.Drawing.Size(148, 20);
+			this.lblInstructions.TabIndex = 3;
+			this.lblInstructions.Text = "Current Inventory";
 			// 
 			// dataGridCars
 			// 
@@ -48,24 +58,14 @@
 			this.btnAddNewCar.UseVisualStyleBackColor = true;
 			this.btnAddNewCar.Click += new System.EventHandler(this.btnAddNewCar_Click);
 			// 
-			// button2
+			// btnExportToExcel
 			// 
 			this.btnExportToExcel.Location = new System.Drawing.Point(354, 302);
-			this.btnExportToExcel.Name = "button2";
+			this.btnExportToExcel.Name = "btnExportToExcel";
 			this.btnExportToExcel.Size = new System.Drawing.Size(274, 31);
 			this.btnExportToExcel.TabIndex = 2;
 			this.btnExportToExcel.Text = "Export Current Inventory to Excel";
 			this.btnExportToExcel.UseVisualStyleBackColor = true;
-			// 
-			// label1
-			// 
-			this.lblInstructions.AutoSize = true;
-			this.lblInstructions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblInstructions.Location = new System.Drawing.Point(13, 25);
-			this.lblInstructions.Name = "label1";
-			this.lblInstructions.Size = new System.Drawing.Size(148, 20);
-			this.lblInstructions.TabIndex = 3;
-			this.lblInstructions.Text = "Current Inventory";
 			// 
 			// ExportData
 			// 
@@ -78,7 +78,8 @@
 			this.Controls.Add(this.dataGridCars);
 			this.Name = "ExportData";
 			this.Text = "The Office COM Interop App!";
-			((System.ComponentModel.ISupportInitialize)(this.dataGridCars)).EndInit();
+			//((System.ComponentModel.ISupportInitialize)(this.dataGridCars)).EndInit();
+			this.Load += new System.EventHandler(this.ExportData_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
