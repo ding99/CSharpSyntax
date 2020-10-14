@@ -27,7 +27,7 @@
 			this.btnAddNewCar = new System.Windows.Forms.Button();
 			this.btnExportToExcel = new System.Windows.Forms.Button();
 			this.lblInstructions = new System.Windows.Forms.Label();
-			//((System.ComponentModel.ISupportInitialize)(this.dataGridCars)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridCars)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -79,11 +79,10 @@
 			this.Controls.Add(this.dataGridCars);
 			this.Name = "ExportData";
 			this.Text = "The Office COM Interop App!";
-			//((System.ComponentModel.ISupportInitialize)(this.dataGridCars)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridCars)).EndInit();
 			this.Load += new System.EventHandler(this.ExportData_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
-
 		}
 
 		#endregion
