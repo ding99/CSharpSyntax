@@ -33,18 +33,43 @@ namespace ProcessManipulator {
 
 			try {
 				Console.WriteLine($"{runningProcs.Count()} processes");
-				int n = 2;
+				List<Process> list = runningProcs.ToList();
+
+				int n = 5;
 				if (runningProcs.Count() > n) {
-					int pid = runningProcs.ToList()[n].Id;
+					int pid = list[n].Id;
 					theProc = Process.GetProcessById(pid);
 					Console.WriteLine($"{theProc.Id} / {theProc.ProcessName}");
 				}
+
+				List<Process> chromes = (from p in runningProcs where p.ProcessName.ToLower().Equals("chrome") select p).ToList();
+
+				Console.WriteLine($"{chromes.Count} chrome processes totally");
+				if (chromes.Count > 0)
+					EnumThreadsForPid(chromes[0].Id);
 			}
 			catch(ArgumentException e) {
 				Console.WriteLine(e.Message);
 			}
 			catch(Exception e) {
 				Console.WriteLine(e.Message);
+			}
+		}
+
+		private static void EnumThreadsForPid(int pID) {
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+
+			Process theProc = null;
+			try { theProc = Process.GetProcessById(pID); }
+			catch (ArgumentException e)
+			{ Console.WriteLine(e.Message); return; }
+
+			Console.WriteLine($"Here are the threads used by {theProc.ProcessName} with pID {pID}");
+			ProcessThreadCollection theThds = theProc.Threads;
+
+			foreach(ProcessThread t in theThds) {
+				string info = $"Thread ID {t.Id}, Time {t.StartTime.ToShortTimeString()}, Priority {t.PriorityLevel}";
+				Console.WriteLine(info);
 			}
 		}
 	}
