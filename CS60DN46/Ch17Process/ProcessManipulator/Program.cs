@@ -10,7 +10,41 @@ namespace ProcessManipulator {
 			ListAllRunningProcesses();
 			SpecificProcess();
 			ThreadSet();
+			ModuleSet();
 			Console.ResetColor();
+		}
+
+		private static void ModuleSet() {
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
+			Console.WriteLine("=> Investigate a Process's Module Set");
+
+			var runningProcs = from proc in Process.GetProcesses(".") orderby proc.Id select proc;
+
+			try {
+				List<Process> chromes = (from p in runningProcs where p.ProcessName.ToLower().EndsWith("processmanipulator") select p).ToList();
+
+				Console.WriteLine($"{chromes.Count} process manipulator processes totally");
+				if (chromes.Count > 0)
+					EnumModulesForPid(chromes[0].Id);
+			}
+			catch (ArgumentException e) {
+				Console.WriteLine(e.Message);
+			}
+			catch (Exception e) {
+				Console.WriteLine(e.Message);
+			}
+		}
+
+		private static void EnumModulesForPid(int pID) {
+			Process theProc = null;
+			try { theProc = Process.GetProcessById(pID); }
+			catch (ArgumentException e) { Console.WriteLine(e.Message); return; }
+			ProcessModuleCollection theMods = theProc.Modules;
+
+			Console.WriteLine($"-> Here are the loaded modules for {theProc.ProcessName} with pID {pID}, size {theMods.Count}");
+			foreach (ProcessModule m in theMods)
+				Console.Write($" [{m.ModuleName}]");
+			Console.WriteLine();
 		}
 
 		private static void ThreadSet() {
@@ -46,12 +80,6 @@ namespace ProcessManipulator {
 				string info = $"Thread ID {t.Id},{Spaces(t.Id)}\tTime {t.StartTime.ToShortTimeString()},\tState {t.ThreadState},\tPriority {t.PriorityLevel}";
 				Console.WriteLine(info);
 			}
-		}
-		private static string Spaces(int id) {
-			string s = string.Empty;
-			for (int i = id.ToString().Length; i < 5; i++)
-				s += " ";
-			return s;
 		}
 
 		private static void SpecificProcess() {
@@ -90,6 +118,13 @@ namespace ProcessManipulator {
 			foreach(var p in runningProcs)
 				Console.Write($" [{p.Id}:{p.ProcessName}]");
 			Console.WriteLine();
+		}
+
+		private static string Spaces(int id) {
+			string s = string.Empty;
+			for (int i = id.ToString().Length; i < 5; i++)
+				s += " ";
+			return s;
 		}
 	}
 }
