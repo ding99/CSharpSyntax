@@ -11,7 +11,28 @@ namespace ProcessManipulator {
 			SpecificProcess();
 			ThreadSet();
 			ModuleSet();
+			StartKillProcess();
 			Console.ResetColor();
+		}
+
+		private static void StartKillProcess() {
+			Console.ForegroundColor = ConsoleColor.Green;
+			Console.WriteLine("=> Start and Kill Process");
+
+			Process browser = null;
+			try {
+				browser = Process.Start("msedge", "www.facebook.com");
+			}
+			catch (InvalidOperationException e) { Console.WriteLine(e.Message); return; }
+			catch(Exception e) { Console.WriteLine(e.Message); return; }
+
+			Console.Write($"Hit enter to kill <{browser.ProcessName}>");
+			Console.ReadLine();
+			try {
+				browser.Kill();
+			}
+			catch (InvalidOperationException e) { Console.WriteLine(e.Message); return; }
+			catch (Exception e) { Console.WriteLine(e.Message); return; }
 		}
 
 		private static void ModuleSet() {
