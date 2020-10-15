@@ -21,7 +21,10 @@ namespace ProcessManipulator {
 
 			Process browser = null;
 			try {
-				browser = Process.Start("msedge", "www.facebook.com");
+				//browser = Process.Start("msedge", "www.facebook.com");
+				ProcessStartInfo startInfo = new ProcessStartInfo("msedge", "www.facebook.com");
+				startInfo.WindowStyle = ProcessWindowStyle.Maximized;
+				browser = Process.Start(startInfo);
 			}
 			catch (InvalidOperationException e) { Console.WriteLine(e.Message); return; }
 			catch(Exception e) { Console.WriteLine(e.Message); return; }
