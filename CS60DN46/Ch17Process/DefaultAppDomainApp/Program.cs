@@ -19,6 +19,7 @@ namespace DefaultAppDomainApp {
 			Console.WriteLine($"ID of domain in this process: <{defaultAD.Id}>");
 			Console.WriteLine($"Is this the default domain: <{defaultAD.IsDefaultAppDomain()}>");
 			Console.WriteLine($"Basic directory of this domain: <{defaultAD.BaseDirectory}>");
+			Console.WriteLine($"Configuration file of this domain: <{defaultAD.SetupInformation.ConfigurationFile}>");
 		}
 	}
 }
