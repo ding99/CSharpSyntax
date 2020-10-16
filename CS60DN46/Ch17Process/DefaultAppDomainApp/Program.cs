@@ -1,13 +1,45 @@
 ﻿using System;
 using System.Linq;
+using System.Reflection;
 
 namespace DefaultAppDomainApp {
 	class Program {
 		static void Main() {
 			Console.WriteLine("***** Default AppDomain *****");
+			InitAD();
 			DisplayDADStats();
-
+			ListAllAssembliesInAppDomain();
 			Console.ResetColor();
+		}
+
+		private static void InitAD() {
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.WriteLine("=> Receive Assembly Load Notifications");
+
+			AppDomain defaultAD = AppDomain.CurrentDomain;
+			defaultAD.AssemblyLoad += (o, s) => {
+				ConsoleColor color = Console.ForegroundColor;
+				Console.ForegroundColor = ConsoleColor.DarkYellow;
+				Console.WriteLine($"-- {s.LoadedAssembly.GetName().Name} has been loaded!");
+				Console.ForegroundColor = color;
+			};
+		}
+
+		private static void ListAllAssembliesInAppDomain() {
+			Console.ForegroundColor = ConsoleColor.Cyan;
+
+			AppDomain defaultAD = AppDomain.CurrentDomain;
+
+			Assembly[] loadedAssemblies = defaultAD.GetAssemblies();
+			Console.WriteLine($"=> Here are the assemblies (size {loadedAssemblies.Count()}) loaded in {defaultAD.FriendlyName}");
+			foreach (Assembly a in loadedAssemblies)
+				Console.WriteLine($"{a.GetName().Name}, {a.GetName().Version} [{a.Location}]");
+
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
+			var sortedAssemblies = from a in defaultAD.GetAssemblies() orderby a.GetName().Name select a;
+			Console.WriteLine($"=> Here are the sorted assemblies (size {sortedAssemblies.Count()}) loaded in {defaultAD.FriendlyName}");
+			foreach (Assembly a in sortedAssemblies)
+				Console.WriteLine($"{a.GetName().Name}, {a.GetName().Version} [{a.Location}]");
 		}
 
 		private static void DisplayDADStats() {
@@ -21,13 +53,8 @@ namespace DefaultAppDomainApp {
 			Console.WriteLine($"Is this the default domain: <{defaultAD.IsDefaultAppDomain()}>");
 			Console.WriteLine($"Basic directory of this domain: <{defaultAD.BaseDirectory}>");
 			Console.WriteLine($"Configuration file of this domain: <{defaultAD.SetupInformation.ConfigurationFile}>");
-			Console.WriteLine();
 
 			Console.WriteLine($"The active thread ID in the current app domain: <{AppDomain.GetCurrentThreadId()}>");
-			var s = defaultAD.GetAssemblies();
-			Console.WriteLine($"-- assemblies (size {s.Count()})");
-			foreach(var a in s)
-				Console.WriteLine($"  <{a.FullName}> <{a.Location}>");
 		}
 	}
 }
