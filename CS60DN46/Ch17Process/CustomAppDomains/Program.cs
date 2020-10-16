@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Runtime.Remoting.Channels;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CustomAppDomains {
 	class Program {
@@ -12,7 +9,6 @@ namespace CustomAppDomains {
 			CustomAppDomain();
 
 			Console.ResetColor();
-			Console.ReadLine();
 		}
 
 		private static void CustomAppDomain() {
@@ -29,7 +25,19 @@ namespace CustomAppDomains {
 		private static void MakeNewAppDomain() {
 			string secondName = "SecondAppDomain";
 			AppDomain newAD = AppDomain.CreateDomain(secondName);
+
+			newAD.DomainUnload += (o, s) => {
+				ConsoleColor color = Console.ForegroundColor;
+				Console.ForegroundColor = ConsoleColor.Cyan;
+				Console.WriteLine("The second AppDomain has been unloaded!");
+				Console.ForegroundColor = color;
+			};
+
+			try { newAD.Load("CarLibrary"); }
+			catch (FileNotFoundException e) { Console.WriteLine(e.Message); }
+
 			ListAllAssembliesInAppDomain(newAD);
+			AppDomain.Unload(newAD);
 		}
 
 		private static void ListAllAssembliesInAppDomain(AppDomain ad) {
