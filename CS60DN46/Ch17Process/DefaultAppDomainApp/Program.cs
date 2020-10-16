@@ -1,13 +1,25 @@
 ﻿using System;
 using System.Linq;
+using System.Reflection;
 
 namespace DefaultAppDomainApp {
 	class Program {
 		static void Main() {
 			Console.WriteLine("***** Default AppDomain *****");
 			DisplayDADStats();
-
+			ListAllAssembliesInAppDomain();
 			Console.ResetColor();
+		}
+
+		private static void ListAllAssembliesInAppDomain() {
+			Console.ForegroundColor = ConsoleColor.Cyan;
+
+			AppDomain defaultAD = AppDomain.CurrentDomain;
+
+			Assembly[] loadedAssemblies = defaultAD.GetAssemblies();
+			Console.WriteLine($"=> Here are the assemblies (size {loadedAssemblies.Count()}) loaded in {defaultAD.FriendlyName}");
+			foreach (Assembly a in loadedAssemblies)
+				Console.WriteLine($"{a.GetName().Name}, {a.GetName().Version}, {a.Location}");
 		}
 
 		private static void DisplayDADStats() {
@@ -24,10 +36,6 @@ namespace DefaultAppDomainApp {
 			Console.WriteLine();
 
 			Console.WriteLine($"The active thread ID in the current app domain: <{AppDomain.GetCurrentThreadId()}>");
-			var s = defaultAD.GetAssemblies();
-			Console.WriteLine($"-- assemblies (size {s.Count()})");
-			foreach(var a in s)
-				Console.WriteLine($"  <{a.FullName}> <{a.Location}>");
 		}
 	}
 }
