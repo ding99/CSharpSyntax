@@ -1,15 +1,23 @@
 ﻿using System;
 using System.Linq;
 using System.Reflection;
-using System.Collections.Generic;
 
 namespace DefaultAppDomainApp {
 	class Program {
 		static void Main() {
 			Console.WriteLine("***** Default AppDomain *****");
+			InitAD();
 			DisplayDADStats();
 			ListAllAssembliesInAppDomain();
 			Console.ResetColor();
+		}
+
+		private static void InitAD() {
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.WriteLine("=> Receive Assembly Load Notifications");
+
+			AppDomain defaultAD = AppDomain.CurrentDomain;
+			defaultAD.AssemblyLoad += (o, s) => Console.WriteLine($"<><><> {s.LoadedAssembly.GetName().Name} has been loaded!");
 		}
 
 		private static void ListAllAssembliesInAppDomain() {
@@ -40,7 +48,6 @@ namespace DefaultAppDomainApp {
 			Console.WriteLine($"Is this the default domain: <{defaultAD.IsDefaultAppDomain()}>");
 			Console.WriteLine($"Basic directory of this domain: <{defaultAD.BaseDirectory}>");
 			Console.WriteLine($"Configuration file of this domain: <{defaultAD.SetupInformation.ConfigurationFile}>");
-			Console.WriteLine();
 
 			Console.WriteLine($"The active thread ID in the current app domain: <{AppDomain.GetCurrentThreadId()}>");
 		}
