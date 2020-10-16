@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Reflection;
+using System.Collections.Generic;
 
 namespace DefaultAppDomainApp {
 	class Program {
@@ -19,7 +20,13 @@ namespace DefaultAppDomainApp {
 			Assembly[] loadedAssemblies = defaultAD.GetAssemblies();
 			Console.WriteLine($"=> Here are the assemblies (size {loadedAssemblies.Count()}) loaded in {defaultAD.FriendlyName}");
 			foreach (Assembly a in loadedAssemblies)
-				Console.WriteLine($"{a.GetName().Name}, {a.GetName().Version}, {a.Location}");
+				Console.WriteLine($"{a.GetName().Name}, {a.GetName().Version} [{a.Location}]");
+
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
+			var sortedAssemblies = from a in defaultAD.GetAssemblies() orderby a.GetName().Name select a;
+			Console.WriteLine($"=> Here are the sorted assemblies (size {sortedAssemblies.Count()}) loaded in {defaultAD.FriendlyName}");
+			foreach (Assembly a in sortedAssemblies)
+				Console.WriteLine($"{a.GetName().Name}, {a.GetName().Version} [{a.Location}]");
 		}
 
 		private static void DisplayDADStats() {
