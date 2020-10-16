@@ -17,7 +17,12 @@ namespace DefaultAppDomainApp {
 			Console.WriteLine("=> Receive Assembly Load Notifications");
 
 			AppDomain defaultAD = AppDomain.CurrentDomain;
-			defaultAD.AssemblyLoad += (o, s) => Console.WriteLine($"<><><> {s.LoadedAssembly.GetName().Name} has been loaded!");
+			defaultAD.AssemblyLoad += (o, s) => {
+				ConsoleColor color = Console.ForegroundColor;
+				Console.ForegroundColor = ConsoleColor.DarkYellow;
+				Console.WriteLine($"-- {s.LoadedAssembly.GetName().Name} has been loaded!");
+				Console.ForegroundColor = color;
+			};
 		}
 
 		private static void ListAllAssembliesInAppDomain() {
