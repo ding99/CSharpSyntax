@@ -400,7 +400,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomAppDomains", "CS60DN4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectContextApp", "CS60DN46\Ch17Process\ObjectContextApp\ObjectContextApp.csproj", "{0FA3A060-5C53-42FE-8598-64204BD5B62B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ch18DynamicAsseblies", "Ch18DynamicAsseblies", "{9045E116-1509-444A-B798-6BA9429D1A44}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ch18CIL", "Ch18CIL", "{9045E116-1509-444A-B798-6BA9429D1A44}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
