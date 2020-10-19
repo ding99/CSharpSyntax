@@ -11,9 +11,13 @@
 .namespace MyNamespace
 {
   .class public interface IMyInterface {}
-  .class public interface IMyOtherInterface implements MyNamespace.IMyInterface{}
   .class public MyBaseClass{}
   .class public MyDerivedClass
     extends MyNamespace.MyBaseClass
 	implements MyNamespace.IMyInterface{}
+	
+  .class public interface IMyOtherInterface implements MyNamespace.IMyInterface{}
+
+  .class public sealed value MyStruct{}
+  .class public sealed MyStruct2 extends [mscorlib]System.ValueType{}  
 }
