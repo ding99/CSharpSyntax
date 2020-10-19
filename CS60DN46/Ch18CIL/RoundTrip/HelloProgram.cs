@@ -9,4 +9,7 @@ namespace RoundTrip {
 	}
 }
 
-/* ilasm /exe HelloProgramm.il /output=HelloProgramm.exe */
+/*
+ * ilasm /exe HelloProgramm.il /output=HelloProgramm.exe
+ * peverify HelloProgramm.exe
+ */
