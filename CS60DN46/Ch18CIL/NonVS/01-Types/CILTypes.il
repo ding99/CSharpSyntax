@@ -11,6 +11,7 @@
 .namespace MyNamespace
 {
   .class public interface IMyInterface {}
+  .class public interface IMyOtherInterface implements MyNamespace.IMyInterface{}
   .class public MyBaseClass{}
   .class public MyDerivedClass
     extends MyNamespace.MyBaseClass
