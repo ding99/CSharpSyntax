@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RoundTrip {
 	class HelloProgram {
@@ -12,3 +8,5 @@ namespace RoundTrip {
 		}
 	}
 }
+
+/* ilasm /exe HelloProgramm.il /output=HelloProgramm.exe */
