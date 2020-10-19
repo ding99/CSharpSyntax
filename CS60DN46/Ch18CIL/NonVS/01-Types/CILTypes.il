@@ -14,7 +14,17 @@
   .class public MyBaseClass{}
   .class public MyDerivedClass
     extends MyNamespace.MyBaseClass
-	implements MyNamespace.IMyInterface{}
+	implements MyNamespace.IMyInterface
+	{
+	  .method private hidebysig void Start() cil managed
+      {
+        //List<int> myInts = new List<int>();
+        //newobj instance void class [mscorlib]System.Collections.Generic.List`1<int32>::.ctor()
+        //Dictionary<string,int>
+        newobj instance void class [mscorlib]System.Collections.Generic.Dictionary`2<string,int32>::.ctor()
+	    //ret
+	  }
+	}
 	
   .class public interface IMyOtherInterface implements MyNamespace.IMyInterface{}
 
