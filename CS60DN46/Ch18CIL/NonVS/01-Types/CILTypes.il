@@ -20,4 +20,7 @@
 
   .class public sealed value MyStruct{}
   .class public sealed MyStruct2 extends [mscorlib]System.ValueType{}  
+  
+  .class public sealed enum MyEnum{}
+  .class public sealed MyEnum2 extends [mscorlib]System.Enum{}
 }
