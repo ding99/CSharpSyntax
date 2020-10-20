@@ -18,11 +18,20 @@
 	//property TheString
 	.method public hidebysig specialname instance string get_TheString() cil managed
 	{
-      ldstr "CIL string"
+	  .custom instance void [mscorlib]System.Runtime.CompilerServices.ComplilerGeneratedAttribute::.ctor() = (01 00 00 00)
+	  ldarg.0
+	  ldfld string MyNamespace.MyBaseClass::'<TheString>k__BackingField'
       ret
 	}
 	// to update
-	.method public hidebysig specialname instance void set_TheString(string 'value') vil managed {}
+	.method public hidebysig specialname instance void set_TheString(string 'value') cil managed 
+	{
+	  .custom instance void [mscorlib]System.Runtime.CompilerServices.ComplilerGeneratedAttribute::.ctor() = (01 00 00 00)
+	  ldarg.0
+	  ldarg.1
+	  stfld string MyNamespace.MyBaseClass::'<TheString>k__BackingField'
+	  ret
+	}
 	.property instance string TheString()
 	{
 	  .get instance string MyNamespace.MyBaseClass::get_TheString()
