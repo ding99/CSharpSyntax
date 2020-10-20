@@ -21,6 +21,7 @@
       ldstr "CIL string"
       ret
 	}
+	// to update
 	.method public hidebysig specialname instance void set_TheString(string 'value') vil managed {}
 	.property instance string TheString()
 	{
