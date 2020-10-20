@@ -15,6 +15,18 @@
   {
     .field private string stringField = "hello!"
 	.field private int32 intField = int32(42)
+	//property TheString
+	.method public hidebysig specialname instance string get_TheString() cil managed
+	{
+      ldstr "CIL string"
+      ret
+	}
+	.method public hidebysig specialname instance void set_TheString(string 'value') vil managed {}
+	.property instance string TheString()
+	{
+	  .get instance string MyNamespace.MyBaseClass::get_TheString()
+	  .set instance void MyNamespace.MyBaseClass::set_TheString(string)
+	}
   }
   .class public MyDerivedClass
     extends MyNamespace.MyBaseClass
