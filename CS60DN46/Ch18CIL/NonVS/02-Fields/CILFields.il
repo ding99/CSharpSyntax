@@ -11,12 +11,16 @@
 .namespace MyNamespace
 {
   .class public interface IMyInterface {}
-  .class public MyBaseClass{}
+  .class public MyBaseClass
+  {
+    .field private string stringField = "hello!"
+	.field private int32 intField = int32(42)
+  }
   .class public MyDerivedClass
     extends MyNamespace.MyBaseClass
 	implements MyNamespace.IMyInterface
 	{
-	  .method private hidebysig void Start() cil managed
+	  .method private void Start()
       {
         //List<int> myInts = new List<int>();
         //newobj instance void class [mscorlib]System.Collections.Generic.List`1<int32>::.ctor()
