@@ -56,6 +56,7 @@
 		pop
 	    ret
 	  }
+	  
 	  // Public static void MyLocalVariables()
 	  // { string myStr = "CIL code is fun!"; int myInt = 33;
 	  // object myObj = new object(); }
@@ -69,6 +70,16 @@
 		stloc.1
 		newobj instance void [mscorlib]System.Object::.ctor()
 		stloc.2
+		ret
+	  }
+	  
+	  // public static int Add(int a, int b){ return a + b; }
+	  .method public hidebysig static int32 Add(int32 a, int32 b) cil managed
+	  {
+	    .maxstack 2
+		ldarg.0
+		ldarg.1
+		add
 		ret
 	  }
 	}
