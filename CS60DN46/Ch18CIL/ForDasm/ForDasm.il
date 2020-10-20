@@ -41,16 +41,50 @@
   .ver 1:0:0:0
 }
 .module ForDasm.exe
-// MVID: {66C70FCB-2B48-418A-AF44-79580CE00D73}
+// MVID: {CC303CAD-492A-45A3-992D-F43624017001}
 .imagebase 0x00400000
 .file alignment 0x00000200
 .stackreserve 0x00100000
 .subsystem 0x0003       // WINDOWS_CUI
 .corflags 0x00020003    //  ILONLY 32BITPREFERRED
-// Image base: 0x09230000
+// Image base: 0x08CB0000
 
 
 // =============== CLASS MEMBERS DECLARATION ===================
+
+.class private auto ansi beforefieldinit ForDasm.Calculator
+       extends [mscorlib]System.Object
+{
+  .method public hidebysig instance int32 
+          Add(int32 a,
+              int32 b) cil managed
+  {
+    // Code size       9 (0x9)
+    .maxstack  2
+    .locals init ([0] int32 V_0)
+    IL_0000:  nop
+    IL_0001:  ldarg.1
+    IL_0002:  ldarg.2
+    IL_0003:  add
+    IL_0004:  stloc.0
+    IL_0005:  br.s       IL_0007
+
+    IL_0007:  ldloc.0
+    IL_0008:  ret
+  } // end of method Calculator::Add
+
+  .method public hidebysig specialname rtspecialname 
+          instance void  .ctor() cil managed
+  {
+    // Code size       8 (0x8)
+    .maxstack  8
+    IL_0000:  ldarg.0
+    IL_0001:  call       instance void [mscorlib]System.Object::.ctor()
+    IL_0006:  nop
+    IL_0007:  ret
+  } // end of method Calculator::.ctor
+
+} // end of class ForDasm.Calculator
 
 .class private auto ansi beforefieldinit ForDasm.Program
        extends [mscorlib]System.Object
@@ -58,44 +92,105 @@
   .method private hidebysig static void  Main() cil managed
   {
     .entrypoint
-    // Code size       100 (0x64)
-    .maxstack  4
-    .locals init ([0] class ForDasm.Person jason)
+    // Code size       25 (0x19)
+    .maxstack  8
     IL_0000:  nop
     IL_0001:  ldstr      "== Reference for DeAsm"
     IL_0006:  call       void [mscorlib]System.Console::WriteLine(string)
     IL_000b:  nop
-    IL_000c:  newobj     instance void ForDasm.Person::.ctor()
-    IL_0011:  stloc.0
-    IL_0012:  ldloc.0
-    IL_0013:  ldstr      "Jason"
-    IL_0018:  callvirt   instance void ForDasm.Person::set_Name(string)
-    IL_001d:  nop
+    IL_000c:  call       void ForDasm.Program::People()
+    IL_0011:  nop
+    IL_0012:  call       void ForDasm.Program::Calculation()
+    IL_0017:  nop
+    IL_0018:  ret
+  } // end of method Program::Main
+
+  .method private hidebysig static void  Calculation() cil managed
+  {
+    // Code size       74 (0x4a)
+    .maxstack  4
+    .locals init ([0] class ForDasm.Calculator cal,
+             [1] int32 num1,
+             [2] int32 num2,
+             [3] int32 res)
+    IL_0000:  nop
+    IL_0001:  ldc.i4.s   11
+    IL_0003:  call       void [mscorlib]System.Console::set_ForegroundColor(valuetype [mscorlib]System.ConsoleColor)
+    IL_0008:  nop
+    IL_0009:  ldstr      "-- Calculating"
+    IL_000e:  call       void [mscorlib]System.Console::WriteLine(string)
+    IL_0013:  nop
+    IL_0014:  newobj     instance void ForDasm.Calculator::.ctor()
+    IL_0019:  stloc.0
+    IL_001a:  ldc.i4.3
+    IL_001b:  stloc.1
+    IL_001c:  ldc.i4.5
+    IL_001d:  stloc.2
     IL_001e:  ldloc.0
-    IL_001f:  ldc.i4.s   25
-    IL_0021:  callvirt   instance void ForDasm.Person::set_Age(int32)
-    IL_0026:  nop
-    IL_0027:  ldloc.0
-    IL_0028:  ldc.r8     160.69999999999999
-    IL_0031:  callvirt   instance void ForDasm.Person::set_Weight(float64)
-    IL_0036:  nop
-    IL_0037:  ldstr      "Name:{0}, Age:{1}, Weight:{2}"
-    IL_003c:  ldloc.0
-    IL_003d:  callvirt   instance string ForDasm.Person::get_Name()
-    IL_0042:  ldloc.0
-    IL_0043:  callvirt   instance int32 ForDasm.Person::get_Age()
-    IL_0048:  box        [mscorlib]System.Int32
-    IL_004d:  ldloc.0
-    IL_004e:  callvirt   instance float64 ForDasm.Person::get_Weight()
-    IL_0053:  box        [mscorlib]System.Double
-    IL_0058:  call       string [mscorlib]System.String::Format(string,
+    IL_001f:  ldloc.1
+    IL_0020:  ldloc.2
+    IL_0021:  callvirt   instance int32 ForDasm.Calculator::Add(int32,
+                                                                int32)
+    IL_0026:  stloc.3
+    IL_0027:  ldstr      "The sum of {0} and {1} is {2}."
+    IL_002c:  ldloc.1
+    IL_002d:  box        [mscorlib]System.Int32
+    IL_0032:  ldloc.2
+    IL_0033:  box        [mscorlib]System.Int32
+    IL_0038:  ldloc.3
+    IL_0039:  box        [mscorlib]System.Int32
+    IL_003e:  call       string [mscorlib]System.String::Format(string,
                                                                 object,
                                                                 object,
                                                                 object)
-    IL_005d:  call       void [mscorlib]System.Console::WriteLine(string)
-    IL_0062:  nop
-    IL_0063:  ret
-  } // end of method Program::Main
+    IL_0043:  call       void [mscorlib]System.Console::WriteLine(string)
+    IL_0048:  nop
+    IL_0049:  ret
+  } // end of method Program::Calculation
+
+  .method private hidebysig static void  People() cil managed
+  {
+    // Code size       108 (0x6c)
+    .maxstack  4
+    .locals init ([0] class ForDasm.Person jason)
+    IL_0000:  nop
+    IL_0001:  ldc.i4.s   14
+    IL_0003:  call       void [mscorlib]System.Console::set_ForegroundColor(valuetype [mscorlib]System.ConsoleColor)
+    IL_0008:  nop
+    IL_0009:  ldstr      "-- Jason's information"
+    IL_000e:  call       void [mscorlib]System.Console::WriteLine(string)
+    IL_0013:  nop
+    IL_0014:  newobj     instance void ForDasm.Person::.ctor()
+    IL_0019:  stloc.0
+    IL_001a:  ldloc.0
+    IL_001b:  ldstr      "Jason"
+    IL_0020:  callvirt   instance void ForDasm.Person::set_Name(string)
+    IL_0025:  nop
+    IL_0026:  ldloc.0
+    IL_0027:  ldc.i4.s   25
+    IL_0029:  callvirt   instance void ForDasm.Person::set_Age(int32)
+    IL_002e:  nop
+    IL_002f:  ldloc.0
+    IL_0030:  ldc.r8     160.69999999999999
+    IL_0039:  callvirt   instance void ForDasm.Person::set_Weight(float64)
+    IL_003e:  nop
+    IL_003f:  ldstr      "Name:{0}, Age:{1}, Weight:{2}"
+    IL_0044:  ldloc.0
+    IL_0045:  callvirt   instance string ForDasm.Person::get_Name()
+    IL_004a:  ldloc.0
+    IL_004b:  callvirt   instance int32 ForDasm.Person::get_Age()
+    IL_0050:  box        [mscorlib]System.Int32
+    IL_0055:  ldloc.0
+    IL_0056:  callvirt   instance float64 ForDasm.Person::get_Weight()
+    IL_005b:  box        [mscorlib]System.Double
+    IL_0060:  call       string [mscorlib]System.String::Format(string,
+                                                                object,
+                                                                object,
+                                                                object)
+    IL_0065:  call       void [mscorlib]System.Console::WriteLine(string)
+    IL_006a:  nop
+    IL_006b:  ret
+  } // end of method Program::People
 
   .method public hidebysig specialname rtspecialname 
           instance void  .ctor() cil managed

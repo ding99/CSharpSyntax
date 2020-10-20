@@ -4,7 +4,7 @@ using System;
 namespace ForDasm {
 	class Program {
 		static void Main() {
-			System.Console.WriteLine("== Reference for DeAsm");
+			Console.WriteLine("== Reference for DeAsm");
 			People();
 			Calculation();
 		}
@@ -26,7 +26,7 @@ namespace ForDasm {
 			jason.Name = "Jason";
 			jason.Age = 25;
 			jason.Weight = 160.7;
-			System.Console.WriteLine($"Name:{jason.Name}, Age:{jason.Age}, Weight:{jason.Weight}");
+			Console.WriteLine($"Name:{jason.Name}, Age:{jason.Age}, Weight:{jason.Weight}");
 		}
 	}
 }
