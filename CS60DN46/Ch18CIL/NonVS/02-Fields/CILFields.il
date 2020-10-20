@@ -37,6 +37,11 @@
 	  .get instance string MyNamespace.MyBaseClass::get_TheString()
 	  .set instance void MyNamespace.MyBaseClass::set_TheString(string)
 	}
+	
+	//public void MyMethod(int inInt, ref int refInt, ArrayList ar, out int outInt){ outInt = 0; }
+	.method public hidebysig void MyMethod(int32 inInt, int32& refInt, class [mscorlib]System.Collections.ArrayList ar, [out] int32& outInt) cil managed
+	{
+	}
   }
   .class public MyDerivedClass
     extends MyNamespace.MyBaseClass
