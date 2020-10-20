@@ -50,7 +50,7 @@
 	  .method private void Start()
       {
         //List<int> myInts = new List<int>();
-        //newobj instance void class [mscorlib]System.Collections.Generic.List`1<int32>::.ctor()
+        newobj instance void class [mscorlib]System.Collections.Generic.List`1<int32>::.ctor()
         //Dictionary<string,int>
         newobj instance void class [mscorlib]System.Collections.Generic.Dictionary`2<string,int32>::.ctor()
 	    //ret
