@@ -46,7 +46,7 @@
     extends MyNamespace.MyBaseClass
 	implements MyNamespace.IMyInterface
 	{
-	  .method private void Start()
+	  .method private hidebysig void Start() cil managed
       {
         //List<int> myInts = new List<int>();
         newobj instance void class [mscorlib]System.Collections.Generic.List`1<int32>::.ctor()
@@ -55,6 +55,21 @@
         newobj instance void class [mscorlib]System.Collections.Generic.Dictionary`2<string,int32>::.ctor()
 		pop
 	    ret
+	  }
+	  // Public static void MyLocalVariables()
+	  // { string myStr = "CIL code is fun!"; int myInt = 33;
+	  // object myObj = new object(); }
+	  .method public hidebysig static void MyLocalVariables() cil managed
+	  {
+	    .maxstack 8
+		.locals init ([0] string myStr, [1] int32 myInt, [2] object myObj)
+		ldstr "CIL code is fun!"
+		stloc.0
+		ldc.i4 33
+		stloc.1
+		newobj instance void [mscorlib]System.Object::.ctor()
+		stloc.2
+		ret
 	  }
 	}
 	
