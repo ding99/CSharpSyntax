@@ -16,6 +16,7 @@
     .field private string stringField = "hello!"
 	.field private int32 intField = int32(42)
 	//property TheString
+	.field private string '<TheString>k__BackingField'
 	.method public hidebysig specialname instance string get_TheString() cil managed
 	{
 	  .custom instance void [mscorlib]System.Runtime.CompilerServices.ComplilerGeneratedAttribute::.ctor() = (01 00 00 00)
@@ -39,9 +40,7 @@
 	}
 	
 	//public void MyMethod(int inInt, ref int refInt, ArrayList ar, out int outInt){ outInt = 0; }
-	.method public hidebysig void MyMethod(int32 inInt, int32& refInt, class [mscorlib]System.Collections.ArrayList ar, [out] int32& outInt) cil managed
-	{
-	}
+	.method public hidebysig void MyMethod(int32 inInt, int32& refInt, class [mscorlib]System.Collections.ArrayList ar, [out] int32& outInt) cil managed{}
   }
   .class public MyDerivedClass
     extends MyNamespace.MyBaseClass
@@ -51,23 +50,25 @@
       {
         //List<int> myInts = new List<int>();
         newobj instance void class [mscorlib]System.Collections.Generic.List`1<int32>::.ctor()
+		pop
         //Dictionary<string,int>
         newobj instance void class [mscorlib]System.Collections.Generic.Dictionary`2<string,int32>::.ctor()
-	    //ret
+		pop
+	    ret
 	  }
 	}
 	
   .class public interface IMyOtherInterface implements MyNamespace.IMyInterface{}
 
-  .class public sealed value MyStruct{}
+  //.class public sealed value MyStruct{}
   
-  .class public sealed enum MyEnum
-  {
-    .field public static literal valuetype
-	MyNamespace.MyEnum A = int32(0)
-    .field public static literal valuetype
-	MyNamespace.MyEnum B = int32(1)
-    .field public static literal valuetype
-	MyNamespace.MyEnum C = int32(2)
-  }
+//  .class public sealed enum MyEnum
+//  {
+//    .field public static literal valuetype
+//	MyNamespace.MyEnum A = int32(0)
+//    .field public static literal valuetype
+//	MyNamespace.MyEnum B = int32(1)
+//    .field public static literal valuetype
+//	MyNamespace.MyEnum C = int32(2)
+//  }
 }
