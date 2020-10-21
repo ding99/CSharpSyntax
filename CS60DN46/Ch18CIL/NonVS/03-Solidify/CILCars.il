@@ -1,11 +1,11 @@
 .assembly extern mscorlib
 {
-  .publickeytoken = (B7 7A 5C 56 19 34 E0 90)
+  .publickeytoken = (B7 7A 5C 56 19 34 E0 89)
   .ver 4:0:0:0
 }
 .assembly extern System.Windows.Forms
 {
-  .publickeytoken = (B7 7A 5C 56 19 34 E0 90)
+  .publickeytoken = (B7 7A 5C 56 19 34 E0 89)
   .ver 4:0:0:0
 }
 .assembly CILCars
@@ -20,8 +20,8 @@
   .class public auto ansi beforefieldinit CILCar extends [mscorlib]System.Object
   {
     //The field data of the CILCar
-    .field private string petName
-	.field private int32 currSpeed
+    .field public string petName
+	.field public int32 currSpeed
 	
 	//The custom constructor simply allows the caller to assign the field data
 	.method public hidebysig specialname rtspecialname instance void .ctor(int32 c, string p) cil managed
