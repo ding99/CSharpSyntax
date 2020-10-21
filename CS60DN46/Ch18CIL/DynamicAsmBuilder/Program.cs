@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Http.Headers;
 using System.Reflection;
 using System.Reflection.Emit;
 using System.Threading;
@@ -9,7 +10,28 @@ namespace DynamicAsmBuilder {
 			Console.WriteLine("***** Dynamic Assembly Builder *****");
 			AppDomain domain = Thread.GetDomain();
 			CreateMyAsm(domain);
+			ReadAssembly();
 			Console.ResetColor();
+		}
+
+		private static void ReadAssembly() {
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine("=> Use Created Assembly");
+
+			Console.WriteLine("-> Loading MyAssembly.dll from file");
+			Assembly a = Assembly.Load("MyAssembly");
+			Type hello = a.GetType("MyAssembly.HelloWorld");
+
+			string msg = "Invoke create assembly";
+			Console.WriteLine($"-> Enter message to pass HelloWorld class: <{msg}>");
+			object[] args = { msg };
+			object obj = Activator.CreateInstance(hello, args);
+
+			Console.WriteLine("-> Calling SayHello() via late binding");
+			MethodInfo mi = hello.GetMethod("SayHello");
+			mi.Invoke(obj, null);
+			mi = hello.GetMethod("GetMsg");
+			Console.WriteLine(mi.Invoke(obj, null));
 		}
 
 		private static void CreateMyAsm(AppDomain curAppDomain) {
@@ -52,6 +74,8 @@ namespace DynamicAsmBuilder {
 
 			helloWorldClass.CreateType();
 			assembly.Save("MyAssembly.dll");
+
+			Console.WriteLine("-> Finished creating MyAssembly.dll");
 		}
 	}
 }
