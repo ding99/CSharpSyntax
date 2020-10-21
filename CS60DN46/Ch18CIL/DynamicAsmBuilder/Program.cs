@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Reflection;
 using System.Reflection.Emit;
 using System.Threading;
@@ -42,6 +38,7 @@ namespace DynamicAsmBuilder {
 			constructorIL.Emit(OpCodes.Ret);
 
 			helloWorldClass.DefineDefaultConstructor(MethodAttributes.Public);
+
 			MethodBuilder getMsgMethod = helloWorldClass.DefineMethod("GetMsg", MethodAttributes.Public, typeof(string), null);
 			ILGenerator methodIL = getMsgMethod.GetILGenerator();
 			methodIL.Emit(OpCodes.Ldarg_0);
