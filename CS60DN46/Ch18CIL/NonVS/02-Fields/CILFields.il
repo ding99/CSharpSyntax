@@ -82,6 +82,24 @@
 		add
 		ret
 	  }
+	  
+	  //public static void CountToTen(){ for(int i = 0; i < 10; i++) ;}
+	  .method public hidebysig static void CountToTen() cil managed
+	  {
+	    .maxstack 2
+		.locals init ([0] int32 i)
+		IL_0000: ldc.i4.0
+		IL_0001: stloc.0
+		IL_0002: br.s IL_0008
+		IL_0004: ldloc.0
+		IL_0005: ldc.i4.1
+		IL_0006: add
+		IL_0007: stloc.0
+		IL_0008: ldloc.0
+		IL_0009: ldc.i4.s 10
+		IL_000b: blt.s IL_0004
+		IL_000d: ret
+	  }
 	}
 	
   .class public interface IMyOtherInterface implements MyNamespace.IMyInterface{}
