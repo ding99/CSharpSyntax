@@ -12,7 +12,7 @@ namespace ForDasm {
 		private static void Calculation() {
 			Console.ForegroundColor = ConsoleColor.Cyan;
 			Console.WriteLine("-- Calculating");
-			Calculator cal = new Calculator();
+			ForDasmSub.Calculator cal = new ForDasmSub.Calculator();
 			int num1 = 3;
 			int num2 = 5;
 			int res = cal.Add(num1, num2);
@@ -22,7 +22,7 @@ namespace ForDasm {
 		private static void People() {
 			Console.ForegroundColor = ConsoleColor.Yellow;
 			Console.WriteLine("-- Jason's information");
-			Person jason = new Person();
+			ForDasmSub.Person jason = new ForDasmSub.Person();
 			jason.Name = "Jason";
 			jason.Age = 25;
 			jason.Weight = 160.7;
