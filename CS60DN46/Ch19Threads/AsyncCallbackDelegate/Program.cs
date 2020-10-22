@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.Remoting.Messaging;
 using System.Threading;
 
 namespace AsyncCallbackDelegate {
@@ -21,7 +22,7 @@ namespace AsyncCallbackDelegate {
 
 			int x = 10, y = 20;
 			BinaryOp b = new BinaryOp(Add);
-			IAsyncResult reuslt = b.BeginInvoke(x, y, new AsyncCallback(AddComplete), null);
+			IAsyncResult result = b.BeginInvoke(x, y, new AsyncCallback(AddComplete), null);
 
 			while (!isDone) {
 				Thread.Sleep(1000);
@@ -30,7 +31,7 @@ namespace AsyncCallbackDelegate {
 		}
 
 		static int Add(int x, int y) {
-			Console.WriteLine($"Add() invoked on thread <{Thread.CurrentThread.ManagedThreadId}>");
+			Console.WriteLine($"Add({x},{y}) invoked on thread <{Thread.CurrentThread.ManagedThreadId}>");
 			Thread.Sleep(3000);
 			return x + y;
 		}
@@ -38,6 +39,11 @@ namespace AsyncCallbackDelegate {
 		static void AddComplete(IAsyncResult result) {
 			Console.WriteLine($"AddComplete() invoked on thread <{Thread.CurrentThread.ManagedThreadId}>");
 			Console.WriteLine("Your addition is complete");
+
+			AsyncResult ar = (AsyncResult)result;
+			BinaryOp b = (BinaryOp)ar.AsyncDelegate;
+			Console.WriteLine($"The result is {b.EndInvoke(result)}");
+
 			isDone = true;
 		}
 	}
