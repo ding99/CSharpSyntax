@@ -15,13 +15,13 @@ namespace SyncDelegateReview {
 			Console.ForegroundColor = ConsoleColor.Yellow;
 			Console.WriteLine("=> Synch Delegate Review");
 
-			Console.WriteLine($"Invoked on thread <{Thread.CurrentThread.ManagedThreadId}>");
+			Console.WriteLine($"Primary invoked on thread <{Thread.CurrentThread.ManagedThreadId}>");
 
 			BinaryOp b = new BinaryOp(Add);
 			int x = 10, y = 20;
 			int answer = b(x, y);
 
-			Console.WriteLine("Doing more work in Primary");
+			Console.WriteLine("Doing more work in primary thread");
 			Console.WriteLine($"{x} + {y} is {answer}");
 		}
 
