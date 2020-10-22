@@ -18,15 +18,16 @@ namespace SyncDelegateReview {
 			Console.WriteLine($"Invoked on thread <{Thread.CurrentThread.ManagedThreadId}>");
 
 			BinaryOp b = new BinaryOp(Add);
-			int answer = b(10, 20);
+			int x = 10, y = 20;
+			int answer = b(x, y);
 
 			Console.WriteLine("Doing more work in Primary");
-			Console.WriteLine($"10 + 10 is {answer}");
+			Console.WriteLine($"{x} + {y} is {answer}");
 		}
 
 		static int Add(int x, int y) {
 			Console.WriteLine($"Add() invoked on thread <{Thread.CurrentThread.ManagedThreadId}>");
-			Thread.Sleep(3000);
+			Thread.Sleep(2000);
 			return x + y;
 		}
 	}
