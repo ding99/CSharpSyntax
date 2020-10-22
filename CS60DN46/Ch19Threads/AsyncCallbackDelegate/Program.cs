@@ -43,8 +43,8 @@ namespace AsyncCallbackDelegate {
 			AsyncResult ar = (AsyncResult)result;
 			BinaryOp b = (BinaryOp)ar.AsyncDelegate;
 			string msg = (string)ar.AsyncState;
-			Console.WriteLine($"Message from the primary thread: <{msg}>");
 			Console.WriteLine($"The result is {b.EndInvoke(result)}");
+			Console.WriteLine($"Message from the primary thread: <{msg}>");
 
 			isDone = true;
 		}
