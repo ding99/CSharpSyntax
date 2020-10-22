@@ -22,7 +22,7 @@ namespace AsyncCallbackDelegate {
 
 			int x = 10, y = 20;
 			BinaryOp b = new BinaryOp(Add);
-			IAsyncResult result = b.BeginInvoke(x, y, new AsyncCallback(AddComplete), null);
+			IAsyncResult result = b.BeginInvoke(x, y, new AsyncCallback(AddComplete), "Primary thanks you for adding these numbers");
 
 			while (!isDone) {
 				Thread.Sleep(1000);
@@ -42,6 +42,8 @@ namespace AsyncCallbackDelegate {
 
 			AsyncResult ar = (AsyncResult)result;
 			BinaryOp b = (BinaryOp)ar.AsyncDelegate;
+			string msg = (string)ar.AsyncState;
+			Console.WriteLine($"Message from the primary thread: <{msg}>");
 			Console.WriteLine($"The result is {b.EndInvoke(result)}");
 
 			isDone = true;
