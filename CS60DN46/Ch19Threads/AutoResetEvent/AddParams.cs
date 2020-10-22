@@ -1,4 +1,4 @@
-﻿namespace AddWithThreads {
+﻿namespace AutoResetEvent {
 	class AddParams {
 		public int a, b;
 
