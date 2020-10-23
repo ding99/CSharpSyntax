@@ -428,6 +428,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackgroundThread", "CS60DN4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiThreadedPrinting", "CS60DN46\Ch19Threads\MultiThreadedPrinting\MultiThreadedPrinting.csproj", "{4CADE088-B6DE-4262-81FB-128F1738574F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiThreadedSafely", "CS60DN46\Ch19Threads\MultiThreadedSafely\MultiThreadedSafely.csproj", "{CE783F88-D361-4F64-8A81-F6269F267F1B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -3088,6 +3090,22 @@ Global
 		{4CADE088-B6DE-4262-81FB-128F1738574F}.Release|x64.Build.0 = Release|Any CPU
 		{4CADE088-B6DE-4262-81FB-128F1738574F}.Release|x86.ActiveCfg = Release|Any CPU
 		{4CADE088-B6DE-4262-81FB-128F1738574F}.Release|x86.Build.0 = Release|Any CPU
+		{CE783F88-D361-4F64-8A81-F6269F267F1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE783F88-D361-4F64-8A81-F6269F267F1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE783F88-D361-4F64-8A81-F6269F267F1B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CE783F88-D361-4F64-8A81-F6269F267F1B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CE783F88-D361-4F64-8A81-F6269F267F1B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CE783F88-D361-4F64-8A81-F6269F267F1B}.Debug|x64.Build.0 = Debug|Any CPU
+		{CE783F88-D361-4F64-8A81-F6269F267F1B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CE783F88-D361-4F64-8A81-F6269F267F1B}.Debug|x86.Build.0 = Debug|Any CPU
+		{CE783F88-D361-4F64-8A81-F6269F267F1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE783F88-D361-4F64-8A81-F6269F267F1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE783F88-D361-4F64-8A81-F6269F267F1B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{CE783F88-D361-4F64-8A81-F6269F267F1B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{CE783F88-D361-4F64-8A81-F6269F267F1B}.Release|x64.ActiveCfg = Release|Any CPU
+		{CE783F88-D361-4F64-8A81-F6269F267F1B}.Release|x64.Build.0 = Release|Any CPU
+		{CE783F88-D361-4F64-8A81-F6269F267F1B}.Release|x86.ActiveCfg = Release|Any CPU
+		{CE783F88-D361-4F64-8A81-F6269F267F1B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -3285,6 +3303,7 @@ Global
 		{87F165BB-ED70-43B8-A9A9-516BCC29F025} = {A0205124-007D-4B3B-B66E-DA6CD943CEB6}
 		{EBD19FD5-4932-4051-A2EE-DF1969F76D99} = {A0205124-007D-4B3B-B66E-DA6CD943CEB6}
 		{4CADE088-B6DE-4262-81FB-128F1738574F} = {A0205124-007D-4B3B-B66E-DA6CD943CEB6}
+		{CE783F88-D361-4F64-8A81-F6269F267F1B} = {A0205124-007D-4B3B-B66E-DA6CD943CEB6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7C00B1AC-1A8A-4B50-9373-585713E1AED0}
