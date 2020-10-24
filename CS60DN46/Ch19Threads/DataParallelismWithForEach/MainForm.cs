@@ -31,6 +31,9 @@ namespace DataParallelismWithForEach {
 					bm.Save(Path.Combine(newDir, name));
 
 					//this.Text = string.Format($"Processing {name} on thread {Thread.CurrentThread.ManagedThreadId}");
+					this.Invoke((Action)delegate {
+						this.Text = $"Processing {name} on thread {Thread.CurrentThread.ManagedThreadId}";
+					});
 				}
 			});
 		}
