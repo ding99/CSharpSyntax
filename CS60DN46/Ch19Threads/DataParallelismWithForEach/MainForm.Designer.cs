@@ -29,16 +29,16 @@
 			// 
 			// textBox1
 			// 
-			this.textBox1.Location = new System.Drawing.Point(33, 25);
+			this.textBox1.Location = new System.Drawing.Point(12, 23);
 			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(420, 20);
+			this.textBox1.Size = new System.Drawing.Size(456, 20);
 			this.textBox1.TabIndex = 0;
 			// 
 			// btnProcessImages
 			// 
-			this.btnProcessImages.Location = new System.Drawing.Point(33, 105);
+			this.btnProcessImages.Location = new System.Drawing.Point(129, 64);
 			this.btnProcessImages.Name = "btnProcessImages";
-			this.btnProcessImages.Size = new System.Drawing.Size(195, 32);
+			this.btnProcessImages.Size = new System.Drawing.Size(236, 36);
 			this.btnProcessImages.TabIndex = 1;
 			this.btnProcessImages.Text = "Process Images";
 			this.btnProcessImages.UseVisualStyleBackColor = true;
@@ -48,7 +48,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(480, 300);
+			this.ClientSize = new System.Drawing.Size(480, 120);
 			this.Controls.Add(this.btnProcessImages);
 			this.Controls.Add(this.textBox1);
 			this.Name = "MainForm";
