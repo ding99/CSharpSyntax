@@ -42,6 +42,7 @@
 			this.btnProcessImages.TabIndex = 1;
 			this.btnProcessImages.Text = "Process Images";
 			this.btnProcessImages.UseVisualStyleBackColor = true;
+			this.btnProcessImages.Click += new System.EventHandler(this.btnProcessImages_Click);
 			// 
 			// MainForm
 			// 

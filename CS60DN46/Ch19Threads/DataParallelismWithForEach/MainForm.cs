@@ -16,6 +16,8 @@ namespace DataParallelismWithForEach {
 			InitializeComponent();
 		}
 
+		private void btnProcessImages_Click(object sender, EventArgs e) { ProcessFiles(); }
+
 		private void ProcessFiles() {
 			//load up all *.jpg files, and make a new folder for the modified data
 			string[] files = Directory.GetFiles(@"E:\test\Parallel\Source", "*.jpg",SearchOption.AllDirectories);
