@@ -25,6 +25,7 @@
 		private void InitializeComponent() {
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.btnProcessImages = new System.Windows.Forms.Button();
+			this.btnCancel = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// textBox1
@@ -36,19 +37,30 @@
 			// 
 			// btnProcessImages
 			// 
-			this.btnProcessImages.Location = new System.Drawing.Point(129, 64);
+			this.btnProcessImages.Location = new System.Drawing.Point(12, 72);
 			this.btnProcessImages.Name = "btnProcessImages";
-			this.btnProcessImages.Size = new System.Drawing.Size(236, 36);
+			this.btnProcessImages.Size = new System.Drawing.Size(213, 36);
 			this.btnProcessImages.TabIndex = 1;
 			this.btnProcessImages.Text = "Process Images";
 			this.btnProcessImages.UseVisualStyleBackColor = true;
 			this.btnProcessImages.Click += new System.EventHandler(this.btnProcessImages_Click);
+			// 
+			// btnCancel
+			// 
+			this.btnCancel.Location = new System.Drawing.Point(277, 72);
+			this.btnCancel.Name = "btnCancel";
+			this.btnCancel.Size = new System.Drawing.Size(191, 36);
+			this.btnCancel.TabIndex = 2;
+			this.btnCancel.Text = "Cancel";
+			this.btnCancel.UseVisualStyleBackColor = true;
+			this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
 			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(480, 120);
+			this.Controls.Add(this.btnCancel);
 			this.Controls.Add(this.btnProcessImages);
 			this.Controls.Add(this.textBox1);
 			this.Name = "MainForm";
@@ -62,6 +74,7 @@
 
 		private System.Windows.Forms.TextBox textBox1;
 		private System.Windows.Forms.Button btnProcessImages;
+		private System.Windows.Forms.Button btnCancel;
 	}
 }
 
