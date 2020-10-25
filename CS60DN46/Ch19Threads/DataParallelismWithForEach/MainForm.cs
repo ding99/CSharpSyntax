@@ -1,17 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
+using System.IO;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Threading;
-using System.IO;
 
 namespace DataParallelismWithForEach {
 	public partial class MainForm : Form {
+
+		private CancellationTokenSource cancelToken = new CancellationTokenSource();
+
 		public MainForm() {
 			InitializeComponent();
 		}
@@ -21,27 +19,37 @@ namespace DataParallelismWithForEach {
 		}
 
 		private void ProcessFiles() {
+			ParallelOptions parOpts = new ParallelOptions();
+			parOpts.CancellationToken = cancelToken.Token;
+			parOpts.MaxDegreeOfParallelism = Environment.ProcessorCount;
+
 			//load up all *.jpg files, and make a new folder for the modified data
 			string[] files = Directory.GetFiles(@"E:\test\Parallel\Source", "*.jpg", SearchOption.AllDirectories);
 			string newDir = @"E:\test\Parallel\Target";
 			Directory.CreateDirectory(newDir);
 
-			Parallel.ForEach(files, file => {
-				string name = Path.GetFileName(file);
-				using (Bitmap bm = new Bitmap(file)) {
-					bm.RotateFlip(RotateFlipType.Rotate180FlipNone);
-					bm.Save(Path.Combine(newDir, name));
+			try {
+				Parallel.ForEach(files, parOpts, file => {
+					parOpts.CancellationToken.ThrowIfCancellationRequested();
 
-					//this.Text = string.Format($"Processing {name} on thread {Thread.CurrentThread.ManagedThreadId}");
-					this.Invoke((Action)delegate {
-						this.Text = $"Processing {name} on thread {Thread.CurrentThread.ManagedThreadId}";
-					});
-				}
-			});
+					string name = Path.GetFileName(file);
+					using (Bitmap bm = new Bitmap(file)) {
+						bm.RotateFlip(RotateFlipType.Rotate180FlipNone);
+						bm.Save(Path.Combine(newDir, name));
+						this.Invoke((Action)delegate {
+							this.Text = $"Processing {name} on thread {Thread.CurrentThread.ManagedThreadId}";
+						});
+					}
+				});
+			} catch(OperationCanceledException e) {
+				this.Invoke((Action)delegate {
+					this.Text = e.Message;
+				});
+			}
 		}
 
 		private void btnCancel_Click(object sender, EventArgs e) {
-
+			cancelToken.Cancel();
 		}
 	}
 }
