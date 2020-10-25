@@ -23,13 +23,58 @@
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
-			this.components = new System.ComponentModel.Container();
+			this.txtBook = new System.Windows.Forms.TextBox();
+			this.btnDownload = new System.Windows.Forms.Button();
+			this.btnGetStart = new System.Windows.Forms.Button();
+			this.SuspendLayout();
+			// 
+			// txtBook
+			// 
+			this.txtBook.Location = new System.Drawing.Point(12, 12);
+			this.txtBook.Name = "txtBook";
+			this.txtBook.Size = new System.Drawing.Size(456, 20);
+			this.txtBook.TabIndex = 0;
+			// 
+			// btnDownload
+			// 
+			this.btnDownload.Location = new System.Drawing.Point(12, 140);
+			this.btnDownload.Name = "btnDownload";
+			this.btnDownload.Size = new System.Drawing.Size(141, 28);
+			this.btnDownload.TabIndex = 1;
+			this.btnDownload.Text = "Download";
+			this.btnDownload.UseVisualStyleBackColor = true;
+			this.btnDownload.Click += new System.EventHandler(this.btnDownload_Click);
+			// 
+			// btnGetStart
+			// 
+			this.btnGetStart.Location = new System.Drawing.Point(321, 140);
+			this.btnGetStart.Name = "btnGetStart";
+			this.btnGetStart.Size = new System.Drawing.Size(147, 24);
+			this.btnGetStart.TabIndex = 2;
+			this.btnGetStart.Text = "Start";
+			this.btnGetStart.UseVisualStyleBackColor = true;
+			this.btnGetStart.Click += new System.EventHandler(this.btnGetStart_Click);
+			// 
+			// MainForm
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(600, 300);
+			this.ClientSize = new System.Drawing.Size(480, 180);
+			this.Controls.Add(this.btnGetStart);
+			this.Controls.Add(this.btnDownload);
+			this.Controls.Add(this.txtBook);
+			this.Name = "MainForm";
 			this.Text = "My EBook Reader";
+			this.ResumeLayout(false);
+			this.PerformLayout();
+
 		}
 
 		#endregion
+
+		private System.Windows.Forms.TextBox txtBook;
+		private System.Windows.Forms.Button btnDownload;
+		private System.Windows.Forms.Button btnGetStart;
 	}
 }
 
