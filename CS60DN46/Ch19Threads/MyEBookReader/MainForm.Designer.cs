@@ -30,16 +30,18 @@
 			// 
 			// txtBook
 			// 
-			this.txtBook.Location = new System.Drawing.Point(12, 12);
+			this.txtBook.Location = new System.Drawing.Point(12, 46);
+			this.txtBook.Multiline = true;
 			this.txtBook.Name = "txtBook";
-			this.txtBook.Size = new System.Drawing.Size(456, 20);
+			this.txtBook.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+			this.txtBook.Size = new System.Drawing.Size(456, 262);
 			this.txtBook.TabIndex = 0;
 			// 
 			// btnDownload
 			// 
-			this.btnDownload.Location = new System.Drawing.Point(12, 140);
+			this.btnDownload.Location = new System.Drawing.Point(12, 12);
 			this.btnDownload.Name = "btnDownload";
-			this.btnDownload.Size = new System.Drawing.Size(141, 28);
+			this.btnDownload.Size = new System.Drawing.Size(141, 24);
 			this.btnDownload.TabIndex = 1;
 			this.btnDownload.Text = "Download";
 			this.btnDownload.UseVisualStyleBackColor = true;
@@ -47,7 +49,7 @@
 			// 
 			// btnGetStart
 			// 
-			this.btnGetStart.Location = new System.Drawing.Point(321, 140);
+			this.btnGetStart.Location = new System.Drawing.Point(321, 12);
 			this.btnGetStart.Name = "btnGetStart";
 			this.btnGetStart.Size = new System.Drawing.Size(147, 24);
 			this.btnGetStart.TabIndex = 2;
@@ -59,12 +61,12 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(480, 180);
+			this.ClientSize = new System.Drawing.Size(480, 320);
 			this.Controls.Add(this.btnGetStart);
 			this.Controls.Add(this.btnDownload);
 			this.Controls.Add(this.txtBook);
 			this.Name = "MainForm";
-			this.Text = "My EBook Reader";
+			this.Text = "EBook Reader";
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

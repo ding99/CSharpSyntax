@@ -20,6 +20,7 @@ namespace MyEBookReader {
 
 		private void btnDownload_Click(object sender, EventArgs e) {
 			string uri = @"http://www.gutenberg.org/files/98/98-8.txt";
+
 			WebClient wc = new WebClient();
 			wc.DownloadStringCompleted += (s, eArgs) => {
 				theEBook = eArgs.Result;
