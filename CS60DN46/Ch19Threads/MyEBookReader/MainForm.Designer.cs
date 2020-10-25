@@ -53,7 +53,7 @@
 			this.btnGetStart.Name = "btnGetStart";
 			this.btnGetStart.Size = new System.Drawing.Size(147, 24);
 			this.btnGetStart.TabIndex = 2;
-			this.btnGetStart.Text = "Start";
+			this.btnGetStart.Text = "Extraction";
 			this.btnGetStart.UseVisualStyleBackColor = true;
 			this.btnGetStart.Click += new System.EventHandler(this.btnGetStart_Click);
 			// 

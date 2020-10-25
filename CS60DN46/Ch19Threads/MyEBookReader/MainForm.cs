@@ -43,11 +43,13 @@ namespace MyEBookReader {
 
 			bookStats.AppendFormat("Longest word is: {0}", longestWord);
 			bookStats.AppendLine();
+			//bookStats.AppendLine($"Longest word is: {longestWord}");
 			MessageBox.Show(bookStats.ToString(), "Book info");
 		}
 
 		private string[] FindTenMostCommon(string[] words) {
-			var frequencyOrder = from word in words where word.Length > 6 group word by word into g orderby g.Count() descending select g.Key;
+			//var frequencyOrder = from word in words where word.Length > 6 group word by word into g orderby g.Count() descending select g.Key;
+			var frequencyOrder = from word in words where word.Length > 4 group word by word into g orderby g.Count() descending select g.Key;
 			string[] commonWords = (frequencyOrder.Take(10)).ToArray();
 			return commonWords;
 		}
