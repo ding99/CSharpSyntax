@@ -19,9 +19,14 @@ namespace LinqBasic {
 			foreach (var w in words) Console.Write(" " + w);
 			Console.WriteLine();
 
-			var groups = from word in words group word by word into g orderby g.Count() descending select g;
-			Console.WriteLine($"Words (size {groups.Count()}):");
-			foreach (var w in groups) Console.Write($" <{w.Key}>-{w.Count()}");
+			var group1 = from word in words group word by word into g orderby g.Count() descending select g;
+			Console.WriteLine($"Group1 (size {group1.Count()}):");
+			foreach (var w in group1) Console.Write($" <{w.Key}>-{w.Count()}");
+			Console.WriteLine();
+
+			var group2 = from word in words group word by word into g orderby g.Count() descending select new { Word = g.Key, Count = g.Count() };
+			Console.WriteLine($"Group2 (size {group2.Count()}):");
+			foreach (var w in group2) Console.Write($" <{w.Word}>-{w.Count}");
 			Console.WriteLine();
 		}
 
