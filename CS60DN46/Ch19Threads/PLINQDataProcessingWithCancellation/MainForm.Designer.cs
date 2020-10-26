@@ -29,9 +29,9 @@
 			// 
 			// btnExecute
 			// 
-			this.btnExecute.Location = new System.Drawing.Point(43, 36);
+			this.btnExecute.Location = new System.Drawing.Point(32, 21);
 			this.btnExecute.Name = "btnExecute";
-			this.btnExecute.Size = new System.Drawing.Size(271, 35);
+			this.btnExecute.Size = new System.Drawing.Size(231, 35);
 			this.btnExecute.TabIndex = 0;
 			this.btnExecute.Text = "Execute";
 			this.btnExecute.UseVisualStyleBackColor = true;
@@ -39,9 +39,9 @@
 			// 
 			// btnCancel
 			// 
-			this.btnCancel.Location = new System.Drawing.Point(43, 105);
+			this.btnCancel.Location = new System.Drawing.Point(320, 21);
 			this.btnCancel.Name = "btnCancel";
-			this.btnCancel.Size = new System.Drawing.Size(271, 35);
+			this.btnCancel.Size = new System.Drawing.Size(210, 35);
 			this.btnCancel.TabIndex = 1;
 			this.btnCancel.Text = "Cancel";
 			this.btnCancel.UseVisualStyleBackColor = true;
@@ -51,7 +51,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(360, 180);
+			this.ClientSize = new System.Drawing.Size(560, 80);
 			this.Controls.Add(this.btnCancel);
 			this.Controls.Add(this.btnExecute);
 			this.Name = "MainForm";
