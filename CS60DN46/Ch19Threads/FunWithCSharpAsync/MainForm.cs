@@ -15,13 +15,15 @@ namespace FunWithCSharpAsync {
 			InitializeComponent();
 		}
 
-		private void btnCallMethod_Click(object sender, EventArgs e) {
-			this.Text = DoWork();
+		private async void btnCallMethod_Click(object sender, EventArgs e) {
+			this.Text = await DoWork();
 		}
 
-		private string DoWork() {
-			Thread.Sleep(10000);
-			return "Done With work!";
+		private Task<string> DoWork() {
+			return Task.Run(() => {
+				Thread.Sleep(10000);
+				return "Done With work!";
+			});
 		}
 	}
 }
