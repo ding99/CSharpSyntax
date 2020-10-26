@@ -46,7 +46,7 @@ namespace MyEBookReader {
 		}
 
 		private string[] FindTenMostCommon(string[] words) {
-			var frequencyOrder = from word in words where word.Length > 6 group word by word into g orderby g.Count() descending select g.Key;
+			var frequencyOrder = from word in words where word.Length > 6 group word by word into g orderby g.Count() descending select $"{g.Key} {g.Count()}";
 			string[] commonWords = (frequencyOrder.Take(10)).ToArray();
 			return commonWords;
 		}
