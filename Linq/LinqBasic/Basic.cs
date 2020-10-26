@@ -5,8 +5,34 @@ using System.Linq;
 namespace LinqBasic {
 	class Basic {
 		public void Start() {
+			Console.WriteLine("-- Linq Basic");
 			Console.ForegroundColor = ConsoleColor.Yellow; Select();
 			Console.ForegroundColor = ConsoleColor.Cyan; Let();
+			Console.ForegroundColor = ConsoleColor.DarkYellow; Group();
+			Console.ResetColor();
+		}
+
+		private void Group() {
+			Console.WriteLine("- Group");
+			string[] words = { "one", "two", "three", "one", "two", "four", "five", "one", "three", "five", "seven", "three", "one"};
+			Console.WriteLine($"Original (size {words.Count()}):");
+			foreach (var w in words) Console.Write(" " + w);
+			Console.WriteLine();
+
+			var group1 = from word in words group word by word into g orderby g.Count() descending select g;
+			Console.WriteLine($"Group1 (size {group1.Count()}):");
+			foreach (var w in group1) Console.Write($" <{w.Key}>-{w.Count()}");
+			Console.WriteLine();
+
+			var group2 = from word in words group word by word into g orderby g.Count() descending select new { Word = g.Key, Count = g.Count() };
+			Console.WriteLine($"Group2 (size {group2.Count()}):");
+			foreach (var w in group2) Console.Write($" <{w.Word}>-{w.Count}");
+			Console.WriteLine();
+
+			var group3 = from word in words group word by word into g orderby g.Count() descending select $"<{g.Key}>-{g.Count()}";
+			Console.WriteLine($"Group3 (size {group3.Count()}):");
+			foreach (var w in group3) Console.Write($" {w}");
+			Console.WriteLine();
 		}
 
 		private void Let() {
@@ -40,7 +66,7 @@ namespace LinqBasic {
 			Console.WriteLine();
 
 			var excellence2 = from score in scores where score > 80 orderby score descending select $"The score is {score}";
-			Console.Write($"Excellent (size {excellence2.Count()}):");
+			Console.Write($"Excellent-descending (size {excellence2.Count()}):");
 			foreach (var a in excellence2) Console.Write($" <{a}>");
 			Console.WriteLine();
 
