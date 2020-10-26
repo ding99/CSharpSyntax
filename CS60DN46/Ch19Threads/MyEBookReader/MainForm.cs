@@ -32,21 +32,27 @@ namespace MyEBookReader {
 
 		private void btnGetStart_Click(object sender, EventArgs e) {
 			string[] words = theEBook.Split(new char[] {' ','\u000A',',','.',';','：','-','?','/'}, StringSplitOptions.RemoveEmptyEntries);
-			string[] tenMostCommon = FindTenMostCommon(words);
+			//string[] tenMostCommon = FindTenMostCommon(words);
+			//string longestWord = FindLongestWord(words);
+			string[] tenMostCommon = null;
+			string longestWord = string.Empty;
 
-			string longestWord = FindLongestWord(words);
+			Parallel.Invoke(
+				() => { tenMostCommon = FindTenMostCommon(words); },
+				() => { longestWord = FindLongestWord(words); }
+			);
 
 			StringBuilder bookStats = new StringBuilder("Ten Most Common Words are:\n");
 			foreach (string s in tenMostCommon)
 				bookStats.AppendLine(s);
-
 			bookStats.AppendFormat("Longest word is: {0}", longestWord);
 			bookStats.AppendLine();
+			bookStats.AppendLine($"Longest word is: {longestWord}");
 			MessageBox.Show(bookStats.ToString(), "Book info");
 		}
 
 		private string[] FindTenMostCommon(string[] words) {
-			var frequencyOrder = from word in words where word.Length > 6 group word by word into g orderby g.Count() descending select g.Key;
+			var frequencyOrder = from word in words where word.Length > 6 group word by word into g orderby g.Count() descending select $"{g.Key} {g.Count()}";
 			string[] commonWords = (frequencyOrder.Take(10)).ToArray();
 			return commonWords;
 		}
