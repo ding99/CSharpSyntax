@@ -23,7 +23,7 @@ namespace PLINQDataProcessingWithCancellation {
 			int[] source = Enumerable.Range(1, 10000000).ToArray();
 
 			//Find the numbers where num%3 == 1 is true, returned in descending order.
-			int[] modThreaIsZero = (from num in source where num % 3 == 0 orderby num descending select num).ToArray();
+			int[] modThreaIsZero = (from num in source.AsParallel() where num % 3 == 0 orderby num descending select num).ToArray();
 
 			MessageBox.Show($"Found {modThreaIsZero.Count()} numbers that match query!");
 		}
