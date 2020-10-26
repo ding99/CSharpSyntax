@@ -28,5 +28,16 @@ namespace FunWithCSharpAsync {
 		private async Task MethodReturningVoidAsync() {
 			await Task.Run(() => Thread.Sleep(4000));
 		}
+
+		private async void btnMultiAwaits_Click(object sender, EventArgs e) {
+			await Task.Run(() => Thread.Sleep(2000) );
+			MessageBox.Show("Done with first task!");
+
+			await Task.Run(() => Thread.Sleep(2000));
+			MessageBox.Show("Done with second task!");
+
+			await Task.Run(() => Thread.Sleep(2000));
+			MessageBox.Show("Done with third task!");
+		}
 	}
 }

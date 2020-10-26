@@ -26,13 +26,14 @@
 			this.btnCallMethod = new System.Windows.Forms.Button();
 			this.txtInput = new System.Windows.Forms.TextBox();
 			this.btnVoidMethodCall = new System.Windows.Forms.Button();
+			this.btnMultiAwaits = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// btnCallMethod
 			// 
-			this.btnCallMethod.Location = new System.Drawing.Point(29, 48);
+			this.btnCallMethod.Location = new System.Drawing.Point(29, 42);
 			this.btnCallMethod.Name = "btnCallMethod";
-			this.btnCallMethod.Size = new System.Drawing.Size(261, 25);
+			this.btnCallMethod.Size = new System.Drawing.Size(261, 36);
 			this.btnCallMethod.TabIndex = 0;
 			this.btnCallMethod.Text = "CallMethod";
 			this.btnCallMethod.UseVisualStyleBackColor = true;
@@ -40,26 +41,37 @@
 			// 
 			// txtInput
 			// 
-			this.txtInput.Location = new System.Drawing.Point(29, 12);
+			this.txtInput.Location = new System.Drawing.Point(29, 11);
 			this.txtInput.Name = "txtInput";
 			this.txtInput.Size = new System.Drawing.Size(261, 20);
 			this.txtInput.TabIndex = 1;
 			// 
 			// btnVoidMethodCall
 			// 
-			this.btnVoidMethodCall.Location = new System.Drawing.Point(29, 79);
+			this.btnVoidMethodCall.Location = new System.Drawing.Point(29, 84);
 			this.btnVoidMethodCall.Name = "btnVoidMethodCall";
-			this.btnVoidMethodCall.Size = new System.Drawing.Size(261, 23);
+			this.btnVoidMethodCall.Size = new System.Drawing.Size(261, 36);
 			this.btnVoidMethodCall.TabIndex = 2;
 			this.btnVoidMethodCall.Text = "VoidMethodCall";
 			this.btnVoidMethodCall.UseVisualStyleBackColor = true;
 			this.btnVoidMethodCall.Click += new System.EventHandler(this.btnVoidMethodCall_Click);
+			// 
+			// btnMultiAwaits
+			// 
+			this.btnMultiAwaits.Location = new System.Drawing.Point(29, 127);
+			this.btnMultiAwaits.Name = "btnMultiAwaits";
+			this.btnMultiAwaits.Size = new System.Drawing.Size(261, 36);
+			this.btnMultiAwaits.TabIndex = 3;
+			this.btnMultiAwaits.Text = "MultiAwaits";
+			this.btnMultiAwaits.UseVisualStyleBackColor = true;
+			this.btnMultiAwaits.Click += new System.EventHandler(this.btnMultiAwaits_Click);
 			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(320, 180);
+			this.Controls.Add(this.btnMultiAwaits);
 			this.Controls.Add(this.btnVoidMethodCall);
 			this.Controls.Add(this.txtInput);
 			this.Controls.Add(this.btnCallMethod);
@@ -75,6 +87,7 @@
 		private System.Windows.Forms.Button btnCallMethod;
 		private System.Windows.Forms.TextBox txtInput;
 		private System.Windows.Forms.Button btnVoidMethodCall;
+		private System.Windows.Forms.Button btnMultiAwaits;
 	}
 }
 
