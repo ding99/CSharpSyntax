@@ -28,6 +28,11 @@ namespace LinqBasic {
 			Console.WriteLine($"Group2 (size {group2.Count()}):");
 			foreach (var w in group2) Console.Write($" <{w.Word}>-{w.Count}");
 			Console.WriteLine();
+
+			var group3 = from word in words group word by word into g orderby g.Count() descending select $"<{g.Key}>-{g.Count()}";
+			Console.WriteLine($"Group3 (size {group3.Count()}):");
+			foreach (var w in group3) Console.Write($" {w}");
+			Console.WriteLine();
 		}
 
 		private void Let() {
