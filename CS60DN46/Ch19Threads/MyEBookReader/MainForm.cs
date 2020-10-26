@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Net;
-using System.Diagnostics;
 
 namespace MyEBookReader {
 	public partial class MainForm : Form {
@@ -47,7 +43,7 @@ namespace MyEBookReader {
 				bookStats.AppendLine(s);
 			bookStats.AppendFormat("Longest word is: {0}", longestWord);
 			bookStats.AppendLine();
-			bookStats.AppendLine($"Longest word is: {longestWord}");
+			//bookStats.AppendLine($"Longest word is: {longestWord}");
 			MessageBox.Show(bookStats.ToString(), "Book info");
 		}
 
