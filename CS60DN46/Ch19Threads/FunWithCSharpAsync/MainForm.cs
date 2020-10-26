@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Threading;
 
 namespace FunWithCSharpAsync {
 	public partial class MainForm : Form {
@@ -15,12 +9,12 @@ namespace FunWithCSharpAsync {
 			InitializeComponent();
 		}
 
-		private async void btnCallMethod_Click(object sender, EventArgs e) {
-			this.Text = await DoWork();
+		private async Task btnCallMethod_Click(object sender, EventArgs e) {
+			this.Text = await DoWorkAsync();
 		}
 
-		private Task<string> DoWork() {
-			return Task.Run(() => {
+		private async Task<string> DoWorkAsync() {
+			return await Task.Run(() => {
 				Thread.Sleep(10000);
 				return "Done With work!";
 			});
