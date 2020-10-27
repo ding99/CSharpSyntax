@@ -9,13 +9,14 @@ namespace DirectoryApp {
 	class Program {
 		static void Main() {
 			Console.WriteLine("***** Fun with Directory(Info) *****");
-			ShowWindowsDirectoryInfo();
+			string path = @"E:\workFolder\cs60\ch20\mouse";
+			ShowWindowsDirectoryInfo(path);
+			EnumerateFiles(path);
 			Console.ResetColor();
 		}
 
-		private static void ShowWindowsDirectoryInfo() {
+		private static void ShowWindowsDirectoryInfo(string path) {
 			Console.ForegroundColor = ConsoleColor.Yellow;
-			string path = @"E:\workFolder\cs60\ch20\mouse";
 			Console.WriteLine($"=> Directory Info : <{path}>");
 
 			DirectoryInfo dir = new DirectoryInfo(path);
@@ -25,6 +26,17 @@ namespace DirectoryApp {
 			Console.WriteLine($"Root      : {dir.Root}");
 			Console.WriteLine($"Creation  : {dir.CreationTime}");
 			Console.WriteLine($"Attributes: {dir.Attributes}");
+		}
+
+		private static void EnumerateFiles(string path) {
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine($"=> Enumerating Files with the DirectoryInfo Type : {path}");
+
+			DirectoryInfo dir = new DirectoryInfo(path);
+			FileInfo[] jpgs = dir.GetFiles("*.jpg", SearchOption.AllDirectories);
+
+			foreach(FileInfo f in jpgs)
+				Console.WriteLine($"File {f.FullName}, Size {f.Length}, Creation {f.CreationTime}, Attributes {f.Attributes}");
 		}
 	}
 }
