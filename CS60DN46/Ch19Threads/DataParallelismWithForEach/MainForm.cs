@@ -24,8 +24,8 @@ namespace DataParallelismWithForEach {
 			parOpts.MaxDegreeOfParallelism = Environment.ProcessorCount;
 
 			//load up all *.jpg files, and make a new folder for the modified data
-			string[] files = Directory.GetFiles(@"E:\test\Parallel\Source", "*.jpg", SearchOption.AllDirectories);
-			string newDir = @"E:\test\Parallel\Target";
+			string[] files = Directory.GetFiles(@"E:\workFolder\cs60\ch19\Parallel\Source", "*.jpg", SearchOption.AllDirectories);
+			string newDir = @"E:\workFolder\cs60\ch19\Parallel\Target";
 			Directory.CreateDirectory(newDir);
 
 			try {
