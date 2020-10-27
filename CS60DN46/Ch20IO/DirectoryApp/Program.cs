@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 
 namespace DirectoryApp {
@@ -13,7 +9,35 @@ namespace DirectoryApp {
 			ShowWindowsDirectoryInfo(path);
 			EnumerateFiles(path);
 			CreateSubDir(path);
+			DirectoryType(path);
 			Console.ResetColor();
+		}
+
+		private static void DirectoryType(string path) {
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
+			Console.WriteLine($"=> Working with the Directory Type. <{path}>");
+
+			string[] drives = Directory.GetLogicalDrives();
+			Console.Write($"Drives (size {drives.Length}):");
+			foreach (string d in drives) Console.Write(" " + d);
+			Console.WriteLine();
+
+			string sub1 = "Sub01", sub2 = @"Sub02\Data\Images";
+			string new1 = Path.Combine(new string[] { path, sub1 });
+			string new2 = Path.Combine(new string[] { path, sub2 });
+
+			Console.WriteLine($"<{new1}> existing: {Directory.Exists(new1)}");
+			Console.WriteLine($"<{new2}> existing: {Directory.Exists(new2)}");
+
+			Console.WriteLine($"To erase directories <{new1}> and <{new2}>");
+
+			try {
+				Directory.Delete(new1);
+				Directory.Delete(new2);
+			}
+			catch (Exception e) { Console.WriteLine(e.Message); }
+			Console.WriteLine($"<{new1}> existing: {Directory.Exists(new1)}");
+			Console.WriteLine($"<{new2}> existing: {Directory.Exists(new2)}");
 		}
 
 		private static void CreateSubDir(string path) {
