@@ -29,12 +29,15 @@ namespace DirectoryApp {
 
 			Console.WriteLine($"Create sub directory <{sub1}> and <{sub2}> in <{path}>");
 			DirectoryInfo dir = new DirectoryInfo(path);
-			dir.CreateSubdirectory(sub1);
-			dir.CreateSubdirectory(sub2);
+			DirectoryInfo cre1 = dir.CreateSubdirectory(sub1);
+			DirectoryInfo cre2 = dir.CreateSubdirectory(sub2);
 
 			Console.WriteLine($"<{new1}> existing: {Directory.Exists(new1)}");
 			Console.WriteLine($"<{new2}> existing: {Directory.Exists(new2)}");
 			Console.WriteLine($"<{new3}> existing: {Directory.Exists(new3)}");
+
+			Console.WriteLine($"created1 : <{cre1.FullName}>");
+			Console.WriteLine($"created2 : <{cre2.FullName}>");
 		}
 
 		private static void EnumerateFiles(string path) {
