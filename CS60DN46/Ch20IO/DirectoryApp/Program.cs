@@ -10,7 +10,21 @@ namespace DirectoryApp {
 			EnumerateFiles(path);
 			CreateSubDir(path);
 			DirectoryType(path);
+			DriveInfos();
 			Console.ResetColor();
+		}
+
+		private static void DriveInfos() {
+			Console.ForegroundColor = ConsoleColor.Green;
+			Console.WriteLine($"=> DriveInfo");
+
+			DriveInfo[] drives = DriveInfo.GetDrives();
+			foreach(DriveInfo d in drives) {
+				Console.Write($"Name: {d.Name}, Type: {d.DriveType}");
+				if(d.IsReady)
+					Console.WriteLine($", Free Space {d.TotalFreeSpace}, Format: {d.DriveFormat}, Label: {d.VolumeLabel}");
+				else Console.WriteLine();
+			}
 		}
 
 		private static void DirectoryType(string path) {
