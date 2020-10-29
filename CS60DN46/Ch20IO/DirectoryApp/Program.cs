@@ -11,7 +11,23 @@ namespace DirectoryApp {
 			CreateSubDir(path);
 			DirectoryType(path);
 			DriveInfos();
+
+			string file = @"E:\workFolder\cs60\ch20\files\cfile.tst";
+			FileInfos(file);
 			Console.ResetColor();
+		}
+
+		private static void FileInfos(string file) {
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("=> FileInfo");
+
+			FileInfo f = new FileInfo(file);
+			using (FileStream fs = f.Create()) {
+				fs.WriteByte(0x31);
+				fs.WriteByte(0x32);
+				fs.WriteByte(0x33);
+				Console.WriteLine($"filestream size {fs.Length}");
+			}
 		}
 
 		private static void DriveInfos() {
