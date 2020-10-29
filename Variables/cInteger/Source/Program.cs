@@ -7,11 +7,17 @@ namespace cInt
         static void Main() {
             Console.WriteLine("== Start");
 
-			Source.CheckInt test = new Source.CheckInt();
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			CheckInt test = new CheckInt();
 			test.shift();
 			test.max();
 
-			new CheckDecimal().test();
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			new CheckDecimal().Start();
+
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Random rand = new Random();
+			rand.Start();
 
 			Console.WriteLine("== End");
         }
