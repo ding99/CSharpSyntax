@@ -16,7 +16,7 @@ namespace cInt
 			new CheckDecimal().Start();
 
 			Console.ForegroundColor = ConsoleColor.Cyan;
-			Random rand = new Random();
+			random rand = new random();
 			rand.Start();
 
 			Console.WriteLine("== End");
