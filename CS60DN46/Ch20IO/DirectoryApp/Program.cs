@@ -50,6 +50,7 @@ namespace DirectoryApp {
 				Console.WriteLine($"tream size {sw.BaseStream.Length}");
 			}
 
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
 			var r1 = File.ReadAllBytes(file); Console.Write($"size {r1.Length}:");
 			foreach (var a in r1) Console.Write(" " + a); Console.WriteLine();
 			var r2 = File.ReadAllLines(file); Console.Write(r2.Length);
