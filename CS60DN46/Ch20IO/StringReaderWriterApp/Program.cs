@@ -33,19 +33,23 @@ namespace StringReaderWriterApp {
 
 		private static void Writing() {
 			Console.ForegroundColor = ConsoleColor.Yellow;
-
-			string path = @"E:\workFolder\cs60\ch20\files\reminders.txt";
-			Console.WriteLine($"Write some message to file <{path}>");
+			Console.WriteLine("=> Write some message to memory");
 
 			using (StringWriter writer = new StringWriter()) {
 				writer.WriteLine("Don't forget Mother's Day this year...");
 				writer.WriteLine("Don't forget Father's Day this year...");
-				writer.WriteLine("Don't forget these numbers:");
-				for (int i = 0; i < 10; i++) writer.Write(i + " ");
-				writer.Write(writer.NewLine);
 
 				Console.WriteLine($"Contents of StringWriter:");
 				Console.WriteLine(writer);
+
+				Console.ForegroundColor = ConsoleColor.DarkYellow;
+				Console.WriteLine("-- Use GetStringBuilder()");
+
+				StringBuilder sb = writer.GetStringBuilder();
+				sb.Insert(0, "Hey!! ");
+				Console.WriteLine($"-> <{sb.ToString()}>");
+				sb.Remove(0, "Hey!! ".Length);
+				Console.WriteLine($"-> <{sb.ToString()}>");
 			}
 		}
 	}
