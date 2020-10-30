@@ -15,17 +15,20 @@ namespace StreamWriterReaderApp {
 		}
 
 		private static void Reading() {
-			Console.ForegroundColor = ConsoleColor.Cyan;
-
 			string path = @"E:\workFolder\cs60\ch20\files\reminders.txt";
-			Console.WriteLine($"Here are your thoughts: (from file <{path}>)");
+			string input = null;
 
-			using (StreamReader sr = File.OpenText(path)) {
-				string input = null;
-
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine($"Using File Type to read file <{path}>");
+			using (StreamReader sr = File.OpenText(path))
 				while ((input = sr.ReadLine()) != null)
 					Console.WriteLine(input);
-			}
+
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
+			Console.WriteLine("-> Create StreamReader Directly");
+			using (StreamReader sr = new StreamReader(path))
+				while ((input = sr.ReadLine()) != null)
+					Console.WriteLine(input);
 		}
 
 		private static void Writing() {
