@@ -18,11 +18,13 @@ namespace FileStreamApp {
 				string msg = "Hello!";
 				byte[] msgAsByteArray = Encoding.Default.GetBytes(msg);
 				fs.Write(msgAsByteArray, 0, msgAsByteArray.Length);
+				fs.WriteByte(msgAsByteArray[0]);
+				fs.WriteByte(msgAsByteArray[0]);
 				fs.Position = 0;
 
 				Console.Write("Message as an array of bytes:");
-				byte[] bytesFromFile = new byte[msgAsByteArray.Length];
-				for(int i = 0; i < msgAsByteArray.Length; i++) {
+				byte[] bytesFromFile = new byte[msgAsByteArray.Length + 2];
+				for(int i = 0; i < bytesFromFile.Length; i++) {
 					bytesFromFile[i] = (byte)fs.ReadByte();
 					Console.Write(" " + bytesFromFile[i].ToString("X"));
 				}
