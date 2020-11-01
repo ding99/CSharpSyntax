@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization.Formatters.Soap;
+using System.Text;
+using System.Xml.Serialization;
 
 namespace SimpleSerialize {
 	class Program {
@@ -15,9 +13,25 @@ namespace SimpleSerialize {
 			BinSerialize(file);
 			BinDeSerialize(file);
 
-			file = "CarData.soap";
-			SoapSerialize(file);
+			SoapSerialize("CarData.soap");
+			XmlSerialize("CarData.xml");
 			Console.ResetColor();
+		}
+
+		private static void XmlSerialize(string file) {
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
+			Console.WriteLine($"=> Serialize Using XmlSerializer. Save to {file}");
+
+			SaveAsXmlFormat(CreateJameBonderCar(), file);
+		}
+
+		private static void SaveAsXmlFormat(object o, string name) {
+			XmlSerializer xs = new XmlSerializer(typeof(JamesBondCar));
+
+			using(Stream s = new FileStream(name, FileMode.Create, FileAccess.Write, FileShare.None)) {
+				xs.Serialize(s, o);
+			}
+			Console.WriteLine("-> Saved car in XML format!");
 		}
 
 		private static void SoapSerialize(string file) {
@@ -32,7 +46,7 @@ namespace SimpleSerialize {
 			using (Stream s = new FileStream(name, FileMode.Create, FileAccess.Write, FileShare.None)) {
 				sf.Serialize(s, o);
 			}
-			Console.WriteLine($"-> Saved car in Soap format!");
+			Console.WriteLine("-> Saved car in Soap format!");
 		}
 
 		private static void BinDeSerialize(string file) {
@@ -75,7 +89,7 @@ namespace SimpleSerialize {
 			using(Stream s = new FileStream(name, FileMode.Create, FileAccess.Write, FileShare.None)) {
 				bf.Serialize(s, o);
 			}
-			Console.WriteLine($"-> Saved car in binary format!");
+			Console.WriteLine("-> Saved car in binary format!");
 		}
 	}
 }
