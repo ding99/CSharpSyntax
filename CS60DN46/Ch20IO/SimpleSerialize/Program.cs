@@ -10,14 +10,26 @@ namespace SimpleSerialize {
 	class Program {
 		static void Main() {
 			Console.WriteLine("***** Simple Serialization *****");
-			Serialize();
+			string file = "CarData.dat";
+			Serialize(file);
+			LoadFromBinaryFile(file);
 			Console.ResetColor();
 		}
 
-		private static void Serialize() {
+		private static void LoadFromBinaryFile(string file) {
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine($"=> Load fro Binary File {file}");
+
+			BinaryFormatter bf = new BinaryFormatter();
+			using (Stream s = File.OpenRead(file)) {
+				JamesBondCar c = (JamesBondCar)bf.Deserialize(s);
+				Console.WriteLine($"Can this car fly? : {c.canFly}");
+			}
+		}
+
+		private static void Serialize(string file) {
 			Console.ForegroundColor = ConsoleColor.Yellow;
-			string file = "CarData.dat";
-			Console.WriteLine($"=> Serialized stream saved to {file}");
+			Console.WriteLine($"=> Serialize and Save to {file}");
 
 			JamesBondCar jbc = new JamesBondCar();
 			jbc.canFly = true;
