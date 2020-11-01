@@ -47,6 +47,7 @@
     <Compile Include="Source\encode.cs" />
     <Compile Include="Source\stringbuilder.cs" />
     <Compile Include="Source\trim.cs" />
+    <Compile Include="Source\Types.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="CommonLog">
