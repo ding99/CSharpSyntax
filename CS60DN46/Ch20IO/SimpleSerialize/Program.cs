@@ -15,7 +15,7 @@ namespace SimpleSerialize {
 			BinSerialize(file);
 			BinDeSerialize(file);
 
-			file = "CarData.xml";
+			file = "CarData.soap";
 			SoapSerialize(file);
 			Console.ResetColor();
 		}
