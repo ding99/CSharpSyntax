@@ -8,6 +8,9 @@
 
 			cMemo cm = new cMemo();
 			cm.checkmemos();
+
+			switcher sw = new switcher();
+			sw.ExamingSwitch();
 		}
 	}
 }
