@@ -7,10 +7,10 @@ namespace cStrings {
 
 			Console.WriteLine("=== start");
 
-            //testString ts = new testString();
-            //bool ret = false;
+            bool ret = false;
 
             #region past
+            testString ts = new testString();
             //ret = ts.timeFormat();
             //ret = ts.replace();
             //ret = ts.parastring();
@@ -86,7 +86,7 @@ namespace cStrings {
             stringbuilder bd = new stringbuilder();
             //bd.cap();
             //bd.prm();
-            bd.jon();
+            //bd.jon();
             #endregion
 
             #region foramt brakets
@@ -99,6 +99,12 @@ namespace cStrings {
             //trims.checks();
             #endregion
 
+            #region types
+            Types types = new Types();
+            types.ExamingTypes();
+            #endregion
+
+            Console.ResetColor();
             Console.WriteLine("=== end");
 		}
 
