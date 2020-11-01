@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Soap;
 
 namespace CustomSerialization {
 	[Serializable]
