@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization.Formatters.Soap;
@@ -15,7 +16,43 @@ namespace SimpleSerialize {
 
 			SoapSerialize("CarData.soap");
 			XmlSerialize("CarData.xml");
+			SaveListOfCarsXml("Cars.xml");
+			SaveListOfCarsBin("Cars.bin");
 			Console.ResetColor();
+		}
+
+		private static void SaveListOfCarsBin(string name) {
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("=> Serialize Collection of Objects as binary");
+
+			BinaryFormatter bf = new BinaryFormatter();
+			using (Stream s = new FileStream(name, FileMode.Create, FileAccess.Write, FileShare.None)) {
+				bf.Serialize(s, CreateCars());
+			}
+
+			Console.WriteLine("-> Saved list of cars as binary!");
+		}
+
+		private static void SaveListOfCarsXml(string name) {
+			Console.ForegroundColor = ConsoleColor.Green;
+			Console.WriteLine("=> Serialize Collection of Objects as XML");
+
+			using (Stream s = new FileStream(name, FileMode.Create, FileAccess.Write, FileShare.None)) {
+				XmlSerializer xs = new XmlSerializer(typeof(List<JamesBondCar>));
+				xs.Serialize(s, CreateCars());
+			}
+
+			Console.WriteLine("-> Saved list of cars as Xml!");
+		}
+
+		private static List<JamesBondCar> CreateCars() {
+			List<JamesBondCar> cars = new List<JamesBondCar>();
+			cars.Add(new JamesBondCar(true, true));
+			cars.Add(new JamesBondCar(true, false));
+			cars.Add(new JamesBondCar(false, true));
+			cars.Add(new JamesBondCar(false, false));
+			Console.WriteLine($"Created a List of JamesBonderCar (size {cars.Count})");
+			return cars;
 		}
 
 		private static void XmlSerialize(string file) {
