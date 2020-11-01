@@ -6,6 +6,13 @@ namespace SimpleSerialize {
 	public class JamesBondCar : Car {
 		[XmlAttribute]
 		public bool canFly;
+		[XmlAttribute]
 		public bool canSubmerge;
+
+		public JamesBondCar() { }
+		public JamesBondCar(bool skyWorthy, bool seaWorthy) {
+			canFly = skyWorthy;
+			canSubmerge = seaWorthy;
+		}
 	}
 }
