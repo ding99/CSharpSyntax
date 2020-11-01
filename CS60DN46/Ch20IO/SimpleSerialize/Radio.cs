@@ -2,7 +2,7 @@
 
 namespace SimpleSerialize {
 	[Serializable]
-	class Radio {
+	public class Radio {
 		public bool hasTweeters;
 		public bool hasSubWoofers;
 		public double[] stationPresets;
