@@ -5,20 +5,39 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization.Formatters.Soap;
 
 namespace SimpleSerialize {
 	class Program {
 		static void Main() {
 			Console.WriteLine("***** Simple Serialization *****");
 			string file = "CarData.dat";
-			Serialize(file);
-			LoadFromBinaryFile(file);
+			BinSerialize(file);
+			BinDeSerialize(file);
+
+			file = "CarData.xml";
+			SoapSerialize(file);
 			Console.ResetColor();
 		}
 
-		private static void LoadFromBinaryFile(string file) {
+		private static void SoapSerialize(string file) {
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.WriteLine($"=> Serialize Using SoapFormater. Save to {file}");
+
+			SaveAsSoapFormat(CreateJameBonderCar(), file);
+		}
+
+		private static void SaveAsSoapFormat(object o, string name) {
+			SoapFormatter sf = new SoapFormatter();
+			using (Stream s = new FileStream(name, FileMode.Create, FileAccess.Write, FileShare.None)) {
+				sf.Serialize(s, o);
+			}
+			Console.WriteLine($"-> Saved car in Soap format!");
+		}
+
+		private static void BinDeSerialize(string file) {
 			Console.ForegroundColor = ConsoleColor.Cyan;
-			Console.WriteLine($"=> Load fro Binary File {file}");
+			Console.WriteLine($"=> DeSerialize Using BinaryFormatter. Load from Binary File {file}");
 
 			BinaryFormatter bf = new BinaryFormatter();
 			using (Stream s = File.OpenRead(file)) {
@@ -27,17 +46,28 @@ namespace SimpleSerialize {
 			}
 		}
 
-		private static void Serialize(string file) {
+		private static void BinSerialize(string file) {
 			Console.ForegroundColor = ConsoleColor.Yellow;
-			Console.WriteLine($"=> Serialize and Save to {file}");
+			Console.WriteLine($"=> Serialize Using BinaryFormatter. Save to {file}");
 
+			SaveAsBinaryFormat(CreateJameBonderCar(), file);
+		}
+
+		private static JamesBondCar CreateJameBonderCar() {
 			JamesBondCar jbc = new JamesBondCar();
 			jbc.canFly = true;
 			jbc.canSubmerge = false;
 			jbc.theRadio.stationPresets = new double[] { 89.3, 105.1, 97.1 };
 			jbc.theRadio.hasSubWoofers = true;
 
-			SaveAsBinaryFormat(jbc, file);
+			StringBuilder b = new StringBuilder($"JamesBonderCar:\n  canFly {jbc.canFly}\n  canSubmerge {jbc.canSubmerge}\n  Radio.stationPreset");
+			foreach (var f in jbc.theRadio.stationPresets)
+				b.Append(" ").Append(f);
+			b.Append($"\n  Radio.hasSubWoofers {jbc.theRadio.hasSubWoofers}");
+
+			Console.WriteLine(b.ToString());
+
+			return jbc;
 		}
 
 		private static void SaveAsBinaryFormat(object o, string name) {
