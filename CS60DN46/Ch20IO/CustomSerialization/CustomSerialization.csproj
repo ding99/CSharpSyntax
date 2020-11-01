@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{73155102-74C6-4D8E-B6A9-3ED4C6A122CB}</ProjectGuid>
+    <ProjectGuid>{605EDBF5-549A-4E11-97FF-8E20D0602865}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SimpleSerialize</RootNamespace>
-    <AssemblyName>SimpleSerialize</AssemblyName>
+    <RootNamespace>CustomSerialization</RootNamespace>
+    <AssemblyName>CustomSerialization</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -44,11 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Car.cs" />
-    <Compile Include="JamesBondCar.cs" />
+    <Compile Include="MoreData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Radio.cs" />
+    <Compile Include="StringData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
