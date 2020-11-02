@@ -36,7 +36,7 @@ namespace cStopWatch {
 	}
 
 	class Program {
-		static void Main(string[] args) {
+		static void Main() {
 			new Watch().testWatch();
 		}
 	}

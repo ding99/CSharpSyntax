@@ -79,7 +79,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Delegate", "Delegate", "{1A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDelegate", "Delegate\cDelegate\CDelegate.csproj", "{98579115-8C03-49C6-9CF3-FC0F671CDD00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cStopWatch", "Times\cStopWatch\cStopWatch.csproj", "{EE05DF81-DD9A-4C64-AD46-2940473EFEBD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CStopWatch", "Times\cStopWatch\CStopWatch.csproj", "{EE05DF81-DD9A-4C64-AD46-2940473EFEBD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CInteger", "Variables\cInteger\CInteger.csproj", "{4D486107-BF08-4E8C-AC93-EA62BD796731}"
 EndProject
