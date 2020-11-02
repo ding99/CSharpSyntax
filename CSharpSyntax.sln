@@ -81,7 +81,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cDelegate", "Delegate\cDele
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cStopWatch", "Times\cStopWatch\cStopWatch.csproj", "{EE05DF81-DD9A-4C64-AD46-2940473EFEBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cInteger", "Variables\cInteger\cInteger.csproj", "{4D486107-BF08-4E8C-AC93-EA62BD796731}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CInteger", "Variables\cInteger\CInteger.csproj", "{4D486107-BF08-4E8C-AC93-EA62BD796731}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CList", "Methods\cList\CList.csproj", "{BB8E1AC4-E028-4752-AA29-6F19BEE3FE08}"
 EndProject
