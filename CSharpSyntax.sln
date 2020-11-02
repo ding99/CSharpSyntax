@@ -39,9 +39,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cStrings", "Variables\cStri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cStream", "Files\cStream\cStream.csproj", "{35DA2A96-9CFC-40CB-9F45-108E2D0F5E22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cCharact", "Variables\cCharact\cCharact.csproj", "{07B6703B-0221-4803-BFE1-E6B9D59422D6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CCharact", "Variables\cCharact\CCharact.csproj", "{07B6703B-0221-4803-BFE1-E6B9D59422D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cEnum", "Variables\cEnum\cEnum.csproj", "{51AAFAF5-6B82-447C-8E4F-A045F23D80FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CEnum", "Variables\cEnum\CEnum.csproj", "{51AAFAF5-6B82-447C-8E4F-A045F23D80FF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cSerialize", "Classes\cSerialize\cSerialize.csproj", "{40794A1E-EF65-40C1-B3E8-E3A6E0206C90}"
 EndProject
