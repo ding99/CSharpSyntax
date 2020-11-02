@@ -112,7 +112,7 @@ namespace CEvent {
         }
 
         public void test2() {
-            BoilerInfoLogger filelog = new BoilerInfoLogger("C:\\workFolder\\Events\\boiler.log");
+            BoilerInfoLogger filelog = new BoilerInfoLogger("d:\\workFolder\\Events\\boiler.log");
 
             DelegateBoilerEvent boilerEvent = new DelegateBoilerEvent();
             boilerEvent.BoilerEventLog += new DelegateBoilerEvent.BoilerLogHander(filelog.LoggerConsole);
