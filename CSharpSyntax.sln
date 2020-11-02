@@ -37,7 +37,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLanguage", "Common\cLangua
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CStrings", "Variables\cStrings\CStrings.csproj", "{95AD1164-F65C-4798-8623-BEA2B04CF083}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cStream", "Files\cStream\cStream.csproj", "{35DA2A96-9CFC-40CB-9F45-108E2D0F5E22}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CStream", "Files\cStream\CStream.csproj", "{35DA2A96-9CFC-40CB-9F45-108E2D0F5E22}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CCharact", "Variables\cCharact\CCharact.csproj", "{07B6703B-0221-4803-BFE1-E6B9D59422D6}"
 EndProject
@@ -47,13 +47,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSerialize", "Classes\cSeri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CClass", "Classes\cClass\CClass.csproj", "{660B6556-C0F4-48B6-B3D7-607895720DA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cPath", "Files\cPath\cPath.csproj", "{7C8340D0-C6F7-48D7-ACA3-04ECB5D794B5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPath", "Files\cPath\CPath.csproj", "{7C8340D0-C6F7-48D7-ACA3-04ECB5D794B5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDictionary", "Methods\cDictionary\CDictionary.csproj", "{A8A027F5-C458-4DC0-98F2-9E5A16E20EF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cFolder", "Files\cFolder\cFolder.csproj", "{A8031648-89F0-464B-85ED-DF4788F7152B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFolder", "Files\cFolder\CFolder.csproj", "{A8031648-89F0-464B-85ED-DF4788F7152B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cFile", "Files\cFile\cFile.csproj", "{99DB8B26-6D97-4CDF-9892-C9260E501C0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFile", "Files\cFile\CFile.csproj", "{99DB8B26-6D97-4CDF-9892-C9260E501C0C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMethod", "Methods\cMethod\CMethod.csproj", "{8BBE3A22-68EE-4A0A-80C5-0FC9388782B0}"
 EndProject
@@ -67,7 +67,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CVersion", "Common\cVersion
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CEnvironment", "Variables\cEnvironment\CEnvironment.csproj", "{0025CC4C-D31F-4C19-B65D-7894F039CF3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cDrive", "Files\cDrive\cDrive.csproj", "{3D336266-077D-4820-8EEF-1F8AF99CE563}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDrive", "Files\cDrive\CDrive.csproj", "{3D336266-077D-4820-8EEF-1F8AF99CE563}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDateTime", "Times\CDateTime\CDateTime.csproj", "{B858D579-1517-426A-A68E-9DDBBEC42160}"
 EndProject

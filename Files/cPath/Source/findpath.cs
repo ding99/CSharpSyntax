@@ -1,11 +1,8 @@
 ﻿using System;
 using System.IO;
 
-namespace cPath {
+namespace CPath {
 	public class TPath {
-		public TPath() {
-		}
-
 		public void createFile(string[] args, string file) {
 			if(args.Length < 1) {
 				Console.WriteLine("cPath <path>");

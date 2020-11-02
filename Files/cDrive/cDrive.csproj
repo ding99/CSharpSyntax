@@ -37,7 +37,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Source\drives.cs" />
+    <Compile Include="Source\Drives.cs" />
     <Compile Include="Source\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
