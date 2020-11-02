@@ -9,7 +9,7 @@ namespace cDictionary.Source
 		{
 			Console.WriteLine("start");
 
-			testDict td = new testDict();
+			ExamingDictionary td = new ExamingDictionary();
 			bool ret = false;
 
 			ret = td.getStr();
