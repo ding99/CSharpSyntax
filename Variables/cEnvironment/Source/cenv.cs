@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace cEnvironment {
+namespace CEnvironment {
 
 	public class Env {
 		public void encVari(){

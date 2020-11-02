@@ -3,7 +3,7 @@ using System;
 using System.IO;
 using System.Text;
 
-namespace cStrings
+namespace CStrings
 {
 	public class Encoder
 	{

@@ -35,7 +35,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cTimer", "Times\cTimer\cTim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cLanguage", "Common\cLanguage\cLanguage.csproj", "{471063F6-1DE1-4F55-8BC7-D927EDB89428}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cStrings", "Variables\cStrings\cStrings.csproj", "{95AD1164-F65C-4798-8623-BEA2B04CF083}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CStrings", "Variables\cStrings\CStrings.csproj", "{95AD1164-F65C-4798-8623-BEA2B04CF083}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cStream", "Files\cStream\cStream.csproj", "{35DA2A96-9CFC-40CB-9F45-108E2D0F5E22}"
 EndProject
@@ -59,13 +59,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMethod", "Methods\cMethod\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cCmd", "Common\cCmd\cCmd.csproj", "{C53E4F5C-846E-4D96-8AFA-066EB4F4856F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cVariable", "Variables\cVariable\cVariable.csproj", "{6CDFBF3C-81F1-47BB-A8B8-A05E2B0A73FB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CVariable", "Variables\cVariable\CVariable.csproj", "{6CDFBF3C-81F1-47BB-A8B8-A05E2B0A73FB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CArray", "Variables\cArray\CArray.csproj", "{A55A0CC0-0EB2-4505-A2B1-1B600E88A599}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cVersion", "Common\cVersion\cVersion.csproj", "{476DF46E-FA7C-4E2D-BA29-32CD425968CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cEnvironment", "Variables\cEnvironment\cEnvironment.csproj", "{0025CC4C-D31F-4C19-B65D-7894F039CF3F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CEnvironment", "Variables\cEnvironment\CEnvironment.csproj", "{0025CC4C-D31F-4C19-B65D-7894F039CF3F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cDrive", "Files\cDrive\cDrive.csproj", "{3D336266-077D-4820-8EEF-1F8AF99CE563}"
 EndProject
@@ -81,7 +81,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cDelegate", "Delegate\cDele
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cStopWatch", "Times\cStopWatch\cStopWatch.csproj", "{EE05DF81-DD9A-4C64-AD46-2940473EFEBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cInteger", "Variables\cInteger\cInteger.csproj", "{4D486107-BF08-4E8C-AC93-EA62BD796731}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CInteger", "Variables\cInteger\CInteger.csproj", "{4D486107-BF08-4E8C-AC93-EA62BD796731}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CList", "Methods\cList\CList.csproj", "{BB8E1AC4-E028-4752-AA29-6F19BEE3FE08}"
 EndProject

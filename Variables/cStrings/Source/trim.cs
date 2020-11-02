@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace cStrings {
+namespace CStrings {
     public class CheckTrim {
 
         private void ctrim(string s) {

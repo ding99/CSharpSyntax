@@ -1,6 +1,6 @@
 using System;
 
-namespace cInt
+namespace CInt
 {
 
 	class Program {
@@ -16,7 +16,7 @@ namespace cInt
 			new CheckDecimal().Start();
 
 			Console.ForegroundColor = ConsoleColor.Cyan;
-			random rand = new random();
+			CRandom rand = new CRandom();
 			rand.Start();
 
 			Console.WriteLine("== End");
