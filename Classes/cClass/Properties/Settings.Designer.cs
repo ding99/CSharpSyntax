@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace cClass.Properties {
+namespace CClass.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
