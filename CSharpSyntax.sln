@@ -47,7 +47,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSerialize", "Classes\cSeri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CClass", "Classes\cClass\CClass.csproj", "{660B6556-C0F4-48B6-B3D7-607895720DA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cPath", "Files\cPath\cPath.csproj", "{7C8340D0-C6F7-48D7-ACA3-04ECB5D794B5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPath", "Files\cPath\CPath.csproj", "{7C8340D0-C6F7-48D7-ACA3-04ECB5D794B5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDictionary", "Methods\cDictionary\CDictionary.csproj", "{A8A027F5-C458-4DC0-98F2-9E5A16E20EF9}"
 EndProject

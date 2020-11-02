@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace cPath
+namespace CPath
 {
 	class Program
 	{
