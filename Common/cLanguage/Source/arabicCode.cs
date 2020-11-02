@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace cLanguage{
+namespace CLanguage{
 
 	public class araSeg{
 		public bool isAra;

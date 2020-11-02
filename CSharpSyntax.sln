@@ -33,7 +33,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cTime", "Times\cTime\cTime.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cTimer", "Times\cTimer\cTimer.csproj", "{FF516FA4-66C9-490C-941E-9734820DCD30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cLanguage", "Common\cLanguage\cLanguage.csproj", "{471063F6-1DE1-4F55-8BC7-D927EDB89428}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLanguage", "Common\cLanguage\CLanguage.csproj", "{471063F6-1DE1-4F55-8BC7-D927EDB89428}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CStrings", "Variables\cStrings\CStrings.csproj", "{95AD1164-F65C-4798-8623-BEA2B04CF083}"
 EndProject
