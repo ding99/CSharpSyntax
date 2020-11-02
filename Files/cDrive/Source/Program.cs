@@ -1,9 +1,9 @@
-﻿namespace cDrive
+﻿namespace CDrive
 {
 	class Entrence {
 		
 		static void Main(string[] args) {
-			drives ds = new drives();
+			Drives ds = new Drives();
 
 			ds.all_drs();
 			ds.specified_dr(args);

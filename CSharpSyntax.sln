@@ -53,7 +53,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDictionary", "Methods\cDic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cFolder", "Files\cFolder\cFolder.csproj", "{A8031648-89F0-464B-85ED-DF4788F7152B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cFile", "Files\cFile\cFile.csproj", "{99DB8B26-6D97-4CDF-9892-C9260E501C0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFile", "Files\cFile\CFile.csproj", "{99DB8B26-6D97-4CDF-9892-C9260E501C0C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMethod", "Methods\cMethod\CMethod.csproj", "{8BBE3A22-68EE-4A0A-80C5-0FC9388782B0}"
 EndProject
@@ -67,7 +67,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CVersion", "Common\cVersion
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CEnvironment", "Variables\cEnvironment\CEnvironment.csproj", "{0025CC4C-D31F-4C19-B65D-7894F039CF3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cDrive", "Files\cDrive\cDrive.csproj", "{3D336266-077D-4820-8EEF-1F8AF99CE563}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDrive", "Files\cDrive\CDrive.csproj", "{3D336266-077D-4820-8EEF-1F8AF99CE563}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDateTime", "Times\CDateTime\CDateTime.csproj", "{B858D579-1517-426A-A68E-9DDBBEC42160}"
 EndProject
