@@ -1,11 +1,11 @@
 ﻿using System;
 using System.IO;
 
-namespace cCharact {
+namespace CCharact {
 
-	public class charct {
+	public class Charct {
 
-		public charct() {
+		public Charct() {
 		}
 
 		#region data
