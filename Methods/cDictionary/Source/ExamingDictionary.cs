@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace cDictionary {
+namespace CDictionary {
 
 	public class ExamingDictionary{
 		private Dictionary<uint, string> sdic;

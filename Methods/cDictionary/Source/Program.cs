@@ -1,13 +1,13 @@
 ﻿using System;
 
-namespace cDictionary.Source
+namespace CDictionary
 {
 
 	class Program
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("start");
+			Console.WriteLine("== Start");
 
 			ExamingDictionary td = new ExamingDictionary();
 			bool ret = false;
@@ -20,6 +20,7 @@ namespace cDictionary.Source
 			ret = dr.accMulti();
 
 			Console.WriteLine(ret ? "Succeeded" : "Failed");
+			Console.WriteLine("== End");
 		}
 	}
 }
