@@ -8,8 +8,8 @@
     <ProjectGuid>{ABDE8036-30D8-4DA2-AD6C-84B743C67C4D}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>cRegex</RootNamespace>
-    <AssemblyName>cRegex</AssemblyName>
+    <RootNamespace>CRegex</RootNamespace>
+    <AssemblyName>CRegex</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
