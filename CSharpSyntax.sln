@@ -61,7 +61,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cCmd", "Common\cCmd\cCmd.cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cVariable", "Variables\cVariable\cVariable.csproj", "{6CDFBF3C-81F1-47BB-A8B8-A05E2B0A73FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cArray", "Variables\cArray\cArray.csproj", "{A55A0CC0-0EB2-4505-A2B1-1B600E88A599}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CArray", "Variables\cArray\CArray.csproj", "{A55A0CC0-0EB2-4505-A2B1-1B600E88A599}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cVersion", "Common\cVersion\cVersion.csproj", "{476DF46E-FA7C-4E2D-BA29-32CD425968CA}"
 EndProject
