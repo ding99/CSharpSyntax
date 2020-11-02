@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace cRegex {
+namespace CRegex {
 	public class MediaTime {
 		public int hour;
 		public int minute;

@@ -3,7 +3,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
 
-namespace cRegex {
+namespace CRegex {
 
 	public class Vtt {
 		public Vtt() {
