@@ -11,11 +11,11 @@ namespace CList {
 		}
 	}
 
-	public class checkNew {
+	public class CheckNew {
 		private BData DSingle;
 		private List<BData> DList;
 
-		public checkNew() {
+		public CheckNew() {
 			DSingle = new BData();
 			DList = new List<BData>();
 		}

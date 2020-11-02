@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace cRegex {
+namespace CRegex {
     class genRegex {
 
         public genRegex() { }

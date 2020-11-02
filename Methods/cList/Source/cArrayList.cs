@@ -2,7 +2,7 @@
 using System.Collections;
 
 namespace CList {
-	public class checkArrayList {
+	public class CheckArrayList {
 
         public void test() {
             ArrayList al = new ArrayList();
