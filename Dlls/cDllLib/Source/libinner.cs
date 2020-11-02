@@ -1,10 +1,7 @@
 ﻿using System;
 
-namespace cDllLib {
-	public class LibDsp : cDllInterface.IFormat {
-		public LibDsp() {
-		}
-
+namespace CDllLib {
+	public class LibDsp : CDllInterface.IFormat {
 		public void dspline(string message) {
 			Console.WriteLine("*** Library [" + message + "] ***");
 		}

@@ -34,13 +34,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Source\loader.cs" />
+    <Compile Include="Source\Loader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\cDllLibm\cDllLibm.csproj">
+    <ProjectReference Include="..\cDllLibm\CDllLibm.csproj">
       <Project>{86459BE5-F707-4521-8725-0ADFC5867A14}</Project>
-      <Name>cDllLibm</Name>
+      <Name>CDllLibm</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
