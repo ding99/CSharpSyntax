@@ -7,7 +7,7 @@ namespace CList {
 
             Console.WriteLine("== Start");
 
-			checkNew cn = new checkNew();
+			CheckNew cn = new CheckNew();
 			cn.startTest();
 			cn.which();
 			cn.vari();
@@ -23,7 +23,7 @@ namespace CList {
 			CheckJoin join = new CheckJoin();
 			join.join();
 
-			checkArrayList arr = new checkArrayList();
+			CheckArrayList arr = new CheckArrayList();
 			arr.test();
 
 			Brief b = new Brief();

@@ -1,16 +1,20 @@
-﻿namespace cMethod.Source
+﻿namespace CMethod
 {
 	class Program
 	{
 		static void Main(string[] args)
 		{
-			(new cPrm()).checkprm();
+			System.Console.WriteLine("== Start");
 
-			cMemo cm = new cMemo();
+			(new CPrm()).checkPrm();
+
+			CMemo cm = new CMemo();
 			cm.checkmemos();
 
-			switcher sw = new switcher();
+			Switcher sw = new Switcher();
 			sw.ExamingSwitch();
+
+			System.Console.WriteLine("== End");
 		}
 	}
 }

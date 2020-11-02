@@ -34,11 +34,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Source\memo.cs" />
-    <Compile Include="Source\param.cs" />
+    <Compile Include="Source\Memo.cs" />
+    <Compile Include="Source\Param.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Source\Program.cs" />
-    <Compile Include="Source\switcher.cs" />
+    <Compile Include="Source\Switcher.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

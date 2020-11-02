@@ -1,7 +1,7 @@
 ﻿using System;
 
-namespace cMethod {
-	class switcher {
+namespace CMethod {
+	class Switcher {
 		public void ExamingSwitch() {
 			Console.ForegroundColor = ConsoleColor.Yellow;
 			Console.WriteLine("-- Examine Switch");
