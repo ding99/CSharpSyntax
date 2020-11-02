@@ -1,10 +1,7 @@
 ﻿using System;
 
-namespace cVariable {
+namespace CVariable {
 	public class Vari {
-		public Vari() {
-		}
-
 		public bool bytedef() {
 
 			byte[] vr = null;

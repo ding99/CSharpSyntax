@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace cVariable {
+namespace CVariable {
 
     public class Examine{
 
