@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace cArray
+namespace CArray
 {
 
 	public class CheckArray {

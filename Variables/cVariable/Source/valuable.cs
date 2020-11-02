@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace cVariable {
+namespace CVariable {
 
     public class NullAble {
 
@@ -14,8 +14,6 @@ namespace cVariable {
             public string Name;
             public Age Age;
         }
-
-        public NullAble() {  }
 
         private void Show(int step, Profile staff) {
             Console.WriteLine($"\n-- Step {step}");

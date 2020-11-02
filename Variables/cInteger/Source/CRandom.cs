@@ -1,7 +1,7 @@
 ﻿using System;
 
-namespace cInt {
-	class random {
+namespace CInt {
+	class CRandom {
 		public void Start() {
 			Console.WriteLine("-- Random");
 

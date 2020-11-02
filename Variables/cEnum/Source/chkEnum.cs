@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace cEnum {
+namespace CEnum {
 
 	public class EnumShow {
 		public EnumShow() {

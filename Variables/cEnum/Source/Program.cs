@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace cEnum.Source {
+namespace CEnum {
     class Program {
         static void Main(string[] args) {
             Console.WriteLine("==  start");

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace cStrings {
+namespace CStrings {
 	class Types {
 		public void ExamingTypes() {
 			Console.ForegroundColor = ConsoleColor.Yellow;

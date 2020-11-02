@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace cCharact {
+namespace CCharact {
     class Program {
         static void Main(string[] args) {
             Console.WriteLine("== start");
 
-			charct ct = new charct();
+			Charct ct = new Charct();
 			ct.dsp(); //To double check: exception here
 			ct.oddParity();
 			ct.charUnic();
