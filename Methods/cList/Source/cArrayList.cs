@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections;
 
-namespace cList {
-	public class checkArrayList {
+namespace CList {
+	public class CheckArrayList {
 
         public void test() {
             ArrayList al = new ArrayList();

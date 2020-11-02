@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace cList {
+namespace CList {
 
     public class DFile {
         public DFile prev;
@@ -17,8 +17,8 @@ namespace cList {
         }
     }
 
-    public class checkIndex {
-        public checkIndex() {
+    public class CheckIndex {
+        public CheckIndex() {
         }
 
         public bool index() {

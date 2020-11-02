@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace cLambda {
+namespace CLambda {
 	public class Test{
 		public Test() {
 		}

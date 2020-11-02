@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace cList {
-    public class chkJoin {
+namespace CList {
+    public class CheckJoin {
         List<string> list;
 
-        public chkJoin() {
+        public CheckJoin() {
             list = new List<string>();
             list.Add("Term01");
             list.Add("Term02");
