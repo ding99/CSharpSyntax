@@ -34,16 +34,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MergeSrc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\MergeSrc.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Source\mentry.cs" />
+    <Compile Include="Source\Mentry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\MergeSrc2\MergeSrc2.csproj">
+      <Project>{143d0f26-3399-421c-99aa-46a2acd53404}</Project>
+      <Name>MergeSrc2</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

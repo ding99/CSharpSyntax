@@ -5,13 +5,13 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dlls", "Dlls", "{AB762C56-6003-43B8-90AF-2269E93826B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cDllInterface", "Dlls\cDllInterface\cDllInterface.csproj", "{8242225B-2363-4059-BB19-60916BB21D35}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDllInterface", "Dlls\cDllInterface\CDllInterface.csproj", "{8242225B-2363-4059-BB19-60916BB21D35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cDllLib", "Dlls\cDllLib\cDllLib.csproj", "{F07B03EB-F3DE-45F8-A27E-F07393FA2B71}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDllLib", "Dlls\cDllLib\CDllLib.csproj", "{F07B03EB-F3DE-45F8-A27E-F07393FA2B71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cDllLibm", "Dlls\cDllLibm\cDllLibm.csproj", "{86459BE5-F707-4521-8725-0ADFC5867A14}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDllLibm", "Dlls\cDllLibm\CDllLibm.csproj", "{86459BE5-F707-4521-8725-0ADFC5867A14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cDllLoad", "Dlls\cDllLoad\cDllLoad.csproj", "{9C89D683-A92B-43DD-B0DF-5CCAD9B3A4A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDllLoad", "Dlls\cDllLoad\CDllLoad.csproj", "{9C89D683-A92B-43DD-B0DF-5CCAD9B3A4A5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeSrc1", "Dlls\MergeSrc1\MergeSrc1.csproj", "{E1DD6D45-A364-4697-BB2C-ACBFCF6721AA}"
 EndProject
