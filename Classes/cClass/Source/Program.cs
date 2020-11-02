@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace cClass
+namespace CClass
 {
 	class Program
 	{
@@ -8,12 +8,12 @@ namespace cClass
 		{
 
 			Console.WriteLine("== Start");
-			chkClass c = new chkClass();
+			ChkClass c = new ChkClass();
 			c.className();
 			c.classMember();
 			c.initClass();
 
-			tCmp t = new tCmp();
+			TCmp t = new TCmp();
 			t.toCmp();
 			t.declaration();
 			

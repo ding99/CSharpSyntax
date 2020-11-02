@@ -2,7 +2,7 @@
 using CommandLine;
 using CommandLine.Text;
 
-namespace cCmd {
+namespace CCmd {
 	class Options {
 		[Option('i', "input", Required = true,
 		  HelpText = "Input source file.")]
