@@ -43,7 +43,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CCharact", "Variables\cChar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CEnum", "Variables\cEnum\CEnum.csproj", "{51AAFAF5-6B82-447C-8E4F-A045F23D80FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cSerialize", "Classes\cSerialize\cSerialize.csproj", "{40794A1E-EF65-40C1-B3E8-E3A6E0206C90}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSerialize", "Classes\cSerialize\CSerialize.csproj", "{40794A1E-EF65-40C1-B3E8-E3A6E0206C90}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CClass", "Classes\cClass\CClass.csproj", "{660B6556-C0F4-48B6-B3D7-607895720DA7}"
 EndProject

@@ -37,7 +37,7 @@
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Source\chkSerialize.cs" />
+    <Compile Include="Source\ChkSerialize.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Source\Program.cs" />
   </ItemGroup>
