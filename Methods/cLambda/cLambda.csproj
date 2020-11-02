@@ -7,8 +7,8 @@
     <ProjectGuid>{0AC52A22-3764-4F13-8517-7F43E982BE1F}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>cLambda</RootNamespace>
-    <AssemblyName>cLambda</AssemblyName>
+    <RootNamespace>CLambda</RootNamespace>
+    <AssemblyName>CLambda</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -36,7 +36,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Source\Program.cs" />
-    <Compile Include="Source\tLambda.cs" />
+    <Compile Include="Source\ExamineLambda.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

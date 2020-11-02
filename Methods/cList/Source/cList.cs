@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace cList {
+namespace CList {
 	public class BData {
 		public string name;
 		public int value;

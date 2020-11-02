@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace cDictionary {
+namespace CDictionary {
 
-	public class testDict{
+	public class ExamingDictionary{
 		private Dictionary<uint, string> sdic;
 
 		private void createDict(){
@@ -16,7 +16,7 @@ namespace cDictionary {
 			Console.WriteLine("created dictionary [" + this.sdic.Count + "]");
 		}
 
-		public testDict(){
+		public ExamingDictionary(){
 			this.sdic = new Dictionary<uint,string>();
 			this.createDict();
 		}

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace cList {
+namespace CList {
     public class NPV {
 
         public class ASegment {

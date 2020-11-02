@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 
-namespace cList {
+namespace CList {
 	public class checkArrayList {
 
         public void test() {

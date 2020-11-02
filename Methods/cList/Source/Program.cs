@@ -1,12 +1,11 @@
-﻿using cList.Source;
-using System;
+﻿using System;
 
-namespace cList {
+namespace CList {
 
     class Entrance {
         static void Main(string[] args) {
 
-            Console.WriteLine("== start");
+            Console.WriteLine("== Start");
 
 			checkNew cn = new checkNew();
 			cn.startTest();
@@ -14,14 +13,14 @@ namespace cList {
 			cn.vari();
 			cn.all();
 
-			checkIndex idx = new checkIndex();
+			CheckIndex idx = new CheckIndex();
 			idx.index();
 			idx.which();
 
 			NPV npv = new NPV();
 			npv.commonList();
 
-			chkJoin join = new chkJoin();
+			CheckJoin join = new CheckJoin();
 			join.join();
 
 			checkArrayList arr = new checkArrayList();
@@ -31,9 +30,9 @@ namespace cList {
 			b.list();
 			b.less();
 
-			new cLoop().LoopStart();
+			new CLoop().LoopStart();
 
-			Console.WriteLine("== end");
+			Console.WriteLine("== End");
         }
     }
 }
