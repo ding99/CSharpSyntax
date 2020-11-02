@@ -34,19 +34,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Source\bracket.cs" />
-    <Compile Include="Source\chkChar.cs" />
-    <Compile Include="Source\chkJP.cs" />
-    <Compile Include="Source\chkParser.cs" />
-    <Compile Include="Source\chkSpace.cs" />
-    <Compile Include="Source\chkString.cs" />
+    <Compile Include="Source\Bracket.cs" />
+    <Compile Include="Source\ChkChar.cs" />
+    <Compile Include="Source\ChkJP.cs" />
+    <Compile Include="Source\ChkParser.cs" />
+    <Compile Include="Source\ChkSpace.cs" />
+    <Compile Include="Source\ChkString.cs" />
     <Compile Include="Source\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Source\chkColors.cs" />
-    <Compile Include="Source\chkPac.cs" />
-    <Compile Include="Source\encode.cs" />
-    <Compile Include="Source\stringbuilder.cs" />
-    <Compile Include="Source\trim.cs" />
+    <Compile Include="Source\ChkColors.cs" />
+    <Compile Include="Source\ChkPac.cs" />
+    <Compile Include="Source\Encode.cs" />
+    <Compile Include="Source\CStringbuilder.cs" />
+    <Compile Include="Source\Trim.cs" />
     <Compile Include="Source\Types.cs" />
   </ItemGroup>
   <ItemGroup>

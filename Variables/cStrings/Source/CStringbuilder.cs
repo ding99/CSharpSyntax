@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Text;
 
-namespace cStrings {
-    public class stringbuilder {
+namespace CStrings {
+    public class CStringbuilder {
         public void cap() {
 
             Console.WriteLine("--- string builder with default capacity");

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 using CommonLogs;
 
-namespace cStrings {
-	public class testString
+namespace CStrings {
+	public class TestString
 	{
 		#region past
-		public testString()
+		public TestString()
 		{
 		}
 
