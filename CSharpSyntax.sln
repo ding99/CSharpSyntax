@@ -57,7 +57,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cFile", "Files\cFile\cFile.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMethod", "Methods\cMethod\CMethod.csproj", "{8BBE3A22-68EE-4A0A-80C5-0FC9388782B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cCmd", "Common\cCmd\cCmd.csproj", "{C53E4F5C-846E-4D96-8AFA-066EB4F4856F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CCmd", "Common\cCmd\CCmd.csproj", "{C53E4F5C-846E-4D96-8AFA-066EB4F4856F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CVariable", "Variables\cVariable\CVariable.csproj", "{6CDFBF3C-81F1-47BB-A8B8-A05E2B0A73FB}"
 EndProject
