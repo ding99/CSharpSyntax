@@ -37,7 +37,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLanguage", "Common\cLangua
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CStrings", "Variables\cStrings\CStrings.csproj", "{95AD1164-F65C-4798-8623-BEA2B04CF083}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cStream", "Files\cStream\cStream.csproj", "{35DA2A96-9CFC-40CB-9F45-108E2D0F5E22}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CStream", "Files\cStream\CStream.csproj", "{35DA2A96-9CFC-40CB-9F45-108E2D0F5E22}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CCharact", "Variables\cCharact\CCharact.csproj", "{07B6703B-0221-4803-BFE1-E6B9D59422D6}"
 EndProject
