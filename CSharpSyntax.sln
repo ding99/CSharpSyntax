@@ -51,7 +51,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cPath", "Files\cPath\cPath.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDictionary", "Methods\cDictionary\CDictionary.csproj", "{A8A027F5-C458-4DC0-98F2-9E5A16E20EF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cFolder", "Files\cFolder\cFolder.csproj", "{A8031648-89F0-464B-85ED-DF4788F7152B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFolder", "Files\cFolder\CFolder.csproj", "{A8031648-89F0-464B-85ED-DF4788F7152B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFile", "Files\cFile\CFile.csproj", "{99DB8B26-6D97-4CDF-9892-C9260E501C0C}"
 EndProject

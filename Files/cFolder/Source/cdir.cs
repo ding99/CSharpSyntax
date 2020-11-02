@@ -1,12 +1,8 @@
 ﻿using System;
 using System.IO;
-using System.Collections.Generic;
 
-namespace cFolder {
-	public class findDirs {
-		public findDirs() {
-		}
-
+namespace CFolder {
+	public class FindDirs {
 		public void seekDir(string path) {
 			try {
 				string[] dirs = Directory.GetDirectories(path);
