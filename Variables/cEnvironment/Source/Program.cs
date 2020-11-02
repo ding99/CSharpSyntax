@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace cEnvironment {
+namespace CEnvironment {
 
     class Entrance {
         static void Main(string[] args) {
