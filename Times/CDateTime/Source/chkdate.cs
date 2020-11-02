@@ -3,9 +3,6 @@
 namespace CDateTime {
 
 	public class CTime {
-		public CTime() {
-		}
-
 		private void dsp(DateTime dt, string m) {
 			//Console.WriteLine(dt.ToString(@"yyyy-MM-dd  HH:mm:ss  hh:mm:ss tt") + "  " + m);
 			Console.WriteLine(dt.ToString(@"yyyy_MM_dd_HH_mm_ss_ffff") + "  " + m);

@@ -1,10 +1,10 @@
-﻿namespace cFolder
+﻿namespace CFolder
 {
-	class entrance
+	class Entrance
 	{
 		static void Main(string[] args)
 		{
-			findDirs fdir = new findDirs();
+			FindDirs fdir = new FindDirs();
 
 			string dir = args.Length > 0 ? args[0] : @"C:\CExec\55-smooth\";
 			fdir.seekDir(dir);

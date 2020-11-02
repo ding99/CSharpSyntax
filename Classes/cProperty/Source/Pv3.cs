@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace cProperty {
+namespace CProperty {
     public class Student3 {
 
         public string Code { get; set; } = "N.A";

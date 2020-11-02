@@ -2,11 +2,11 @@
 using System.IO;
 using System.Text;
 
-namespace cStream {
+namespace CStream {
 
-	public class rewardline {
+	public class RewardLine {
 		StreamReader st;
-		public rewardline(string iname) {
+		public RewardLine(string iname) {
 			this.st = new StreamReader(iname, Encoding.Unicode);
 		}
 

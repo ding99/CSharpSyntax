@@ -2,7 +2,7 @@
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace cSerialize {
+namespace CSerialize {
 
 	[Serializable]
 	//[DataContract(Namespace = "http://DL3/Rendering/rv01")]

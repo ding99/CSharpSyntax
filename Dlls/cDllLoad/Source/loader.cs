@@ -1,13 +1,10 @@
 ﻿using System;
 
-namespace cDllLoad {
+namespace CDllLoad {
 	public class Loader {
-		public Loader() {
-		}
-
 		public void loadLib() {
 			string msg = "Top_Message";
-			cDllLibm.LibTransfer lt = new cDllLibm.LibTransfer();
+			CDllLibm.LibTransfer lt = new CDllLibm.LibTransfer();
 			lt.dspmid(msg);
 		}
 	}

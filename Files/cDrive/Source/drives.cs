@@ -2,14 +2,10 @@
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace cDrive
+namespace CDrive
 {
-	public class drives
+	public class Drives
 	{
-		public drives()
-		{
-		}
-
 		public void specified_dr(string[] args)
 		{
 

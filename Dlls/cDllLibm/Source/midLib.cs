@@ -1,10 +1,7 @@
 ﻿using System;
 
-namespace cDllLibm {
+namespace CDllLibm {
 	public class LibTransfer {
-		public LibTransfer() {
-		}
-
 		public void dspmid(string msg) {
 			Console.WriteLine("  mid 1. start loading");
 

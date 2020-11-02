@@ -1,35 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace cClass {
+namespace CClass {
 
-	public class cData {
+	public class CData {
 		public string cStr;
 		public int cDec;
 		public bool cFlag;
 
-		public cData() {
+		public CData() {
 			this.cStr = String.Empty;
 			this.cDec = 0;
 			this.cFlag = false;
 		}
 	}
 
-	public class aData {
+	public class AData {
 		public string cStr { get; set; }
 		public int cDec { get; set; }
 		public bool cFlag { get; set; }
 	}
 
-	public class chkClass {
-		public chkClass() {
-		}
-
+	public class ChkClass {
 		public void className() {
-			cData cd = new cData() { cStr = "Student", cDec = 50, cFlag = true };
+			CData cd = new CData() { cStr = "Student", cDec = 50, cFlag = true };
 			Console.WriteLine("First [" + cd.cStr + "," + cd.cDec + "," + cd.cFlag + "]");
 
-			Type cls = typeof(cData);
+			Type cls = typeof(CData);
 			Console.WriteLine("  name      [" + cls.Name + "]");
 			Console.WriteLine("  namespace [" + cls.Namespace + "]");
 			Console.WriteLine("  full      [" + cls.ToString() + "]");
@@ -37,23 +34,23 @@ namespace cClass {
 		}
 
 		public void classMember() {
-			cData cd = new cData() { cStr = "Student", cDec = 50, cFlag = true };
+			CData cd = new CData() { cStr = "Student", cDec = 50, cFlag = true };
 			Console.WriteLine("First [" + cd.cStr + "," + cd.cDec + "," + cd.cFlag + "]");
 
-			foreach(System.Reflection.FieldInfo f in typeof(cData).GetFields())
+			foreach(System.Reflection.FieldInfo f in typeof(CData).GetFields())
 				Console.WriteLine(f.Name + ", " );
 		}
 
 		public void initClass() {
 			Console.WriteLine("--- cData ---");
-			cData c1 = new cData() { cDec = 5 };
-			cData c2 = new cData { cDec = 5 };
+			CData c1 = new CData() { cDec = 5 };
+			CData c2 = new CData { cDec = 5 };
 			Console.WriteLine("c1: (" + c1.cStr + ", " + c1.cDec + ", " + c1.cFlag + ")");
 			Console.WriteLine("c2: (" + c2.cStr + ", " + c2.cDec + ", " + c2.cFlag + ")");
 
 			Console.WriteLine("--- aData ---");
-			aData a1 = new aData() { cDec = 5 };
-			aData a2 = new aData { cDec = 5 };
+			AData a1 = new AData() { cDec = 5 };
+			AData a2 = new AData { cDec = 5 };
 			Console.WriteLine("a1: (" + a1.cStr + ", " + a1.cDec + ", " + a1.cFlag + ")");
 			Console.WriteLine("a2: (" + a2.cStr + ", " + a2.cDec + ", " + a2.cFlag + ")");
 		}
@@ -113,10 +110,7 @@ namespace cClass {
 		}
 	}
 
-	public class tCmp {
-		public tCmp() {
-		}
-
+	public class TCmp {
 		private void dsp(CFrame f, string m) {
 			Console.WriteLine(m + " [" + f.rate + ", " + f.drop + ", " + f.valid + "]");
 		}

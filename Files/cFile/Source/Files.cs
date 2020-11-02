@@ -5,14 +5,10 @@ namespace cFile
 {
 	public class Files
 	{
-		public Files()
-		{
-		}
-
 		public bool filecopy()
 		{
-			string src = @"C:\test\temp\subdir\tempcp01.bin";
-			string dst = @"C:\test\temp\tempcp03.bin";
+			string src = @"d:\test\temp\subdir\tempcp01.bin";
+			string dst = @"d:\test\temp\tempcp03.bin";
 
 			try
 			{

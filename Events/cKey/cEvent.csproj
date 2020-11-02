@@ -34,12 +34,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Source\cWorker2.cs" />
-    <Compile Include="Source\cKey2.cs" />
-    <Compile Include="Source\cKey1.cs" />
+    <Compile Include="Source\CWorker2.cs" />
+    <Compile Include="Source\CKey2.cs" />
+    <Compile Include="Source\CKey1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Source\Program.cs" />
-    <Compile Include="Source\cRunoob.cs" />
+    <Compile Include="Source\CRunoob.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WorkLib\WorkLib.csproj">
