@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Windows.Media;
 
-namespace cStrings {
+namespace CStrings {
 
-	public class testColor {
-		public testColor() {
+	public class TestColor {
+		public TestColor() {
 		}
 
 		public bool colorid() {

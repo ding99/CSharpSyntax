@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
-namespace cRegex {
+namespace CRegex {
 
 	public class Cap {
 		public Cap() {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace cSerialize
+namespace CSerialize
 {
 	class Program
 	{

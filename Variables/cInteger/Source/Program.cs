@@ -1,17 +1,23 @@
 using System;
 
-namespace cInt
+namespace CInt
 {
 
 	class Program {
         static void Main() {
             Console.WriteLine("== Start");
 
-			Source.CheckInt test = new Source.CheckInt();
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			CheckInt test = new CheckInt();
 			test.shift();
 			test.max();
 
-			new CheckDecimal().test();
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			new CheckDecimal().Start();
+
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			CRandom rand = new CRandom();
+			rand.Start();
 
 			Console.WriteLine("== End");
         }

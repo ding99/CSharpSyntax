@@ -5,13 +5,13 @@ using System.Text.RegularExpressions;
 
 using CommonLogs;
 
-namespace cStrings {
+namespace CStrings {
 
-	public class testPAC {
+	public class TestPAC {
 
 		private CommonLog re;
 
-		public testPAC() {
+		public TestPAC() {
 			this.re = new CommonLog(@"D:\workFolder\Santex\chkPac.log", "PAC");
 		}
 

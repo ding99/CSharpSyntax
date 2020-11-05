@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace cStrings {
+namespace CStrings {
 
-	public class testParse {
-		public testParse() {
+	public class TestParse {
+		public TestParse() {
 		}
 
 		private void pHex(string s) {

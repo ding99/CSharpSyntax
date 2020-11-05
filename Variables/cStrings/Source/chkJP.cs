@@ -5,13 +5,13 @@ using System.Text.RegularExpressions;
 
 using CommonLogs;
 
-namespace cStrings {
+namespace CStrings {
 
-	public class testJP {
+	public class TestJP {
 
 		private CommonLog re;
 
-		public testJP() {
+		public TestJP() {
 			this.re = new CommonLog(@"D:\workFolder\Santex\chkJP.log", "JP");
 		}
 

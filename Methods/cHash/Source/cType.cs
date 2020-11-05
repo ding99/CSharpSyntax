@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 
-namespace cHash{
+namespace CHash{
 
     public class CType {
         public CType() { }

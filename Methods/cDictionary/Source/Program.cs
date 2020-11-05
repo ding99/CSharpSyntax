@@ -1,15 +1,15 @@
 ﻿using System;
 
-namespace cDictionary.Source
+namespace CDictionary
 {
 
 	class Program
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("start");
+			Console.WriteLine("== Start");
 
-			testDict td = new testDict();
+			ExamingDictionary td = new ExamingDictionary();
 			bool ret = false;
 
 			ret = td.getStr();
@@ -20,6 +20,7 @@ namespace cDictionary.Source
 			ret = dr.accMulti();
 
 			Console.WriteLine(ret ? "Succeeded" : "Failed");
+			Console.WriteLine("== End");
 		}
 	}
 }

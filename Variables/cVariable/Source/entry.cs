@@ -1,10 +1,7 @@
 ﻿using System;
 
-namespace cVariable {
+namespace CVariable {
 	public class Vari {
-		public Vari() {
-		}
-
 		public bool bytedef() {
 
 			byte[] vr = null;
@@ -46,7 +43,7 @@ namespace cVariable {
 			return true;
 		}
 
-		public bool toFloat() {
+		public static bool toFloat() {
 			int int1 = 25000, int2 = 29970, int3 = 23976;
 			Console.WriteLine(int1.ToString() + " -> " + ((double)int1 / 1000).ToString());
 			Console.WriteLine(int2.ToString() + " -> " + ((double)int2 / 1000).ToString());

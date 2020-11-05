@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace cVariable {
+namespace CVariable {
 
 	public class Marks {
 		public class SecretData {
@@ -75,7 +75,6 @@ namespace cVariable {
 
 			return true;
 		}
-
 	}
 
 }

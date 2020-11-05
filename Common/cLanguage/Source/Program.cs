@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace cLanguage
+namespace CLanguage
 {
 	class Entrance {
 

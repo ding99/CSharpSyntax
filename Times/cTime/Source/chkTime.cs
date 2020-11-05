@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace cTime {
+namespace CTime {
 
 	public static class Extensions {
 
@@ -42,7 +42,7 @@ namespace cTime {
 		}
 	}
 
-	public class chkTime {
+	public class ChkTime {
 		private DateTime start, current;
 
 		#region old test
@@ -52,7 +52,7 @@ namespace cTime {
 		private void ddf(TimeSpan dt) {
 			Console.WriteLine("{0}:{1}:{2}.{3}", dt.Hours, dt.Minutes, dt.Seconds, dt.Milliseconds);
 		}
-		public chkTime() {
+		public ChkTime() {
 			this.start = DateTime.Now;
 			this.current = DateTime.Now;
 		}

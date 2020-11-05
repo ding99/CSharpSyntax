@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Windows.Media;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace cStrings {
+namespace CStrings {
 
-	public class testChar {
-		public testChar() {
-		}
-
-
+	public class TestChar {
 		private void oneChar(char a){
 			int v = (int)a;
 			Console.WriteLine("-- [" + a + "] value {" + v.ToString("x2") + "}");

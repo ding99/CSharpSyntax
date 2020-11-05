@@ -3,7 +3,7 @@ using System.IO;
 using System.Timers;
 using System.Collections.Generic;
 
-namespace cTimer {
+namespace CTimer {
 
 	public class TimingOld {
 

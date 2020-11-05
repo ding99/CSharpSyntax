@@ -31,13 +31,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Source\libinner.cs" />
+    <Compile Include="Source\Libinner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\cDllInterface\cDllInterface.csproj">
+    <ProjectReference Include="..\cDllInterface\CDllInterface.csproj">
       <Project>{8242225B-2363-4059-BB19-60916BB21D35}</Project>
-      <Name>cDllInterface</Name>
+      <Name>CDllInterface</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

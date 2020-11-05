@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Text;
 
-namespace cStrings {
-	public class chkSpace{
-		public chkSpace(){}
+namespace CStrings {
+	public class ChkSpace{
+		public ChkSpace(){}
 
 		#region arrow
 		private void one(string s){

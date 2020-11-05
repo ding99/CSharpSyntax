@@ -1,13 +1,17 @@
 ﻿
-namespace cRegex {
+using System;
+
+namespace CRegex {
 	class Entrance {
 		static void Main(string[] args) {
+			System.Console.WriteLine("== Start");
 
-			tReg tr = new tReg();
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			TReg tr = new TReg();
 
 			#region past
-			//tr.rSpace();
-			//tr.rComma();
+			tr.rSpace();
+			tr.rComma();
 			//tr.rFind1();
 			//tr.rFind2();
 			//tr.quotes();
@@ -48,6 +52,7 @@ namespace cRegex {
 			//tr.eall();
 			#endregion
 
+			Console.ForegroundColor = ConsoleColor.Cyan;
 			#region past 2
 			//tr.eighth();
 			//tr.smiml();
@@ -56,19 +61,25 @@ namespace cRegex {
 			//Cap c = new Cap();
 			//c.chu();
 
-			//MediaTime mt = new MediaTime();
-			//mt.vttTests();
+			MediaTime mt = new MediaTime();
+			mt.vttTests();
 			#endregion
 
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
 			Npv npv = new Npv();
 			npv.slashes();
 
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
 			Vtt v = new Vtt();
 			v.lines();
 
+			Console.ForegroundColor = ConsoleColor.Green;
 			genRegex gen = new genRegex();
             gen.cmp();
             gen.align();
+
+			Console.ResetColor();
+			System.Console.WriteLine("== End");
 		}
 	}
 }

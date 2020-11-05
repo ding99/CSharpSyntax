@@ -11,6 +11,7 @@ namespace DebugAttribute {
 
 			Console.ForegroundColor = ConsoleColor.Yellow;
 			Console.WriteLine("-- Class attributes");
+			Console.WriteLine($"Class <{type.Name}>:");
 			foreach (Object attribute in type.GetCustomAttributes(false)) {
 				DebugInfoAttribute dbi = attribute as DebugInfoAttribute;
 				if(dbi != null)
