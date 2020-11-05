@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace cList{
-    public class Brief {
+namespace CList {
+	public class Brief {
 
         public class Person {
             public string Name { get; set; }

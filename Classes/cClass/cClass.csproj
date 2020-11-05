@@ -39,7 +39,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Source\chkClass.cs" />
+    <Compile Include="Source\ChkClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Source\Practicing.cs" />
     <Compile Include="Source\Program.cs" />

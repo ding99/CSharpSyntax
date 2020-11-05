@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace DebugAttribute {
-	[DebugInfo(45,"Zara Ali","12/18/2012", Message = "Return tyep mismatch")]
+	[DebugInfo(45,"Zara Ali","12/18/2012", Message = "Return type mismatch")]
 	[DebugInfo(49, "Nuha Ali", "10/10/2012", Message = "Unused variable")]
 	class Rectangle {
 		protected double length, width;

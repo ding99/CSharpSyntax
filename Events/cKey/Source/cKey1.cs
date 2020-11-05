@@ -4,9 +4,6 @@ using WorkLib;
 namespace CEvent {
 
     public class EventTest1 {
-
-        public EventTest1() { }
-
         private void checkStat(object obj, StatArgs args) {
             Console.WriteLine("Status " + args.stat + " / " +
                 args.pgs + " / " + args.message);
@@ -23,7 +20,6 @@ namespace CEvent {
             while(kinfo.Key != ConsoleKey.S);
 
             new Worker().Start("SUB", new EventHandler<StatArgs>(checkStat));
-
         }
     }
 }

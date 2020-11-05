@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace cMethod {
-	public class cMemo {
-		public cMemo() {
+namespace CMethod {
+	public class CMemo {
+		public CMemo() {
 		}
 
 		private byte[][] getMemos() {

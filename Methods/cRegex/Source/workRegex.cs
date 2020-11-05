@@ -3,17 +3,17 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
 
-namespace cRegex {
+namespace CRegex {
 
 	struct StyleKey {
 		public static string italicOn = "<i>";
 		public static string italicOff = "</i>";
 	}
 
-	public class tReg {
+	public class TReg {
 		private MatchCollection m;
 
-		public tReg() {
+		public TReg() {
 		}
 
 		#region past

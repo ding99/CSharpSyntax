@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace cInt.Source
+namespace CInt
 {
 	public class CheckInt
 	{
@@ -10,6 +10,7 @@ namespace cInt.Source
         }
         public void shift()
         {
+			Console.WriteLine("-- Shift: >> 2 << 2");
             sone(4);
             sone(5);
             sone(6);
@@ -19,6 +20,7 @@ namespace cInt.Source
 
         public void max()
 		{
+			Console.WriteLine("-- Max Int32");
             Console.WriteLine("Max int is [" + Int32.MaxValue + "]");
 		}
     }

@@ -8,8 +8,8 @@
     <ProjectGuid>{ABDE8036-30D8-4DA2-AD6C-84B743C67C4D}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>cRegex</RootNamespace>
-    <AssemblyName>cRegex</AssemblyName>
+    <RootNamespace>CRegex</RootNamespace>
+    <AssemblyName>CRegex</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -37,14 +37,14 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Source\capRegex.cs" />
-    <Compile Include="Source\chkRegex.cs" />
+    <Compile Include="Source\CapRegex.cs" />
+    <Compile Include="Source\ChkRegex.cs" />
     <Compile Include="Source\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Source\npvRegex.cs" />
-    <Compile Include="Source\timeRegex.cs" />
-    <Compile Include="Source\webvtt.cs" />
-    <Compile Include="Source\workRegex.cs" />
+    <Compile Include="Source\NPVRegex.cs" />
+    <Compile Include="Source\TimeRegex.cs" />
+    <Compile Include="Source\Webvtt.cs" />
+    <Compile Include="Source\WorkRegex.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

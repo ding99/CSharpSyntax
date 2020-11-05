@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{BAD50ED6-2C19-4A69-89DD-AF632C039FDD}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>cHash</RootNamespace>
-    <AssemblyName>cHash</AssemblyName>
+    <RootNamespace>CHash</RootNamespace>
+    <AssemblyName>CHash</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Source\cType.cs" />
+    <Compile Include="Source\CType.cs" />
     <Compile Include="Source\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

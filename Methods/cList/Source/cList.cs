@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace cList {
+namespace CList {
 	public class BData {
 		public string name;
 		public int value;
@@ -11,11 +11,11 @@ namespace cList {
 		}
 	}
 
-	public class checkNew {
+	public class CheckNew {
 		private BData DSingle;
 		private List<BData> DList;
 
-		public checkNew() {
+		public CheckNew() {
 			DSingle = new BData();
 			DList = new List<BData>();
 		}

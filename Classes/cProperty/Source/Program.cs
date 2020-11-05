@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace cProperty {
+namespace CProperty {
 
     class Program {
         static void Main(string[] args) {

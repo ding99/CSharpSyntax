@@ -5,13 +5,13 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dlls", "Dlls", "{AB762C56-6003-43B8-90AF-2269E93826B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cDllInterface", "Dlls\cDllInterface\cDllInterface.csproj", "{8242225B-2363-4059-BB19-60916BB21D35}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDllInterface", "Dlls\cDllInterface\CDllInterface.csproj", "{8242225B-2363-4059-BB19-60916BB21D35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cDllLib", "Dlls\cDllLib\cDllLib.csproj", "{F07B03EB-F3DE-45F8-A27E-F07393FA2B71}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDllLib", "Dlls\cDllLib\CDllLib.csproj", "{F07B03EB-F3DE-45F8-A27E-F07393FA2B71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cDllLibm", "Dlls\cDllLibm\cDllLibm.csproj", "{86459BE5-F707-4521-8725-0ADFC5867A14}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDllLibm", "Dlls\cDllLibm\CDllLibm.csproj", "{86459BE5-F707-4521-8725-0ADFC5867A14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cDllLoad", "Dlls\cDllLoad\cDllLoad.csproj", "{9C89D683-A92B-43DD-B0DF-5CCAD9B3A4A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDllLoad", "Dlls\cDllLoad\CDllLoad.csproj", "{9C89D683-A92B-43DD-B0DF-5CCAD9B3A4A5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeSrc1", "Dlls\MergeSrc1\MergeSrc1.csproj", "{E1DD6D45-A364-4697-BB2C-ACBFCF6721AA}"
 EndProject
@@ -29,67 +29,67 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkLib", "Events\WorkLib\W
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Times", "Times", "{9BFD8DA6-1A85-4B71-9CDB-F044C0036073}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cTime", "Times\cTime\cTime.csproj", "{00BEFD1E-EE8D-4B16-A358-BD8F41A21849}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTime", "Times\cTime\CTime.csproj", "{00BEFD1E-EE8D-4B16-A358-BD8F41A21849}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cTimer", "Times\cTimer\cTimer.csproj", "{FF516FA4-66C9-490C-941E-9734820DCD30}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTimer", "Times\cTimer\CTimer.csproj", "{FF516FA4-66C9-490C-941E-9734820DCD30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cLanguage", "Common\cLanguage\cLanguage.csproj", "{471063F6-1DE1-4F55-8BC7-D927EDB89428}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLanguage", "Common\cLanguage\CLanguage.csproj", "{471063F6-1DE1-4F55-8BC7-D927EDB89428}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cStrings", "Variables\cStrings\cStrings.csproj", "{95AD1164-F65C-4798-8623-BEA2B04CF083}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CStrings", "Variables\cStrings\CStrings.csproj", "{95AD1164-F65C-4798-8623-BEA2B04CF083}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cStream", "Files\cStream\cStream.csproj", "{35DA2A96-9CFC-40CB-9F45-108E2D0F5E22}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CStream", "Files\cStream\CStream.csproj", "{35DA2A96-9CFC-40CB-9F45-108E2D0F5E22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cCharact", "Variables\cCharact\cCharact.csproj", "{07B6703B-0221-4803-BFE1-E6B9D59422D6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CCharact", "Variables\cCharact\CCharact.csproj", "{07B6703B-0221-4803-BFE1-E6B9D59422D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cEnum", "Variables\cEnum\cEnum.csproj", "{51AAFAF5-6B82-447C-8E4F-A045F23D80FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CEnum", "Variables\cEnum\CEnum.csproj", "{51AAFAF5-6B82-447C-8E4F-A045F23D80FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cSerialize", "Classes\cSerialize\cSerialize.csproj", "{40794A1E-EF65-40C1-B3E8-E3A6E0206C90}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSerialize", "Classes\cSerialize\CSerialize.csproj", "{40794A1E-EF65-40C1-B3E8-E3A6E0206C90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cClass", "Classes\cClass\cClass.csproj", "{660B6556-C0F4-48B6-B3D7-607895720DA7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CClass", "Classes\cClass\CClass.csproj", "{660B6556-C0F4-48B6-B3D7-607895720DA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cPath", "Files\cPath\cPath.csproj", "{7C8340D0-C6F7-48D7-ACA3-04ECB5D794B5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPath", "Files\cPath\CPath.csproj", "{7C8340D0-C6F7-48D7-ACA3-04ECB5D794B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cDictionary", "Methods\cDictionary\cDictionary.csproj", "{A8A027F5-C458-4DC0-98F2-9E5A16E20EF9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDictionary", "Methods\cDictionary\CDictionary.csproj", "{A8A027F5-C458-4DC0-98F2-9E5A16E20EF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cFolder", "Files\cFolder\cFolder.csproj", "{A8031648-89F0-464B-85ED-DF4788F7152B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFolder", "Files\cFolder\CFolder.csproj", "{A8031648-89F0-464B-85ED-DF4788F7152B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cFile", "Files\cFile\cFile.csproj", "{99DB8B26-6D97-4CDF-9892-C9260E501C0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFile", "Files\cFile\CFile.csproj", "{99DB8B26-6D97-4CDF-9892-C9260E501C0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cMethod", "Methods\cMethod\cMethod.csproj", "{8BBE3A22-68EE-4A0A-80C5-0FC9388782B0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMethod", "Methods\cMethod\CMethod.csproj", "{8BBE3A22-68EE-4A0A-80C5-0FC9388782B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cCmd", "Common\cCmd\cCmd.csproj", "{C53E4F5C-846E-4D96-8AFA-066EB4F4856F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CCmd", "Common\cCmd\CCmd.csproj", "{C53E4F5C-846E-4D96-8AFA-066EB4F4856F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cVariable", "Variables\cVariable\cVariable.csproj", "{6CDFBF3C-81F1-47BB-A8B8-A05E2B0A73FB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CVariable", "Variables\cVariable\CVariable.csproj", "{6CDFBF3C-81F1-47BB-A8B8-A05E2B0A73FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cArray", "Variables\cArray\cArray.csproj", "{A55A0CC0-0EB2-4505-A2B1-1B600E88A599}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CArray", "Variables\cArray\CArray.csproj", "{A55A0CC0-0EB2-4505-A2B1-1B600E88A599}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cVersion", "Common\cVersion\cVersion.csproj", "{476DF46E-FA7C-4E2D-BA29-32CD425968CA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CVersion", "Common\cVersion\CVersion.csproj", "{476DF46E-FA7C-4E2D-BA29-32CD425968CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cEnvironment", "Variables\cEnvironment\cEnvironment.csproj", "{0025CC4C-D31F-4C19-B65D-7894F039CF3F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CEnvironment", "Variables\cEnvironment\CEnvironment.csproj", "{0025CC4C-D31F-4C19-B65D-7894F039CF3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cDrive", "Files\cDrive\cDrive.csproj", "{3D336266-077D-4820-8EEF-1F8AF99CE563}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDrive", "Files\cDrive\CDrive.csproj", "{3D336266-077D-4820-8EEF-1F8AF99CE563}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDateTime", "Times\CDateTime\CDateTime.csproj", "{B858D579-1517-426A-A68E-9DDBBEC42160}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cRegex", "Methods\cRegex\cRegex.csproj", "{ABDE8036-30D8-4DA2-AD6C-84B743C67C4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cLambda", "Methods\cLambda\cLambda.csproj", "{0AC52A22-3764-4F13-8517-7F43E982BE1F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLambda", "Methods\cLambda\CLambda.csproj", "{0AC52A22-3764-4F13-8517-7F43E982BE1F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Delegate", "Delegate", "{1A51F003-FAA4-4848-93D8-0DCFD5724A2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cDelegate", "Delegate\cDelegate\cDelegate.csproj", "{98579115-8C03-49C6-9CF3-FC0F671CDD00}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDelegate", "Delegate\cDelegate\CDelegate.csproj", "{98579115-8C03-49C6-9CF3-FC0F671CDD00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cStopWatch", "Times\cStopWatch\cStopWatch.csproj", "{EE05DF81-DD9A-4C64-AD46-2940473EFEBD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CStopWatch", "Times\cStopWatch\CStopWatch.csproj", "{EE05DF81-DD9A-4C64-AD46-2940473EFEBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cInteger", "Variables\cInteger\cInteger.csproj", "{4D486107-BF08-4E8C-AC93-EA62BD796731}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CInteger", "Variables\cInteger\CInteger.csproj", "{4D486107-BF08-4E8C-AC93-EA62BD796731}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cList", "Methods\cList\cList.csproj", "{BB8E1AC4-E028-4752-AA29-6F19BEE3FE08}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CList", "Methods\cList\CList.csproj", "{BB8E1AC4-E028-4752-AA29-6F19BEE3FE08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cProperty", "Classes\cProperty\cProperty.csproj", "{FB32FD53-BE63-4DBA-92BE-57F75E971CB2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CProperty", "Classes\cProperty\CProperty.csproj", "{FB32FD53-BE63-4DBA-92BE-57F75E971CB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cHash", "Methods\cHash\cHash.csproj", "{BAD50ED6-2C19-4A69-89DD-AF632C039FDD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CHash", "Methods\cHash\CHash.csproj", "{BAD50ED6-2C19-4A69-89DD-AF632C039FDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cGeneric", "Methods\cGeneric\cGeneric.csproj", "{F52A745E-363B-4249-B998-C6FB39B27C0F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CGeneric", "Methods\cGeneric\CGeneric.csproj", "{F52A745E-363B-4249-B998-C6FB39B27C0F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Async", "Async", "{C956EA40-4DCB-4E61-B10D-4AFA786AE1E7}"
 EndProject

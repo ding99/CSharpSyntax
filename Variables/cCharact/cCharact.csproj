@@ -34,9 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Source\chkChar.cs" />
+    <Compile Include="Source\ChkChar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Source\const.cs" />
+    <Compile Include="Source\Const.cs" />
     <Compile Include="Source\Program.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

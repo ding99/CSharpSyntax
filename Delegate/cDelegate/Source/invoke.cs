@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace cDelegate {
+namespace CDelegate {
     public class Invoke {
 
         protected delegate string MyDelegate(string msg);

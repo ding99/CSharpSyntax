@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace cCharact {
+namespace CCharact {
 
     public class ConstTest{
         public ConstTest() { }

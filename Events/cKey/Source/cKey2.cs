@@ -3,9 +3,6 @@
 namespace CEvent {
 
     public class EventTest2 {
-
-        public EventTest2() { }
-
         private void checkStat(object obj, StateArgs args) {
             Console.WriteLine("Status " + args.status + ", " + args.message);
         }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 
-namespace cDelegate {
+namespace CDelegate {
 
     delegate int NumberChanger(int n);
 
