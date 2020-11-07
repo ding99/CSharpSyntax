@@ -7,11 +7,11 @@ namespace cStrings {
 
 		public void ExamineOrder() {
 			Console.ForegroundColor = ConsoleColor.Yellow;
-			Console.WriteLine("-- ReOrder numbers according to their weight");
+			Console.WriteLine("-- Start: ReOrder numbers according to their weight");
 
 			ReOrder("4444 2000 123 99 103");
 
-			Console.WriteLine("-- Class End");
+			Console.WriteLine("-- End");
 		}
 
 		private void ReOrder(string s) {
@@ -46,10 +46,6 @@ namespace cStrings {
 			Console.ForegroundColor = ConsoleColor.Cyan;
 			Console.WriteLine("-- Base64 Encoding");
 
-			/*
-				
-				
-			*/
 			EncodeOne("this is a string!!", "dGhpcyBpcyBhIHN0cmluZyEh");
 			EncodeOne("this is a test!", "dGhpcyBpcyBhIHRlc3Qh");
 		}
