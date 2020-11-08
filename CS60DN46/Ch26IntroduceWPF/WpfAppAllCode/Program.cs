@@ -9,7 +9,7 @@ using System.Windows.Controls;
 namespace WpfAppAllCode {
 	class Program : Application {
 		[STAThread]
-		static void Main(string[] args) {
+		static void Main() {
 			//Handle the Startup and Exit events, and then run the application.
 			Program app = new Program();
 			app.Startup += AppStartUp;
