@@ -22,6 +22,8 @@ namespace WpfAppAllCodeStronglyTypedWindow {
 		}
 
 		private void btnExitApp_Clicked(object sender, RoutedEventArgs e) {
+			if ((bool)Application.Current.Properties["GodMode"])
+				MessageBox.Show("Cheater!");
 			//Close the window
 			this.Close();
 		}
