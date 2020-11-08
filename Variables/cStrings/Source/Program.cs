@@ -1,4 +1,5 @@
-﻿using System;
+﻿using cStrings;
+using System;
 
 namespace CStrings {
 	class Entrance {
@@ -9,9 +10,9 @@ namespace CStrings {
 
             bool ret = false;
 
-            #region past
-            TestString ts = new TestString();
-            ret = ts.timeFormat();
+			#region past
+			//TestString ts = new TestString();
+			//ret = ts.timeFormat();
 			//ret = ts.replace();
 			//ret = ts.parastring();
 			//ret = ts.parseInt();
@@ -42,8 +43,8 @@ namespace CStrings {
 			#endregion
 
 			#region color
-			TestColor tc = new TestColor();
-			ret = tc.colorid();
+			//TestColor tc = new TestColor();
+			//ret = tc.colorid();
 			#endregion
 
 			#region encode
@@ -52,46 +53,46 @@ namespace CStrings {
 			#endregion
 
 			#region char
-			TestChar cchar = new TestChar();
-			cchar.chars();
-			cchar.clses();
-			cchar.spcc();
-			cchar.quavers();
+			//TestChar cchar = new TestChar();
+			//cchar.chars();
+			//cchar.clses();
+			//cchar.spcc();
+			//cchar.quavers();
 			#endregion
 
 			#region parse
-			TestParse tp = new TestParse();
+			//TestParse tp = new TestParse();
 			//tp.parseHex();
 			//tp.idex();
-			tp.tryparse();
+			//tp.tryparse();
 			#endregion
 
 			#region JP
-			TestJP jp = new TestJP();
-			jp.chkChar();
+			//TestJP jp = new TestJP();
+			//jp.chkChar();
 			#endregion
 
 			#region PAC
-			TestPAC pac = new TestPAC();
-			pac.chkChar();
+			//TestPAC pac = new TestPAC();
+			//pac.chkChar();
 			#endregion
 
 			#region space
-			ChkSpace space = new ChkSpace();
-			space.trims();
+			//ChkSpace space = new ChkSpace();
+			//space.trims();
 			//space.spaces();
 			#endregion
 
 			#region stringbuilder
-			CStringbuilder bd = new CStringbuilder();
-			bd.cap();
+			//CStringbuilder bd = new CStringbuilder();
+			//bd.cap();
 			//bd.prm();
 			//bd.jon();
 			#endregion
 
 			#region foramt brakets
-			Bracket b = new Bracket();
-			b.test();
+			//Bracket b = new Bracket();
+			//b.test();
 			#endregion
 
 			#region trim
@@ -100,11 +101,17 @@ namespace CStrings {
 			#endregion
 
 			#region types
-			Types types = new Types();
-            types.ExamingTypes();
-            #endregion
+			//Types types = new Types();
+			//types.ExamingTypes();
+			#endregion
 
-            Console.ResetColor();
+			#region qualified
+			Evaluation e = new Evaluation();
+			e.ExamineOrder();
+			e.ExamineBase64();
+			#endregion
+
+			Console.ResetColor();
             Console.WriteLine("=== end");
 		}
 
