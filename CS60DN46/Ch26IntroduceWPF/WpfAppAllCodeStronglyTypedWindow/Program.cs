@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows;
 
-namespace WpfAppAllCode {
+namespace WpfAppAllCodeStronglyTypedWindow {
 	class Program : Application {
 		[STAThread]
 		static void Main() {
@@ -17,12 +17,8 @@ namespace WpfAppAllCode {
 		}
 
 		static void AppStartUp(object sender, StartupEventArgs e) {
-			Window mainWindow = new Window();
-			mainWindow.Title = "My First WPF App!";
-			mainWindow.Height = 200;
-			mainWindow.Width = 300;
-			mainWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-			mainWindow.Show();
+			var main = new MainWindow("May better WPF APP!", 200, 300);
+			main.Show();
 		}
 	}
 }
