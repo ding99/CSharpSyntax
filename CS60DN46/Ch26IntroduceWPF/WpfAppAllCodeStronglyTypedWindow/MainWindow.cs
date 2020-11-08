@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace WpfAppAllCodeStronglyTypedWindow {
@@ -15,10 +16,25 @@ namespace WpfAppAllCodeStronglyTypedWindow {
 			//set the content of this window to a single button
 			this.Content = btnExitApp;
 
+			this.Closing += MainWindow_Closing;
+			this.Closed += MainWindow_CLosed;
+
 			this.Title = windowTitle;
 			this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
 			this.Height = height;
 			this.Width = width;
+		}
+
+		private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e) {
+			string msg = "Do you want to close without saving?";
+			MessageBoxResult result = MessageBox.Show(msg, "My App", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+			if(result == MessageBoxResult.No) {
+				e.Cancel = true;
+			}
+		}
+
+		private void MainWindow_CLosed(object sender, EventArgs e) {
+			MessageBox.Show("See ya!");
 		}
 
 		private void btnExitApp_Clicked(object sender, RoutedEventArgs e) {
