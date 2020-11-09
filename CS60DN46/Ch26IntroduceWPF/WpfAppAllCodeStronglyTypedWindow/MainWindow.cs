@@ -18,11 +18,16 @@ namespace WpfAppAllCodeStronglyTypedWindow {
 
 			this.Closing += MainWindow_Closing;
 			this.Closed += MainWindow_CLosed;
+			this.MouseMove += MainWindow_MouseMove;
 
 			this.Title = windowTitle;
 			this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
 			this.Height = height;
 			this.Width = width;
+		}
+
+		private void MainWindow_MouseMove(object sender, System.Windows.Input.MouseEventArgs e) {
+			this.Title = e.GetPosition(this).ToString();
 		}
 
 		private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e) {
