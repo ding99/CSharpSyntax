@@ -20,6 +20,8 @@ namespace MyXamlPad {
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
 	public partial class MainWindow : Window {
+		string fileName = "YourXaml.xaml";
+
 		public MainWindow() {
 			InitializeComponent();
 		}
@@ -27,7 +29,6 @@ namespace MyXamlPad {
 		private void Window_Loaded(object sender, RoutedEventArgs e) {
 			//When the main window of the app loads
 			//place some basic XAML text into the text block
-			string fileName = "YourXaml.xaml";
 			if (File.Exists(fileName))
 				txtXamlData.Text = File.ReadAllText(fileName);
 			else {
@@ -42,11 +43,26 @@ namespace MyXamlPad {
 		}
 
 		private void Window_Closed(object sender, EventArgs e) {
-
 		}
 
 		private void btnViewXaml_Click(object sender, RoutedEventArgs e) {
+			//write otu the data in the text block to a local *.xaml file
+			File.WriteAllText(fileName, txtXamlData.Text);
+			//This is the window that will be dynamically XAML-ed
+			Window myWindow = null;
+			try {
+				using(Stream sr = File.Open(fileName, FileMode.Open)) {
+					//Connect the XAML to the Window object
+					myWindow = (Window)XamlReader.Load(sr);
 
+					//Show window as a dialog and clean up
+					myWindow.ShowDialog();
+					myWindow.Close();
+					myWindow = null;
+				}
+			}catch(Exception ex) {
+				MessageBox.Show(ex.Message);
+			}
 		}
 	}
 }
