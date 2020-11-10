@@ -43,6 +43,9 @@ namespace MyXamlPad {
 		}
 
 		private void Window_Closed(object sender, EventArgs e) {
+			//write out the data in the text block to a local *.xaml file.
+			File.WriteAllText(fileName, txtXamlData.Text);
+			Application.Current.Shutdown();
 		}
 
 		private void btnViewXaml_Click(object sender, RoutedEventArgs e) {
