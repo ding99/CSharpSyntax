@@ -25,7 +25,20 @@ namespace MyXamlPad {
 		}
 
 		private void Window_Loaded(object sender, RoutedEventArgs e) {
-
+			//When the main window of the app loads
+			//place some basic XAML text into the text block
+			string fileName = "YourXaml.xaml";
+			if (File.Exists(fileName))
+				txtXamlData.Text = File.ReadAllText(fileName);
+			else {
+				txtXamlData.Text =
+					"<Window xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\"\n"
+					+ "xmlns:x=\"http://schemas.microsoft.com/winfx/2006/xaml\"\n"
+					+ "Height=\"400\" Width=\"500\" WindowStartupLocation=\"CenterScreen\">\n"
+					+ "<StackPanel>\n"
+					+ "</StackPanel>\n"
+					+ "</Window>";
+			}
 		}
 
 		private void Window_Closed(object sender, EventArgs e) {
