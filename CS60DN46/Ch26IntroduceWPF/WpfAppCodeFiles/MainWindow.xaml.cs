@@ -8,7 +8,7 @@ namespace WpfAppAllXaml{
 			InitializeComponent();
 		}
 
-		public void btnExitApp_Clicked(object sender, RoutedEventArgs e){
+		private void btnExitApp_Clicked(object sender, RoutedEventArgs e){
 			this.Close();
         }
 	}
