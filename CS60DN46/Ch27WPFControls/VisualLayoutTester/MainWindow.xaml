@@ -6,7 +6,20 @@
         xmlns:local="clr-namespace:VisualLayoutTester"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <DockPanel>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="0,181,0,0" VerticalAlignment="Top" Width="75"/>
-    </DockPanel>
+    <Grid Margin="0,0,2,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="128*" />
+            <ColumnDefinition Width="263*" />
+            <ColumnDefinition Width="128*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="277*"/>
+        </Grid.RowDefinitions>
+        <WrapPanel Grid.Column="1" Margin="21,21,10,38" Orientation="Vertical" Grid.Row="1">
+            <Button x:Name="button" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="20"/>
+            <Calendar HorizontalAlignment="Left" VerticalAlignment="Top" Height="168" Width="179"/>
+            <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="20"/>
+        </WrapPanel>
+    </Grid>
 </Window>
