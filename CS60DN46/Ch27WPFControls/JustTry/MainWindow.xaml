@@ -5,6 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JustTry"
         mc:Ignorable="d"
-        Title="Panel" Height="240" Width="320">
-    <Button x:Name="btnOK" Height = "100" Width="80" Content="OK"/>
+        Title="Panel" Height="300" Width="360">
+
+    <Grid ShowGridLines ="True" Background ="LightSteelBlue">
+        <!-- Define the rows/columns -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!-- Now add the elements to the grid’s cells -->
+        <Label x:Name="lblInstruction" Grid.Column ="0" Grid.Row ="0"
+FontSize="15" Content="Enter Car Information"/>
+        <Button x:Name="btnOK" Height ="30" Grid.Column ="0"
+Grid.Row ="0" Content="OK"/>
+        <Label x:Name="lblMake" Grid.Column ="1"
+Grid.Row ="0" Content="Make"/>
+        <TextBox x:Name="txtMake" Grid.Column ="1"
+Grid.Row ="0" Width="193" Height="25"/>
+        <Label x:Name="lblColor" Grid.Column ="0"
+Grid.Row ="1" Content="Color"/>
+        <TextBox x:Name="txtColor" Width="193" Height="25"
+Grid.Column ="0" Grid.Row ="1" />
+        <!-- Just to keep things interesting, add some color to the pet name cell -->
+        <Rectangle Fill ="LightGreen" Grid.Column ="1" Grid.Row ="1" />
+        <Label x:Name="lblPetName" Grid.Column ="1" Grid.Row ="1"
+Content="Pet Name"/>
+        <TextBox x:Name="txtPetName" Grid.Column ="1" Grid.Row ="1"
+Width="193" Height="25"/>
+    </Grid>
+
 </Window>
