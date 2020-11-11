@@ -31,15 +31,15 @@ namespace MyWordPad {
 		}
 
 		protected void MouseEnterExitArea(object sender, RoutedEventArgs e) {
-
+			statBarText.Text = "Exit the Application";
 		}
 
 		protected void MouseLeaveArea(object sender, RoutedEventArgs e) {
-
+			statBarText.Text = "Ready";
 		}
 
 		protected void MouseEnterToolsHintsArea(object sender, RoutedEventArgs e) {
-
+			statBarText.Text = "Show Spelling Suggestions";
 		}
 	}
 }
