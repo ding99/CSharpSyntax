@@ -41,6 +41,7 @@
     </Compile>
     <Compile Include="Source\ChkClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\Dynamics.cs" />
     <Compile Include="Source\Practicing.cs" />
     <Compile Include="Source\Program.cs" />
   </ItemGroup>
