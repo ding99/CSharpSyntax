@@ -21,5 +21,9 @@ namespace WpfControlsAndAPIs {
 		public MainWindow() {
 			InitializeComponent();
 		}
+
+		protected void ColorChanged(object sender, SelectionChangedEventArgs e) {
+			string colorToUse = (this.comboColors.SelectedItem as StackPanel).Tag.ToString();
+		}
 	}
 }
