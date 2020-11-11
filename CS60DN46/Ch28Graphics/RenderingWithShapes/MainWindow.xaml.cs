@@ -21,5 +21,10 @@ namespace RenderingWithShapes {
 		public MainWindow() {
 			InitializeComponent();
 		}
+
+		protected void myRect_MouseDown(object sender, MouseButtonEventArgs e) {
+			//change color of rectangle when clicked
+			myRect.Fill = Brushes.Pink;
+		}
 	}
 }

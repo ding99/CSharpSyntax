@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RenderingWithShapes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="300" Width="300">
+        Title="Fun with Shapes!" Height="300" Width="300">
     <Grid>
-        
+        <Rectangle x:Name="myRect" Height="30" Width="30" Fill="Green" MouseDown="myRect_MouseDown"/>
     </Grid>
 </Window>
