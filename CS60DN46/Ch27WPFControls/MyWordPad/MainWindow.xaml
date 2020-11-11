@@ -24,5 +24,14 @@
             <Separator/>
             <Button Content ="Check" MouseEnter ="MouseEnterToolsHintsArea" MouseLeave ="MouseLeaveArea" Click="ToolsSpellingHints_Click" Cursor="Help" />
         </ToolBar>
+
+        <!-- Put a StatusBar at the bottom -->
+        <!--
+        <StatusBar DockPanel.Dock ="Bottom" Background="Beige" >
+            <StatusBarItem>
+                <TextBlock Name="statBarText" Text="Ready"/>
+            </StatusBarItem>
+        </StatusBar>
+        -->
     </DockPanel>
 </Window>
