@@ -21,5 +21,25 @@ namespace MyWordPad {
 		public MainWindow() {
 			InitializeComponent();
 		}
+
+		protected void FileExit_Click(object sender, RoutedEventArgs e) {
+			this.Close();
+		}
+
+		protected void ToolsSpellingHints_Click(object sender, RoutedEventArgs e) {
+
+		}
+
+		protected void MouseEnterExitArea(object sender, RoutedEventArgs e) {
+
+		}
+
+		protected void MouseLeaveArea(object sender, RoutedEventArgs e) {
+
+		}
+
+		protected void MouseEnterToolsHintsArea(object sender, RoutedEventArgs e) {
+
+		}
 	}
 }
