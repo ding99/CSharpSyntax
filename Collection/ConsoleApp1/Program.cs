@@ -29,14 +29,13 @@ namespace ConsoleApp1 {
 			_name = name;
 		}
 
-		//public override int GetHashCode() {
-		//	//return 0;
-		//	return base.GetHashCode();
-		//}
+		public override int GetHashCode() {
+			return 0;
+		}
 
-		//public override bool Equals(object obj) {
-		//	return Equals(obj as PersonKey);
-		//}
+		public override bool Equals(object obj) {
+			return Equals(obj as PersonKey);
+		}
 
 		public bool Equals(PersonKey k) {
 			return k != null && k.Age == this.Age && k.Name == this.Name;
