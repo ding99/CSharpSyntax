@@ -1,30 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Console;
 using System.Data;
-using System.Data.SqlClient;
 using System.Data.Odbc;
 using System.Data.OleDb;
+using System.Data.SqlClient;
+using static System.Console;
 
 namespace ConnectionFactory {
 	enum DataProvider { SqlServer, OleDb, Odbc, None }
 
 	class Program {
 		static void Main() {
-			Console.WriteLine("***** Very Simple Connection Factory *****");
+			WriteLine("***** Very Simple Connection Factory *****");
 			SimpleFactory();
-			Console.ResetColor();
+			ResetColor();
 		}
 
 		private static void SimpleFactory() {
-			Console.ForegroundColor = ConsoleColor.Yellow;
-			Console.WriteLine("=> Connection Factory");
+			ForegroundColor = ConsoleColor.Yellow;
+			WriteLine("=> Connection Factory");
 
 			IDbConnection connection = GetConnection(DataProvider.SqlServer);
-			Console.WriteLine($"Your connnection is a {connection.GetType().Name}");
+			WriteLine($"Your connnection is a {connection.GetType().Name}");
 
 		}
 
