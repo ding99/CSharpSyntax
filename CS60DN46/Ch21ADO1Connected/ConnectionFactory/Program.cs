@@ -4,6 +4,7 @@ using System.Data.Odbc;
 using System.Data.OleDb;
 using System.Data.SqlClient;
 using static System.Console;
+using System.Configuration;
 
 namespace ConnectionFactory {
 	enum DataProvider { SqlServer, OleDb, Odbc, None }
@@ -12,7 +13,27 @@ namespace ConnectionFactory {
 		static void Main() {
 			WriteLine("***** Very Simple Connection Factory *****");
 			SimpleFactory();
+			AppConfig();
 			ResetColor();
+		}
+
+		private static void AppConfig() {
+			ForegroundColor = ConsoleColor.Cyan;
+			WriteLine("=> Using Application Configuration Files");
+
+			string conKey = "provider";
+			string dataProviderString = ConfigurationManager.AppSettings[conKey];
+			WriteLine($"conKey <{conKey}>, string <{dataProviderString}>");
+			DataProvider dataProvider = DataProvider.None;
+			if(Enum.IsDefined(typeof(DataProvider), dataProviderString)) {
+				dataProvider = (DataProvider)Enum.Parse(typeof(DataProvider), dataProviderString);
+			} else {
+				WriteLine("Sorry, no provider exists!");
+				return;
+			}
+
+			IDbConnection connection = GetConnection(dataProvider);
+			WriteLine($"Your connection is a {connection?.GetType().Name ?? "unrecognized type"}");
 		}
 
 		private static void SimpleFactory() {
