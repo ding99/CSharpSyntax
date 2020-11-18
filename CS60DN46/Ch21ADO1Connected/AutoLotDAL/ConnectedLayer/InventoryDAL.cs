@@ -62,6 +62,19 @@ namespace AutoLotDAL.ConnectedLayer {
 			return inv;
 		}
 
+		public DataTable GetAllInventoryAsDataTable() {
+			DataTable table = new DataTable();
+
+			string sql = "Select * From Inventory";
+			using (SqlCommand command = new SqlCommand(sql, _sqlConnection)) {
+				SqlDataReader reader = command.ExecuteReader();
+				table.Load(reader);
+				reader.Close();
+			}
+
+			return table;
+		}
+
 		public void CloseConnection() {
 			_sqlConnection.Close();
 		}
