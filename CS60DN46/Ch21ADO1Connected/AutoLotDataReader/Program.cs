@@ -30,6 +30,8 @@ namespace AutoLotDataReader {
 				string sql = "Select * From Inventory";
 				SqlCommand command = new SqlCommand(sql, connection);
 
+				command.CommandType = System.Data.CommandType.Text; //default
+
 				using (SqlDataReader reader = command.ExecuteReader()) {
 					while (reader.Read())
 						WriteLine($"-> Make: {reader["Make"]}, PetName: {reader["PetName"]}.");
