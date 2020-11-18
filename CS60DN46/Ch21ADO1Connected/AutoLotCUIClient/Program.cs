@@ -106,7 +106,9 @@ namespace AutoLotCUIClient {
 		}
 
 		private static void LookUpPetName(InventoryDAL dal) {
-
+			Write("Enter ID of Car to look up: ");
+			int id = int.Parse(ReadLine() ?? "0");
+			WriteLine($"Petname of {id} is {dal.LookUpPetName(id).TrimEnd()}.");
 		}
 
 		private static void ShowInstructions() {
