@@ -31,6 +31,7 @@ namespace AutoLotCUIClient {
 					Write("Please enter your command: ");
 					userCommand = ReadLine();
 					WriteLine();
+					ForegroundColor = ConsoleColor.Cyan;
 					switch (userCommand?.ToUpper() ?? "") {
 						case "I": InsertNewCar(dal); break;
 						case "U": UpdateCarPetName(dal); break;
@@ -112,6 +113,7 @@ namespace AutoLotCUIClient {
 		}
 
 		private static void ShowInstructions() {
+			ForegroundColor = ConsoleColor.Yellow;
 			WriteLine("I: Inserts a new car.");
 			WriteLine("U: Updates an existing car.");
 			WriteLine("D: Deletes an existing car.");
