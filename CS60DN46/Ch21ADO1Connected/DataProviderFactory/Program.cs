@@ -64,3 +64,21 @@ namespace DataProviderFactory {
 		}
 	}
 }
+
+/**
+***** Data Provider Factories *****
+=> Use Configuration
+dataProvider <System.Data.OleDb>, connectionString <Provider=SQLOLEDB;Data Source=(local);Initial Catalog=AutoLot;Integrated Security=SSPI>
+Your Connection object is a OleDbConnection
+Your command object is a OleDbCommand
+Your data reader object is a OleDbDataReader
+----- Current Inventory -----
+-> Car #1 is a VW with a color Black
+-> Car #2 is a Ford with a color Rust
+-> Car #3 is a Saab with a color Black
+-> Car #4 is a Yugo with a color Yellow
+-> Car #5 is a BMW with a color Black
+-> Car #6 is a BMW with a color Green
+-> Car #7 is a BMW with a color Pink
+**/
+
