@@ -16,6 +16,7 @@ namespace AutoLotDataReader {
 
 			using(SqlConnection connection = new SqlConnection()) {
 				string connectionString = @"Data Source=(local);Integrated Security=SSPI;" + "Initial Catalog=AutoLot";
+				//or Security=true
 				connection.ConnectionString = connectionString;
 				connection.Open();
 
