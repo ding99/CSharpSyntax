@@ -97,7 +97,12 @@ namespace AutoLotCUIClient {
 		}
 
 		private static void UpdateCarPetName(InventoryDAL dal) {
+			Write("Enter Car ID: ");
+			var carID = int.Parse(ReadLine() ?? "0");
+			Write("Enter New Pet Name: ");
+			var newPetName = ReadLine();
 
+			dal.UpdateCarPetName(carID, newPetName);
 		}
 
 		private static void LookUpPetName(InventoryDAL dal) {
