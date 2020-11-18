@@ -23,7 +23,9 @@ namespace DataProviderFactory {
 			WriteLine("=> Use Configuration");
 
 			string dataProvider = ConfigurationManager.AppSettings["provider"];
-			string connectionString = ConfigurationManager.AppSettings["connectionString"];
+			//string connectionString = ConfigurationManager.AppSettings["connectionString"];
+			string connectionString = ConfigurationManager.AppSettings["cnStr"];
+
 			WriteLine($"dataProvider <{dataProvider}>, connectionString <{connectionString}>");
 
 			DbProviderFactory factory = DbProviderFactories.GetFactory(dataProvider);
