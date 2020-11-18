@@ -51,15 +51,27 @@ namespace AutoLotCUIClient {
 		}
 
 		private static void ListInventory(InventoryDAL dal) {
-
+			DataTable dt = dal.GetAllInventoryAsDataTable();
+			DisplayTable(dt);
+			ListInventoryViaList(dal);
 		}
 
 		private static void DisplayTable(DataTable t) {
-
+			for (int col = 0; col < t.Columns.Count; col++)
+				Write($"{t.Columns[col].ColumnName}\t");
+			WriteLine("\n--------------------------------");
+			for(int row = 0; row < t.Rows.Count; row++) {
+				for (int col = 0; col < t.Columns.Count; col++)
+					Write($"{t.Rows[row][col]}\t");
+				WriteLine();
+			}
 		}
 
 		private static void ListInventoryViaList(InventoryDAL dal) {
-
+			List<NewCar> record = dal.GetAllInventoryAsList();
+			WriteLine("CarId:\tMake:\tColor:\tPetName:");
+			foreach (NewCar c in record)
+				WriteLine($"{c.CarId}\t{c.Make}\t{c.Color}\t{c.PetName}");
 		}
 
 		private static void DeleteCar(InventoryDAL dal) {
