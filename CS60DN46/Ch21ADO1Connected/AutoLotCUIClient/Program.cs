@@ -75,7 +75,12 @@ namespace AutoLotCUIClient {
 		}
 
 		private static void DeleteCar(InventoryDAL dal) {
+			Write("Enter ID of Car to delete: ");
+			int id = int.Parse(ReadLine() ?? "0");
 
+			try {
+				dal.DeleteCar(id);
+			} catch(Exception ex) { WriteLine(ex.Message);  }
 		}
 
 		private static void InsertNewCar(InventoryDAL dal) {
