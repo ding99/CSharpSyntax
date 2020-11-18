@@ -20,6 +20,8 @@ namespace AutoLotDataReader {
 				connection.ConnectionString = connectionString;
 				connection.Open();
 
+				WriteLine($"(1) timeout {connection.ConnectionTimeout}, source {connection.DataSource} (lenght {connection.DataSource.Length}), state {connection.State}");
+
 				string sql = "Select * From Inventory";
 				SqlCommand command = new SqlCommand(sql, connection);
 
@@ -27,6 +29,9 @@ namespace AutoLotDataReader {
 					while (reader.Read())
 						WriteLine($"-> Make: {reader["Make"]}, PetName: {reader["PetName"]}.");
 				}
+
+				connection.Close(); //?
+				WriteLine($"(2) timeout {connection.ConnectionTimeout}, source {connection.DataSource} (lenght {connection.DataSource.Length}), state {connection.State}");
 			}
 		}
 	}
