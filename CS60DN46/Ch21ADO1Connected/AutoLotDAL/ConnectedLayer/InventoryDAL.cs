@@ -75,6 +75,69 @@ namespace AutoLotDAL.ConnectedLayer {
 			return table;
 		}
 
+		public void InsertAuto(int id, string color, string make, string petName) {
+			string sql = "Insert Into Inventory" + "(Make, Color, PetName) Values" +
+				"(@Make, @Color, @PetName)";
+
+			using(SqlCommand command = new SqlCommand(sql, _sqlConnection)) {
+				SqlParameter parameter = new SqlParameter {
+					ParameterName = "@Make",
+					Value = make,
+					SqlDbType = SqlDbType.Char,
+					Size = 10
+				};
+				command.Parameters.Add(parameter);
+
+				parameter = new SqlParameter {
+					ParameterName = "@Color",
+					Value = color,
+					SqlDbType = SqlDbType.Char,
+					Size = 10
+				};
+				command.Parameters.Add(parameter);
+
+				parameter = new SqlParameter {
+					ParameterName = "@PetName",
+					Value = petName,
+					SqlDbType = SqlDbType.Char,
+					Size = 10
+				};
+				command.Parameters.Add(parameter);
+
+				command.ExecuteNonQuery();
+			}
+		}
+
+		public string LookUpPetName(int carID) {
+			string carPetName = string.Empty;
+
+			using(SqlCommand command = new SqlCommand("GetPetName", _sqlConnection)) {
+				command.CommandType = CommandType.StoredProcedure;
+
+				SqlParameter param = new SqlParameter {
+					ParameterName = "@carID",
+					SqlDbType = SqlDbType.Int,
+					Value = carID,
+					Direction = ParameterDirection.Input
+				};
+				command.Parameters.Add(param);
+
+				param = new SqlParameter {
+					ParameterName = "@petName",
+					SqlDbType = SqlDbType.Char,
+					Size = 10,
+					Direction = ParameterDirection.Output
+				};
+				command.Parameters.Add(param);
+
+				command.ExecuteNonQuery();
+
+				carPetName = (string)command.Parameters["@petName"].Value;
+			}
+
+			return carPetName;
+		}
+
 		public void CloseConnection() {
 			_sqlConnection.Close();
 		}
