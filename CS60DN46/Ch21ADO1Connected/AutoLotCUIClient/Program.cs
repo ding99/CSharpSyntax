@@ -84,7 +84,16 @@ namespace AutoLotCUIClient {
 		}
 
 		private static void InsertNewCar(InventoryDAL dal) {
-
+			Write("Enter Car ID: ");
+			var newCarId = int.Parse(ReadLine() ?? "0");
+			Write("Enter Car Color: ");
+			var newColor = ReadLine();
+			Write("Enter Car Make: ");
+			var newMake = ReadLine();
+			Write("Enter Pet Name: ");
+			var newPetName = ReadLine();
+			var c = new NewCar { CarId = newCarId, Color = newColor, Make = newMake, PetName = newPetName };
+			dal.InsertAuto(c);
 		}
 
 		private static void UpdateCarPetName(InventoryDAL dal) {
