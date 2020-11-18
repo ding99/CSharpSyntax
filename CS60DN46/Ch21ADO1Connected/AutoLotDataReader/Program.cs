@@ -32,10 +32,12 @@ namespace AutoLotDataReader {
 
 				command.CommandType = System.Data.CommandType.Text; //default
 
-				using (SqlDataReader reader = command.ExecuteReader()) {
-					while (reader.Read())
-						WriteLine($"-> Make: {reader["Make"]}, PetName: {reader["PetName"]}.");
-				}
+				using (SqlDataReader reader = command.ExecuteReader())
+					while (reader.Read()) {
+						for (int i = 0; i < reader.FieldCount; i++)
+							Write($"{reader.GetName(i)}: {reader.GetValue(i)}, ");
+						WriteLine();
+					}
 
 				connection.Close();
 			}
