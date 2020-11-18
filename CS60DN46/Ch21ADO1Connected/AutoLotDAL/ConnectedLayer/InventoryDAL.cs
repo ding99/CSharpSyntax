@@ -108,6 +108,36 @@ namespace AutoLotDAL.ConnectedLayer {
 			}
 		}
 
+		public string LookUpPetName(int carID) {
+			string carPetName = string.Empty;
+
+			using(SqlCommand command = new SqlCommand("GetPetName", _sqlConnection)) {
+				command.CommandType = CommandType.StoredProcedure;
+
+				SqlParameter param = new SqlParameter {
+					ParameterName = "@carID",
+					SqlDbType = SqlDbType.Int,
+					Value = carID,
+					Direction = ParameterDirection.Input
+				};
+				command.Parameters.Add(param);
+
+				param = new SqlParameter {
+					ParameterName = "@petName",
+					SqlDbType = SqlDbType.Char,
+					Size = 10,
+					Direction = ParameterDirection.Output
+				};
+				command.Parameters.Add(param);
+
+				command.ExecuteNonQuery();
+
+				carPetName = (string)command.Parameters["@petName"].Value;
+			}
+
+			return carPetName;
+		}
+
 		public void CloseConnection() {
 			_sqlConnection.Close();
 		}
