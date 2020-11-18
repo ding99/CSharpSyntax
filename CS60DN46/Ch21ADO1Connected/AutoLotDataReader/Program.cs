@@ -8,7 +8,34 @@ namespace AutoLotDataReader {
 			WriteLine("***** Data Readers *****");
 			DataReader();
 			UseBuilder();
+			MultiResult();
 			ResetColor();
+		}
+
+		private static void MultiResult() {
+			ForegroundColor = ConsoleColor.DarkYellow;
+			WriteLine("=> Multi Result Sets");
+
+			string connectionString = @"Data Source=(local);Integrated Security=SSPI;" + "Initial Catalog=AutoLot;Timeout=20";
+
+			using (SqlConnection connection = new SqlConnection()) {
+				connection.ConnectionString = connectionString;
+				connection.Open();
+				ShowConnectionStatus(connection);
+
+				string sql = "select * from Inventory;select * from Customers";
+				SqlCommand command = new SqlCommand(sql, connection);
+
+				using (SqlDataReader reader = command.ExecuteReader()) {
+					do {
+						while (reader.Read()) {
+							for (int i = 0; i < reader.FieldCount; i++)
+								Write($"{reader.GetName(i)}: {reader.GetValue(i)}, ");
+							WriteLine();
+						}
+					} while (reader.NextResult());
+				}
+			}
 		}
 
 		private static void UseBuilder() {
@@ -32,10 +59,12 @@ namespace AutoLotDataReader {
 
 				command.CommandType = System.Data.CommandType.Text; //default
 
-				using (SqlDataReader reader = command.ExecuteReader()) {
-					while (reader.Read())
-						WriteLine($"-> Make: {reader["Make"]}, PetName: {reader["PetName"]}.");
-				}
+				using (SqlDataReader reader = command.ExecuteReader())
+					while (reader.Read()) {
+						for (int i = 0; i < reader.FieldCount; i++)
+							Write($"{reader.GetName(i)}: {reader.GetValue(i)}, ");
+						WriteLine();
+					}
 
 				connection.Close();
 			}
