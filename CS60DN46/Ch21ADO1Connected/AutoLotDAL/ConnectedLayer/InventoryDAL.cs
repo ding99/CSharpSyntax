@@ -37,6 +37,44 @@ namespace AutoLotDAL.ConnectedLayer {
 			}
 		}
 
+		public void UpdateCarPetName(int id, string newPetName) {
+			string sql = $"Update Inventory Set PetName = '{newPetName}' Where CarId = '{id}'";
+			using (SqlCommand command = new SqlCommand(sql, _sqlConnection))
+				command.ExecuteNonQuery();
+		}
+
+		public List<NewCar> GetAllInventoryAsList() {
+			List<NewCar> inv = new List<NewCar>();
+
+			string sql = "Select * From Inventory";
+			using (SqlCommand command = new SqlCommand(sql, _sqlConnection)) {
+				SqlDataReader reader = command.ExecuteReader();
+				while (reader.Read())
+					inv.Add(new NewCar {
+						CarId = (int)reader["CarId"],
+						Color = (string)reader["Color"],
+						Make = (string)reader["Make"],
+						PetName = (string)reader["PetName"]
+					});
+				reader.Close();
+			}
+
+			return inv;
+		}
+
+		public DataTable GetAllInventoryAsDataTable() {
+			DataTable table = new DataTable();
+
+			string sql = "Select * From Inventory";
+			using (SqlCommand command = new SqlCommand(sql, _sqlConnection)) {
+				SqlDataReader reader = command.ExecuteReader();
+				table.Load(reader);
+				reader.Close();
+			}
+
+			return table;
+		}
+
 		public void CloseConnection() {
 			_sqlConnection.Close();
 		}
