@@ -52,7 +52,7 @@ namespace DataProviderFactory {
 
 					WriteLine("----- Current Inventory -----");
 					while (reader.Read())
-						WriteLine($"-> Car #{reader["CarId"]} is a {reader["Make"]}");
+						WriteLine($"-> Car #{reader["CarId"]} is a {reader["Make"]} with a color {reader["Color"]}");
 				}
 			}
 		}
