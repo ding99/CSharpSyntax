@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using AutoLotDAL.Models;
 
 namespace AutoLotDAL.ConnectedLayer {
 	public class InventoryDAL {
@@ -15,8 +16,8 @@ namespace AutoLotDAL.ConnectedLayer {
 			_sqlConnection.Open();
 		}
 
-		public void InsertAuto(int id, string color, string make, string petName) {
-			string sql = "Insert Into Inventory" + $"(Make, Color, PetName) Values ('{make}', '{color}', '{petName}')";
+		public void InsertAuto(NewCar car) {
+			string sql = "Insert Into Inventory" + $"(Make, Color, PetName) Values ('{car.Make}', '{car.Color}', '{car.PetName}')";
 
 			using(SqlCommand command =  new SqlCommand(sql, _sqlConnection)) {
 				command.ExecuteNonQuery();
