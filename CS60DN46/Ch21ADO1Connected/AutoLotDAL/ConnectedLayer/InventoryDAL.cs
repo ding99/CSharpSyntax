@@ -37,6 +37,12 @@ namespace AutoLotDAL.ConnectedLayer {
 			}
 		}
 
+		public void UpdateCarPetName(int id, string newPetName) {
+			string sql = $"Update Inventory Set PetName = '{newPetName}' Where CarId = '{id}'";
+			using (SqlCommand command = new SqlCommand(sql, _sqlConnection))
+				command.ExecuteNonQuery();
+		}
+
 		public void CloseConnection() {
 			_sqlConnection.Close();
 		}
