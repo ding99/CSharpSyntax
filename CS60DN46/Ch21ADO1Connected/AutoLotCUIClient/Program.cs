@@ -27,12 +27,55 @@ namespace AutoLotCUIClient {
 
 			try {
 				ShowInstructions();
+				do {
+					Write("Please enter your command: ");
+					userCommand = ReadLine();
+					WriteLine();
+					switch (userCommand?.ToUpper() ?? "") {
+						case "I": InsertNewCar(dal); break;
+						case "U": UpdateCarPetName(dal); break;
+						case "D": DeleteCar(dal); break;
+						case "L": ListInventory(dal); break;
+						case "S": ShowInstructions(); break;
+						case "P": LookUpPetName(dal); break;
+						case "Q": userDone = true;  break;
+						default: WriteLine("Bad data! Try again"); break;
+					}
+				} while (!userDone);
 			} catch(Exception ex) {
 				WriteLine(ex.Message);
 			}
 			finally { dal.CloseConnection(); }
 
 			ResetColor();
+		}
+
+		private static void ListInventory(InventoryDAL dal) {
+
+		}
+
+		private static void DisplayTable(DataTable t) {
+
+		}
+
+		private static void ListInventoryViaList(InventoryDAL dal) {
+
+		}
+
+		private static void DeleteCar(InventoryDAL dal) {
+
+		}
+
+		private static void InsertNewCar(InventoryDAL dal) {
+
+		}
+
+		private static void UpdateCarPetName(InventoryDAL dal) {
+
+		}
+
+		private static void LookUpPetName(InventoryDAL dal) {
+
 		}
 
 		private static void ShowInstructions() {
