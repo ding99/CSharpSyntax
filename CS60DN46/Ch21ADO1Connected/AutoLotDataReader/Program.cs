@@ -7,7 +7,36 @@ namespace AutoLotDataReader {
 		static void Main() {
 			WriteLine("***** Data Readers *****");
 			DataReader();
+			UseBuilder();
 			ResetColor();
+		}
+
+		private static void UseBuilder() {
+			ForegroundColor = ConsoleColor.Cyan;
+			WriteLine("=> Working with ConnectionStringBuilder Object");
+
+			var builder = new SqlConnectionStringBuilder {
+				InitialCatalog = "AutoLot",
+				DataSource = ".",
+				ConnectTimeout = 18,
+				IntegratedSecurity = true
+			};
+
+			using(SqlConnection connection = new SqlConnection()) {
+				connection.ConnectionString = builder.ConnectionString;
+				connection.Open();
+				ShowConnectionStatus(connection);
+
+				string sql = "Select * From Inventory";
+				SqlCommand command = new SqlCommand(sql, connection);
+
+				using (SqlDataReader reader = command.ExecuteReader()) {
+					while (reader.Read())
+						WriteLine($"-> Make: {reader["Make"]}, PetName: {reader["PetName"]}.");
+				}
+
+				connection.Close();
+			}
 		}
 
 		private static void DataReader() {
