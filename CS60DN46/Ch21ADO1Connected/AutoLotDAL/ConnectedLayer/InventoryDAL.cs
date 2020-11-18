@@ -24,6 +24,19 @@ namespace AutoLotDAL.ConnectedLayer {
 			}
 		}
 
+		public void DeleteCar(int id) {
+			string sql = $"Delete from Inventory where CarId = '{id}'";
+			using(SqlCommand command = new SqlCommand(sql, _sqlConnection)) {
+				try {
+					command.ExecuteNonQuery();
+				}
+				catch(SqlException ex) {
+					Exception error = new Exception("Sorry! That car is on order!", ex);
+					throw error;
+				}
+			}
+		}
+
 		public void CloseConnection() {
 			_sqlConnection.Close();
 		}
