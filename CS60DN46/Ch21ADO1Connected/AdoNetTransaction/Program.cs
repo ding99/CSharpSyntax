@@ -19,8 +19,8 @@ namespace AdoNetTransaction {
 			string connectString = @"Data Source=(local);Integrated Security=SSPI;Initial Catalog=AutoLot";
 			dal.OpenConnection(connectString);
 
-			dal.ProcessCreditRisk(throwEx, 5);
-			WriteLine("Check CreditRisk table for results");
+			dal.ProcessCreditRisk(throwEx, 6);
+			WriteLine($"Check CreditRisk table for results (ThrowEx: <{throwEx}>)");
 
 			ResetColor();
 		}
