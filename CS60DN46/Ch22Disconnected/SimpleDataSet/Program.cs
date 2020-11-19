@@ -70,6 +70,8 @@ namespace SimpleDataSet {
 			row["PetName"] = "Sea Breeze";
 			inventoryTable.Rows.Add(row);
 			#endregion rows
+
+			s.Tables.Add(inventoryTable);
 		}
 
 		private static void PrintDataSet(DataSet s) {
