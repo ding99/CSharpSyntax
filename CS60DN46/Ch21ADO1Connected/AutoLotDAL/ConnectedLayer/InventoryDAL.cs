@@ -1,11 +1,9 @@
-﻿using System;
+﻿using AutoLotDAL.Models;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-using AutoLotDAL.Models;
+using static System.Console;
 
 namespace AutoLotDAL.ConnectedLayer {
 	public class InventoryDAL {
@@ -136,6 +134,49 @@ namespace AutoLotDAL.ConnectedLayer {
 			}
 
 			return carPetName;
+		}
+
+		public void ProcessCreditRisk(bool throwEx, int custID) {
+			#region look up current name
+			string fName, lName;
+			string sql = $"Select * from Customers where CustId = {custID}";
+			var cmdSelect = new SqlCommand(sql, _sqlConnection);
+
+			using(var reader = cmdSelect.ExecuteReader()) {
+				if (reader.HasRows) {
+					reader.Read();
+					fName = (string)reader["FirstName"];
+					lName = (string)reader["LastName"];
+				} else return;
+			}
+			#endregion
+
+			#region transaction
+			sql = $"Delete from Customers where CustId = {custID}";
+			var cmdRemove = new SqlCommand(sql, _sqlConnection);
+			sql = $"Insert Into CreditRisks" + $"(FirstName, LastName) Values('{fName}','{lName}')";
+			var cmdInsert = new SqlCommand(sql, _sqlConnection);
+
+			SqlTransaction tx = null;
+			try {
+				tx = _sqlConnection.BeginTransaction();
+
+				cmdInsert.Transaction = tx;
+				cmdRemove.Transaction = tx;
+
+				cmdInsert.ExecuteNonQuery();
+				cmdRemove.ExecuteNonQuery();
+
+				if(throwEx)
+					throw new Exception("Sorry! Database error! Tx failed...");
+
+				tx.Commit();
+			}
+			catch (Exception ex) {
+				WriteLine(ex.Message);
+				tx?.Rollback();
+			}
+			#endregion
 		}
 
 		public void CloseConnection() {
