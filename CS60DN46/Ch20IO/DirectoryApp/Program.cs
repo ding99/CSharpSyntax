@@ -22,32 +22,38 @@ namespace DirectoryApp {
 
 		private static void FileType(string file) {
 			Console.ForegroundColor = ConsoleColor.DarkYellow;
-			Console.WriteLine("=> File Type");
+			Console.WriteLine($"=> File Type. <{file}>");
 
 			using (FileStream fs = File.Create(file)) {
+				Console.WriteLine($"filestream size (before writebyte) {fs.Length}");
 				fs.WriteByte(0x31);
 				fs.WriteByte(0x32);
 				fs.WriteByte(0x33);
-				Console.WriteLine($"filestream size {fs.Length}");
+				Console.WriteLine($"filestream size (after  writebyte) {fs.Length}");
 			}
 
 			using (FileStream fs = File.Open(file, FileMode.Append, FileAccess.Write, FileShare.None)) {
+				Console.WriteLine($"filestream size (before writebyte) {fs.Length}");
 				fs.WriteByte(0x41);
 				fs.WriteByte(0x42);
 				fs.WriteByte(0x43);
-				Console.WriteLine($"filestream size {fs.Length}");
+				Console.WriteLine($"filestream size (after  writebyte) {fs.Length}");
 			}
 
 			using (FileStream fs = File.OpenWrite(file)) {
+				Console.WriteLine($"filestream size (before writebyte) {fs.Length}");
 				fs.WriteByte(0x61);
 				fs.WriteByte(0x62);
 				fs.WriteByte(0x63);
-				Console.WriteLine($"filestream size {fs.Length}");
+				Console.WriteLine($"filestream size (after  writebyte) {fs.Length}");
 			}
 
 			using (StreamWriter sw = File.AppendText(file)) {
+				Console.WriteLine($"tream size (before write) {sw.BaseStream.Length}");
 				sw.Write("789");
-				Console.WriteLine($"tream size {sw.BaseStream.Length}");
+				Console.WriteLine($"tream size (after write) {sw.BaseStream.Length}");
+				sw.Flush();
+				Console.WriteLine($"tream size (after flush) {sw.BaseStream.Length}");
 			}
 
 			Console.ForegroundColor = ConsoleColor.DarkCyan;
