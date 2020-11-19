@@ -54,6 +54,7 @@ namespace SimpleDataSet {
 			#region table
 			var inventoryTable = new DataTable("Inventory");
 			inventoryTable.Columns.AddRange(new[] { carIDColumn, carMakeColumn, carColorColumn, carPetNameColumn });
+			inventoryTable.PrimaryKey = new[] { inventoryTable.Columns[0] };
 			#endregion
 
 			#region rows
