@@ -57,20 +57,20 @@ namespace DirectoryApp {
 			}
 
 			Console.ForegroundColor = ConsoleColor.DarkCyan;
-			var r1 = File.ReadAllBytes(file); Console.Write($"size {r1.Length}:");
-			foreach (var a in r1) Console.Write(" " + a); Console.WriteLine();
-			var r2 = File.ReadAllLines(file); Console.Write(r2.Length);
+			var r1 = File.ReadAllBytes(file); Console.Write($"ReadAllBytes: size {r1.Length}:");
+			foreach (var a in r1) Console.Write($" 0x{a.ToString("x2")}"); Console.WriteLine();
+			var r2 = File.ReadAllLines(file); Console.Write("ReadAllLines: size " +r2.Length);
 			foreach (var a in r2) Console.Write(" " + a); Console.WriteLine();
-			var r3 = File.ReadAllText(file); Console.WriteLine($"<{r3}> (size {r3.Length})");
+			var r3 = File.ReadAllText(file); Console.WriteLine($"ReadAllText : <{r3}> (size {r3.Length})");
 
 			string[] tasks = { "call 01", "call 02", "call 03"};
-			Console.Write($"Orig (size {tasks.Count()}):");
+			Console.Write($"Orig Array   (size {tasks.Count()}):");
 			foreach (var a in tasks) Console.Write($" <{a}>");
 			Console.WriteLine();
 			string newFile = file + "_a.txt";
 			File.WriteAllLines(newFile, tasks);
 			var r = File.ReadAllLines(newFile);
-			Console.Write($"Read (size {r.Count()}):");
+			Console.Write($"ReadAllLines (size {r.Count()}):");
 			foreach (var a in r) Console.Write($" <{a}>");
 			Console.WriteLine();
 		}
