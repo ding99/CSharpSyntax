@@ -32,7 +32,23 @@ namespace SimpleDataSet {
 		}
 
 		private static void FillDataSet(DataSet s) {
-			WriteLine($"-> Fill DataSet, <{s.ExtendedProperties["Company"]}>");
+			WriteLine("-> Fill DataSet");
+
+			var carIDColumn = new DataColumn("CarID", typeof(int)) {
+				Caption = "Car ID",
+				ReadOnly = true,
+				AllowDBNull = false,
+				Unique = true,
+				AutoIncrement = true,
+				AutoIncrementSeed = 1,
+				AutoIncrementStep = 1
+			};
+
+			var carMakeColumn = new DataColumn("Make", typeof(string));
+			var carColorColumn = new DataColumn("Color", typeof(string));
+			var carPetNameColumn = new DataColumn("PetName", typeof(string)){
+				Caption = "Pet Name"
+			};
 		}
 
 		private static void PrintDataSet(DataSet s) {
