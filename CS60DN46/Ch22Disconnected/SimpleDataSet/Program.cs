@@ -31,6 +31,27 @@ namespace SimpleDataSet {
 			PrintDataSet(ds);
 		}
 
+		private static void PrintDataSet(DataSet s) {
+			WriteLine($"-> Print DataSet <{s.DataSetName}>");
+			var props = s.ExtendedProperties;
+			WriteLine($"Properties (size {props.Count}):");
+			foreach (DictionaryEntry a in props)
+					WriteLine($"  <{a.Key}> : <{a.Value}> ");
+
+			foreach(DataTable t in s.Tables) {
+				WriteLine($"-- {t.TableName} Table:");
+
+				for (var col = 0; col < t.Columns.Count; col++)
+					Write($"{t.Columns[col].ColumnName}\t");
+				WriteLine("\n-----------------------------------");
+				for(var row = 0; row < t.Rows.Count; row++) {
+					for (var col = 0; col < t.Columns.Count; col++)
+						Write($"{t.Rows[row][col]}\t");
+					WriteLine();
+				}
+			}
+		}
+
 		private static void FillDataSet(DataSet s) {
 			WriteLine("-> Fill DataSet");
 			#region columns
@@ -72,15 +93,6 @@ namespace SimpleDataSet {
 			#endregion rows
 
 			s.Tables.Add(inventoryTable);
-		}
-
-		private static void PrintDataSet(DataSet s) {
-			WriteLine("-> Print DataSet");
-			var props = s.ExtendedProperties;
-			WriteLine($"Properties (size {props.Count}):");
-			foreach (var a in props)
-				if(a is DictionaryEntry)
-					WriteLine($"  <{((DictionaryEntry)a).Key}> : <{((DictionaryEntry)a).Value}> ");
 		}
 
 		private static void ManipulateDataRowState() {
