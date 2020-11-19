@@ -71,14 +71,15 @@ namespace DirectoryApp {
 
 		private static void FileInfos(string file) {
 			Console.ForegroundColor = ConsoleColor.Yellow;
-			Console.WriteLine("=> FileInfo");
+			Console.WriteLine($"=> FileInfo <{file}>");
 
 			FileInfo f = new FileInfo(file);
 			using (FileStream fs = f.Create()) {
+				Console.WriteLine($"filestream size (before writebyte) {fs.Length}");
 				fs.WriteByte(0x31);
 				fs.WriteByte(0x32);
 				fs.WriteByte(0x33);
-				Console.WriteLine($"filestream size {fs.Length}");
+				Console.WriteLine($"filestream size (after  writebyte) {fs.Length}");
 			}
 
 			using (FileStream fs = f.Open(FileMode.Append, FileAccess.Write, FileShare.None)) {
@@ -96,8 +97,11 @@ namespace DirectoryApp {
 			}
 
 			using(StreamWriter sw = f.AppendText()) {
+				Console.WriteLine($"stream size (before write) {sw.BaseStream.Length}");
 				sw.Write("789");
-				Console.WriteLine($"tream size {sw.BaseStream.Length}");
+				Console.WriteLine($"stream size (after write) {sw.BaseStream.Length}");
+				sw.Flush();
+				Console.WriteLine($"stream size (after flush) {sw.BaseStream.Length}");
 			}
 		}
 
