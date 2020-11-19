@@ -33,7 +33,7 @@ namespace SimpleDataSet {
 
 		private static void FillDataSet(DataSet s) {
 			WriteLine("-> Fill DataSet");
-
+			#region columns
 			var carIDColumn = new DataColumn("CarID", typeof(int)) {
 				Caption = "Car ID",
 				ReadOnly = true,
@@ -49,9 +49,26 @@ namespace SimpleDataSet {
 			var carPetNameColumn = new DataColumn("PetName", typeof(string)){
 				Caption = "Pet Name"
 			};
+			#endregion
 
+			#region table
 			var inventoryTable = new DataTable("Inventory");
 			inventoryTable.Columns.AddRange(new[] { carIDColumn, carMakeColumn, carColorColumn, carPetNameColumn });
+			#endregion
+
+			#region rows
+			DataRow row = inventoryTable.NewRow();
+			row["Make"] = "BMW";
+			row["Color"] = "Black";
+			row["PetName"] = "Hamlet";
+			inventoryTable.Rows.Add(row);
+
+			row = inventoryTable.NewRow();
+			row["Make"] = "Saab";
+			row["Color"] = "Red";
+			row["PetName"] = "Sea Breeze";
+			inventoryTable.Rows.Add(row);
+			#endregion rows
 		}
 
 		private static void PrintDataSet(DataSet s) {
