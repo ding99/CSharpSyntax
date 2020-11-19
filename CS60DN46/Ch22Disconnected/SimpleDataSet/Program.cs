@@ -54,6 +54,7 @@ namespace SimpleDataSet {
 			#region table
 			var inventoryTable = new DataTable("Inventory");
 			inventoryTable.Columns.AddRange(new[] { carIDColumn, carMakeColumn, carColorColumn, carPetNameColumn });
+			inventoryTable.PrimaryKey = new[] { inventoryTable.Columns[0] };
 			#endregion
 
 			#region rows
@@ -69,6 +70,8 @@ namespace SimpleDataSet {
 			row["PetName"] = "Sea Breeze";
 			inventoryTable.Rows.Add(row);
 			#endregion rows
+
+			s.Tables.Add(inventoryTable);
 		}
 
 		private static void PrintDataSet(DataSet s) {
