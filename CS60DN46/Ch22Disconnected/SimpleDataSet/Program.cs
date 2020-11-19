@@ -49,6 +49,9 @@ namespace SimpleDataSet {
 			var carPetNameColumn = new DataColumn("PetName", typeof(string)){
 				Caption = "Pet Name"
 			};
+
+			var inventoryTable = new DataTable("Inventory");
+			inventoryTable.Columns.AddRange(new[] { carIDColumn, carMakeColumn, carColorColumn, carPetNameColumn });
 		}
 
 		private static void PrintDataSet(DataSet s) {
