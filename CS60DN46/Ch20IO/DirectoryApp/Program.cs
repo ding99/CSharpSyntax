@@ -22,63 +22,70 @@ namespace DirectoryApp {
 
 		private static void FileType(string file) {
 			Console.ForegroundColor = ConsoleColor.DarkYellow;
-			Console.WriteLine("=> File Type");
+			Console.WriteLine($"=> File Type. <{file}>");
 
 			using (FileStream fs = File.Create(file)) {
+				Console.WriteLine($"filestream size (before writebyte) {fs.Length}");
 				fs.WriteByte(0x31);
 				fs.WriteByte(0x32);
 				fs.WriteByte(0x33);
-				Console.WriteLine($"filestream size {fs.Length}");
+				Console.WriteLine($"filestream size (after  writebyte) {fs.Length}");
 			}
 
 			using (FileStream fs = File.Open(file, FileMode.Append, FileAccess.Write, FileShare.None)) {
+				Console.WriteLine($"filestream size (before writebyte) {fs.Length}");
 				fs.WriteByte(0x41);
 				fs.WriteByte(0x42);
 				fs.WriteByte(0x43);
-				Console.WriteLine($"filestream size {fs.Length}");
+				Console.WriteLine($"filestream size (after  writebyte) {fs.Length}");
 			}
 
 			using (FileStream fs = File.OpenWrite(file)) {
+				Console.WriteLine($"filestream size (before writebyte) {fs.Length}");
 				fs.WriteByte(0x61);
 				fs.WriteByte(0x62);
 				fs.WriteByte(0x63);
-				Console.WriteLine($"filestream size {fs.Length}");
+				Console.WriteLine($"filestream size (after  writebyte) {fs.Length}");
 			}
 
 			using (StreamWriter sw = File.AppendText(file)) {
+				Console.WriteLine($"tream size (before write) {sw.BaseStream.Length}");
 				sw.Write("789");
-				Console.WriteLine($"tream size {sw.BaseStream.Length}");
+				Console.WriteLine($"tream size (after write) {sw.BaseStream.Length}");
+				sw.Flush();
+				Console.WriteLine($"tream size (after flush) {sw.BaseStream.Length}");
 			}
 
 			Console.ForegroundColor = ConsoleColor.DarkCyan;
-			var r1 = File.ReadAllBytes(file); Console.Write($"size {r1.Length}:");
-			foreach (var a in r1) Console.Write(" " + a); Console.WriteLine();
-			var r2 = File.ReadAllLines(file); Console.Write(r2.Length);
+			var r1 = File.ReadAllBytes(file); Console.Write($"ReadAllBytes: size {r1.Length}:");
+			foreach (var a in r1) Console.Write($" 0x{a.ToString("x2")}"); Console.WriteLine();
+			var r2 = File.ReadAllLines(file); Console.Write("ReadAllLines: size " +r2.Length);
 			foreach (var a in r2) Console.Write(" " + a); Console.WriteLine();
-			var r3 = File.ReadAllText(file); Console.WriteLine($"<{r3}> (size {r3.Length})");
+			var r3 = File.ReadAllText(file); Console.WriteLine($"ReadAllText : <{r3}> (size {r3.Length})");
 
 			string[] tasks = { "call 01", "call 02", "call 03"};
-			Console.Write($"Orig (size {tasks.Count()}):");
+			Console.Write($"Orig Array   (size {tasks.Count()}):");
 			foreach (var a in tasks) Console.Write($" <{a}>");
 			Console.WriteLine();
 			string newFile = file + "_a.txt";
 			File.WriteAllLines(newFile, tasks);
 			var r = File.ReadAllLines(newFile);
-			Console.Write($"Read (size {r.Count()}):");
+			Console.Write($"ReadAllLines (size {r.Count()}):");
 			foreach (var a in r) Console.Write($" <{a}>");
 			Console.WriteLine();
 		}
 
 		private static void FileInfos(string file) {
 			Console.ForegroundColor = ConsoleColor.Yellow;
-			Console.WriteLine("=> FileInfo");
+			Console.WriteLine($"=> FileInfo <{file}>");
 
 			FileInfo f = new FileInfo(file);
 			using (FileStream fs = f.Create()) {
+				Console.WriteLine($"filestream size (before writebyte) {fs.Length}");
 				fs.WriteByte(0x31);
 				fs.WriteByte(0x32);
 				fs.WriteByte(0x33);
-				Console.WriteLine($"filestream size {fs.Length}");
+				Console.WriteLine($"filestream size (after  writebyte) {fs.Length}");
 			}
 
 			using (FileStream fs = f.Open(FileMode.Append, FileAccess.Write, FileShare.None)) {
@@ -96,8 +103,11 @@ namespace DirectoryApp {
 			}
 
 			using(StreamWriter sw = f.AppendText()) {
+				Console.WriteLine($"stream size (before write) {sw.BaseStream.Length}");
 				sw.Write("789");
-				Console.WriteLine($"tream size {sw.BaseStream.Length}");
+				Console.WriteLine($"stream size (after write) {sw.BaseStream.Length}");
+				sw.Flush();
+				Console.WriteLine($"stream size (after flush) {sw.BaseStream.Length}");
 			}
 		}
 
