@@ -49,7 +49,22 @@ namespace SimpleDataSet {
 						Write($"{t.Rows[row][col]}\t");
 					WriteLine();
 				}
+				WriteLine("-----------------------------------");
+
+				PrintTable(t);
 			}
+		}
+
+		private static void PrintTable(DataTable t) {
+			ForegroundColor = ConsoleColor.DarkYellow;
+
+			DataTableReader reader = t.CreateDataReader();
+			while (reader.Read()) {
+				for (var i = 0; i < reader.FieldCount; i++)
+					Write($"{reader.GetValue(i).ToString().Trim()}\t");
+				WriteLine();
+			}
+			reader.Close();
 		}
 
 		private static void FillDataSet(DataSet s) {
