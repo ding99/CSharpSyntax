@@ -11,10 +11,36 @@ namespace SimpleDataSet {
 	class Program {
 		static void Main() {
 			WriteLine("***** Fun with DataSets *****");
-
+			ManipulateDataRowState();
 			CreateData();
 
 			ResetColor();
+		}
+
+		private static void ManipulateDataRowState() {
+			ForegroundColor = ConsoleColor.Cyan;
+			WriteLine("=> Manipulate DataRowState");
+
+			var temp = new DataTable("Temp");
+			temp.Columns.Add(new DataColumn("TempColumn", typeof(int)));
+
+			var row = temp.NewRow();
+			WriteLine($"After calling NewRow(): {row.RowState}");
+
+			temp.Rows.Add(row);
+			WriteLine($"After calling Rows.Add(): {row.RowState}");
+
+			row["TempColumn"] = 10;
+			WriteLine($"After first assignment: {row.RowState}");
+
+			temp.AcceptChanges();
+			WriteLine($"After calling AcceptChanges: {row.RowState}");
+
+			row["TempColumn"] = 11;
+			WriteLine($"After second assignment: {row.RowState}");
+
+			temp.Rows[0].Delete();
+			WriteLine($"After calling Delete: {row.RowState}");
 		}
 
 		private static void CreateData() {
