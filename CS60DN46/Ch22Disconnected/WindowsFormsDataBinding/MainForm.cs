@@ -13,6 +13,7 @@ namespace WindowsFormsDataBinding {
 
 		List<Car> listCars = null;
 		DataTable inventoryTable = new DataTable();
+		DataView yugosOnlyView;
 
 		public MainForm() {
 			InitializeComponent();
@@ -29,6 +30,7 @@ namespace WindowsFormsDataBinding {
 			};
 
 			CreateDataTable();
+			CreateDataView();
 		}
 
 		void CreateDataTable() {
@@ -50,6 +52,13 @@ namespace WindowsFormsDataBinding {
 			}
 
 			carInventoryGridView.DataSource = inventoryTable;
+		}
+
+		private void CreateDataView() {
+			yugosOnlyView = new DataView(inventoryTable);
+			yugosOnlyView.RowFilter = "Make='Yugo'";
+			dataGridYugosView.DataSource = yugosOnlyView;
+
 		}
 
 		private void btnRemoveCar_Click(object sender, EventArgs e) {

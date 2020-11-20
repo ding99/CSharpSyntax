@@ -33,12 +33,15 @@ namespace WindowsFormsDataBinding {
 			this.btnDisplayMakes = new System.Windows.Forms.Button();
 			this.txtMakeToView = new System.Windows.Forms.TextBox();
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
-			this.txtChangeMake = new System.Windows.Forms.TextBox();
 			this.btnChangeMake = new System.Windows.Forms.Button();
+			this.txtChangeMake = new System.Windows.Forms.TextBox();
+			this.label2 = new System.Windows.Forms.Label();
+			this.dataGridYugosView = new System.Windows.Forms.DataGridView();
 			((System.ComponentModel.ISupportInitialize)(this.carInventoryGridView)).BeginInit();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.groupBox3.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridYugosView)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// carInventoryGridView
@@ -126,13 +129,6 @@ namespace WindowsFormsDataBinding {
 			this.groupBox3.TabStop = false;
 			this.groupBox3.Text = "Change to Yugo";
 			// 
-			// txtChangeMake
-			// 
-			this.txtChangeMake.Location = new System.Drawing.Point(7, 25);
-			this.txtChangeMake.Name = "txtChangeMake";
-			this.txtChangeMake.Size = new System.Drawing.Size(103, 20);
-			this.txtChangeMake.TabIndex = 0;
-			// 
 			// btnChangeMake
 			// 
 			this.btnChangeMake.Location = new System.Drawing.Point(7, 51);
@@ -143,11 +139,38 @@ namespace WindowsFormsDataBinding {
 			this.btnChangeMake.UseVisualStyleBackColor = true;
 			this.btnChangeMake.Click += new System.EventHandler(this.btnChangeMake_Click);
 			// 
+			// txtChangeMake
+			// 
+			this.txtChangeMake.Location = new System.Drawing.Point(7, 25);
+			this.txtChangeMake.Name = "txtChangeMake";
+			this.txtChangeMake.Size = new System.Drawing.Size(103, 20);
+			this.txtChangeMake.TabIndex = 0;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.Location = new System.Drawing.Point(19, 377);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(118, 24);
+			this.label2.TabIndex = 7;
+			this.label2.Text = "Only Yugos";
+			// 
+			// dataGridYugosView
+			// 
+			this.dataGridYugosView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridYugosView.Location = new System.Drawing.Point(12, 407);
+			this.dataGridYugosView.Name = "dataGridYugosView";
+			this.dataGridYugosView.Size = new System.Drawing.Size(463, 145);
+			this.dataGridYugosView.TabIndex = 8;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(488, 374);
+			this.ClientSize = new System.Drawing.Size(488, 577);
+			this.Controls.Add(this.dataGridYugosView);
+			this.Controls.Add(this.label2);
 			this.Controls.Add(this.groupBox3);
 			this.Controls.Add(this.groupBox2);
 			this.Controls.Add(this.groupBox1);
@@ -162,6 +185,7 @@ namespace WindowsFormsDataBinding {
 			this.groupBox2.PerformLayout();
 			this.groupBox3.ResumeLayout(false);
 			this.groupBox3.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridYugosView)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -180,6 +204,8 @@ namespace WindowsFormsDataBinding {
 		private System.Windows.Forms.GroupBox groupBox3;
 		private System.Windows.Forms.Button btnChangeMake;
 		private System.Windows.Forms.TextBox txtChangeMake;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.DataGridView dataGridYugosView;
 	}
 }
 
