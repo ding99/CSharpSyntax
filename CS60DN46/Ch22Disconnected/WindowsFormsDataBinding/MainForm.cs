@@ -25,8 +25,10 @@ namespace WindowsFormsDataBinding {
 				new Car{ Id=5, PetName="Fred", Make="BMW", Color="Green" },
 				new Car{ Id=6, PetName="Sidd", Make="BMW", Color="Black" },
 				new Car{ Id=7, PetName="Mel", Make="Firebird", Color="Red" },
-				new Car{ Id=8, PetName="Sarah", Make="Colt", Color="Black" },
+				new Car{ Id=8, PetName="Sarah", Make="Colt", Color="Black" }
 			};
+
+			CreateDataTable();
 		}
 
 		void CreateDataTable() {

@@ -34,7 +34,7 @@ namespace WindowsFormsDataBinding {
 			this.carInventoryGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.carInventoryGridView.Location = new System.Drawing.Point(12, 51);
 			this.carInventoryGridView.Name = "carInventoryGridView";
-			this.carInventoryGridView.Size = new System.Drawing.Size(572, 140);
+			this.carInventoryGridView.Size = new System.Drawing.Size(464, 233);
 			this.carInventoryGridView.TabIndex = 0;
 			// 
 			// label1
@@ -51,7 +51,7 @@ namespace WindowsFormsDataBinding {
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(596, 303);
+			this.ClientSize = new System.Drawing.Size(488, 296);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.carInventoryGridView);
 			this.Name = "MainForm";
