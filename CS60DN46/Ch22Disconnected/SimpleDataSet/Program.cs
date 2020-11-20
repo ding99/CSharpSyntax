@@ -11,6 +11,7 @@ namespace SimpleDataSet {
 	class Program {
 		static void Main() {
 			WriteLine("***** Fun with DataSets *****");
+
 			ManipulateDataRowState();
 			CreateData();
 
@@ -29,6 +30,22 @@ namespace SimpleDataSet {
 
 			FillDataSet(ds);
 			PrintDataSet(ds);
+			SaveAndLoadAsXml(ds);
+		}
+
+		private static void SaveAndLoadAsXml(DataSet ds) {
+			ForegroundColor = ConsoleColor.DarkCyan;
+			string xmlfile = "carsDataSet.xml";
+			WriteLine($"=> Save and Load xml file. File name <{xmlfile}>");
+
+			WriteLine("- write xml");
+			ds.WriteXml(xmlfile);
+			ds.WriteXmlSchema("carDataSet.xsd");
+
+			ds.Clear();
+
+			WriteLine("- read xml");
+			ds.ReadXml(xmlfile);
 		}
 
 		private static void PrintDataSet(DataSet s) {
