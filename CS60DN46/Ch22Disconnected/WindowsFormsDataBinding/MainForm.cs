@@ -30,7 +30,24 @@ namespace WindowsFormsDataBinding {
 		}
 
 		void CreateDataTable() {
+			var carIDColumn = new DataColumn("Id", typeof(int));
+			var carMakeColumn = new DataColumn("Make", typeof(string));
+			var carColorColumn = new DataColumn("Color", typeof(string));
+			var carPetNameColumn = new DataColumn("PetName", typeof(string)) { Caption = "Pet Name" };
+			inventoryTable.Columns.AddRange(new[] {
+				carIDColumn, carMakeColumn, carColorColumn, carPetNameColumn
+			});
 
+			foreach(var c in listCars) {
+				var newRow = inventoryTable.NewRow();
+				newRow["Id"] = c.Id;
+				newRow["Make"] = c.Make;
+				newRow["Color"] = c.Color;
+				newRow["PetName"] = c.PetName;
+				inventoryTable.Rows.Add(newRow);
+			}
+
+			carInventoryGridView.DataSource = inventoryTable;
 		}
 	}
 }
