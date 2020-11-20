@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +7,7 @@ using System.Threading.Tasks;
 using System.Collections;
 using System.Data;
 using static System.Console;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace SimpleDataSet {
 	class Program {
@@ -31,8 +33,27 @@ namespace SimpleDataSet {
 			FillDataSet(ds);
 			PrintDataSet(ds);
 			SaveAndLoadAsXml(ds);
+			SaveAndLoadAsBinary(ds);
 		}
+		private static void SaveAndLoadAsBinary(DataSet ds){
+			ForegroundColor = ConsoleColor.Blue;
+			string bfile = "BinaryCars.bin";
+			WriteLine($"=> Save and Load binary file. File name <{bfile}>");
 
+			ds.RemotingFormat = SerializationFormat.Binary;
+			var fs = new FileStream(bfile, FileMode.Create);
+			
+			var bFormat = new BinaryFormatter();
+			bFormat.Serialize(fs, ds);
+			fs.Close();
+			
+			ds.Clear();
+			
+			fs = new FileStream(bfile, FileMode.Open);
+			var data = (DataSet)bFormat.Deserialize(fs);
+			fs.Close();
+			PrintDataSet(data);
+		}
 		private static void SaveAndLoadAsXml(DataSet ds) {
 			ForegroundColor = ConsoleColor.DarkCyan;
 			string xmlfile = "carsDataSet.xml";
