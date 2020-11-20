@@ -51,5 +51,14 @@ namespace WindowsFormsDataBinding {
 
 			carInventoryGridView.DataSource = inventoryTable;
 		}
+
+		private void btnRemoveCar_Click(object sender, EventArgs e) {
+			try {
+				DataRow[] rowToDelete = inventoryTable.Select($"Id={int.Parse(txtCarToRemove.Text)}");
+
+				rowToDelete[0].Delete();
+				inventoryTable.AcceptChanges();
+			} catch(Exception ex) { MessageBox.Show(ex.Message); }
+		}
 	}
 }
