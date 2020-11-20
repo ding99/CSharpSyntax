@@ -64,7 +64,7 @@ namespace WindowsFormsDataBinding {
 		private void btnDisplayMakes_Click(object sender, EventArgs e) {
 			string filter = $"Make='{txtMakeToView.Text}'";
 
-			DataRow[] makes = inventoryTable.Select(filter);
+			DataRow[] makes = inventoryTable.Select(filter, "PetName DESC");
 
 			if (makes.Length == 0)
 				MessageBox.Show("Sorry, no cars...", "Selection error!");
