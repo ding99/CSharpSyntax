@@ -60,5 +60,20 @@ namespace WindowsFormsDataBinding {
 				inventoryTable.AcceptChanges();
 			} catch(Exception ex) { MessageBox.Show(ex.Message); }
 		}
+
+		private void btnDisplayMakes_Click(object sender, EventArgs e) {
+			string filter = $"Make='{txtMakeToView.Text}'";
+
+			DataRow[] makes = inventoryTable.Select(filter);
+
+			if (makes.Length == 0)
+				MessageBox.Show("Sorry, no cars...", "Selection error!");
+			else {
+				string strMake = null;
+				for (var i = 0; i < makes.Length; i++)
+					strMake += makes[i]["PetName"] + "\n";
+				MessageBox.Show(strMake, $"We have {txtMakeToView.Text}s named:");
+			}
+		}
 	}
 }
