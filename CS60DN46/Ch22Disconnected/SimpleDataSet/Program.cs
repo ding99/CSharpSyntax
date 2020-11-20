@@ -55,7 +55,9 @@ namespace SimpleDataSet {
 			foreach (DictionaryEntry a in props)
 					WriteLine($"  <{a.Key}> : <{a.Value}> ");
 
+			int n = 1;
 			foreach(DataTable t in s.Tables) {
+				ForegroundColor = ConsoleColor.Yellow;
 				WriteLine($"-- {t.TableName} Table:");
 
 				for (var col = 0; col < t.Columns.Count; col++)
@@ -69,6 +71,7 @@ namespace SimpleDataSet {
 				WriteLine("-----------------------------------");
 
 				PrintTable(t);
+				t.WriteXml("table_" + n++ + ".xml");
 			}
 		}
 
@@ -86,6 +89,8 @@ namespace SimpleDataSet {
 
 		private static void FillDataSet(DataSet s) {
 			WriteLine("-> Fill DataSet");
+
+			#region table 01
 			#region columns
 			var carIDColumn = new DataColumn("CarID", typeof(int)) {
 				Caption = "Car ID",
@@ -125,6 +130,55 @@ namespace SimpleDataSet {
 			#endregion rows
 
 			s.Tables.Add(inventoryTable);
+			#endregion
+
+			#region table 02
+			#region columns
+			var carIDColumn2 = new DataColumn("CarID", typeof(int)) {
+				Caption = "Car2 ID",
+				ReadOnly = true,
+				AllowDBNull = false,
+				Unique = true,
+				AutoIncrement = true,
+				AutoIncrementSeed = 1,
+				AutoIncrementStep = 1
+			};
+
+			var carMakeColumn2 = new DataColumn("Make", typeof(string));
+			var carColorColumn2 = new DataColumn("Color", typeof(string));
+			var carPetNameColumn2 = new DataColumn("PetName", typeof(string)) {
+				Caption = "Pet Name"
+			};
+			#endregion
+
+			#region table
+			var vehicleTable = new DataTable("Vehicle");
+			vehicleTable.Columns.AddRange(new[] { carIDColumn2, carMakeColumn2, carColorColumn2, carPetNameColumn2 });
+			vehicleTable.PrimaryKey = new[] { vehicleTable.Columns[0] };
+			#endregion
+
+			#region rows
+			row = vehicleTable.NewRow();
+			row["Make"] = "Yuhe";
+			row["Color"] = "Green";
+			row["PetName"] = "Fast";
+			vehicleTable.Rows.Add(row);
+
+			row = vehicleTable.NewRow();
+			row["Make"] = "Yamaha";
+			row["Color"] = "Blue";
+			row["PetName"] = "Flying";
+			vehicleTable.Rows.Add(row);
+
+			row = vehicleTable.NewRow();
+			row["Make"] = "Qingqi";
+			row["Color"] = "White";
+			row["PetName"] = "Fish";
+			vehicleTable.Rows.Add(row);
+			#endregion rows
+
+			s.Tables.Add(vehicleTable);
+			#endregion
 		}
 
 		private static void ManipulateDataRowState() {
