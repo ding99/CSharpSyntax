@@ -25,9 +25,10 @@ namespace StringReaderWriterApp {
 				Console.WriteLine("-- Use GetStringBuilder()");
 
 				StringBuilder sb = writer.GetStringBuilder();
-				sb.Insert(0, "Hey!! ");
+				string msg = "(Hey!! )";
+				sb.Insert(6, msg);
 				Console.WriteLine($"-> <{sb.ToString()}>");
-				sb.Remove(0, "Hey!! ".Length);
+				sb.Remove(6, msg.Length);
 				Console.WriteLine($"-> <{sb.ToString()}>");
 
 				Console.ForegroundColor = ConsoleColor.Cyan;
