@@ -75,5 +75,15 @@ namespace WindowsFormsDataBinding {
 				MessageBox.Show(strMake, $"We have {txtMakeToView.Text}s named:");
 			}
 		}
+
+		private void btnChangeMake_Click(object sender, EventArgs e) {
+			string src = txtChangeMake.Text;
+			if (DialogResult.Yes != MessageBox.Show($"Are you sure? {src} are much nicer than Yogos!", "Please Confirm!", MessageBoxButtons.YesNo)) return;
+			string filterStr = $"Make='{src}'";
+
+			DataRow[] makes = inventoryTable.Select(filterStr);
+			for (int i = 0; i < makes.Length; i++)
+				makes[i]["Make"] = "Yugo";
+		}
 	}
 }
