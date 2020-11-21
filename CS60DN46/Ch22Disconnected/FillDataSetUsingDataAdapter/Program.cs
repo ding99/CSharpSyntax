@@ -30,8 +30,28 @@ namespace FillDataSetUsingDataAdapter {
 			PrintDataSet(ds);
 		}
 
-		private static void PrintDataSet(DataSet d) {
+		private static void PrintDataSet(DataSet s) {
+			WriteLine($"DataSet is named : {s.DataSetName}");
 
+			ConsoleColor org = ForegroundColor;
+			ForegroundColor = ConsoleColor.DarkYellow;
+
+			foreach (DictionaryEntry de in s.ExtendedProperties)
+				WriteLine($"Key = {de.Key}, Value = {de.Value}");
+			foreach (DataTable t in s.Tables) {
+				WriteLine($"<> {t.TableName} Table:");
+				for (int col = 0; col < t.Columns.Count; col++)
+					Write($"{t.Columns[col].ColumnName}\t");
+				WriteLine();
+				WriteLine("--------------------------------");
+				for(int row = 0; row < t.Rows.Count; row++) {
+					for (int col = 0; col < t.Columns.Count; col++)
+						Write($"{t.Rows[row][col].ToString().Trim()}\t");
+					WriteLine();
+				}
+			}
+
+			ForegroundColor = org;
 		}
 	}
 }
