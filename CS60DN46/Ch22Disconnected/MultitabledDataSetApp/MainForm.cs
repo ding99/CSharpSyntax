@@ -7,11 +7,50 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data.Common;
+using System.Configuration;
 
 namespace MultitabledDataSetApp {
 	public partial class MainForm : Form {
+		private DataSet _autoLotDs = new DataSet("AutoLot");
+
+		private SqlCommandBuilder _sqlCbInventory;
+		private SqlCommandBuilder _sqlCbCustomers;
+		private SqlCommandBuilder _sqlCbOrders;
+
+		private SqlDataAdapter _invAdapter;
+		private SqlDataAdapter _custAdapter;
+		private SqlDataAdapter _ordAdapter;
+
+		private string _connectionString;
+
 		public MainForm() {
 			InitializeComponent();
+
+			_connectionString = ConfigurationManager.ConnectionStrings["AutoLotSqlProvider"].ConnectionString;
+
+			_invAdapter = new SqlDataAdapter("Select * from Inventory", _connectionString);
+			_custAdapter = new SqlDataAdapter("Select * from Customers", _connectionString);
+			_ordAdapter = new SqlDataAdapter("Select * from Orders", _connectionString);
+
+			_sqlCbInventory = new SqlCommandBuilder(_invAdapter);
+			_sqlCbCustomers = new SqlCommandBuilder(_custAdapter);
+			_sqlCbOrders = new SqlCommandBuilder(_ordAdapter);
+
+			_invAdapter.Fill(_autoLotDs, "Inventory");
+			_custAdapter.Fill(_autoLotDs, "Customers");
+			_ordAdapter.Fill(_autoLotDs, "Orders");
+
+			BuildTableRelationship();
+
+			dataGridViewInventory.DataSource = _autoLotDs.Tables["Inventory"];
+			dataGridViewCustomers.DataSource = _autoLotDs.Tables["Customers"];
+			dataGridViewOrders.DataSource = _autoLotDs.Tables["Orders"];
+		}
+
+		private void BuildTableRelationship() {
+
 		}
 
 		private void btnUpdateDatabase_Click(object sender, EventArgs e) {
