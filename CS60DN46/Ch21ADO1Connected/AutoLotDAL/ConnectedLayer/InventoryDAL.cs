@@ -74,8 +74,7 @@ namespace AutoLotDAL.ConnectedLayer {
 		}
 
 		public void InsertAuto(int id, string color, string make, string petName) {
-			string sql = "Insert Into Inventory" + "(Make, Color, PetName) Values" +
-				"(@Make, @Color, @PetName)";
+			string sql = "Insert Into Inventory" + "(Make, Color, PetName) Values" + "(@Make, @Color, @PetName)";
 
 			using(SqlCommand command = new SqlCommand(sql, _sqlConnection)) {
 				SqlParameter parameter = new SqlParameter {
