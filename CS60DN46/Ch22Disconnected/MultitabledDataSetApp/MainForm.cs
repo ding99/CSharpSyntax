@@ -64,5 +64,30 @@ namespace MultitabledDataSetApp {
 				_ordAdapter.Update(_autoLotDs, "Orders");
 			} catch(Exception ex) { MessageBox.Show(ex.Message);  }
 		}
+
+		private void btnGetOrderInfo_Click(object sender, EventArgs e) {
+			string strOrderInfo = string.Empty;
+
+			int custID = int.Parse(txtCustID.Text);
+
+			//based on custID, get the correct row in Customers table.
+			var drsCust = _autoLotDs.Tables["Customers"].Select($"CustID={custID}");
+			strOrderInfo += $"Customer {drsCust[0]["CustID"]} {drsCust[0]["FirstName"].ToString().Trim()} { drsCust[0]["LastName"].ToString().Trim()}\n";
+
+			var drsOrder = drsCust[0].GetChildRows(_autoLotDs.Relations["CustomerOrder"]);
+
+			foreach(DataRow order in drsOrder) {
+				strOrderInfo += $"------\nOrder Number: {order["OrderID"]}\n";
+
+				DataRow[] drsInv = order.GetParentRows(_autoLotDs.Relations["InventoryOrder"]);
+
+				DataRow car = drsInv[0];
+				strOrderInfo += $"Make: {car["Make"]}\n";
+				strOrderInfo += $"Color: {car["Color"]}\n";
+				strOrderInfo += $"Pet Name: {car["PetName"]}\n";
+			}
+
+			MessageBox.Show(strOrderInfo, "Order Details");
+		}
 	}
 }
