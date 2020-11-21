@@ -58,7 +58,11 @@ namespace MultitabledDataSetApp {
 		}
 
 		private void btnUpdateDatabase_Click(object sender, EventArgs e) {
-
+			try {
+				_invAdapter.Update(_autoLotDs, "Inventory");
+				_custAdapter.Update(_autoLotDs, "Customers");
+				_ordAdapter.Update(_autoLotDs, "Orders");
+			} catch(Exception ex) { MessageBox.Show(ex.Message);  }
 		}
 	}
 }

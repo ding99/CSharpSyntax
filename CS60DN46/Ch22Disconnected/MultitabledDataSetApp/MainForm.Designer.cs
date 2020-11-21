@@ -51,14 +51,14 @@ namespace MultitabledDataSetApp {
 			this.dataGridViewInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridViewInventory.Location = new System.Drawing.Point(12, 25);
 			this.dataGridViewInventory.Name = "dataGridViewInventory";
-			this.dataGridViewInventory.Size = new System.Drawing.Size(458, 119);
+			this.dataGridViewInventory.Size = new System.Drawing.Size(473, 171);
 			this.dataGridViewInventory.TabIndex = 1;
 			// 
 			// label2
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(12, 152);
+			this.label2.Location = new System.Drawing.Point(9, 199);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(134, 16);
 			this.label2.TabIndex = 2;
@@ -67,16 +67,16 @@ namespace MultitabledDataSetApp {
 			// dataGridViewCustomers
 			// 
 			this.dataGridViewCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridViewCustomers.Location = new System.Drawing.Point(15, 174);
+			this.dataGridViewCustomers.Location = new System.Drawing.Point(15, 218);
 			this.dataGridViewCustomers.Name = "dataGridViewCustomers";
-			this.dataGridViewCustomers.Size = new System.Drawing.Size(455, 101);
+			this.dataGridViewCustomers.Size = new System.Drawing.Size(470, 112);
 			this.dataGridViewCustomers.TabIndex = 3;
 			// 
 			// label3
 			// 
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(12, 282);
+			this.label3.Location = new System.Drawing.Point(12, 333);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(108, 16);
 			this.label3.TabIndex = 4;
@@ -85,14 +85,14 @@ namespace MultitabledDataSetApp {
 			// dataGridViewOrders
 			// 
 			this.dataGridViewOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridViewOrders.Location = new System.Drawing.Point(12, 304);
+			this.dataGridViewOrders.Location = new System.Drawing.Point(12, 352);
 			this.dataGridViewOrders.Name = "dataGridViewOrders";
-			this.dataGridViewOrders.Size = new System.Drawing.Size(458, 105);
+			this.dataGridViewOrders.Size = new System.Drawing.Size(473, 112);
 			this.dataGridViewOrders.TabIndex = 5;
 			// 
 			// btnUpdateDatabase
 			// 
-			this.btnUpdateDatabase.Location = new System.Drawing.Point(325, 415);
+			this.btnUpdateDatabase.Location = new System.Drawing.Point(340, 470);
 			this.btnUpdateDatabase.Name = "btnUpdateDatabase";
 			this.btnUpdateDatabase.Size = new System.Drawing.Size(145, 27);
 			this.btnUpdateDatabase.TabIndex = 6;
@@ -104,7 +104,7 @@ namespace MultitabledDataSetApp {
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(484, 461);
+			this.ClientSize = new System.Drawing.Size(495, 503);
 			this.Controls.Add(this.btnUpdateDatabase);
 			this.Controls.Add(this.dataGridViewOrders);
 			this.Controls.Add(this.label3);
