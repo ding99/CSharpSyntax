@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using System.Collections;
+using System.Data.Common;
 using static System.Console;
 
 namespace FillDataSetUsingDataAdapter {
@@ -24,6 +25,10 @@ namespace FillDataSetUsingDataAdapter {
 			DataSet ds = new DataSet("AutoLot");
 
 			SqlDataAdapter adapter = new SqlDataAdapter("Select * From Inventory", connectionString);
+
+			DataTableMapping mapping = adapter.TableMappings.Add("Inventory", "Current Inventory");
+			mapping.ColumnMappings.Add("CarId", "Car Id");
+			mapping.ColumnMappings.Add("PetName", "Name of Car");
 
 			WriteLine($"The number of rows is {adapter.Fill(ds, "Inventory")}.");
 
