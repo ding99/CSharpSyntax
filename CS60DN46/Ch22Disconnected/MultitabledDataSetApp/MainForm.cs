@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Data.SqlClient;
-using System.Data.Common;
 using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace MultitabledDataSetApp {
 	public partial class MainForm : Form {
@@ -63,6 +56,31 @@ namespace MultitabledDataSetApp {
 				_custAdapter.Update(_autoLotDs, "Customers");
 				_ordAdapter.Update(_autoLotDs, "Orders");
 			} catch(Exception ex) { MessageBox.Show(ex.Message);  }
+		}
+
+		private void btnGetOrderInfo_Click(object sender, EventArgs e) {
+			string strOrderInfo = string.Empty;
+
+			int custID = int.Parse(txtCustID.Text);
+
+			//based on custID, get the correct row in Customers table.
+			var drsCust = _autoLotDs.Tables["Customers"].Select($"CustID={custID}");
+			strOrderInfo += $"Customer {drsCust[0]["CustID"]} {drsCust[0]["FirstName"].ToString().Trim()} { drsCust[0]["LastName"].ToString().Trim()}\n";
+
+			var drsOrder = drsCust[0].GetChildRows(_autoLotDs.Relations["CustomerOrder"]);
+
+			foreach(DataRow order in drsOrder) {
+				strOrderInfo += $"------\nOrder Number: {order["OrderID"]}\n";
+
+				DataRow[] drsInv = order.GetParentRows(_autoLotDs.Relations["InventoryOrder"]);
+
+				DataRow car = drsInv[0];
+				strOrderInfo += $"Make: {car["Make"]}\n";
+				strOrderInfo += $"Color: {car["Color"]}\n";
+				strOrderInfo += $"Pet Name: {car["PetName"]}\n";
+			}
+
+			MessageBox.Show(strOrderInfo, "Order Details");
 		}
 	}
 }
