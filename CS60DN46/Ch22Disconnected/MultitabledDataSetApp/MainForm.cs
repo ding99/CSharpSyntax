@@ -50,7 +50,11 @@ namespace MultitabledDataSetApp {
 		}
 
 		private void BuildTableRelationship() {
+			DataRelation dr = new DataRelation("CustomerOrder", _autoLotDs.Tables["Customers"].Columns["CustID"], _autoLotDs.Tables["Orders"].Columns["CustID"]);
+			_autoLotDs.Relations.Add(dr);
 
+			dr = new DataRelation("InventoryOrder", _autoLotDs.Tables["Inventory"].Columns["CarID"], _autoLotDs.Tables["Orders"].Columns["CarID"]);
+			_autoLotDs.Relations.Add(dr);
 		}
 
 		private void btnUpdateDatabase_Click(object sender, EventArgs e) {
