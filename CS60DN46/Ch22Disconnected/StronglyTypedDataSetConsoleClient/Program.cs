@@ -7,18 +7,43 @@ namespace StronglyTypedDataSetConsoleClient {
 	class Program {
 		static void Main() {
 			WriteLine("***** Strongly Typed DataSets *****");
-			UseLib();
+			ShowTable();
+			AddRows();
 			ResetColor();
 		}
 
-		private static void UseLib() {
-			ForegroundColor = ConsoleColor.Yellow;
-			WriteLine("=> Use AutoLogDAL library version 3");
+		private static void AddRows() {
+			ForegroundColor = ConsoleColor.Cyan;
+			WriteLine("=> Add Two Rows Using AutoLogDAL library version 3");
 
 			var table = new AutoLotDataSet.InventoryDataTable();
-
 			var adapter = new InventoryTableAdapter();
+			adapter.Fill(table);
 
+			AddRecords(table, adapter);
+			table.Clear();
+			adapter.Fill(table);
+			PrintInventory(table);
+		}
+
+		private static void AddRecords(AutoLotDataSet.InventoryDataTable table, InventoryTableAdapter adapter) {
+			AutoLotDataSet.InventoryRow newRow = table.NewInventoryRow();
+			newRow.Color = "Purple";
+			newRow.Make = "BMW";
+			newRow.PetName = "Saku";
+			table.AddInventoryRow(newRow);
+
+			table.AddInventoryRow("Yugo", "Green", "Zippy");
+
+			adapter.Update(table);
+		}
+
+		private static void ShowTable() {
+			ForegroundColor = ConsoleColor.Yellow;
+			WriteLine("=> Diaplay Inventory Data Using AutoLogDAL library version 3");
+
+			var table = new AutoLotDataSet.InventoryDataTable();
+			var adapter = new InventoryTableAdapter();
 			adapter.Fill(table);
 
 			PrintInventory(table);
