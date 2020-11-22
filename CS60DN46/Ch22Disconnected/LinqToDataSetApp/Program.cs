@@ -27,6 +27,24 @@ namespace LinqToDataSetApp {
 			PrintAllCarIDs(data);
 			ShowBalckCars(data);
 			ShowBlackSafety(data);
+
+			BuildDataTableFromQuery(data);
+		}
+
+		private static void BuildDataTableFromQuery(DataTable data) {
+			ForegroundColor = ConsoleColor.DarkCyan;
+
+			var cars = from car in data.AsEnumerable()
+					   where car.Field<int>("CarID") > 5
+					   select car;
+
+			DataTable newTable = cars.CopyToDataTable();
+
+			for(int row = 0; row < newTable.Rows.Count; row++) {
+				for (int col = 0; col < newTable.Columns.Count; col++)
+					Write($"{newTable.Rows[row][col].ToString().Trim()}\t");
+				WriteLine();
+			}
 		}
 
 		private static void ShowBlackSafety(DataTable data) {
