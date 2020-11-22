@@ -29,8 +29,10 @@ namespace LinqToDataSetApp {
 
 		private static void PrintAllCarIDs(DataTable data) {
 			EnumerableRowCollection enumData = data.AsEnumerable();
+			Write($"Car IDs:");
 			foreach (DataRow r in enumData)
-				WriteLine($"Car ID = {r["CarID"]}");
+				Write($" {r["CarID"]}");
+			WriteLine();
 		}
 	}
 }
