@@ -528,6 +528,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryDALDisconnectedGUI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultitabledDataSetApp", "CS60DN46\Ch22Disconnected\MultitabledDataSetApp\MultitabledDataSetApp.csproj", "{64BDCFF1-FBF3-44B7-A631-B069F3B28CF7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridViewDataDesigner", "CS60DN46\Ch22Disconnected\DataGridViewDataDesigner\DataGridViewDataDesigner.csproj", "{8A91B030-4488-42BE-97C2-33C196753C8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StronglyTypedDataSetConsoleClient", "CS60DN46\Ch22Disconnected\StronglyTypedDataSetConsoleClient\StronglyTypedDataSetConsoleClient.csproj", "{31A8B438-D401-4729-B39B-94085DB43158}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -3892,6 +3896,38 @@ Global
 		{64BDCFF1-FBF3-44B7-A631-B069F3B28CF7}.Release|x64.Build.0 = Release|Any CPU
 		{64BDCFF1-FBF3-44B7-A631-B069F3B28CF7}.Release|x86.ActiveCfg = Release|Any CPU
 		{64BDCFF1-FBF3-44B7-A631-B069F3B28CF7}.Release|x86.Build.0 = Release|Any CPU
+		{8A91B030-4488-42BE-97C2-33C196753C8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A91B030-4488-42BE-97C2-33C196753C8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A91B030-4488-42BE-97C2-33C196753C8C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{8A91B030-4488-42BE-97C2-33C196753C8C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{8A91B030-4488-42BE-97C2-33C196753C8C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8A91B030-4488-42BE-97C2-33C196753C8C}.Debug|x64.Build.0 = Debug|Any CPU
+		{8A91B030-4488-42BE-97C2-33C196753C8C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8A91B030-4488-42BE-97C2-33C196753C8C}.Debug|x86.Build.0 = Debug|Any CPU
+		{8A91B030-4488-42BE-97C2-33C196753C8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A91B030-4488-42BE-97C2-33C196753C8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A91B030-4488-42BE-97C2-33C196753C8C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{8A91B030-4488-42BE-97C2-33C196753C8C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{8A91B030-4488-42BE-97C2-33C196753C8C}.Release|x64.ActiveCfg = Release|Any CPU
+		{8A91B030-4488-42BE-97C2-33C196753C8C}.Release|x64.Build.0 = Release|Any CPU
+		{8A91B030-4488-42BE-97C2-33C196753C8C}.Release|x86.ActiveCfg = Release|Any CPU
+		{8A91B030-4488-42BE-97C2-33C196753C8C}.Release|x86.Build.0 = Release|Any CPU
+		{31A8B438-D401-4729-B39B-94085DB43158}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31A8B438-D401-4729-B39B-94085DB43158}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31A8B438-D401-4729-B39B-94085DB43158}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{31A8B438-D401-4729-B39B-94085DB43158}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{31A8B438-D401-4729-B39B-94085DB43158}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{31A8B438-D401-4729-B39B-94085DB43158}.Debug|x64.Build.0 = Debug|Any CPU
+		{31A8B438-D401-4729-B39B-94085DB43158}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{31A8B438-D401-4729-B39B-94085DB43158}.Debug|x86.Build.0 = Debug|Any CPU
+		{31A8B438-D401-4729-B39B-94085DB43158}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31A8B438-D401-4729-B39B-94085DB43158}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31A8B438-D401-4729-B39B-94085DB43158}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{31A8B438-D401-4729-B39B-94085DB43158}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{31A8B438-D401-4729-B39B-94085DB43158}.Release|x64.ActiveCfg = Release|Any CPU
+		{31A8B438-D401-4729-B39B-94085DB43158}.Release|x64.Build.0 = Release|Any CPU
+		{31A8B438-D401-4729-B39B-94085DB43158}.Release|x86.ActiveCfg = Release|Any CPU
+		{31A8B438-D401-4729-B39B-94085DB43158}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -4139,6 +4175,8 @@ Global
 		{96CF70A8-2A6E-4B98-8836-5AE71F516BE5} = {FAACF52E-6AF3-4213-A5AF-C8446C0F42B0}
 		{F0DC9BB8-97B0-4A01-A69F-1805D52257EF} = {FAACF52E-6AF3-4213-A5AF-C8446C0F42B0}
 		{64BDCFF1-FBF3-44B7-A631-B069F3B28CF7} = {FAACF52E-6AF3-4213-A5AF-C8446C0F42B0}
+		{8A91B030-4488-42BE-97C2-33C196753C8C} = {FAACF52E-6AF3-4213-A5AF-C8446C0F42B0}
+		{31A8B438-D401-4729-B39B-94085DB43158} = {FAACF52E-6AF3-4213-A5AF-C8446C0F42B0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7C00B1AC-1A8A-4B50-9373-585713E1AED0}
