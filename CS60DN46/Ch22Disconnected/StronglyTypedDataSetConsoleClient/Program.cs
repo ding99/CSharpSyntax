@@ -9,7 +9,32 @@ namespace StronglyTypedDataSetConsoleClient {
 			WriteLine("***** Strongly Typed DataSets *****");
 			ShowTable();
 			AddRows();
+			DelRows();
 			ResetColor();
+		}
+
+		private static void DelRows() {
+			ForegroundColor = ConsoleColor.DarkYellow;
+			WriteLine("=> Delete Records Using AutoLogDAL library");
+
+			var table = new AutoLotDataSet.InventoryDataTable();
+			var adapter = new InventoryTableAdapter();
+			adapter.Fill(table);
+
+			DelRecords(table, adapter);
+			table.Clear();
+			adapter.Fill(table);
+			PrintInventory(table);
+		}
+
+		private static void DelRecords(AutoLotDataSet.InventoryDataTable table, InventoryTableAdapter adapter) {
+			try {
+				AutoLotDataSet.InventoryRow row = table.FindByCarId(14);
+				adapter.Delete(row.CarId, row.Make, row.Color, row.PetName);
+				row = table.FindByCarId(13);
+				adapter.Delete(row.CarId, row.Make, row.Color, row.PetName);
+			}
+			catch (Exception ex) { WriteLine(ex.Message); }
 		}
 
 		private static void AddRows() {
