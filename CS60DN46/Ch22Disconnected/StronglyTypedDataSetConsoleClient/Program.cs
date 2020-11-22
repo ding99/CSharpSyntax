@@ -7,10 +7,26 @@ namespace StronglyTypedDataSetConsoleClient {
 	class Program {
 		static void Main() {
 			WriteLine("***** Strongly Typed DataSets *****");
+			
 			ShowTable();
 			AddRows();
 			DelRows();
+			CallStoredProc();
+
 			ResetColor();
+		}
+
+		private static void CallStoredProc() {
+			ForegroundColor = ConsoleColor.DarkCyan;
+			WriteLine("=> Call Stored Procedure");
+			try {
+				var adapter = new QueriesTableAdapter();
+				Write("Enter ID of car to look up: ");
+				string id = ReadLine() ?? "0";
+				string carName = "";
+				adapter.GetPetName(int.Parse(id), ref carName);
+				WriteLine($"CarID {id} has the name of {carName}");
+			} catch(Exception ex) { WriteLine(ex.Message); }
 		}
 
 		private static void DelRows() {
