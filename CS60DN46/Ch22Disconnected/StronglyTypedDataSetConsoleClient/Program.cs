@@ -29,12 +29,28 @@ namespace StronglyTypedDataSetConsoleClient {
 
 		private static void DelRecords(AutoLotDataSet.InventoryDataTable table, InventoryTableAdapter adapter) {
 			try {
-				AutoLotDataSet.InventoryRow row = table.FindByCarId(14);
-				adapter.Delete(row.CarId, row.Make, row.Color, row.PetName);
-				row = table.FindByCarId(13);
-				adapter.Delete(row.CarId, row.Make, row.Color, row.PetName);
+
+				var rows = table.Rows;
+				Write($"rows (size {rows.Count}):");
+				foreach (AutoLotDataSet.InventoryRow r in rows)
+					Write(" " + r.CarId);
+				WriteLine();
+
+				if(rows.Count > 1) {
+					RemoveRow(table, adapter, 2);
+					RemoveRow(table, adapter, 1);
+				}
 			}
 			catch (Exception ex) { WriteLine(ex.Message); }
+		}
+
+		private static void RemoveRow(AutoLotDataSet.InventoryDataTable table, InventoryTableAdapter adapter, int n) {
+			var rows = table.Rows;
+			if ((n = ((AutoLotDataSet.InventoryRow)rows[rows.Count - n]).CarId) > 12) {
+				WriteLine($"- remove row with CarId {n}");
+				AutoLotDataSet.InventoryRow row = table.FindByCarId(n);
+				adapter.Delete(row.CarId, row.Make, row.Color, row.PetName);
+			}
 		}
 
 		private static void AddRows() {
