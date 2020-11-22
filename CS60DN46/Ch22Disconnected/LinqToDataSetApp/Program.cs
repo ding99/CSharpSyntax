@@ -26,20 +26,42 @@ namespace LinqToDataSetApp {
 
 			PrintAllCarIDs(data);
 			ShowBalckCars(data);
+			ShowBlackSafety(data);
+		}
+
+		private static void ShowBlackSafety(DataTable data) {
+			ForegroundColor = ConsoleColor.DarkYellow;
+
+			var cars = from car in data.AsEnumerable()
+					   where car.Field<string>("Color") == "Black"
+					   select new {
+						   ID = car.Field<int>("CarID"),
+						   Make = car.Field<string>("Make")
+					   };
+
+			WriteLine($"Here are the black cars (size {cars.Count()}) :");
+			foreach (var item in cars)
+				WriteLine($"  CarID = {item.ID} is {item.Make}");
 		}
 
 		private static void ShowBalckCars(DataTable data) {
 			ForegroundColor = ConsoleColor.Cyan;
 
-			var cars = from car in data.AsEnumerable() where (string)car["Color"] == "Black" select new { ID = (int)car["CarID"], Make = (string)car["Make"] };
-			WriteLine($"Here are the black cars we have in stock (size {cars.Count()}) :");
+			var cars = from car in data.AsEnumerable()
+					   where (string)car["Color"] == "Black"
+					   select new {
+						   ID = (int)car["CarID"],
+						   Make = (string)car["Make"]
+					   };
+
+			WriteLine($"Here are the black cars (size {cars.Count()}) :");
 			foreach (var item in cars)
-				WriteLine($"CarID = {item.ID} is {item.Make}");
+				WriteLine($"  CarID = {item.ID} is {item.Make}");
 		}
 
 		private static void PrintAllCarIDs(DataTable data) {
 			EnumerableRowCollection enumData = data.AsEnumerable();
-			Write($"All Cars with IDs:");
+			Write($"All Cars (IDs):");
 			foreach (DataRow r in enumData)
 				Write($" {r["CarID"]}");
 			WriteLine();
