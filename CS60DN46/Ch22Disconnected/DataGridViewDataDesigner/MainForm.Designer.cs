@@ -26,17 +26,17 @@ namespace DataGridViewDataDesigner {
 		private void InitializeComponent() {
 			this.components = new System.ComponentModel.Container();
 			this.inventoryDataGridView = new System.Windows.Forms.DataGridView();
-			this.button1 = new System.Windows.Forms.Button();
-			this.inventoryDataSet = new DataGridViewDataDesigner.InventoryDataSet();
-			this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.inventoryTableAdapter = new DataGridViewDataDesigner.InventoryDataSetTableAdapters.InventoryTableAdapter();
+			this.btnUpdateInventory = new System.Windows.Forms.Button();
 			this.carIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.makeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.colorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.petNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.inventoryDataSet = new DataGridViewDataDesigner.InventoryDataSet();
+			this.inventoryTableAdapter = new DataGridViewDataDesigner.InventoryDataSetTableAdapters.InventoryTableAdapter();
 			((System.ComponentModel.ISupportInitialize)(this.inventoryDataGridView)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.inventoryDataSet)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.inventoryDataSet)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// inventoryDataGridView
@@ -49,33 +49,20 @@ namespace DataGridViewDataDesigner {
             this.colorDataGridViewTextBoxColumn,
             this.petNameDataGridViewTextBoxColumn});
 			this.inventoryDataGridView.DataSource = this.inventoryBindingSource;
-			this.inventoryDataGridView.Location = new System.Drawing.Point(9, 35);
+			this.inventoryDataGridView.Location = new System.Drawing.Point(12, 49);
 			this.inventoryDataGridView.Name = "inventoryDataGridView";
-			this.inventoryDataGridView.Size = new System.Drawing.Size(441, 289);
+			this.inventoryDataGridView.Size = new System.Drawing.Size(445, 288);
 			this.inventoryDataGridView.TabIndex = 0;
 			// 
-			// button1
+			// btnUpdateInventory
 			// 
-			this.button1.Location = new System.Drawing.Point(295, 341);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(159, 26);
-			this.button1.TabIndex = 1;
-			this.button1.Text = "Update";
-			this.button1.UseVisualStyleBackColor = true;
-			// 
-			// inventoryDataSet
-			// 
-			this.inventoryDataSet.DataSetName = "InventoryDataSet";
-			this.inventoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-			// 
-			// inventoryBindingSource
-			// 
-			this.inventoryBindingSource.DataMember = "Inventory";
-			this.inventoryBindingSource.DataSource = this.inventoryDataSet;
-			// 
-			// inventoryTableAdapter
-			// 
-			this.inventoryTableAdapter.ClearBeforeFill = true;
+			this.btnUpdateInventory.Location = new System.Drawing.Point(286, 343);
+			this.btnUpdateInventory.Name = "btnUpdateInventory";
+			this.btnUpdateInventory.Size = new System.Drawing.Size(171, 27);
+			this.btnUpdateInventory.TabIndex = 1;
+			this.btnUpdateInventory.Text = "Update";
+			this.btnUpdateInventory.UseVisualStyleBackColor = true;
+			this.btnUpdateInventory.Click += new System.EventHandler(this.btnUpdateInventory_Click);
 			// 
 			// carIdDataGridViewTextBoxColumn
 			// 
@@ -102,19 +89,33 @@ namespace DataGridViewDataDesigner {
 			this.petNameDataGridViewTextBoxColumn.HeaderText = "PetName";
 			this.petNameDataGridViewTextBoxColumn.Name = "petNameDataGridViewTextBoxColumn";
 			// 
+			// inventoryBindingSource
+			// 
+			this.inventoryBindingSource.DataMember = "Inventory";
+			this.inventoryBindingSource.DataSource = this.inventoryDataSet;
+			// 
+			// inventoryDataSet
+			// 
+			this.inventoryDataSet.DataSetName = "InventoryDataSet";
+			this.inventoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			// 
+			// inventoryTableAdapter
+			// 
+			this.inventoryTableAdapter.ClearBeforeFill = true;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(462, 382);
-			this.Controls.Add(this.button1);
+			this.ClientSize = new System.Drawing.Size(468, 385);
+			this.Controls.Add(this.btnUpdateInventory);
 			this.Controls.Add(this.inventoryDataGridView);
 			this.Name = "MainForm";
-			this.Text = "Windows Forms Data Wizerds";
+			this.Text = "Windows Forms Data Wizards";
 			this.Load += new System.EventHandler(this.MainForm_Load);
 			((System.ComponentModel.ISupportInitialize)(this.inventoryDataGridView)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.inventoryDataSet)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.inventoryDataSet)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -122,7 +123,7 @@ namespace DataGridViewDataDesigner {
 		#endregion
 
 		private System.Windows.Forms.DataGridView inventoryDataGridView;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button btnUpdateInventory;
 		private InventoryDataSet inventoryDataSet;
 		private System.Windows.Forms.BindingSource inventoryBindingSource;
 		private InventoryDataSetTableAdapters.InventoryTableAdapter inventoryTableAdapter;
