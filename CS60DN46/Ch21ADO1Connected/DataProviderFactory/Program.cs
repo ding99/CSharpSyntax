@@ -36,7 +36,7 @@ namespace DataProviderFactory {
 
 				var sqlConnection = connection as System.Data.SqlClient.SqlConnection;
 				if (sqlConnection != null)
-					WriteLine($"Sql Connnection version is {sqlConnection.ServerVersion}");
+					WriteLine($"Sql Connnection version is <{sqlConnection.ServerVersion}>");
 				else WriteLine("This is not a Sql Connection");
 
 				DbCommand command = factory.CreateCommand();
@@ -44,16 +44,18 @@ namespace DataProviderFactory {
 					ShowError("Command");
 					return;
 				}
-				WriteLine($"Your command object is a {command.GetType().Name}");
+				WriteLine($"Your command object is a <{command.GetType().Name}>");
 				command.Connection = connection;
 				command.CommandText = "Select * From Inventory";
+				WriteLine($"Command Text is <{command.CommandText}>");
 
 				using(DbDataReader reader = command.ExecuteReader()) {
-					WriteLine($"Your data reader object is a {reader.GetType().Name}");
+					WriteLine($"Your data reader object is a <{reader.GetType().Name}>");
 
+					ForegroundColor = ConsoleColor.DarkYellow;
 					WriteLine("----- Current Inventory -----");
 					while (reader.Read())
-						WriteLine($"-> Car #{reader["CarId"]} is a {reader["Make"]} with a color {reader["Color"]}");
+						WriteLine($"Car #{reader["CarId"]} is a {reader["Make"]} with a color {reader["Color"]}");
 				}
 			}
 		}
