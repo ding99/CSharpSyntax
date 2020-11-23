@@ -100,6 +100,8 @@ namespace AutoLotDataReader {
 			WriteLine($"Database Name    : {connection.Database}");
 			WriteLine($"Timeout          : {connection.ConnectionTimeout}");
 			WriteLine($"Connection State : {connection.State}");
+			if(connection.State == System.Data.ConnectionState.Open)
+				WriteLine($"Server Version   : {connection.ServerVersion}");
 		}
 	}
 }
