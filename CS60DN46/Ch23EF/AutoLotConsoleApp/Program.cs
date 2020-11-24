@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 namespace AutoLotConsoleApp {
 	class Program {
 		static void Main() {
+			Console.WriteLine("***** Code First from an Existing DB *****");
+			Console.ResetColor();
 		}
 	}
 }
