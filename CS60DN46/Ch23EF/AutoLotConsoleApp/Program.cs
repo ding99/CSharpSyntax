@@ -11,8 +11,18 @@ namespace AutoLotConsoleApp {
 			Console.WriteLine("***** Code First from an Existing DB *****");
 
 			Console.WriteLine($"new car id {AddNewRecord()}");
+			PrintAllInventory();
 
 			Console.ResetColor();
+		}
+
+		private static void PrintAllInventory() {
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine("=> Print All Inventory");
+
+			using(var context = new AutoLotEntities())
+				foreach(Car c in context.cars)
+					Console.WriteLine(c);
 		}
 
 		private static int AddNewRecord() {
