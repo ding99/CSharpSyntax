@@ -1,7 +1,4 @@
-using System;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
-using System.Linq;
 
 namespace AutoLotConsoleApp.EF {
 	public partial class AutoLotEntities : DbContext {
@@ -11,7 +8,7 @@ namespace AutoLotConsoleApp.EF {
 
 		public virtual DbSet<CreditRisk> CreditRisks { get; set; }
 		public virtual DbSet<Customer> Customers { get; set; }
-		public virtual DbSet<Inventory> Inventories { get; set; }
+		public virtual DbSet<Car> cars { get; set; }
 		public virtual DbSet<Order> Orders { get; set; }
 
 		protected override void OnModelCreating(DbModelBuilder modelBuilder) {
@@ -20,9 +17,9 @@ namespace AutoLotConsoleApp.EF {
 				.WithRequired(e => e.Customer)
 				.WillCascadeOnDelete(false);
 
-			modelBuilder.Entity<Inventory>()
+			modelBuilder.Entity<Car>()
 				.HasMany(e => e.Orders)
-				.WithRequired(e => e.Inventory)
+				.WithRequired(e => e.Car)
 				.WillCascadeOnDelete(false);
 		}
 	}
