@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 using AutoLotConsoleApp.EF;
 using static System.Console;
 
@@ -14,8 +15,54 @@ namespace AutoLotConsoleApp {
 			WriteLine($"new car id {AddNewRecord()}");
 			PrintAllInventory();
 			LinqQueries();
+			Navigation();
+			ExplicitLoading();
 
 			ResetColor();
+		}
+
+		private static void ExplicitLoading() {
+			ForegroundColor = ConsoleColor.Blue;
+			WriteLine("-> Explicit loading:");
+
+			using (var context = new AutoLotEntities()) {
+				context.Configuration.LazyLoadingEnabled = false;
+
+				foreach (Car c in context.cars) {
+					context.Entry(c).Collection(x => x.Orders).Load();
+
+					Write($"CarID-{c.CarId}, Count-{c.Orders.Count}");
+					foreach (Order o in c.Orders)
+						Write($" : <OrderID-{o.OrderId}>");
+					WriteLine();
+				}
+			}
+		}
+
+		private static void Navigation() {
+			ForegroundColor = ConsoleColor.Yellow;
+			WriteLine("=> Navigation Properties");
+
+			Write("-> Lazy loading:");
+			int n = 0;
+			using (var context = new AutoLotEntities())
+				foreach (Car c in context.cars) {
+					Write($" {++n}");
+					foreach (Order o in c.Orders)
+						Write($" <{o.OrderId}.{o.Car.CarNickName}.{o.Customer.FirstName} {o.Customer.LastName}>");
+				}
+			WriteLine();
+
+			ForegroundColor = ConsoleColor.DarkYellow;
+			Write("-> Eager Loading:");
+			n = 0;
+			using (var context = new AutoLotEntities())
+				foreach (Car c in context.cars.Include(c => c.Orders)) {
+					Write($" {++n}");
+					foreach (Order o in c.Orders)
+						Write($" <{o.OrderId}.{o.Car.CarNickName}.{o.Customer.FirstName} {o.Customer.LastName}>");
+				}
+			WriteLine();
 		}
 
 		private static void LinqQueries() {
@@ -73,7 +120,7 @@ namespace AutoLotConsoleApp {
 				try {
 					var car = new Car() { Make = "Yugo", Color = "Brown", CarNickName = "Brownie" };
 					context.cars.Add(car);
-					context.SaveChanges();
+					//context.SaveChanges();
 					return car.CarId;
 				}
 				catch (Exception e) {
