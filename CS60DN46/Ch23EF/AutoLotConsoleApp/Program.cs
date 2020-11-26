@@ -13,8 +13,26 @@ namespace AutoLotConsoleApp {
 
 			WriteLine($"new car id {AddNewRecord()}");
 			PrintAllInventory();
+			LinqQueries();
 
 			ResetColor();
+		}
+
+		private static void LinqQueries() {
+			ForegroundColor = ConsoleColor.Green;
+			WriteLine("=> Fun with Linq Queries");
+
+			using (var context = new AutoLotEntities()) {
+				WriteLine("-> Colors Makes");
+				var colorsMakes = from item in context.cars select new { item.Color, item.Make };
+				foreach (var item in colorsMakes)
+					WriteLine(item);
+
+				WriteLine("-> Black cars");
+				var blackCars = from item in context.cars where item.Color == "Black" select item;
+				foreach (var item in blackCars)
+					WriteLine(item);
+			}
 		}
 
 		private static void PrintAllInventory() {
