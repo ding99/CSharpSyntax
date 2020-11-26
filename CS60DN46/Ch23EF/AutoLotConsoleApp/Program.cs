@@ -23,11 +23,20 @@ namespace AutoLotConsoleApp {
 			ForegroundColor = ConsoleColor.Yellow;
 			WriteLine("=> Navigation Properties");
 
-			WriteLine("-> Lazy loading");
-			using (var context = new AutoLotEntities())
+			using (var context = new AutoLotEntities()) {
+				WriteLine("-> Lazy loading");
 				foreach (Car c in context.cars)
 					foreach (Order o in c.Orders)
 						WriteLine($"{o.OrderId} - {o.CarId}({o.Car.CarNickName}) / {o.CustId}({o.Customer.FirstName} {o.Customer.LastName})");
+			}
+
+			using(var context = new AutoLotEntities()) {
+				ForegroundColor = ConsoleColor.DarkYellow;
+				WriteLine("-> Eager Loading");
+				foreach(Car c in context.cars.Include("Orders"))
+					foreach(Order o in c.Orders)
+						WriteLine($"{o.OrderId} - {o.CarId}({o.Car.CarNickName}) / {o.CustId}({o.Customer.FirstName} {o.Customer.LastName})");
+			}
 		}
 
 		private static void LinqQueries() {
@@ -85,7 +94,7 @@ namespace AutoLotConsoleApp {
 				try {
 					var car = new Car() { Make = "Yugo", Color = "Brown", CarNickName = "Brownie" };
 					context.cars.Add(car);
-					context.SaveChanges();
+					//context.SaveChanges();
 					return car.CarId;
 				}
 				catch (Exception e) {
