@@ -28,6 +28,10 @@ namespace AutoLotConsoleApp {
 				ForegroundColor = ConsoleColor.DarkCyan;
 				foreach(Car c in context.cars.SqlQuery("Select CarId,Make,Color,PetName as CarNickName from Inventory where Make=@p0", "BMW"))
 					WriteLine(c);
+
+				ForegroundColor = ConsoleColor.DarkYellow;
+				foreach (Car c in context.cars.Where(c => c.Make == "BMW"))
+					WriteLine(c);
 			}
 		}
 
