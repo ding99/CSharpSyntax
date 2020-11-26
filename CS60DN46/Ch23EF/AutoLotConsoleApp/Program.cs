@@ -4,30 +4,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoLotConsoleApp.EF;
+using static System.Console;
 
 namespace AutoLotConsoleApp {
 	class Program {
 		static void Main() {
-			Console.WriteLine("***** Code First from an Existing DB *****");
+			WriteLine("***** Code First from an Existing DB *****");
 
-			Console.WriteLine($"new car id {AddNewRecord()}");
+			WriteLine($"new car id {AddNewRecord()}");
 			PrintAllInventory();
 
-			Console.ResetColor();
+			ResetColor();
 		}
 
 		private static void PrintAllInventory() {
-			Console.ForegroundColor = ConsoleColor.Cyan;
-			Console.WriteLine("=> Print All Inventory");
+			ForegroundColor = ConsoleColor.Cyan;
+			WriteLine("=> Print All Inventory");
 
-			using(var context = new AutoLotEntities())
+			using(var context = new AutoLotEntities()) {
 				foreach(Car c in context.cars)
-					Console.WriteLine(c);
+					WriteLine(c);
+
+				ForegroundColor = ConsoleColor.DarkCyan;
+				foreach(Car c in context.cars.SqlQuery("Select CarId,Make,Color,PetName as CarNickName from Inventory where Make=@p0", "BMW"))
+					WriteLine(c);
+			}
 		}
 
 		private static int AddNewRecord() {
-			Console.ForegroundColor = ConsoleColor.Yellow;
-			Console.WriteLine("=> Add New Record");
+			ForegroundColor = ConsoleColor.Yellow;
+			WriteLine("=> Add New Record");
 
 			using(var context = new AutoLotEntities()) {
 				try {
@@ -37,7 +43,7 @@ namespace AutoLotConsoleApp {
 					return car.CarId;
 				}
 				catch (Exception e) {
-					Console.WriteLine(e.InnerException.Message);
+					WriteLine(e.InnerException.Message);
 					return 0;
 				}
 			}
