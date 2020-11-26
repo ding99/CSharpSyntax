@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 using AutoLotConsoleApp.EF;
 using static System.Console;
 
@@ -23,20 +24,26 @@ namespace AutoLotConsoleApp {
 			ForegroundColor = ConsoleColor.Yellow;
 			WriteLine("=> Navigation Properties");
 
-			using (var context = new AutoLotEntities()) {
-				WriteLine("-> Lazy loading");
-				foreach (Car c in context.cars)
+			Write("-> Lazy loading:");
+			int n = 0;
+			using (var context = new AutoLotEntities())
+				foreach (Car c in context.cars) {
+					Write($" {++n}");
 					foreach (Order o in c.Orders)
-						WriteLine($"{o.OrderId} - {o.CarId}({o.Car.CarNickName}) / {o.CustId}({o.Customer.FirstName} {o.Customer.LastName})");
-			}
+						Write($" <{o.OrderId}.{o.Car.CarNickName}.{o.Customer.FirstName} {o.Customer.LastName}>");
+				}
+			WriteLine();
 
-			using(var context = new AutoLotEntities()) {
-				ForegroundColor = ConsoleColor.DarkYellow;
-				WriteLine("-> Eager Loading");
-				foreach(Car c in context.cars.Include("Orders"))
-					foreach(Order o in c.Orders)
-						WriteLine($"{o.OrderId} - {o.CarId}({o.Car.CarNickName}) / {o.CustId}({o.Customer.FirstName} {o.Customer.LastName})");
-			}
+			ForegroundColor = ConsoleColor.DarkYellow;
+			Write("-> Eager Loading:");
+			n = 0;
+			using (var context = new AutoLotEntities())
+				foreach (Car c in context.cars.Include(c => c.Orders)) {
+					Write($" {++n}");
+					foreach (Order o in c.Orders)
+						Write($" <{o.OrderId}.{o.Car.CarNickName}.{o.Customer.FirstName} {o.Customer.LastName}>");
+				}
+			WriteLine();
 		}
 
 		private static void LinqQueries() {
