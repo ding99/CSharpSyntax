@@ -16,8 +16,27 @@ namespace AutoLotConsoleApp {
 			PrintAllInventory();
 			LinqQueries();
 			Navigation();
+			ExplicitLoading();
 
 			ResetColor();
+		}
+
+		private static void ExplicitLoading() {
+			ForegroundColor = ConsoleColor.Blue;
+			WriteLine("-> Explicit loading:");
+
+			using (var context = new AutoLotEntities()) {
+				context.Configuration.LazyLoadingEnabled = false;
+
+				foreach (Car c in context.cars) {
+					context.Entry(c).Collection(x => x.Orders).Load();
+
+					Write($"CarID-{c.CarId}, Count-{c.Orders.Count}");
+					foreach (Order o in c.Orders)
+						Write($" : <OrderID-{o.OrderId}>");
+					WriteLine();
+				}
+			}
 		}
 
 		private static void Navigation() {
