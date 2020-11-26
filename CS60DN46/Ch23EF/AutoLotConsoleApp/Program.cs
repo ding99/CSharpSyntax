@@ -32,6 +32,18 @@ namespace AutoLotConsoleApp {
 				var blackCars = from item in context.cars where item.Color == "Black" select item;
 				foreach (var item in blackCars)
 					WriteLine(item);
+
+				ForegroundColor = ConsoleColor.Red;
+				var allData = context.cars.ToArray();
+				WriteLine("-> Colors Makes");
+				var colorsMakes2 = from item in allData select new { item.Color, item.Make };
+				foreach (var item in colorsMakes2)
+					WriteLine("  " + item);
+
+				WriteLine("-> Black cars");
+				var blackCars2 = from item in allData where item.Color == "Black" select item;
+				foreach (var item in blackCars2)
+					WriteLine("  " + item);
 			}
 		}
 
