@@ -14,8 +14,20 @@ namespace AutoLotConsoleApp {
 			WriteLine($"new car id {AddNewRecord()}");
 			PrintAllInventory();
 			LinqQueries();
+			Navigation();
 
 			ResetColor();
+		}
+
+		private static void Navigation() {
+			ForegroundColor = ConsoleColor.Yellow;
+			WriteLine("=> Navigation Properties");
+
+			WriteLine("-> Lazy loading");
+			using (var context = new AutoLotEntities())
+				foreach (Car c in context.cars)
+					foreach (Order o in c.Orders)
+						WriteLine($"{o.OrderId} - {o.CarId}({o.Car.CarNickName}) / {o.CustId}({o.Customer.FirstName} {o.Customer.LastName})");
 		}
 
 		private static void LinqQueries() {
