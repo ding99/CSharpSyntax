@@ -17,8 +17,31 @@ namespace AutoLotConsoleApp {
 			LinqQueries();
 			Navigation();
 			ExplicitLoading();
+			Deleting();
 
 			ResetColor();
+		}
+
+		private static void Deleting() {
+			ForegroundColor = ConsoleColor.Cyan;
+			WriteLine("=> Deleting a Record");
+
+			int maxId = 0;
+			using (var context = new AutoLotEntities())
+				maxId = context.cars.Max(x => x.CarId);
+
+			WriteLine($"max carID : {maxId}");
+			RemoveRecord(maxId);
+		}
+
+		private static void RemoveRecord(int carId) {
+			using (var context = new AutoLotEntities()) {
+				Car carToRemove = context.cars.Find(carId);
+				if(carToRemove != null){
+					context.cars.Remove(carToRemove);
+					context.SaveChanges();
+				}
+			}
 		}
 
 		private static void ExplicitLoading() {
@@ -120,7 +143,7 @@ namespace AutoLotConsoleApp {
 				try {
 					var car = new Car() { Make = "Yugo", Color = "Brown", CarNickName = "Brownie" };
 					context.cars.Add(car);
-					//context.SaveChanges();
+					context.SaveChanges();
 					return car.CarId;
 				}
 				catch (Exception e) {
