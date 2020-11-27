@@ -9,7 +9,7 @@ using System.Data.Entity.Infrastructure;
 using AutoLotDAL.EF;
 
 namespace AutoLotDAL.Repos {
-	public abstract class BaseRepo<T> where T : class, new() {
+	public abstract class BaseRepo<T> : IRepo<T> where T : class, new() {
 		public AutoLotEntities Context { get; } = new AutoLotEntities();
 		protected DbSet<T> Table;
 
@@ -48,5 +48,15 @@ namespace AutoLotDAL.Repos {
 				throw;
 			}
 		}
+
+		public T GetOne(int? id) => Table.Find(id);
+		public Task<T> GetOneAsync(int? id) => Table.FindAsync(id);
+		public List<T> GetAll() => Table.ToList();
+		public Task<List<T>> GetAllAsync() => Table.ToListAsync();
+
+		public List<T> ExecuteQuery(string sql) => Table.SqlQuery(sql).ToList();
+		public Task<List<T>> ExecuteQueryAsync(string sql) => Table.SqlQuery(sql).ToListAsync();
+		public List<T> ExecuteQuery(string sql, object[] sqlParametersObjects) => Table.SqlQuery(sql, sqlParametersObjects).ToList();
+		public Task<List<T>> ExecuteQueryAsync(string sql, object[] sqlParametersObjects) => Table.SqlQuery(sql, sqlParametersObjects).ToListAsync();
 	}
 }
