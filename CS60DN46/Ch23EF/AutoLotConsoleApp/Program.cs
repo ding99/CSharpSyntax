@@ -21,8 +21,39 @@ namespace AutoLotConsoleApp {
 			ExplicitLoading();
 			RemoveRecord(newId);
 			RemoveRecordUasingEntityState();
+			UpdateRecord();
 
 			ResetColor();
+		}
+
+		private static void UpdateRecord() {
+			ForegroundColor = ConsoleColor.Red;
+			WriteLine("=> Delete a record");
+
+			int carId = 0;
+			string color = "Blue", color2 = "Yellow";
+			using (var context = new AutoLotEntities()) {
+				carId = context.cars.Max(x => x.CarId);
+				Car car = context.cars.Find(carId);
+
+				if(car.Color == color) color = color2;
+			}
+
+			UpdateColor(carId, color);
+		}
+
+		private static void UpdateColor(int carId, string color) {
+			WriteLine($"Update the Color to {color} for CarId {carId} ");
+
+			using(var context = new AutoLotEntities()) {
+				Car carToUpdate = context.cars.Find(carId);
+				if(carToUpdate != null) {
+					WriteLine(context.Entry(carToUpdate).State);
+					carToUpdate.Color = color;
+					WriteLine(context.Entry(carToUpdate).State);
+					context.SaveChanges();
+				}
+			}
 		}
 
 		private static void RemoveRecordUasingEntityState() {
