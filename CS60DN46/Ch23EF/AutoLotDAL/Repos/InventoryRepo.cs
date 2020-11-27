@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoLotDAL.EF;
-using AutoLotDAL.Models;
+﻿using AutoLotDAL.Models;
 using System.Data.Entity;
+using System.Threading.Tasks;
 
 namespace AutoLotDAL.Repos {
 	public class InventoryRepo : BaseRepo<Inventory>, IRepo<Inventory> {
