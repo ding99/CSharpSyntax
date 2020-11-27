@@ -39,6 +39,15 @@ namespace AutoLotDAL.Repos {
 			return SaveChangesAsync();
 		}
 
+		public int Delete(T entity) {
+			Context.Entry(entity).State = EntityState.Deleted;
+			return SaveChanges();
+		}
+		public Task<int> DeleteAsync(T entity) {
+			Context.Entry(entity).State = EntityState.Deleted;
+			return SaveChangesAsync();
+		}
+
 		public T GetOne(int? id) => Table.Find(id);
 		public Task<T> GetOneAsync(int? id) => Table.FindAsync(id);
 		public List<T> GetAll() => Table.ToList();
