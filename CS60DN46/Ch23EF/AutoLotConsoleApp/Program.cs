@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AutoLotConsoleApp.EF;
+using System;
 using System.Data.Entity;
-using AutoLotConsoleApp.EF;
+using System.Data.Entity.Infrastructure;
+using System.Linq;
 using static System.Console;
 
 namespace AutoLotConsoleApp {
@@ -12,13 +10,79 @@ namespace AutoLotConsoleApp {
 		static void Main() {
 			WriteLine("***** Code First from an Existing DB *****");
 
-			WriteLine($"new car id {AddNewRecord()}");
+			int newId = AddNewRecord();
+			WriteLine($"new car id {newId}");
 			PrintAllInventory();
 			LinqQueries();
 			Navigation();
 			ExplicitLoading();
+			RemoveRecord(newId);
+			RemoveRecordUasingEntityState();
+			UpdateRecord();
 
 			ResetColor();
+		}
+
+		private static void UpdateRecord() {
+			ForegroundColor = ConsoleColor.Red;
+			WriteLine("=> Delete a record");
+
+			int carId = 0;
+			string color = "Blue", color2 = "Yellow";
+			using (var context = new AutoLotEntities()) {
+				carId = context.cars.Max(x => x.CarId);
+				Car car = context.cars.Find(carId);
+
+				if(car.Color == color) color = color2;
+			}
+
+			UpdateColor(carId, color);
+		}
+
+		private static void UpdateColor(int carId, string color) {
+			WriteLine($"Update the Color to {color} for CarId {carId} ");
+
+			using(var context = new AutoLotEntities()) {
+				Car carToUpdate = context.cars.Find(carId);
+				if(carToUpdate != null) {
+					WriteLine(context.Entry(carToUpdate).State);
+					carToUpdate.Color = color;
+					WriteLine(context.Entry(carToUpdate).State);
+					context.SaveChanges();
+				}
+			}
+		}
+
+		private static void RemoveRecordUasingEntityState() {
+			ForegroundColor = ConsoleColor.DarkCyan;
+			WriteLine($"=> Deleting Record Using Entity State");
+
+			int carId = AddNewRecord();
+			ForegroundColor = ConsoleColor.DarkCyan;
+			WriteLine($"CarID {carId} to delete");
+
+			using(var context = new AutoLotEntities()) {
+				Car carToDelete = new Car() { CarId = carId };
+				context.Entry(carToDelete).State = EntityState.Deleted;
+				try {
+					context.SaveChanges();
+				} catch(DbUpdateConcurrencyException ex) {
+					WriteLine(ex.Message);
+				}
+			}
+		}
+
+		private static void RemoveRecord(int carId) {
+			ForegroundColor = ConsoleColor.Cyan;
+			WriteLine($"=> Deleting Record: {carId}");
+
+			using (var context = new AutoLotEntities()) {
+				Car carToRemove = context.cars.Find(carId);
+				if(carToRemove != null){
+					context.cars.Remove(carToRemove);
+					context.SaveChanges();
+				}
+			}
 		}
 
 		private static void ExplicitLoading() {
@@ -120,7 +184,7 @@ namespace AutoLotConsoleApp {
 				try {
 					var car = new Car() { Make = "Yugo", Color = "Brown", CarNickName = "Brownie" };
 					context.cars.Add(car);
-					//context.SaveChanges();
+					context.SaveChanges();
 					return car.CarId;
 				}
 				catch (Exception e) {
