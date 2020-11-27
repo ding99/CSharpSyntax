@@ -12,29 +12,21 @@ namespace AutoLotConsoleApp {
 		static void Main() {
 			WriteLine("***** Code First from an Existing DB *****");
 
-			WriteLine($"new car id {AddNewRecord()}");
+			int newId = AddNewRecord();
+			WriteLine($"new car id {newId}");
 			PrintAllInventory();
 			LinqQueries();
 			Navigation();
 			ExplicitLoading();
-			Deleting();
+			RemoveRecord(newId);
 
 			ResetColor();
 		}
 
-		private static void Deleting() {
-			ForegroundColor = ConsoleColor.Cyan;
-			WriteLine("=> Deleting a Record");
-
-			int maxId = 0;
-			using (var context = new AutoLotEntities())
-				maxId = context.cars.Max(x => x.CarId);
-
-			WriteLine($"max carID : {maxId}");
-			RemoveRecord(maxId);
-		}
-
 		private static void RemoveRecord(int carId) {
+			ForegroundColor = ConsoleColor.Cyan;
+			WriteLine($"=> Deleting Record: {carId}");
+
 			using (var context = new AutoLotEntities()) {
 				Car carToRemove = context.cars.Find(carId);
 				if(carToRemove != null){
