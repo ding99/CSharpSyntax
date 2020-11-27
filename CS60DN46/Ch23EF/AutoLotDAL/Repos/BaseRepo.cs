@@ -60,16 +60,16 @@ namespace AutoLotDAL.Repos {
 			try {
 				return Context.SaveChanges();
 			}
-			catch (DbUpdateConcurrencyException ex) {
+			catch (DbUpdateConcurrencyException) {
 				throw;
 			}
-			catch (DbUpdateException ex) {
+			catch (DbUpdateException) {
 				throw;
 			}
-			catch (CommitFailedException ex) {
+			catch (CommitFailedException) {
 				throw;
 			}
-			catch (Exception ex) {
+			catch (Exception) {
 				throw;
 			}
 		}
@@ -78,16 +78,16 @@ namespace AutoLotDAL.Repos {
 			try {
 				return await Context.SaveChangesAsync();
 			}
-			catch (DbUpdateConcurrencyException ex) {
+			catch (DbUpdateConcurrencyException) {
 				throw;
 			}
-			catch (DbUpdateException ex) {
+			catch (DbUpdateException) {
 				throw;
 			}
-			catch (CommitFailedException ex) {
+			catch (CommitFailedException) {
 				throw;
 			}
-			catch (Exception ex) {
+			catch (Exception) {
 				throw;
 			}
 		}
