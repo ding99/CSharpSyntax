@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using AutoLotConsoleApp.EF;
 using static System.Console;
 
@@ -19,8 +20,28 @@ namespace AutoLotConsoleApp {
 			Navigation();
 			ExplicitLoading();
 			RemoveRecord(newId);
+			RemoveRecordUasingEntityState();
 
 			ResetColor();
+		}
+
+		private static void RemoveRecordUasingEntityState() {
+			ForegroundColor = ConsoleColor.DarkCyan;
+			WriteLine($"=> Deleting Record Using Entity State");
+
+			int carId = AddNewRecord();
+			ForegroundColor = ConsoleColor.DarkCyan;
+			WriteLine($"CarID {carId} to delete");
+
+			using(var context = new AutoLotEntities()) {
+				Car carToDelete = new Car() { CarId = carId };
+				context.Entry(carToDelete).State = EntityState.Deleted;
+				try {
+					context.SaveChanges();
+				} catch(DbUpdateConcurrencyException ex) {
+					WriteLine(ex.Message);
+				}
+			}
 		}
 
 		private static void RemoveRecord(int carId) {
