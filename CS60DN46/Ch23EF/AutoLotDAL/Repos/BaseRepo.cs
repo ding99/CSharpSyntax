@@ -31,6 +31,23 @@ namespace AutoLotDAL.Repos {
 			}
 		}
 
+		public int Add(T entity) {
+			Table.Add(entity);
+			return SaveChanges();
+		}
+		public Task<int> AddAsync(T entity) {
+			Table.Add(entity);
+			return SaveChangesAsync();
+		}
+		public int AddRange(IList<T> entities) {
+			Table.AddRange(entities);
+			return SaveChanges();
+		}
+		public Task<int> AddRangeAsync(IList<T> entities) {
+			Table.AddRange(entities);
+			return SaveChangesAsync();
+		}
+
 		internal async Task<int> SaveChangesAsync() {
 			try {
 				return await Context.SaveChangesAsync();
