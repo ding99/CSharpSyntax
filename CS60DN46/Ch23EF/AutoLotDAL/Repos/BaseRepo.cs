@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace AutoLotDAL.Repos {
-	public abstract class BaseRepo<T> where T : class, new() {
+	public abstract class BaseRepo<T> : IDisposable where T : class, new() {
 		public AutoLotEntities Context { get; } = new AutoLotEntities();
 		protected DbSet<T> Table;
 
@@ -60,16 +60,16 @@ namespace AutoLotDAL.Repos {
 			try {
 				return Context.SaveChanges();
 			}
-			catch (DbUpdateConcurrencyException ex) {
+			catch (DbUpdateConcurrencyException) {
 				throw;
 			}
-			catch (DbUpdateException ex) {
+			catch (DbUpdateException) {
 				throw;
 			}
-			catch (CommitFailedException ex) {
+			catch (CommitFailedException) {
 				throw;
 			}
-			catch (Exception ex) {
+			catch (Exception) {
 				throw;
 			}
 		}
@@ -78,23 +78,19 @@ namespace AutoLotDAL.Repos {
 			try {
 				return await Context.SaveChangesAsync();
 			}
-			catch (DbUpdateConcurrencyException ex) {
+			catch (DbUpdateConcurrencyException) {
 				throw;
 			}
-			catch (DbUpdateException ex) {
+			catch (DbUpdateException) {
 				throw;
 			}
-			catch (CommitFailedException ex) {
+			catch (CommitFailedException) {
 				throw;
 			}
-			catch (Exception ex) {
+			catch (Exception) {
 				throw;
 			}
 		}
-	}
-
-	public abstract class BaseRepo : IDisposable {
-		protected AutoLotEntities Context { get; } = new AutoLotEntities();
 
 		bool disposed = false;
 		public void Dispose() {
