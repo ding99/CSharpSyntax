@@ -13,12 +13,33 @@ namespace AutoLotTestDrive {
 			Database.SetInitializer(new DataInitializer());
 
 			PrintAllInventory();
-			AddNewCar();
+			int id = AddNewCar();
+			PrintAllInventory();
+			UpdateRecord(id);
+			PrintAllInventory();
 
 			ResetColor();
 		}
 
-		private static void AddNewCar() {
+		private static void UpdateRecord(int carId) {
+			ForegroundColor = ConsoleColor.DarkYellow;
+			WriteLine($"=> Updating Record with carId {carId}");
+
+			using (var repo = new InventoryRepo()) {
+				var carToUpdate = repo.GetOne(carId);
+				if (carToUpdate != null) {
+					WriteLine($"Before change: {repo.Context.Entry(carToUpdate).State}");
+
+					carToUpdate.Color = "Blue";
+					WriteLine($"After change: {repo.Context.Entry(carToUpdate).State}");
+
+					repo.Save(carToUpdate);
+					WriteLine($"After save: {repo.Context.Entry(carToUpdate).State}");
+				} else WriteLine($"Not found record {carId}");
+			}
+		}
+
+		private static int AddNewCar() {
 			ForegroundColor = ConsoleColor.Cyan;
 			WriteLine("=> Adding New Inventory");
 
@@ -26,9 +47,10 @@ namespace AutoLotTestDrive {
 			var car2 = new Inventory { Make = "SmartCar", Color = "Brown", PetName = "Shorty" };
 
 			AddNewRecord(car1);
+			int id = car1.CarId;
 			AddNewRecords(new List<Inventory> { car1, car2 });
 
-			PrintAllInventory();
+			return id;
 		}
 
 		private static void AddNewRecord(Inventory car) {
