@@ -25,11 +25,32 @@ namespace AutoLotTestDrive {
 
 			ResetColor();
 		}
-
 		private static void UpdateCreditRisk() {
 			ForegroundColor = ConsoleColor.Blue;
 			WriteLine("=> Make Customer Credit Risk");
 
+			PrintAllCustomersCreditRisks();
+			var customerRepo = new CustomerRepo();
+			var customer = customerRepo.GetOne(4);
+			ForegroundColor = ConsoleColor.Blue;
+			WriteLine($"To move: {customer.CustId} {customer.FullName}");
+			customerRepo.Context.Entry(customer).State = EntityState.Detached;
+			var risk = MakeCustomerARisk(customer);
+			PrintAllCustomersCreditRisks();
+		}
+
+		private static void PrintAllCustomersCreditRisks() {
+			ForegroundColor = ConsoleColor.DarkYellow;
+
+			WriteLine("-> Customers");
+			using(var repo = new CustomerRepo())
+				foreach (var cust in repo.GetAll())
+					WriteLine($"{cust.FirstName} {cust.LastName} is a Customer.");
+
+			WriteLine("-> CreditRisks");
+			using (var repo = new CreditRiskRepo())
+				foreach (var cust in repo.GetAll())
+					WriteLine($"{cust.FirstName} {cust.LastName} is a Credit Risk!");
 		}
 
 		private static CreditRisk MakeCustomerARisk(Customer customer) {
