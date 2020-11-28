@@ -12,16 +12,16 @@ namespace AutoLotTestDrive {
 	class Program {
 		static void Main() {
 			WriteLine("***** Fun with ADO.NET EF Code First *****");
-			//Database.SetInitializer(new DataInitializer());
+			Database.SetInitializer(new DataInitializer());
 
 			PrintAllInventory();
-			//int id = AddNewCar();
-			//UpdateRecord(id);
-			//PrintAllInventory();
+			int id = AddNewCar();
+			UpdateRecord(id);
+			PrintAllInventory();
 
-			//ShowAllOrders();
-			//ShowAllOrdersEagerlyFetched();
-			//UpdateCreditRisk();
+			ShowAllOrders();
+			ShowAllOrdersEagerlyFetched();
+			UpdateCreditRisk();
 
 			ResetColor();
 		}
@@ -62,9 +62,19 @@ namespace AutoLotTestDrive {
 					LastName = customer.LastName
 				};
 				context.CreditRisks.Add(creditRisk);
+
+				var creditRiskDupe = new CreditRisk {
+					FirstName = customer.FirstName,
+					LastName = customer.LastName
+				};
+				context.CreditRisks.Add(creditRiskDupe);
+
 				try { context.SaveChanges(); }
-				catch (DbUpdateException ex) { WriteLine(ex.Message); }
-				catch (Exception ex) { WriteLine(ex.Message); }
+				catch (DbUpdateException ex) {
+					WriteLine($"Db Update Exception: {ex.Message}");
+				}
+				catch (Exception ex) { WriteLine($"Exception: {ex.Message}"); }
+
 				return creditRisk;
 			}
 		}
