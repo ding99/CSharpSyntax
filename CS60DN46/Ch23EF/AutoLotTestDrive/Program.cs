@@ -3,6 +3,7 @@ using AutoLotDAL.Models;
 using AutoLotDAL.Repos;
 using System;
 using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Collections.Generic;
 using System.Linq;
 using static System.Console;
@@ -20,8 +21,31 @@ namespace AutoLotTestDrive {
 
 			ShowAllOrders();
 			ShowAllOrdersEagerlyFetched();
+			UpdateCreditRisk();
 
 			ResetColor();
+		}
+
+		private static void UpdateCreditRisk() {
+			ForegroundColor = ConsoleColor.Blue;
+			WriteLine("=> Make Customer Credit Risk");
+
+		}
+
+		private static CreditRisk MakeCustomerARisk(Customer customer) {
+			using(var context = new AutoLotEntities()) {
+				context.Customers.Attach(customer);
+				context.Customers.Remove(customer);
+				var creditRisk = new CreditRisk {
+					FirstName = customer.FirstName,
+					LastName = customer.LastName
+				};
+				context.CreditRisks.Add(creditRisk);
+				try { context.SaveChanges(); }
+				catch (DbUpdateException ex) { WriteLine(ex.Message); }
+				catch (Exception ex) { WriteLine(ex.Message); }
+				return creditRisk;
+			}
 		}
 
 		private static void ShowAllOrdersEagerlyFetched() {
