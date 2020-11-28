@@ -59,6 +59,10 @@
     <Compile Include="Migrations\202011280542517_InitialCreate.designer.cs">
       <DependentUpon>202011280542517_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011280744345_TimeStamps.cs" />
+    <Compile Include="Migrations\202011280744345_TimeStamps.designer.cs">
+      <DependentUpon>202011280744345_TimeStamps.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CreditRisk.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -76,6 +80,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202011280542517_InitialCreate.resx">
       <DependentUpon>202011280542517_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011280744345_TimeStamps.resx">
+      <DependentUpon>202011280744345_TimeStamps.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
