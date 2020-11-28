@@ -22,6 +22,7 @@ namespace FillDataSetUsingDataAdapter {
 
 			SqlDataAdapter adapter = new SqlDataAdapter("Select * From Inventory", connectionString);
 
+			WriteLine($"Adapter Select Command : {adapter.SelectCommand.CommandText}");
 			DataTableMapping mapping = adapter.TableMappings.Add("Inventory", "Current Inventory");
 			mapping.ColumnMappings.Add("CarId", "Car Id");
 			mapping.ColumnMappings.Add("PetName", "Name of Car");
@@ -39,6 +40,7 @@ namespace FillDataSetUsingDataAdapter {
 
 			foreach (DictionaryEntry de in s.ExtendedProperties)
 				WriteLine($"Key = {de.Key}, Value = {de.Value}");
+
 			foreach (DataTable t in s.Tables) {
 				WriteLine($"<> {t.TableName} Table:");
 				for (int col = 0; col < t.Columns.Count; col++)
