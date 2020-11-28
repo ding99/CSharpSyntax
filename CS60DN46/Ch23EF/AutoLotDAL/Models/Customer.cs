@@ -10,6 +10,8 @@ namespace AutoLotDAL.Models {
 		public string FirstName { get; set; }
 		[StringLength(50)]
 		public string LastName { get; set; }
+		[Timestamp]
+		public byte[] Timestamp { get; set; }
 
 		[NotMapped]
 		public string FullName => $"{FirstName} {LastName}";
