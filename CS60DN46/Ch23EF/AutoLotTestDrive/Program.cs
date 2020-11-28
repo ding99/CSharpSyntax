@@ -14,11 +14,22 @@ namespace AutoLotTestDrive {
 
 			PrintAllInventory();
 			int id = AddNewCar();
-			PrintAllInventory();
 			UpdateRecord(id);
 			PrintAllInventory();
 
+			ShowAllOrders();
+
 			ResetColor();
+		}
+
+		private static void ShowAllOrders() {
+			ForegroundColor = ConsoleColor.DarkCyan;
+			WriteLine("=> Show All Orders");
+
+			using(var repo = new OrderRepo()) {
+				foreach (var itm in repo.GetAll())
+					WriteLine($"{itm.Customer.FullName} is waiting on {itm.Car.PetName}");
+			}
 		}
 
 		private static void UpdateRecord(int carId) {
