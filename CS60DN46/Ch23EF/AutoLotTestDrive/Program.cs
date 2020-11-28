@@ -4,6 +4,7 @@ using AutoLotDAL.Repos;
 using System;
 using System.Data.Entity;
 using System.Collections.Generic;
+using System.Linq;
 using static System.Console;
 
 namespace AutoLotTestDrive {
@@ -18,8 +19,20 @@ namespace AutoLotTestDrive {
 			PrintAllInventory();
 
 			ShowAllOrders();
+			ShowAllOrdersEagerlyFetched();
 
 			ResetColor();
+		}
+
+		private static void ShowAllOrdersEagerlyFetched() {
+			ForegroundColor = ConsoleColor.Green;
+			WriteLine("=> Show All Orders Eagerly Fetched");
+
+			using(var context = new AutoLotEntities()) {
+				var orders = context.Orders.Include(x => x.Customer).Include(y => y.Car).ToList();
+				foreach (var itm in orders)
+					WriteLine($"{itm.Customer.FullName} is waiting on {itm.Car.PetName}");
+			}
 		}
 
 		private static void ShowAllOrders() {
