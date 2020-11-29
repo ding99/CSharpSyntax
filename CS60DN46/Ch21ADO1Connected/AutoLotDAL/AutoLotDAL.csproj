@@ -38,6 +38,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectedLayer\InventoryDAL.cs" />
+    <Compile Include="DataSet\AutoLotDataSet.cs">
+      <DependentUpon>AutoLotDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet\AutoLotDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
