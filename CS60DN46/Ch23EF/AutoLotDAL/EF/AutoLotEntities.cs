@@ -8,13 +8,25 @@ namespace AutoLotDAL.EF {
 		// connection string: 'AutoLotEntities'.
 		// target: 'AutoLotDAL.EF.AutoLotEntities' database on your LocalDb instance. 
 		// If you wish to target a different database and/or database provider, modify the 'AutoLotEntities' connection string in the configuration file.
+
+		static readonly DatabaseLogger dbLogger = new DatabaseLogger("sqllog.txt", true);
+
 		public AutoLotEntities() : base("name=AutoLotConnection") {
-			DbInterception.Add(new ConsoleWriterInterceptor());
+			//DbInterception.Add(new ConsoleWriterInterceptor());
+			dbLogger.StartLogging();
+			DbInterception.Add(dbLogger);
 		}
 
 		public virtual DbSet<CreditRisk> CreditRisks { get; set; }
 		public virtual DbSet<Customer> Customers { get; set; }
 		public virtual DbSet<Inventory> Inventory { get; set; }
 		public virtual DbSet<Order> Orders { get; set; }
+
+		protected override void Dispose(bool disposing) {
+			DbInterception.Remove(dbLogger);
+			dbLogger.StartLogging();
+
+			base.Dispose(disposing);
+		}
 	}
 }
