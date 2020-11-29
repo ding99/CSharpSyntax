@@ -23,8 +23,36 @@ namespace AutoLotTestDrive {
 			ShowAllOrdersEagerlyFetched();
 			UpdateCreditRisk();
 
+			UpdateRecordWithConcurrency();
+			PrintAllInventory();
+
 			ResetColor();
 		}
+
+		private static void UpdateRecordWithConcurrency() {
+			ForegroundColor = ConsoleColor.Cyan;
+			WriteLine("=> Update Record with Concurrency");
+
+			var car = new Inventory
+			{ Make="Yugo",Color="Brown",PetName="Brownie" };
+			AddNewRecord(car);
+
+			WriteLine($"The new carId : {car.CarId}");
+
+			var repo1 = new InventoryRepo();
+			var car1 = repo1.GetOne(car.CarId);
+			car1.PetName = "Updated1";
+
+			var repo2 = new InventoryRepo();
+			var car2 = repo2.GetOne(car.CarId);
+			car2.Make = "Nissan";
+
+			repo1.Save(car1);
+			try { repo2.Save(car2); }
+			catch(DbUpdateConcurrencyException ex) { WriteLine(ex.Message); }
+			catch (Exception ex) { WriteLine(ex.Message); }
+		}
+
 		private static void UpdateCreditRisk() {
 			ForegroundColor = ConsoleColor.Blue;
 			WriteLine("=> Make Customer Credit Risk");
