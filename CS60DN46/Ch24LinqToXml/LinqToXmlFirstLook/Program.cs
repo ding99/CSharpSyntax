@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Linq;
 
 namespace LinqToXmlFirstLook {
 	class Program {
@@ -11,8 +12,25 @@ namespace LinqToXmlFirstLook {
 			Console.WriteLine("***** Linq to XML First Look *****");
 
 			BuildXmlDocWithDOM();
+			BuildXmlDocWithLinqToXml();
 
 			Console.ResetColor();
+		}
+
+		private static void BuildXmlDocWithLinqToXml() {
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine("=> Biuld XML Doc with Linq to XML");
+
+			XElement doc =
+			  new XElement("Inventory",
+			    new XElement("Car", new XAttribute("ID", "1000"),
+			      new XElement("PetName", "Jimbo"),
+			      new XElement("Color", "Red"),
+			      new XElement("Make", "Ford")
+			    )
+			  );
+
+			doc.Save("InventoryWithLinq.xml");
 		}
 
 		private static void BuildXmlDocWithDOM() {
