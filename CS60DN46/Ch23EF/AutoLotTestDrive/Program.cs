@@ -51,6 +51,15 @@ namespace AutoLotTestDrive {
 			try { repo2.Save(car2); }
 			catch(DbUpdateConcurrencyException ex) { WriteLine(ex.Message); }
 			catch (Exception ex) { WriteLine(ex.Message); }
+
+			RemoveRecordById(car1.CarId, car1.Timestamp);
+		}
+
+		private static void RemoveRecordById(int id, byte[] time) {
+			WriteLine($"Remove a record with id {id}");
+
+			using (var repo = new InventoryRepo()) 
+				repo.Delete(id, time);
 		}
 
 		private static void UpdateCreditRisk() {
