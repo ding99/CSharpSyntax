@@ -43,7 +43,7 @@
             };
             orders.ForEach(x => context.Orders.AddOrUpdate(o => new { o.CarId, o.CustId }, x));
 
-            context.CreditRisks.AddOrUpdate(c => new { c.FirstName,             c.LastName }, new CreditRisk {
+            context.CreditRisks.AddOrUpdate(c => new { c.FirstName, c.LastName }, new CreditRisk {
                 CustId = customers[4].CustId,
                 FirstName = customers[4].FirstName,
                 LastName = customers[4].LastName,
