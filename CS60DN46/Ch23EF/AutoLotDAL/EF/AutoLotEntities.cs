@@ -1,10 +1,7 @@
-using System;
-using System.Data.Entity;
-using System.Linq;
-using AutoLotDAL.Models;
-using System.Data.Entity.Infrastructure;
-using System.Data.Entity.Infrastructure.Interception;
 using AutoLotDAL.Interception;
+using AutoLotDAL.Models;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure.Interception;
 
 namespace AutoLotDAL.EF {
 	public class AutoLotEntities : DbContext {
