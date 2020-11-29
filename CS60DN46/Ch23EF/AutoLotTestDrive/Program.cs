@@ -12,19 +12,56 @@ namespace AutoLotTestDrive {
 	class Program {
 		static void Main() {
 			WriteLine("***** Fun with ADO.NET EF Code First *****");
-			//Database.SetInitializer(new DataInitializer());
+			Database.SetInitializer(new DataInitializer());
 
 			PrintAllInventory();
-			//int id = AddNewCar();
-			//UpdateRecord(id);
-			//PrintAllInventory();
+			int id = AddNewCar();
+			UpdateRecord(id);
+			PrintAllInventory();
 
-			//ShowAllOrders();
-			//ShowAllOrdersEagerlyFetched();
-			//UpdateCreditRisk();
+			ShowAllOrders();
+			ShowAllOrdersEagerlyFetched();
+			UpdateCreditRisk();
+
+			UpdateRecordWithConcurrency();
+			PrintAllInventory();
 
 			ResetColor();
 		}
+
+		private static void UpdateRecordWithConcurrency() {
+			ForegroundColor = ConsoleColor.Cyan;
+			WriteLine("=> Update Record with Concurrency");
+
+			var car = new Inventory
+			{ Make="Yugo",Color="Brown",PetName="Brownie" };
+			AddNewRecord(car);
+
+			WriteLine($"The new carId : {car.CarId}");
+
+			var repo1 = new InventoryRepo();
+			var car1 = repo1.GetOne(car.CarId);
+			car1.PetName = "Updated1";
+
+			var repo2 = new InventoryRepo();
+			var car2 = repo2.GetOne(car.CarId);
+			car2.Make = "Nissan";
+
+			repo1.Save(car1);
+			try { repo2.Save(car2); }
+			catch(DbUpdateConcurrencyException ex) { WriteLine(ex.Message); }
+			catch (Exception ex) { WriteLine(ex.Message); }
+
+			RemoveRecordById(car1.CarId, car1.Timestamp);
+		}
+
+		private static void RemoveRecordById(int id, byte[] time) {
+			WriteLine($"Remove a record with id {id}");
+
+			using (var repo = new InventoryRepo()) 
+				repo.Delete(id, time);
+		}
+
 		private static void UpdateCreditRisk() {
 			ForegroundColor = ConsoleColor.Blue;
 			WriteLine("=> Make Customer Credit Risk");
@@ -62,9 +99,19 @@ namespace AutoLotTestDrive {
 					LastName = customer.LastName
 				};
 				context.CreditRisks.Add(creditRisk);
+
+				var creditRiskDupe = new CreditRisk {
+					FirstName = customer.FirstName,
+					LastName = customer.LastName
+				};
+				context.CreditRisks.Add(creditRiskDupe);
+
 				try { context.SaveChanges(); }
-				catch (DbUpdateException ex) { WriteLine(ex.Message); }
-				catch (Exception ex) { WriteLine(ex.Message); }
+				catch (DbUpdateException ex) {
+					WriteLine($"Db Update Exception: {ex.Message}");
+				}
+				catch (Exception ex) { WriteLine($"Exception: {ex.Message}"); }
+
 				return creditRisk;
 			}
 		}
