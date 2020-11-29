@@ -6,12 +6,16 @@ namespace AutoLotDAL.Repos {
 	public class CreditRiskRepo : BaseRepo<CreditRisk>, IRepo<CreditRisk> {
 		public CreditRiskRepo() { Table = Context.CreditRisks; }
 
-		public int Delete(int id) {
-			Context.Entry(new CreditRisk() { CustId = id }).State = EntityState.Deleted;
+		public int Delete(int id, byte[] timeStamp) {
+			Context.Entry(new CreditRisk() {
+				CustId = id, Timestamp = timeStamp
+			}).State = EntityState.Deleted;
 			return SaveChanges();
 		}
-		public Task<int> DeleteAsync(int id) {
-			Context.Entry(new CreditRisk() { CustId = id }).State = EntityState.Deleted;
+		public Task<int> DeleteAsync(int id, byte[] timeStamp) {
+			Context.Entry(new CreditRisk() {
+				CustId = id, Timestamp = timeStamp
+			}).State = EntityState.Deleted;
 			return SaveChangesAsync();
 		}
 	}
