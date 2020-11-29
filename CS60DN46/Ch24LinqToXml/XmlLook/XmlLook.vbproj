@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{606A7354-0D0D-44B1-A271-7C4C512E7FFE}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>XmlLook.Module1</StartupObject>
+    <StartupObject>XmlLook.Program</StartupObject>
     <RootNamespace>XmlLook</RootNamespace>
     <AssemblyName>XmlLook</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -69,7 +69,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Module1.vb" />
+    <Compile Include="Program.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
