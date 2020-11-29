@@ -106,6 +106,7 @@ namespace AutoLotTestDrive {
 				};
 				context.CreditRisks.Add(creditRiskDupe);
 
+				//exception occurs because of adding the record twice
 				try { context.SaveChanges(); }
 				catch (DbUpdateException ex) {
 					WriteLine($"Db Update Exception: {ex.Message}");
