@@ -12,7 +12,7 @@ namespace AutoLotTestDrive {
 	class Program {
 		static void Main() {
 			WriteLine("***** Fun with ADO.NET EF Code First *****");
-			//Database.SetInitializer(new DataInitializer());
+			Database.SetInitializer(new DataInitializer());
 
 			PrintAllInventory();
 			int id = AddNewCar();
