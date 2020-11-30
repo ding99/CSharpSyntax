@@ -13,8 +13,26 @@ namespace LinqToXmlFirstLook {
 
 			BuildXmlDocWithDOM();
 			BuildXmlDocWithLinqToXml();
+			RemoveElement();
 
 			Console.ResetColor();
+		}
+
+		private static void RemoveElement() {
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.WriteLine("=> Remove Element with Linq to XML");
+
+			XElement doc =
+			  new XElement("Inventory",
+				new XElement("Car", new XAttribute("ID", "1001"),
+				  new XElement("PetName", "Jimbo"),
+				  new XElement("Color", "Red"),
+				  new XElement("Make", "Ford")
+				)
+			  );
+
+			doc.Descendants("PetName").Remove();
+			doc.Save("InventoryWithLinqWithoutPetName.xml");
 		}
 
 		private static void BuildXmlDocWithLinqToXml() {
