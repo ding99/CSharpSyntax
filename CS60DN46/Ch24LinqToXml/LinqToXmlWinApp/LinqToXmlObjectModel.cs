@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
 namespace LinqToXmlWinApp {
 	public class LinqToXmlObjectModel {
-		string 
+
 		public static XDocument GetXmlInventory() {
 			try {
 				XDocument inventory = XDocument.Load("Inventory.xml");
@@ -42,7 +39,7 @@ namespace LinqToXmlWinApp {
 			foreach (var item in makeInfo.Distinct())
 				data += string.Format("- {0}\n", item);
 
-			MessageBox.Show(data, string.Format("{0} colors:", make))
+			MessageBox.Show(data, string.Format("{0} colors:", make));
 		}
 	}
 }
