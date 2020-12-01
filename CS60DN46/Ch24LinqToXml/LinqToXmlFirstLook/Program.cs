@@ -31,6 +31,10 @@ namespace LinqToXmlFirstLook {
 				)
 			  );
 
+			var d = doc.Descendants("Car");
+			foreach(var a in d)
+				Console.WriteLine(a);
+
 			doc.Descendants("PetName").Remove();
 			doc.Save("InventoryWithLinqWithoutPetName.xml");
 		}
