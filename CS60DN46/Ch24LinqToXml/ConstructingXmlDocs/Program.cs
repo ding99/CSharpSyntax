@@ -29,8 +29,12 @@ namespace ConstructingXmlDocs {
 			XElement peopleDoc = new XElement("People",
 				from c in people select new XElement("Person", new XAttribute("Age", c.Age), new XElement("FirstName", c.FirstName))
 			);
-
 			Console.WriteLine(peopleDoc);
+
+			Console.WriteLine("-- Onec again");
+			var data = from c in people select new XElement("Person", new XAttribute("Age", c.Age), new XElement("FirstName", c.FirstName));
+			XElement peopleDoc2 = new XElement("people", data);
+			Console.WriteLine(peopleDoc2);
 		}
 
 		private static void CreateRootAndChildren() {
