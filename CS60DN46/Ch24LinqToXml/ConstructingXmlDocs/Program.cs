@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Linq;
 
 namespace ConstructingXmlDocs {
@@ -12,7 +9,27 @@ namespace ConstructingXmlDocs {
 			CreateFullXDocument();
 			CreateRootAndChildren();
 			MakeXElementFromArray();
+			ParseLoadXml();
 			Console.ResetColor();
+		}
+
+		private static void ParseLoadXml() {
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
+			
+			Console.WriteLine("-> Parsing XML Content");
+
+			string myElement =
+				@"<Car ID = '3'>
+				<Color>Yellow</Color>
+				<Make>Yugo</Make>
+				</Car>";
+
+			XElement newElement = XElement.Parse(myElement);
+			Console.WriteLine(newElement);
+
+			Console.WriteLine("-> Loading XML Content");
+			XDocument myDoc = XDocument.Load("SimpleInventory.xml");
+			Console.WriteLine(myDoc);
 		}
 
 		private static void MakeXElementFromArray() {
@@ -29,8 +46,12 @@ namespace ConstructingXmlDocs {
 			XElement peopleDoc = new XElement("People",
 				from c in people select new XElement("Person", new XAttribute("Age", c.Age), new XElement("FirstName", c.FirstName))
 			);
-
 			Console.WriteLine(peopleDoc);
+
+			Console.WriteLine("-- Onec again");
+			var data = from c in people select new XElement("Person", new XAttribute("Age", c.Age), new XElement("FirstName", c.FirstName));
+			XElement peopleDoc2 = new XElement("people", data);
+			Console.WriteLine(peopleDoc2);
 		}
 
 		private static void CreateRootAndChildren() {
@@ -81,6 +102,7 @@ namespace ConstructingXmlDocs {
 				);
 
 			Console.WriteLine(inventoryDoc);
+			inventoryDoc.Save("SimpleInventory.xml");
 		}
 	}
 }
