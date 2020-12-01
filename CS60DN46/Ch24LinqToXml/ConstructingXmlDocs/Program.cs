@@ -11,7 +11,26 @@ namespace ConstructingXmlDocs {
 			Console.WriteLine("***** Constructing Xml Docs *****");
 			CreateFullXDocument();
 			CreateRootAndChildren();
+			MakeXElementFromArray();
 			Console.ResetColor();
+		}
+
+		private static void MakeXElementFromArray() {
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.WriteLine("=> Generating Documents from Arrays and Containers");
+
+			var people = new[] {
+				new { FirstName = "Mandy", Age = 32 },
+				new { FirstName = "Andrew", Age = 40 },
+				new { FirstName = "Dave", Age = 41 },
+				new { FirstName = "Sara", Age = 31 }
+			};
+
+			XElement peopleDoc = new XElement("People",
+				from c in people select new XElement("Person", new XAttribute("Age", c.Age), new XElement("FirstName", c.FirstName))
+			);
+
+			Console.WriteLine(peopleDoc);
 		}
 
 		private static void CreateRootAndChildren() {
@@ -35,7 +54,7 @@ namespace ConstructingXmlDocs {
 					)
 				);
 
-			inventoryDoc.Save("RootInventory.xml");
+			Console.WriteLine(inventoryDoc);
 		}
 
 		private static void CreateFullXDocument() {
@@ -61,7 +80,7 @@ namespace ConstructingXmlDocs {
 					)
 				);
 
-			inventoryDoc.Save("SampleInventory.xml");
+			Console.WriteLine(inventoryDoc);
 		}
 	}
 }
