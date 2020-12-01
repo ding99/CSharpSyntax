@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Linq;
 
 namespace ConstructingXmlDocs {
@@ -12,7 +9,27 @@ namespace ConstructingXmlDocs {
 			CreateFullXDocument();
 			CreateRootAndChildren();
 			MakeXElementFromArray();
+			ParseLoadXml();
 			Console.ResetColor();
+		}
+
+		private static void ParseLoadXml() {
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
+			
+			Console.WriteLine("-> Parsing XML Content");
+
+			string myElement =
+				@"<Car ID = '3'>
+				<Color>Yellow</Color>
+				<Make>Yugo</Make>
+				</Car>";
+
+			XElement newElement = XElement.Parse(myElement);
+			Console.WriteLine(newElement);
+
+			Console.WriteLine("-> Loading XML Content");
+			XDocument myDoc = XDocument.Load("SimpleInventory.xml");
+			Console.WriteLine(myDoc);
 		}
 
 		private static void MakeXElementFromArray() {
@@ -85,6 +102,7 @@ namespace ConstructingXmlDocs {
 				);
 
 			Console.WriteLine(inventoryDoc);
+			inventoryDoc.Save("SimpleInventory.xml");
 		}
 	}
 }
