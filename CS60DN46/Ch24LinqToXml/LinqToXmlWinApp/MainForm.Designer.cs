@@ -27,21 +27,6 @@ namespace LinqToXmlWinApp {
 			this.label1 = new System.Windows.Forms.Label();
 			this.txtInventory = new System.Windows.Forms.TextBox();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
-			this.label4 = new System.Windows.Forms.Label();
-			this.txtMake = new System.Windows.Forms.TextBox();
-			this.txtColor = new System.Windows.Forms.TextBox();
-			this.txtPetName = new System.Windows.Forms.TextBox();
-			this.btnAddNewItem = new System.Windows.Forms.Button();
-			this.groupBox2 = new System.Windows.Forms.GroupBox();
-			this.button1 = new System.Windows.Forms.Button();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.textBox3 = new System.Windows.Forms.TextBox();
-			this.label5 = new System.Windows.Forms.Label();
-			this.label6 = new System.Windows.Forms.Label();
-			this.label7 = new System.Windows.Forms.Label();
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
 			this.groupBox4 = new System.Windows.Forms.GroupBox();
 			this.button2 = new System.Windows.Forms.Button();
@@ -58,14 +43,29 @@ namespace LinqToXmlWinApp {
 			this.label11 = new System.Windows.Forms.Label();
 			this.label12 = new System.Windows.Forms.Label();
 			this.label13 = new System.Windows.Forms.Label();
+			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.button1 = new System.Windows.Forms.Button();
+			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.textBox2 = new System.Windows.Forms.TextBox();
+			this.textBox3 = new System.Windows.Forms.TextBox();
+			this.label5 = new System.Windows.Forms.Label();
+			this.label6 = new System.Windows.Forms.Label();
+			this.label7 = new System.Windows.Forms.Label();
+			this.btnAddNewItem = new System.Windows.Forms.Button();
+			this.txtPetName = new System.Windows.Forms.TextBox();
+			this.txtColor = new System.Windows.Forms.TextBox();
+			this.txtMake = new System.Windows.Forms.TextBox();
+			this.label4 = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
 			this.groupBox5 = new System.Windows.Forms.GroupBox();
-			this.label14 = new System.Windows.Forms.Label();
-			this.txtMakeToLookUp = new System.Windows.Forms.TextBox();
 			this.btnLookUpColors = new System.Windows.Forms.Button();
+			this.txtMakeToLookUp = new System.Windows.Forms.TextBox();
+			this.label14 = new System.Windows.Forms.Label();
 			this.groupBox1.SuspendLayout();
-			this.groupBox2.SuspendLayout();
 			this.groupBox3.SuspendLayout();
 			this.groupBox4.SuspendLayout();
+			this.groupBox2.SuspendLayout();
 			this.groupBox5.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -84,7 +84,7 @@ namespace LinqToXmlWinApp {
 			this.txtInventory.Multiline = true;
 			this.txtInventory.Name = "txtInventory";
 			this.txtInventory.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.txtInventory.Size = new System.Drawing.Size(248, 274);
+			this.txtInventory.Size = new System.Drawing.Size(248, 412);
 			this.txtInventory.TabIndex = 1;
 			// 
 			// groupBox1
@@ -100,141 +100,10 @@ namespace LinqToXmlWinApp {
 			this.groupBox1.Controls.Add(this.label2);
 			this.groupBox1.Location = new System.Drawing.Point(266, 9);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(281, 181);
+			this.groupBox1.Size = new System.Drawing.Size(281, 218);
 			this.groupBox1.TabIndex = 2;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Add Inventory Item";
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(16, 33);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(34, 13);
-			this.label2.TabIndex = 1;
-			this.label2.Text = "Make";
-			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(16, 69);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(31, 13);
-			this.label3.TabIndex = 2;
-			this.label3.Text = "Color";
-			// 
-			// label4
-			// 
-			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(16, 108);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(54, 13);
-			this.label4.TabIndex = 3;
-			this.label4.Text = "Pet Name";
-			// 
-			// txtMake
-			// 
-			this.txtMake.Location = new System.Drawing.Point(76, 30);
-			this.txtMake.Name = "txtMake";
-			this.txtMake.Size = new System.Drawing.Size(181, 20);
-			this.txtMake.TabIndex = 4;
-			// 
-			// txtColor
-			// 
-			this.txtColor.Location = new System.Drawing.Point(76, 66);
-			this.txtColor.Name = "txtColor";
-			this.txtColor.Size = new System.Drawing.Size(181, 20);
-			this.txtColor.TabIndex = 5;
-			// 
-			// txtPetName
-			// 
-			this.txtPetName.Location = new System.Drawing.Point(76, 101);
-			this.txtPetName.Name = "txtPetName";
-			this.txtPetName.Size = new System.Drawing.Size(181, 20);
-			this.txtPetName.TabIndex = 6;
-			// 
-			// btnAddNewItem
-			// 
-			this.btnAddNewItem.Location = new System.Drawing.Point(160, 140);
-			this.btnAddNewItem.Name = "btnAddNewItem";
-			this.btnAddNewItem.Size = new System.Drawing.Size(97, 23);
-			this.btnAddNewItem.TabIndex = 7;
-			this.btnAddNewItem.Text = "Add";
-			this.btnAddNewItem.UseVisualStyleBackColor = true;
-			this.btnAddNewItem.Click += new System.EventHandler(this.btnAddNewItem_Click);
-			// 
-			// groupBox2
-			// 
-			this.groupBox2.Controls.Add(this.button1);
-			this.groupBox2.Controls.Add(this.textBox1);
-			this.groupBox2.Controls.Add(this.textBox2);
-			this.groupBox2.Controls.Add(this.textBox3);
-			this.groupBox2.Controls.Add(this.label5);
-			this.groupBox2.Controls.Add(this.label6);
-			this.groupBox2.Controls.Add(this.label7);
-			this.groupBox2.Location = new System.Drawing.Point(2, 195);
-			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(293, 181);
-			this.groupBox2.TabIndex = 8;
-			this.groupBox2.TabStop = false;
-			this.groupBox2.Text = "Add Inventory Item";
-			// 
-			// button1
-			// 
-			this.button1.Location = new System.Drawing.Point(182, 140);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
-			this.button1.TabIndex = 7;
-			this.button1.Text = "Add";
-			this.button1.UseVisualStyleBackColor = true;
-			// 
-			// textBox1
-			// 
-			this.textBox1.Location = new System.Drawing.Point(76, 97);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(181, 20);
-			this.textBox1.TabIndex = 6;
-			// 
-			// textBox2
-			// 
-			this.textBox2.Location = new System.Drawing.Point(76, 66);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(181, 20);
-			this.textBox2.TabIndex = 5;
-			// 
-			// textBox3
-			// 
-			this.textBox3.Location = new System.Drawing.Point(76, 30);
-			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(181, 20);
-			this.textBox3.TabIndex = 4;
-			// 
-			// label5
-			// 
-			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(16, 100);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(54, 13);
-			this.label5.TabIndex = 3;
-			this.label5.Text = "Pet Name";
-			// 
-			// label6
-			// 
-			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(19, 69);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(31, 13);
-			this.label6.TabIndex = 2;
-			this.label6.Text = "Color";
-			// 
-			// label7
-			// 
-			this.label7.AutoSize = true;
-			this.label7.Location = new System.Drawing.Point(16, 33);
-			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(34, 13);
-			this.label7.TabIndex = 1;
-			this.label7.Text = "Make";
 			// 
 			// groupBox3
 			// 
@@ -383,37 +252,152 @@ namespace LinqToXmlWinApp {
 			this.label13.TabIndex = 1;
 			this.label13.Text = "Make";
 			// 
+			// groupBox2
+			// 
+			this.groupBox2.Controls.Add(this.button1);
+			this.groupBox2.Controls.Add(this.textBox1);
+			this.groupBox2.Controls.Add(this.textBox2);
+			this.groupBox2.Controls.Add(this.textBox3);
+			this.groupBox2.Controls.Add(this.label5);
+			this.groupBox2.Controls.Add(this.label6);
+			this.groupBox2.Controls.Add(this.label7);
+			this.groupBox2.Location = new System.Drawing.Point(2, 195);
+			this.groupBox2.Name = "groupBox2";
+			this.groupBox2.Size = new System.Drawing.Size(293, 181);
+			this.groupBox2.TabIndex = 8;
+			this.groupBox2.TabStop = false;
+			this.groupBox2.Text = "Add Inventory Item";
+			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(182, 140);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(75, 23);
+			this.button1.TabIndex = 7;
+			this.button1.Text = "Add";
+			this.button1.UseVisualStyleBackColor = true;
+			// 
+			// textBox1
+			// 
+			this.textBox1.Location = new System.Drawing.Point(76, 97);
+			this.textBox1.Name = "textBox1";
+			this.textBox1.Size = new System.Drawing.Size(181, 20);
+			this.textBox1.TabIndex = 6;
+			// 
+			// textBox2
+			// 
+			this.textBox2.Location = new System.Drawing.Point(76, 66);
+			this.textBox2.Name = "textBox2";
+			this.textBox2.Size = new System.Drawing.Size(181, 20);
+			this.textBox2.TabIndex = 5;
+			// 
+			// textBox3
+			// 
+			this.textBox3.Location = new System.Drawing.Point(76, 30);
+			this.textBox3.Name = "textBox3";
+			this.textBox3.Size = new System.Drawing.Size(181, 20);
+			this.textBox3.TabIndex = 4;
+			// 
+			// label5
+			// 
+			this.label5.AutoSize = true;
+			this.label5.Location = new System.Drawing.Point(16, 100);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(54, 13);
+			this.label5.TabIndex = 3;
+			this.label5.Text = "Pet Name";
+			// 
+			// label6
+			// 
+			this.label6.AutoSize = true;
+			this.label6.Location = new System.Drawing.Point(19, 69);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(31, 13);
+			this.label6.TabIndex = 2;
+			this.label6.Text = "Color";
+			// 
+			// label7
+			// 
+			this.label7.AutoSize = true;
+			this.label7.Location = new System.Drawing.Point(16, 33);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(34, 13);
+			this.label7.TabIndex = 1;
+			this.label7.Text = "Make";
+			// 
+			// btnAddNewItem
+			// 
+			this.btnAddNewItem.Location = new System.Drawing.Point(162, 155);
+			this.btnAddNewItem.Name = "btnAddNewItem";
+			this.btnAddNewItem.Size = new System.Drawing.Size(97, 23);
+			this.btnAddNewItem.TabIndex = 7;
+			this.btnAddNewItem.Text = "Add";
+			this.btnAddNewItem.UseVisualStyleBackColor = true;
+			this.btnAddNewItem.Click += new System.EventHandler(this.btnAddNewItem_Click);
+			// 
+			// txtPetName
+			// 
+			this.txtPetName.Location = new System.Drawing.Point(76, 110);
+			this.txtPetName.Name = "txtPetName";
+			this.txtPetName.Size = new System.Drawing.Size(181, 20);
+			this.txtPetName.TabIndex = 6;
+			// 
+			// txtColor
+			// 
+			this.txtColor.Location = new System.Drawing.Point(76, 75);
+			this.txtColor.Name = "txtColor";
+			this.txtColor.Size = new System.Drawing.Size(181, 20);
+			this.txtColor.TabIndex = 5;
+			// 
+			// txtMake
+			// 
+			this.txtMake.Location = new System.Drawing.Point(76, 39);
+			this.txtMake.Name = "txtMake";
+			this.txtMake.Size = new System.Drawing.Size(181, 20);
+			this.txtMake.TabIndex = 4;
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Location = new System.Drawing.Point(16, 117);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(54, 13);
+			this.label4.TabIndex = 3;
+			this.label4.Text = "Pet Name";
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(16, 78);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(31, 13);
+			this.label3.TabIndex = 2;
+			this.label3.Text = "Color";
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(16, 42);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(34, 13);
+			this.label2.TabIndex = 1;
+			this.label2.Text = "Make";
+			// 
 			// groupBox5
 			// 
 			this.groupBox5.Controls.Add(this.btnLookUpColors);
 			this.groupBox5.Controls.Add(this.txtMakeToLookUp);
 			this.groupBox5.Controls.Add(this.label14);
-			this.groupBox5.Location = new System.Drawing.Point(267, 203);
+			this.groupBox5.Location = new System.Drawing.Point(266, 242);
 			this.groupBox5.Name = "groupBox5";
-			this.groupBox5.Size = new System.Drawing.Size(280, 96);
+			this.groupBox5.Size = new System.Drawing.Size(280, 195);
 			this.groupBox5.TabIndex = 3;
 			this.groupBox5.TabStop = false;
 			this.groupBox5.Text = "Look up Colors for Make";
 			// 
-			// label14
-			// 
-			this.label14.AutoSize = true;
-			this.label14.Location = new System.Drawing.Point(9, 34);
-			this.label14.Name = "label14";
-			this.label14.Size = new System.Drawing.Size(90, 13);
-			this.label14.TabIndex = 0;
-			this.label14.Text = "Make to Look Up";
-			// 
-			// txtMakeToLookUp
-			// 
-			this.txtMakeToLookUp.Location = new System.Drawing.Point(105, 29);
-			this.txtMakeToLookUp.Name = "txtMakeToLookUp";
-			this.txtMakeToLookUp.Size = new System.Drawing.Size(156, 20);
-			this.txtMakeToLookUp.TabIndex = 1;
-			// 
 			// btnLookUpColors
 			// 
-			this.btnLookUpColors.Location = new System.Drawing.Point(160, 59);
+			this.btnLookUpColors.Location = new System.Drawing.Point(160, 119);
 			this.btnLookUpColors.Name = "btnLookUpColors";
 			this.btnLookUpColors.Size = new System.Drawing.Size(97, 23);
 			this.btnLookUpColors.TabIndex = 2;
@@ -421,11 +405,27 @@ namespace LinqToXmlWinApp {
 			this.btnLookUpColors.UseVisualStyleBackColor = true;
 			this.btnLookUpColors.Click += new System.EventHandler(this.btnLookUpColors_Click);
 			// 
+			// txtMakeToLookUp
+			// 
+			this.txtMakeToLookUp.Location = new System.Drawing.Point(106, 59);
+			this.txtMakeToLookUp.Name = "txtMakeToLookUp";
+			this.txtMakeToLookUp.Size = new System.Drawing.Size(156, 20);
+			this.txtMakeToLookUp.TabIndex = 1;
+			// 
+			// label14
+			// 
+			this.label14.AutoSize = true;
+			this.label14.Location = new System.Drawing.Point(6, 62);
+			this.label14.Name = "label14";
+			this.label14.Size = new System.Drawing.Size(90, 13);
+			this.label14.TabIndex = 0;
+			this.label14.Text = "Make to Look Up";
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(560, 330);
+			this.ClientSize = new System.Drawing.Size(560, 449);
 			this.Controls.Add(this.groupBox5);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.txtInventory);
@@ -435,12 +435,12 @@ namespace LinqToXmlWinApp {
 			this.Load += new System.EventHandler(this.MainForm_Load);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
-			this.groupBox2.ResumeLayout(false);
-			this.groupBox2.PerformLayout();
 			this.groupBox3.ResumeLayout(false);
 			this.groupBox3.PerformLayout();
 			this.groupBox4.ResumeLayout(false);
 			this.groupBox4.PerformLayout();
+			this.groupBox2.ResumeLayout(false);
+			this.groupBox2.PerformLayout();
 			this.groupBox5.ResumeLayout(false);
 			this.groupBox5.PerformLayout();
 			this.ResumeLayout(false);
