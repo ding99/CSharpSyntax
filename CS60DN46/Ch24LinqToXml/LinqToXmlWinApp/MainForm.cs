@@ -13,5 +13,13 @@ namespace LinqToXmlWinApp {
 		public MainForm() {
 			InitializeComponent();
 		}
+
+		private void btnAddNewItem_Click(object sender, EventArgs e) {
+
+		}
+
+		private void btnLookUpColors_Click(object sender, EventArgs e) {
+
+		}
 	}
 }

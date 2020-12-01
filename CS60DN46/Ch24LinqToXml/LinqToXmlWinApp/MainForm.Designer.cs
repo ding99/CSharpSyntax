@@ -161,6 +161,7 @@ namespace LinqToXmlWinApp {
 			this.btnAddNewItem.TabIndex = 7;
 			this.btnAddNewItem.Text = "Add";
 			this.btnAddNewItem.UseVisualStyleBackColor = true;
+			this.btnAddNewItem.Click += new System.EventHandler(this.btnAddNewItem_Click);
 			// 
 			// groupBox2
 			// 
@@ -418,6 +419,7 @@ namespace LinqToXmlWinApp {
 			this.btnLookUpColors.TabIndex = 2;
 			this.btnLookUpColors.Text = "Look Up Colors";
 			this.btnLookUpColors.UseVisualStyleBackColor = true;
+			this.btnLookUpColors.Click += new System.EventHandler(this.btnLookUpColors_Click);
 			// 
 			// MainForm
 			// 
