@@ -13,11 +13,24 @@ namespace AutoLotConsoleRe {
 
 			int newId = AddNewRecord();
 			WriteLine($"The new car is {newId}");
+			PrintAllInventory();
+
+			ResetColor();
+		}
+
+		private static void PrintAllInventory() {
+			ForegroundColor = ConsoleColor.Cyan;
+			WriteLine("=> Print All Inventory");
+
+			using(var context = new AutoLotEntities()) {
+				foreach (Car c in context.Cars)
+					WriteLine(c);
+			}
 		}
 
 		private static int AddNewRecord() {
 			ForegroundColor = ConsoleColor.Yellow;
-			WriteLine("==> Add New Record");
+			WriteLine("=> Add New Record");
 
 			using(var context = new AutoLotEntities()) {
 				try {
