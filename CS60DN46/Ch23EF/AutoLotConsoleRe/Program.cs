@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using AutoLotConsoleRe.EF;
+using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoLotConsoleRe.EF;
 using static System.Console;
 
 namespace AutoLotConsoleRe {
@@ -23,9 +20,15 @@ namespace AutoLotConsoleRe {
 			ForegroundColor = ConsoleColor.DarkYellow;
 			WriteLine("Linq Queries");
 
-			using(var context = new AutoLotEntities()) {
-				var colorMakes = from item in context.Cars select new { item.Color, item.Make };
+			using (var context = new AutoLotEntities()) {
+				var allData = context.Cars.ToArray();
+
+				var colorMakes = from item in allData select new { item.Color, item.Make };
 				foreach (var item in colorMakes)
+					WriteLine(item);
+
+				var blueCars = from item in allData where item.Color == "Blue" select item;
+				foreach (var item in blueCars)
 					WriteLine(item);
 			}
 		}
