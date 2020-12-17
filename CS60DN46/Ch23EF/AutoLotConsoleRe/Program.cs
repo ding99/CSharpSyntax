@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using AutoLotConsoleRe.EF;
+using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoLotConsoleRe.EF;
 using static System.Console;
 
 namespace AutoLotConsoleRe {
@@ -13,11 +10,42 @@ namespace AutoLotConsoleRe {
 
 			int newId = AddNewRecord();
 			WriteLine($"The new car is {newId}");
+			PrintAllInventory();
+			LinqQueries();
+
+			ResetColor();
+		}
+
+		private static void LinqQueries() {
+			ForegroundColor = ConsoleColor.DarkYellow;
+			WriteLine("Linq Queries");
+
+			using (var context = new AutoLotEntities()) {
+				var allData = context.Cars.ToArray();
+
+				var colorMakes = from item in allData select new { item.Color, item.Make };
+				foreach (var item in colorMakes)
+					WriteLine(item);
+
+				var blueCars = from item in allData where item.Color == "Blue" select item;
+				foreach (var item in blueCars)
+					WriteLine(item);
+			}
+		}
+
+		private static void PrintAllInventory() {
+			ForegroundColor = ConsoleColor.Cyan;
+			WriteLine("=> Print All Inventory");
+
+			using(var context = new AutoLotEntities()) {
+				foreach (Car c in context.Cars)
+					WriteLine(c);
+			}
 		}
 
 		private static int AddNewRecord() {
 			ForegroundColor = ConsoleColor.Yellow;
-			WriteLine("==> Add New Record");
+			WriteLine("=> Add New Record");
 
 			using(var context = new AutoLotEntities()) {
 				try {
