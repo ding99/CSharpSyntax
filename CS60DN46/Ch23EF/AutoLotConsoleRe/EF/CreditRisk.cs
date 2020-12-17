@@ -1,12 +1,7 @@
-namespace AutoLotConsoleRe.EF
-{
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
+namespace AutoLotConsoleRe.EF {
+	using System.ComponentModel.DataAnnotations;
 
-    public partial class CreditRisk
+	public partial class CreditRisk
     {
         [Key]
         public int CustId { get; set; }

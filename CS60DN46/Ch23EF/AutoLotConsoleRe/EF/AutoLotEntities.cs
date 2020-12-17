@@ -22,7 +22,7 @@ namespace AutoLotConsoleRe.EF {
 
 			modelBuilder.Entity<Car>()
 				.HasMany(e => e.Orders)
-				.WithRequired(e => e.Inventory)
+				.WithRequired(e => e.Car)
 				.WillCascadeOnDelete(false);
 		}
 	}
