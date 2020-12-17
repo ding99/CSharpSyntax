@@ -11,7 +11,7 @@ namespace AutoLotConsoleRe.EF {
 
 		public virtual DbSet<CreditRisk> CreditRisks { get; set; }
 		public virtual DbSet<Customer> Customers { get; set; }
-		public virtual DbSet<Car> Inventories { get; set; }
+		public virtual DbSet<Car> Cars { get; set; }
 		public virtual DbSet<Order> Orders { get; set; }
 
 		protected override void OnModelCreating(DbModelBuilder modelBuilder) {
@@ -22,7 +22,7 @@ namespace AutoLotConsoleRe.EF {
 
 			modelBuilder.Entity<Car>()
 				.HasMany(e => e.Orders)
-				.WithRequired(e => e.Inventory)
+				.WithRequired(e => e.Car)
 				.WillCascadeOnDelete(false);
 		}
 	}
