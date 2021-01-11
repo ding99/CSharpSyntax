@@ -18,62 +18,57 @@ namespace CVariable {
 		private Person p;
 		private string tele = string.Empty;
 
-		public Marks() { this.p = null;  }
+		public Marks() {
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine("Test (p?.Secret?.TelePhone ??)");
+		}
 
-		public bool TestMark() {
-
-			Console.WriteLine("-- Step 1 (p is null)");
-
-			Console.WriteLine("tele [" + (string.IsNullOrWhiteSpace(tele) ? "(null)" : tele) + "]");
-			if(p == null)
+		private void Display() {
+			if (p == null)
 				Console.WriteLine("p is null");
 			else {
-				if(p.Secret == null)
+				if (p.Secret == null)
 					Console.WriteLine("Secret is null");
 				else {
 					tele = p.Secret.TelePhone;
 					Console.WriteLine("tele [" + tele + "]");
 				}
 			}
+		}
+
+		public void TestMark() {
+
+			Console.WriteLine("-- Step 1 (p is null)");
+			p = null;
+			Console.WriteLine($"tele [{(string.IsNullOrWhiteSpace(tele) ? "(null)" : tele)}]");
+			Display();
 
 			Console.WriteLine("-- Step 2 (every defined)");
 			p = new Person { Name = "John", Age = 30, Sex = "Male", Secret = new SecretData { Password = "pword", TelePhone = "123456" } };
-			if(p == null)
-				Console.WriteLine("p is null");
-			else {
-				if(p.Secret == null)
-					Console.WriteLine("Secret is null");
-				else {
-					tele = p.Secret.TelePhone;
-					Console.WriteLine("tele [" + tele + "]");
-				}
-			}
+			Display();
 
 			Console.WriteLine("-- Step 3 (every defined, check every)");
-			tele = p?.Secret?.TelePhone ?? "";
-			Console.WriteLine("tele [" + tele + "]");
+			tele = p?.Secret?.TelePhone ?? "Unknown";
+			Console.WriteLine($"tele [{tele}]");
 
 			Console.WriteLine("-- Step 4 (p is null)");
 			p = null;
-			tele = p?.Secret.TelePhone ?? "";
-			Console.WriteLine("tele [" + tele + "]");
+			tele = p?.Secret.TelePhone ?? "Unknown";
+			Console.WriteLine($"tele [{tele}]");
 
 			Console.WriteLine("-- Step 5 (Secret is null, check every)");
 			p = new Person { Name = "John", Age = 30, Sex = "Male", Secret = null };
-			tele = p?.Secret?.TelePhone ?? "";
-			Console.WriteLine("tele [" + tele + "]");
+			tele = p?.Secret?.TelePhone ?? "Unknown";
+			Console.WriteLine($"tele [{tele}]");
 
 			Console.WriteLine("-- Step 6 (Secret is null, not check Secret)");
 			p = new Person { Name = "John", Age = 30, Sex = "Male", Secret = null };
 			try {
-				tele = p?.Secret.TelePhone ?? "";
+				tele = p?.Secret.TelePhone ?? "Unknown";
 			} catch(Exception e) {
-				Console.WriteLine("message {" + e.Message + "}");
-				Console.WriteLine("trace   {" + e.StackTrace + "}");
+				Console.WriteLine($"Error : {e.Message}");
 			}
-			Console.WriteLine("tele [" + tele + "]");
-
-			return true;
+			Console.WriteLine($"tele [{tele}]");
 		}
 	}
 

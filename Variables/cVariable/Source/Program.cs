@@ -14,16 +14,13 @@ namespace CVariable {
 			v.Select();
 			v.Valuable();
 
-			//Console.ForegroundColor = ConsoleColor.Cyan;
-			//ret = new Marks().TestMark();
+			new Marks().TestMark();
 
-			//Console.ForegroundColor = ConsoleColor.DarkYellow;
-			//ret = new NullAble().TestValue();
+			new NullAble().TestValue();
 
-			//Console.ForegroundColor = ConsoleColor.DarkCyan;
-			//Examine exam = new Examine();
-			//         exam.Interpolation();
-			//         exam.ExamineStruct();
+			Examine exam = new Examine();
+			exam.Interpolation();
+			exam.ExamineStruct();
 
 			Console.ResetColor();
         }

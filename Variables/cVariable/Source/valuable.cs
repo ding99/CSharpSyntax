@@ -15,6 +15,8 @@ namespace CVariable {
             public Age Age;
         }
 
+        public NullAble() { Console.ForegroundColor = ConsoleColor.DarkYellow;  }
+
         private void Show(int step, Profile staff) {
             Console.WriteLine($"\n-- Step {step}");
 
@@ -32,7 +34,7 @@ namespace CVariable {
             Console.WriteLine($"month greater than 10\t [{month > 10}]");
         }
 
-        public bool TestValue() {
+        public void TestValue() {
 
             #region pretest
             int? n = null;
@@ -48,8 +50,6 @@ namespace CVariable {
 
             staff.Age = new Age { Year = 1996, Month = 3 };
             Show(2, staff);
-
-            return true;
         }
 
     }
