@@ -36,7 +36,7 @@
   <ItemGroup>
     <Compile Include="Source\Calculation.cs" />
     <Compile Include="Source\Program.cs" />
-    <Compile Include="Source\Questionmark.cs" />
+    <Compile Include="Source\Marks.cs" />
     <Compile Include="Source\Valuable.cs" />
     <Compile Include="Source\Entry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

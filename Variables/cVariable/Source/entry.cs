@@ -10,19 +10,10 @@ namespace CVariable {
 		}
 
 		private void SizeOfs() {
-			Console.WriteLine($"Size of bool    : {sizeof(bool)}");
-			Console.WriteLine($"Size of byte    : {sizeof(byte)}");
-			Console.WriteLine($"Size of sbyte   : {sizeof(sbyte)}");
-			Console.WriteLine($"Size of char    : {sizeof(char)}");
-			Console.WriteLine($"Size of short   : {sizeof(short)}");
-			Console.WriteLine($"Size of ushort  : {sizeof(ushort)}");
-			Console.WriteLine($"Size of int     : {sizeof(int)}");
-			Console.WriteLine($"Size of uint    : {sizeof(uint)}");
-			Console.WriteLine($"Size of long    : {sizeof(ulong)}");
-			Console.WriteLine($"Size of ulong   : {sizeof(long)}");
-			Console.WriteLine($"Size of float   : {sizeof(float)}");
-			Console.WriteLine($"Size of double  : {sizeof(double)}");
-			Console.WriteLine($"Size of devimal : {sizeof(decimal)}");
+			Console.WriteLine("-- size of variable");
+			Console.WriteLine($"bool {sizeof(bool)}");
+			Console.WriteLine($"byte {sizeof(byte)}, sbyte {sizeof(sbyte)}, char {sizeof(char)}, short {sizeof(short)}, ushort {sizeof(ushort)}, int {sizeof(int)}, uint {sizeof(uint)}, long {sizeof(ulong)}, ulong {sizeof(long)}");
+			Console.WriteLine($"float {sizeof(float)}, double {sizeof(double)}, decimal {sizeof(decimal)}");
 		}
 
 		public void ByteDef() {
@@ -81,17 +72,10 @@ namespace CVariable {
 		public void Valuable() {
 			Console.WriteLine("-- HasValue of a nullable bool variable a");
 
-			bool? a = null;
-			Console.WriteLine("a(null)  : " + a.HasValue);
-
-			a = true;
-			Console.WriteLine("a(true)  : " + a.HasValue);
-
-			a = false;
-			Console.WriteLine("a(false) : " + a.HasValue);
-
-			a = null;
-			Console.WriteLine("a(null)  : " + a.HasValue);
+			bool? a = null; Console.WriteLine("a(null)  : " + a.HasValue);
+			a = true; Console.WriteLine("a(true)  : " + a.HasValue);
+			a = false; Console.WriteLine("a(false) : " + a.HasValue);
+			a = null; Console.WriteLine("a(null)  : " + a.HasValue);
 		}
 	}
 }
