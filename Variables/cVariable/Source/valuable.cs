@@ -4,22 +4,13 @@ namespace CVariable {
 
     public class NullAble {
 
-        public class Age {
-            public int? Year;
-            public int? Month;
-            public int? Day;
-        }
-
-        public class Profile {
-            public string Name;
-            public Age Age;
-        }
+        public class Age { public int? Year; public int? Month; public int? Day; }
+        public class Profile { public string Name; public Age Age; }
 
         public NullAble() { Console.ForegroundColor = ConsoleColor.DarkYellow;  }
 
         private void Show(int step, Profile staff) {
-            Console.WriteLine($"\n-- Step {step}");
-
+            Console.WriteLine($"-- Step {step}");
             var year = staff.Age?.Year;
             var month = staff.Age?.Month;
             var day = staff.Age?.Day;
@@ -35,21 +26,15 @@ namespace CVariable {
         }
 
         public void TestValue() {
-
+			Console.WriteLine("-- nullable int");
             #region pretest
-            int? n = null;
-            Console.WriteLine($"n has value [{n.HasValue}]");
-            n = 5;
-            Console.WriteLine($"n has value [{n.HasValue}]");
-            n = null;
-            Console.WriteLine($"n has value [{n.HasValue}]");
+            int? n = null; Console.WriteLine($"n has value [{n.HasValue}]");
+            n = 5; Console.WriteLine($"n has value [{n.HasValue}]");
+            n = null; Console.WriteLine($"n has value [{n.HasValue}]");
             #endregion pretest
 
-            Profile staff = new Profile { Name = "Peter" };
-            Show(1, staff);
-
-            staff.Age = new Age { Year = 1996, Month = 3 };
-            Show(2, staff);
+            Profile staff = new Profile { Name = "Peter" }; Show(1, staff);
+            staff.Age = new Age { Year = 1996, Month = 3 }; Show(2, staff);
         }
 
     }
