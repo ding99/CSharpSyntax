@@ -2,18 +2,17 @@
 
 namespace CVariable {
 	class Program {
-        static void Main(string[] args) {
+        static void Main() {
             Console.WriteLine("== start");
-            bool ret = true;
 
 			Console.ForegroundColor = ConsoleColor.Yellow;
-			Vari v = new Vari();
-			ret = v.bytedef();
-			ret = v.rows();
-			//ret = v.toFloat();
-			ret = Vari.toFloat();
-			//v.sel();
-			//v.valuable();
+			Variables v = new Variables();
+			
+			v.ByteDef();
+			v.Rows();
+			Variables.ToDouble();
+			v.Select();
+			v.Valuable();
 
 			//Console.ForegroundColor = ConsoleColor.Cyan;
 			//ret = new Marks().TestMark();
@@ -27,7 +26,6 @@ namespace CVariable {
 			//         exam.ExamineStruct();
 
 			Console.ResetColor();
-            Console.WriteLine("== end (" + (ret ? "success)" : "failuer)"));
         }
     }
 }

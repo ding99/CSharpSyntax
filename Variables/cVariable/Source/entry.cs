@@ -1,25 +1,47 @@
 ﻿using System;
 
 namespace CVariable {
-	public class Vari {
-		public bool bytedef() {
+	public class Variables {
+
+		public Variables() {
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("-- Variables Basis");
+			SizeOfs();
+		}
+
+		private void SizeOfs() {
+			Console.WriteLine($"Size of bool    : {sizeof(bool)}");
+			Console.WriteLine($"Size of byte    : {sizeof(byte)}");
+			Console.WriteLine($"Size of sbyte   : {sizeof(sbyte)}");
+			Console.WriteLine($"Size of char    : {sizeof(char)}");
+			Console.WriteLine($"Size of short   : {sizeof(short)}");
+			Console.WriteLine($"Size of ushort  : {sizeof(ushort)}");
+			Console.WriteLine($"Size of int     : {sizeof(int)}");
+			Console.WriteLine($"Size of uint    : {sizeof(uint)}");
+			Console.WriteLine($"Size of long    : {sizeof(ulong)}");
+			Console.WriteLine($"Size of ulong   : {sizeof(long)}");
+			Console.WriteLine($"Size of float   : {sizeof(float)}");
+			Console.WriteLine($"Size of double  : {sizeof(double)}");
+			Console.WriteLine($"Size of devimal : {sizeof(decimal)}");
+		}
+
+		public void ByteDef() {
+			Console.WriteLine("-- byte type");
 
 			byte[] vr = null;
-			Console.WriteLine("-- null " + (vr == null));
+			Console.WriteLine("Declare a byte[] which was assigned as null is null : " + (vr == null));
 
 			vr = new byte[10];
-			Console.WriteLine("-- null " + (vr == null));
+			Console.WriteLine("Declare a byte[] with length 10 is null : " + (vr == null));
 
 			try {
+				Console.WriteLine("Declare a byte[] with length 10000000000 :");
 				vr = new byte[10000000000];
 				Console.WriteLine("   null " + (vr == null));
 			}
 			catch(Exception e) {
 				Console.WriteLine(e.Message);
-				return false;
 			}
-
-			return true;
 		}
 
 		private void toTele(int value) {
@@ -32,44 +54,44 @@ namespace CVariable {
 			Console.WriteLine(value + " to map in-vision : " + Math.Ceiling((value - 1) * stp) +
 				" / " + Math.Ceiling((value - 1) * stm));
 		}
-		public bool rows() {
-
+		public void Rows() {
+			Console.WriteLine("-- Test float for Teletext");
 			this.toTele(83);
 			this.toTele(92);
-			Console.WriteLine();
 			this.toInvi(20);
 			this.toInvi(22);
-
-			return true;
 		}
 
-		public static bool toFloat() {
+		public static void ToDouble() {
+			Console.WriteLine("-- int to double");
 			int int1 = 25000, int2 = 29970, int3 = 23976;
 			Console.WriteLine(int1.ToString() + " -> " + ((double)int1 / 1000).ToString());
 			Console.WriteLine(int2.ToString() + " -> " + ((double)int2 / 1000).ToString());
 			Console.WriteLine(int3.ToString() + " -> " + ((double)int3 / 1000).ToString());
-			return true;
 		}
 
-		public void sel() {
+		public void Select() {
+			Console.WriteLine("-- Select (need parentheses in ?: statement)");
 			int a = 5, b = 6;
 			int c = a + b > 7 ? 7 : 0;
 			int d = (a + b) > 7 ? 7 : 0;
-			Console.WriteLine("a " + a + " b " + b + " c " + c + " d " + d);
+			Console.WriteLine($"a {a}, b {b}, [a+b:] woParenthesese {c}, wParenthesese {d}");
 		}
 
-		public void valuable() {
+		public void Valuable() {
+			Console.WriteLine("-- HasValue of a nullable bool variable a");
+
 			bool? a = null;
-			Console.WriteLine("0 a " + a.HasValue + (a.HasValue ? " " + a : ""));
+			Console.WriteLine("a(null)  : " + a.HasValue);
 
 			a = true;
-			Console.WriteLine("1 a " + a.HasValue + (a.HasValue ? " " + a : ""));
+			Console.WriteLine("a(true)  : " + a.HasValue);
 
 			a = false;
-			Console.WriteLine("2 a " + a.HasValue + (a.HasValue ? " " + a : ""));
+			Console.WriteLine("a(false) : " + a.HasValue);
 
 			a = null;
-			Console.WriteLine("3 a " + a.HasValue + (a.HasValue ? " " + a : ""));
+			Console.WriteLine("a(null)  : " + a.HasValue);
 		}
 	}
 }
