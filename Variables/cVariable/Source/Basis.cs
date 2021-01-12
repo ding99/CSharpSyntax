@@ -7,6 +7,7 @@ namespace CVariable {
 			Console.ForegroundColor = ConsoleColor.Yellow;
 			Console.WriteLine("-- Variables Basis");
 			SizeOfs();
+			Floating();
 		}
 
 		private void SizeOfs() {
@@ -14,6 +15,15 @@ namespace CVariable {
 			Console.WriteLine($"bool {sizeof(bool)}");
 			Console.WriteLine($"byte {sizeof(byte)}, sbyte {sizeof(sbyte)}, char {sizeof(char)}, short {sizeof(short)}, ushort {sizeof(ushort)}, int {sizeof(int)}, uint {sizeof(uint)}, long {sizeof(ulong)}, ulong {sizeof(long)}");
 			Console.WriteLine($"float {sizeof(float)}, double {sizeof(double)}, decimal {sizeof(decimal)}");
+		}
+
+		private void Floating() {
+			float f1 = 12345E2f, f2 = 12345E-2f;
+			Console.WriteLine($"The float value of '12345E2f' is {f1}, '12345E-2f' is {f2}");
+			double f3 = 12345E2f, f4 = 12345E-2f;
+			Console.WriteLine($"The double value of '12345E2f' is {f3}, '12345E-2f' is {f4}");
+			double f5 = 12345E2, f6 = 12345E-2;
+			Console.WriteLine($"The double value of '12345E2' is {f5}, '12345E-2' is {f6}");
 		}
 
 		public void ByteDef() {
