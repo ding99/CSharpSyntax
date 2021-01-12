@@ -14,6 +14,9 @@ namespace CVariable {
 			Console.WriteLine($"bool {sizeof(bool)}");
 			Console.WriteLine($"byte {sizeof(byte)}, sbyte {sizeof(sbyte)}, char {sizeof(char)}, short {sizeof(short)}, ushort {sizeof(ushort)}, int {sizeof(int)}, uint {sizeof(uint)}, long {sizeof(ulong)}, ulong {sizeof(long)}");
 			Console.WriteLine($"float {sizeof(float)}, double {sizeof(double)}, decimal {sizeof(decimal)}");
+
+			double f1 = 12345E2f, f2 = 12345E-2f;
+			Console.WriteLine($"The value of '12345E2f' is {f1}, '12345E-2f' is {f2}");
 		}
 
 		public void ByteDef() {
