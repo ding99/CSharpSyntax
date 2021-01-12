@@ -13,7 +13,6 @@ namespace cStrings {
 
 			Console.WriteLine("-- End");
 		}
-
 		private void ReOrder(string s) {
 			string[] c = s.Split(' ');
 
@@ -49,12 +48,10 @@ namespace cStrings {
 			EncodeOne("this is a string!!", "dGhpcyBpcyBhIHN0cmluZyEh");
 			EncodeOne("this is a test!", "dGhpcyBpcyBhIHRlc3Qh");
 		}
-
 		private void EncodeOne(string src, string tgt) {
 			Console.WriteLine($"src [{tgt}]");
 			Console.WriteLine($"tgt [{EncodeBase64(src)}]");
 		}
-
 		public string EncodeBase64(string str) {
 			#region table
 			char[] tbl = new char[65];
@@ -96,6 +93,15 @@ namespace cStrings {
 			#endregion
 
 			return s;
+		}
+
+		public void ExamineChars() {
+			string s = "abcde";
+			Console.WriteLine($"-- Examining string (length, chars) [{s}]");
+			Console.Write($"size {s.Length}:");
+			for (int i = 0; i < s.Length; i++)
+				Console.Write(" " + s[i]);
+			Console.WriteLine();
 		}
 	}
 }
