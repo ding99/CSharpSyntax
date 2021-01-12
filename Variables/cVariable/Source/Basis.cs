@@ -19,6 +19,8 @@ namespace CVariable {
 			Console.WriteLine($"The float value of '12345E2f' is {f1}, '12345E-2f' is {f2}");
 			double f3 = 12345E2f, f4 = 12345E-2f;
 			Console.WriteLine($"The double value of '12345E2f' is {f3}, '12345E-2f' is {f4}");
+			double f5 = 12345E2, f6 = 12345E-2;
+			Console.WriteLine($"The double value of '12345E2' is {f5}, '12345E-2' is {f6}");
 		}
 
 		public void ByteDef() {
