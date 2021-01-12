@@ -17,7 +17,7 @@ namespace AutoLotConsoleApp {
 			Navigation();
 			ExplicitLoading();
 			RemoveRecord(newId);
-			RemoveRecordUasingEntityState();
+			RemoveRecordUsingEntityState();
 			UpdateRecord();
 
 			ResetColor();
@@ -53,7 +53,7 @@ namespace AutoLotConsoleApp {
 			}
 		}
 
-		private static void RemoveRecordUasingEntityState() {
+		private static void RemoveRecordUsingEntityState() {
 			ForegroundColor = ConsoleColor.DarkCyan;
 			WriteLine($"=> Deleting Record Using Entity State");
 
