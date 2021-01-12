@@ -109,6 +109,7 @@ namespace CStrings {
 			Evaluation e = new Evaluation();
 			e.ExamineOrder();
 			e.ExamineBase64();
+			e.ExamineChars();
 			#endregion
 
 			Console.ResetColor();
