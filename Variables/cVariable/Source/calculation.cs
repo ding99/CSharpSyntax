@@ -4,6 +4,8 @@ namespace CVariable {
 
     public class Examine{
 
+        public Examine() { Console.ForegroundColor = ConsoleColor.DarkCyan;  }
+
         public void Interpolation() {
 			Console.WriteLine("-> Examing string interpolation");
             int a = 123;
