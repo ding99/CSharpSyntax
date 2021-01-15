@@ -1,7 +1,7 @@
 ﻿using System.ServiceModel;
 
 namespace MagicEightBallServiceLib {
-	[ServiceContract]
+	[ServiceContract(Namespace = "http://MyCompany.com")]
 	public interface IEightBall {
 		//Ask a question, receive an answer!
 		[OperationContract]
