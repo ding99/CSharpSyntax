@@ -564,6 +564,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicEightBallServiceLib", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicEightBallServiceHost", "CS60DN46\Ch25WCF\MagicEightBallServiceHost\MagicEightBallServiceHost.csproj", "{5D2176CA-DB31-40D9-BB00-E35ADD28CC40}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicEightBallServiceClient", "CS60DN46\Ch25WCF\MagicEightBallServiceClient\MagicEightBallServiceClient.csproj", "{C5F2796C-95E1-48A3-9F1C-A9A9621C96A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -4152,6 +4154,22 @@ Global
 		{5D2176CA-DB31-40D9-BB00-E35ADD28CC40}.Release|x64.Build.0 = Release|Any CPU
 		{5D2176CA-DB31-40D9-BB00-E35ADD28CC40}.Release|x86.ActiveCfg = Release|Any CPU
 		{5D2176CA-DB31-40D9-BB00-E35ADD28CC40}.Release|x86.Build.0 = Release|Any CPU
+		{C5F2796C-95E1-48A3-9F1C-A9A9621C96A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5F2796C-95E1-48A3-9F1C-A9A9621C96A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5F2796C-95E1-48A3-9F1C-A9A9621C96A5}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C5F2796C-95E1-48A3-9F1C-A9A9621C96A5}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C5F2796C-95E1-48A3-9F1C-A9A9621C96A5}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C5F2796C-95E1-48A3-9F1C-A9A9621C96A5}.Debug|x64.Build.0 = Debug|Any CPU
+		{C5F2796C-95E1-48A3-9F1C-A9A9621C96A5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C5F2796C-95E1-48A3-9F1C-A9A9621C96A5}.Debug|x86.Build.0 = Debug|Any CPU
+		{C5F2796C-95E1-48A3-9F1C-A9A9621C96A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5F2796C-95E1-48A3-9F1C-A9A9621C96A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5F2796C-95E1-48A3-9F1C-A9A9621C96A5}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C5F2796C-95E1-48A3-9F1C-A9A9621C96A5}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{C5F2796C-95E1-48A3-9F1C-A9A9621C96A5}.Release|x64.ActiveCfg = Release|Any CPU
+		{C5F2796C-95E1-48A3-9F1C-A9A9621C96A5}.Release|x64.Build.0 = Release|Any CPU
+		{C5F2796C-95E1-48A3-9F1C-A9A9621C96A5}.Release|x86.ActiveCfg = Release|Any CPU
+		{C5F2796C-95E1-48A3-9F1C-A9A9621C96A5}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -4416,6 +4434,7 @@ Global
 		{1B46B7EF-E689-42F1-AFE8-6FC901CD8BB3} = {9508E799-38B0-48B1-9B07-46AEBE6B0C42}
 		{6237ED98-1007-49A8-BF60-A1FADE1D9AA5} = {5404AAA4-3B44-4A57-9629-61BBC57002DD}
 		{5D2176CA-DB31-40D9-BB00-E35ADD28CC40} = {5404AAA4-3B44-4A57-9629-61BBC57002DD}
+		{C5F2796C-95E1-48A3-9F1C-A9A9621C96A5} = {5404AAA4-3B44-4A57-9629-61BBC57002DD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7C00B1AC-1A8A-4B50-9373-585713E1AED0}
