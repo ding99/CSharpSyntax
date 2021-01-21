@@ -9,10 +9,30 @@ namespace MagicEightBallServiceHost {
 
 			using(ServiceHost serviceHost = new ServiceHost(typeof(MagicEightBallService))) {
 				serviceHost.Open();
+
+				DisplayHostInfo(serviceHost);
+
 				Console.WriteLine("The service is ready.");
 				Console.WriteLine("Press the Enter key to terminate service.");
 				Console.ReadLine();
 			}
+		}
+
+		static void DisplayHostInfo(ServiceHost host) {
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("==> Host Info");
+			
+			Console.WriteLine($"BaseAddresses (count {host.BaseAddresses.Count}) :");
+			foreach(var a in host.BaseAddresses)
+				Console.WriteLine($"  {a.Scheme} | {a.Host} | {a.Port} | {a.AbsolutePath}");
+
+			Console.WriteLine($"Endpoints (count {host.Description.Endpoints.Count}) :");
+			foreach (System.ServiceModel.Description.ServiceEndpoint e in host.Description.Endpoints) {
+				Console.WriteLine($"  Address : {e.Address}");
+				Console.WriteLine($"  Binding : {e.Binding.Name}");
+				Console.WriteLine($"  Contract: {e.Contract.Name}");
+			}
+			Console.ResetColor();
 		}
 	}
 }
