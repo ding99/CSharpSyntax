@@ -7,17 +7,37 @@ using System.Linq;
 using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
+using MathServiceLib;
+using System.ServiceModel;
 
 namespace MathWindowsServiceHost {
 	public partial class MathWinService : ServiceBase {
+		private ServiceHost myHost;
+
 		public MathWinService() {
 			InitializeComponent();
 		}
 
 		protected override void OnStart(string[] args) {
+			if(myHost != null) {
+				myHost.Close();
+				myHost = null;
+			}
+
+			myHost = new ServiceHost(typeof(BasicMath));
+
+			Uri address = new Uri("http://localhost:8080/MathServiceLib");
+			WSHttpBinding binding = new WSHttpBinding();
+			Type contract = typeof(IBasicMath);
+
+			myHost.AddServiceEndpoint(contract, binding, address);
+
+			myHost.Open();
 		}
 
 		protected override void OnStop() {
+			if (myHost != null)
+				myHost.Close();
 		}
 	}
 }
