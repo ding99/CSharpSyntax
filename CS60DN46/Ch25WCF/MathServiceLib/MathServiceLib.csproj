@@ -46,7 +46,7 @@
   <ItemGroup>
     <Compile Include="IBasicMath.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MethSerive.cs" />
+    <Compile Include="MathService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
