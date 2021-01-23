@@ -18,13 +18,14 @@ namespace MathWindowsServiceHost {
 			InitializeComponent();
 		}
 
-		protected override void OnStart(string[] args) {
+		/*
+		protected override void OnStart(string[] args) { //not work yet
 			if(myHost != null) {
 				myHost.Close();
 				myHost = null;
 			}
 
-			myHost = new ServiceHost(typeof(MethSerive));
+			myHost = new ServiceHost(typeof(MathService));
 
 			Uri address = new Uri("http://localhost:8080/MathServiceLib");
 			WSHttpBinding binding = new WSHttpBinding();
@@ -34,18 +35,18 @@ namespace MathWindowsServiceHost {
 
 			myHost.Open();
 		}
-/*
+		*/
 		protected override void OnStart(string[] args) {
 			if (myHost != null)
 				myHost.Close();
 
-			myHost = new ServiceHost(typeof(MethSerive), new Uri("http://localhost:8080/MathServiceLib"));
+			myHost = new ServiceHost(typeof(MathService), new Uri("http://localhost:8080/MathServiceLib"));
 
 			myHost.AddDefaultEndpoints();
 
 			myHost.Open();
 		}
-*/
+
 		protected override void OnStop() {
 			if (myHost != null)
 				myHost.Close();
