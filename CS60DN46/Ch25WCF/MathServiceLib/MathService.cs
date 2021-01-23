@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.Text;
-
-namespace MathServiceLib {
+﻿namespace MathServiceLib {
 
 	public class MathService : IBasicMath {
 		public int Add(int x, int y) {
