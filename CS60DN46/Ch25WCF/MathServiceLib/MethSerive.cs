@@ -7,7 +7,7 @@ using System.Text;
 
 namespace MathServiceLib {
 
-	public class BasicMath : IBasicMath {
+	public class MethSerive : IBasicMath {
 		public int Add(int x, int y) {
 			System.Threading.Thread.Sleep(3000);
 			return x + y;

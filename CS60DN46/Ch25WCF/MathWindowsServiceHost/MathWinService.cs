@@ -24,7 +24,7 @@ namespace MathWindowsServiceHost {
 				myHost = null;
 			}
 
-			myHost = new ServiceHost(typeof(BasicMath));
+			myHost = new ServiceHost(typeof(MethSerive));
 
 			Uri address = new Uri("http://localhost:8080/MathServiceLib");
 			WSHttpBinding binding = new WSHttpBinding();
