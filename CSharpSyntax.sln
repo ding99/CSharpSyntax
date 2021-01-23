@@ -568,6 +568,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicEightBallServiceClient
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicEightBallServiceClientVS", "CS60DN46\Ch25WCF\MagicEightBallServiceClientVS\MagicEightBallServiceClientVS.csproj", "{B0640583-E343-440F-9849-567BDB5CE88F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathServiceLib", "CS60DN46\Ch25WCF\MathServiceLib\MathServiceLib.csproj", "{F0E5A93B-E99F-4F08-BDAD-6CE365D17DFA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -4188,6 +4190,22 @@ Global
 		{B0640583-E343-440F-9849-567BDB5CE88F}.Release|x64.Build.0 = Release|Any CPU
 		{B0640583-E343-440F-9849-567BDB5CE88F}.Release|x86.ActiveCfg = Release|Any CPU
 		{B0640583-E343-440F-9849-567BDB5CE88F}.Release|x86.Build.0 = Release|Any CPU
+		{F0E5A93B-E99F-4F08-BDAD-6CE365D17DFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0E5A93B-E99F-4F08-BDAD-6CE365D17DFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0E5A93B-E99F-4F08-BDAD-6CE365D17DFA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F0E5A93B-E99F-4F08-BDAD-6CE365D17DFA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F0E5A93B-E99F-4F08-BDAD-6CE365D17DFA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F0E5A93B-E99F-4F08-BDAD-6CE365D17DFA}.Debug|x64.Build.0 = Debug|Any CPU
+		{F0E5A93B-E99F-4F08-BDAD-6CE365D17DFA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F0E5A93B-E99F-4F08-BDAD-6CE365D17DFA}.Debug|x86.Build.0 = Debug|Any CPU
+		{F0E5A93B-E99F-4F08-BDAD-6CE365D17DFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0E5A93B-E99F-4F08-BDAD-6CE365D17DFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0E5A93B-E99F-4F08-BDAD-6CE365D17DFA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{F0E5A93B-E99F-4F08-BDAD-6CE365D17DFA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{F0E5A93B-E99F-4F08-BDAD-6CE365D17DFA}.Release|x64.ActiveCfg = Release|Any CPU
+		{F0E5A93B-E99F-4F08-BDAD-6CE365D17DFA}.Release|x64.Build.0 = Release|Any CPU
+		{F0E5A93B-E99F-4F08-BDAD-6CE365D17DFA}.Release|x86.ActiveCfg = Release|Any CPU
+		{F0E5A93B-E99F-4F08-BDAD-6CE365D17DFA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -4454,6 +4472,7 @@ Global
 		{5D2176CA-DB31-40D9-BB00-E35ADD28CC40} = {5404AAA4-3B44-4A57-9629-61BBC57002DD}
 		{C5F2796C-95E1-48A3-9F1C-A9A9621C96A5} = {5404AAA4-3B44-4A57-9629-61BBC57002DD}
 		{B0640583-E343-440F-9849-567BDB5CE88F} = {5404AAA4-3B44-4A57-9629-61BBC57002DD}
+		{F0E5A93B-E99F-4F08-BDAD-6CE365D17DFA} = {5404AAA4-3B44-4A57-9629-61BBC57002DD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7C00B1AC-1A8A-4B50-9373-585713E1AED0}
