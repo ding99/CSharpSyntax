@@ -1,4 +1,4 @@
-﻿using MathClient.ServiceReference1;
+﻿using MathClient.ServiceReference2;
 using System;
 
 namespace MathClient {

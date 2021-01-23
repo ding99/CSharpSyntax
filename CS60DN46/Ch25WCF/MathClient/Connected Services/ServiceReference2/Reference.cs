@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MathClient.ServiceReference1 {
+namespace MathClient.ServiceReference2 {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://MyCompany.com", ConfigurationName="ServiceReference1.IBasicMath")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://MyCompany.com", ConfigurationName="ServiceReference2.IBasicMath")]
     public interface IBasicMath {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://MyCompany.com/IBasicMath/Add", ReplyAction="http://MyCompany.com/IBasicMath/AddResponse")]
@@ -25,7 +25,7 @@ namespace MathClient.ServiceReference1 {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IBasicMathChannel : MathClient.ServiceReference1.IBasicMath, System.ServiceModel.IClientChannel {
+    public interface IBasicMathChannel : MathClient.ServiceReference2.IBasicMath, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -49,7 +49,7 @@ namespace MathClient.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class BasicMathClient : System.ServiceModel.ClientBase<MathClient.ServiceReference1.IBasicMath>, MathClient.ServiceReference1.IBasicMath {
+    public partial class BasicMathClient : System.ServiceModel.ClientBase<MathClient.ServiceReference2.IBasicMath>, MathClient.ServiceReference2.IBasicMath {
         
         private BeginOperationDelegate onBeginAddDelegate;
         
