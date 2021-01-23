@@ -5,7 +5,7 @@ namespace MathServiceLib {
 	[ServiceContract(Namespace ="http://MyCompany.com")]
 	public interface IBasicMath {
 		[OperationContract]
-		int Add(int a, int y);
+		int Add(int x, int y);
 
 
 	}
