@@ -31,6 +31,10 @@ namespace MagicEightBallServiceHost {
 				Console.WriteLine($"  Address : {e.Address}");
 				Console.WriteLine($"  Binding : {e.Binding.Name}");
 				Console.WriteLine($"  Contract: {e.Contract.Name}");
+				Console.WriteLine($"  Open    Timeout : {e.Binding.OpenTimeout}");
+				Console.WriteLine($"  Close   Timeout : {e.Binding.CloseTimeout}");
+				Console.WriteLine($"  Send    Timeout : {e.Binding.SendTimeout}");
+				Console.WriteLine($"  Receive Timeout : {e.Binding.ReceiveTimeout}");
 			}
 			Console.ResetColor();
 		}
