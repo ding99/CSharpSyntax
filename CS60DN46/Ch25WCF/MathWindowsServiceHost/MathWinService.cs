@@ -34,7 +34,18 @@ namespace MathWindowsServiceHost {
 
 			myHost.Open();
 		}
+/*
+		protected override void OnStart(string[] args) {
+			if (myHost != null)
+				myHost.Close();
 
+			myHost = new ServiceHost(typeof(MethSerive), new Uri("http://localhost:8080/MathServiceLib"));
+
+			myHost.AddDefaultEndpoints();
+
+			myHost.Open();
+		}
+*/
 		protected override void OnStop() {
 			if (myHost != null)
 				myHost.Close();
