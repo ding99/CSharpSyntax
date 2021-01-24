@@ -25,7 +25,7 @@ namespace MathWindowsServiceHost {
 		/// </summary>
 		private void InitializeComponent() {
 			this.serviceProcessInstaller1 = new System.ServiceProcess.ServiceProcessInstaller();
-			this.serviceInstaller1 = new System.ServiceProcess.ServiceInstaller();
+			this.serviceInstaller2 = new System.ServiceProcess.ServiceInstaller();
 			// 
 			// serviceProcessInstaller1
 			// 
@@ -33,24 +33,24 @@ namespace MathWindowsServiceHost {
 			this.serviceProcessInstaller1.Password = null;
 			this.serviceProcessInstaller1.Username = null;
 			// 
-			// serviceInstaller1
+			// serviceInstaller2
 			// 
-			this.serviceInstaller1.Description = "This is the math service!";
-			this.serviceInstaller1.DisplayName = "MathService";
-			this.serviceInstaller1.ServiceName = "MathService";
-			this.serviceInstaller1.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
+			this.serviceInstaller2.Description = "This is the math service!";
+			this.serviceInstaller2.DisplayName = "MathService";
+			this.serviceInstaller2.ServiceName = "MathService";
+			this.serviceInstaller2.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
 			// 
 			// ProjectInstaller
 			// 
 			this.Installers.AddRange(new System.Configuration.Install.Installer[] {
             this.serviceProcessInstaller1,
-            this.serviceInstaller1});
+            this.serviceInstaller2});
 
 		}
 
 		#endregion
 
 		private System.ServiceProcess.ServiceProcessInstaller serviceProcessInstaller1;
-		private System.ServiceProcess.ServiceInstaller serviceInstaller1;
+		private System.ServiceProcess.ServiceInstaller serviceInstaller2;
 	}
 }
