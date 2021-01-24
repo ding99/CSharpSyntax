@@ -5,23 +5,49 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using System.Data;
+using AutoLotDAL.ConnectedLayer;
 
 namespace AutoLotWCFService {
 	// NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
 	// NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
 	public class AutoLotService : IAutoLotService {
-		public string GetData(int value) {
-			return string.Format("You entered: {0}", value);
+		private const string ConnString = @"Data Source=(local);Initial Catalog=AutoLot;Integrated Security=True";
+
+		public void InsertCar(int id, string make, string color, string petName) {
+			InventoryDAL d = new InventoryDAL();
+			d.OpenConnection(ConnString);
+			d.InsertAuto(id, color, make, petName);
+			d.CloseConnection();
 		}
 
-		public CompositeType GetDataUsingDataContract(CompositeType composite) {
-			if (composite == null) {
-				throw new ArgumentNullException("composite");
+		public void InsertCar(InventoryRecord car) {
+			InventoryDAL d = new InventoryDAL();
+			d.OpenConnection(ConnString);
+			d.InsertAuto(car.ID, car.Color, car.Make, car.PetName);
+			d.CloseConnection();
+		}
+
+		public InventoryRecord[] GetInventory() {
+			InventoryDAL d = new InventoryDAL();
+			d.OpenConnection(ConnString);
+			DataTable table = d.GetAllInventoryAsDataTable();
+			d.CloseConnection();
+
+			List<InventoryRecord> records = new List<InventoryRecord>();
+
+			DataTableReader reader = table.CreateDataReader();
+			while (reader.Read()) {
+				InventoryRecord r = new InventoryRecord();
+				r.ID = (int)reader["CarID"];
+				r.Color = ((string)reader["Color"]);
+				r.Make = ((string)reader["Make"]);
+				r.PetName = ((string)reader["PetName"]);
+
+				records.Add(r);
 			}
-			if (composite.BoolValue) {
-				composite.StringValue += "Suffix";
-			}
-			return composite;
+
+			return (InventoryRecord[])records.ToArray();
 		}
 	}
 }
