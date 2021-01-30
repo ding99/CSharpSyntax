@@ -6,6 +6,14 @@
     <title>This is my simple web page</title>
 </head>
 <body>
+    <script type = "text/javascript">
+        // <![CDATA[
+        function btnShow_onclick() {
+            alert(window.txtUserMessage.value);
+        }
+        // ]])
+    </script>
+    
     <h1>Simple HTML Page</h1>
     <p>
         <br />
@@ -17,7 +25,7 @@
         <input id="txtUserMessage" type="text" />
         </p>
         <p>
-        <input id="btnShow" type="button" value="Show!" />
+        <input id="btnShow" type="button" value="Show!" onclick="return btnShow_onclick()" />
         <input id="btnReset" type="reset" value="Reset" />
         </p>
     </form>
