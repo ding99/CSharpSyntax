@@ -19,7 +19,7 @@
         <br />
         <i>Please enter a message</i>
     </p>
-    <form id="defaultPage">
+    <form id="defaultPage" action="http://localhost/Cars/MyAspNetPage.aspx" method="GET">
         <p>
         Your Message:
         <input id="txtUserMessage" type="text" />
@@ -27,6 +27,7 @@
         <p>
         <input id="btnShow" type="button" value="Show!" onclick="return btnShow_onclick()" />
         <input id="btnReset" type="reset" value="Reset" />
+        <input id="btnPostBack" type="submit" value="Post to Server!"/>
         </p>
     </form>
 </body>
