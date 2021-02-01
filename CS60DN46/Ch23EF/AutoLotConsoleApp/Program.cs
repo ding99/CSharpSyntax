@@ -25,7 +25,7 @@ namespace AutoLotConsoleApp {
 
 		private static void UpdateRecord() {
 			ForegroundColor = ConsoleColor.Red;
-			WriteLine("=> Delete a record");
+			WriteLine("=> Update a record");
 
 			int carId = 0;
 			string color = "Blue", color2 = "Yellow";
@@ -34,6 +34,7 @@ namespace AutoLotConsoleApp {
 				Car car = context.cars.Find(carId);
 
 				if(car.Color == color) color = color2;
+				WriteLine($"The current Color is {car.Color} for CarId {car.CarId}");
 			}
 
 			UpdateColor(carId, color);
