@@ -13,6 +13,7 @@ namespace CodeBehindPageModel {
 		}
 
 		public IEnumerable<Inventory> GetData() {
+			Trace.Write("Default.aspx", "Getting Data");
 			return new InventoryRepo().GetAll();
 		}
 	}
