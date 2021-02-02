@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using AutoLotDAL.Models;
+﻿using AutoLotDAL.Models;
 using AutoLotDAL.Repos;
+using System;
+using System.Collections.Generic;
 
 namespace CodeBehindPageModel {
 	public partial class Default : System.Web.UI.Page {
