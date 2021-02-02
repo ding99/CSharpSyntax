@@ -1,4 +1,3 @@
-using AutoLotDAL.Interception;
 using AutoLotDAL.Models;
 using System;
 using System.Data.Entity;
