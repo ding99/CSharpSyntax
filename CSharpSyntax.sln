@@ -604,6 +604,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "FunWithPageMembers", "CS60D
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "58211"
+		SlnRelativePath = "CS60DN46\Ch31WebForms\FunWithPageMembers\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
