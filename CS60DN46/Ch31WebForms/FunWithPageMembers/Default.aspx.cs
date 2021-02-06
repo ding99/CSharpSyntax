@@ -19,11 +19,12 @@ public partial class _Default : System.Web.UI.Page {
 		theInfo += $"<li>What is the screen size? {Request.Browser.ScreenPixelsWidth} x {Request.Browser.ScreenPixelsHeight}</li>";
 		theInfo += $"<li>Text Name [{txtFirstName.Text}]</li>";
 		theInfo += $"<li>Text Name (Get) [{Request.Form.Get("txtFirstName")}]</li>";
+		theInfo += $"<li>Query String [{Request.QueryString}]</li>";
 		lblOutput.Text = theInfo;
 	}
 
 	protected void btnGetFormData_Click(object sender, EventArgs e) {
 		string txtName = Request.Form.Get("txtFirstName");
-		txtName += txtFirstName.Text;
+		lblOutput.Text = txtName;
 	}
 }
