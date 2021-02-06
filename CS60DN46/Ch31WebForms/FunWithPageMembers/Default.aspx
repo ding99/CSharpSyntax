@@ -13,7 +13,8 @@
                 <br /><br />
                 <asp:Button ID="btnGetBrowserStats" runat="server" OnClick="btnGetBrowserStats_Click" Text="Get Stats" />
                 <br />
-                <br />
+                <label>First name</label>
+                <asp:TextBox ID="txtFirstName" runat="server"></asp:TextBox>
                 <asp:Label ID="lblOutput" runat="server"></asp:Label>
             </strong>
         </div>
