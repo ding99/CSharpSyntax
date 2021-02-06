@@ -10,11 +10,17 @@
     <form id="form1" runat="server">
         <div>
             <strong style="font-weight:700">Basic Request / Response Info
-                <br /><br />
+                <br />
                 <asp:Button ID="btnGetBrowserStats" runat="server" OnClick="btnGetBrowserStats_Click" Text="Get Stats" />
                 <br />
-                <br />
                 <asp:Label ID="lblOutput" runat="server"></asp:Label>
+                <br />
+                <br />
+                <label>First name</label>
+                <asp:TextBox ID="txtFirstName" runat="server"></asp:TextBox>
+                <br />
+                <asp:Button ID="btnGetFormData" runat="server" OnClick="btnGetFormData_Click" Text="Get First Name" />
+                <br />
             </strong>
         </div>
     </form>
