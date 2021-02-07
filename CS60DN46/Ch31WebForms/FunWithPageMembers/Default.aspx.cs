@@ -17,6 +17,7 @@ public partial class _Default : System.Web.UI.Page {
 		theInfo += $"<li>Does the client support Cookies? {Request.Browser.Cookies}</li>";
 		theInfo += $"<li>Does the client support VBScript? {Request.Browser.VBScript}</li>";
 		theInfo += $"<li>What is the screen size? {Request.Browser.ScreenPixelsWidth} x {Request.Browser.ScreenPixelsHeight}</li>";
+
 		theInfo += "<br/>";
 		theInfo += $"<li>Text Name [{txtFirstName.Text}]</li>";
 		theInfo += $"<li>Text Name (Get) [{Request.Form.Get("txtFirstName")}]</li>";
@@ -32,6 +33,13 @@ public partial class _Default : System.Web.UI.Page {
 		theInfo += $"<li>User Host Address [{Request.UserHostAddress}]</li>";
 		theInfo += $"<li>User Host Name [{Request.UserHostName}]</li>";
 		theInfo += $"<li>User Agent [{Request.UserAgent}]</li>";
+
+		theInfo += "<br/>";
+		string headers = string.Empty;
+		foreach(var key in Request.Headers.AllKeys)
+			headers += $"({key}::{Request.Headers[key]})";
+		theInfo += $"<li>Headers [{Request.Headers.Count} {headers}]</li>";
+
 		lblOutput.Text = theInfo;
 	}
 
