@@ -19,7 +19,6 @@ public partial class _Default : System.Web.UI.Page {
 		builder.Append("<br/>");
 		builder.Append($"<li>Text Name [{txtFirstName.Text}]</li>");
 		builder.Append($"<li>Text Name (Get) [{Request.Form.Get("txtFirstName")}]</li>");
-		builder.Append($"<li>Query String Count [{Request.QueryString.Count}]</li>");
 		builder.Append($"<li>Raw Url [{Request.RawUrl}]</li>");
 		builder.Append($"<li>Request Type [{Request.RequestType}]</li>");
 		builder.Append($"<li>Http Method [{Request.HttpMethod}]</li>");
@@ -34,6 +33,7 @@ public partial class _Default : System.Web.UI.Page {
 			terms += $"({a})";
 		builder.Append($"<li>Cookies [{Request.Cookies.Count} {terms}]</li>");
 
+		builder.Append(getList("Query Strings", Request.QueryString));
 		builder.Append(getList("Headers", Request.Headers));
 		builder.Append(getList("Form", Request.Form));
 		builder.Append(getList("Server Variables", Request.ServerVariables));
@@ -45,7 +45,7 @@ public partial class _Default : System.Web.UI.Page {
 		StringBuilder terms = new StringBuilder();
 		foreach (var key in collection.AllKeys)
 			terms.Append($"({key}::{collection[key]})");
-		return $"<br/><li>{name} [{collection.Count} {terms}]</li>";
+		return $"<br/><li>{name} [{collection.Count}{(collection.Count == 0 ? "" : " ")}{terms}]</li>";
 
 	}
 
