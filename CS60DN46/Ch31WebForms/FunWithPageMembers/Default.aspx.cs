@@ -53,4 +53,9 @@ public partial class _Default : System.Web.UI.Page {
 		string txtName = Request.Form.Get("txtFirstName");
 		lblOutput.Text = txtName;
 	}
+
+	protected void btnHttpResponse_Click(object sender, EventArgs e) {
+		Response.Write("<b>My name is:</b><br>");
+		Response.Write(Request.Form.Get("txtFirstName") +"<br><br>");
+	}
 }
