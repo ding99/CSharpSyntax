@@ -23,6 +23,9 @@
                 <br />
                 <br />
                 <asp:Button runat="server" ID="btnHttpResponse" OnClick="btnHttpResponse_Click" Text="Get First Name" BolderColor="DarkCyan" BorderWidth="3" BackColor="Cyan" />
+                <br />
+                <br />
+                <asp:Button runat="server" ID="btnTriggerError" OnClick="btnTriggerError_Click" Text="Trigger Error" BolderColor="DarkRed" BorderWidth="3" />
             </strong>
         </div>
     </form>
