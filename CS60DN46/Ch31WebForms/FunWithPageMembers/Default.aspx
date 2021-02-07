@@ -11,7 +11,7 @@
         <div>
             <strong style="font-weight:700">Basic Request / Response Info
                 <br />
-                <asp:Button ID="btnGetBrowserStats" runat="server" OnClick="btnGetBrowserStats_Click" Text="Get Stats" />
+                <asp:Button ID="btnGetBrowserStats" runat="server" OnClick="btnGetBrowserStats_Click" Text="Get Stats" BorderColor="Green" BorderStyle="Solid" BorderWidth="3px" />
                 <br />
                 <asp:Label ID="lblOutput" runat="server"></asp:Label>
                 <br />
