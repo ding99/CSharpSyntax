@@ -3,6 +3,17 @@ using System.Text;
 
 public partial class _Default : System.Web.UI.Page {
 
+	void Page_Error(object sender, EventArgs e) {
+		Response.Clear();
+		Response.Write("I am sorry... I can't find a required file.<br>");
+		Response.Write($"The error was : <b>{Server.GetLastError().Message }</b>");
+		Server.ClearError();
+	}
+
+	protected void btnTriggerError_Click(object sender, EventArgs e) {
+		System.IO.File.ReadAllText(@"E:\workFolder\AspNet\IDontExist.txt");
+	}
+
 	protected void Page_Load(object sender, EventArgs e) {
 		Response.Write("Load event fired!");
 	}
@@ -61,6 +72,6 @@ public partial class _Default : System.Web.UI.Page {
 	}
 
 	protected void Page_Unload(object sender, EventArgs e) {
-		System.IO.File.WriteAllText(@"e:\mylog.txt", "Page unloading!");
+		System.IO.File.WriteAllText(@"e:\workFolder\AspNet\mylog.txt", "Page unloading!");
 	}
 }
