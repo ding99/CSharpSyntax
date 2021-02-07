@@ -4,6 +4,7 @@ using System.Text;
 public partial class _Default : System.Web.UI.Page {
 
 	protected void Page_Load(object sender, EventArgs e) {
+		Response.Write("Load event fired!");
 	}
 
 	protected void btnGetBrowserStats_Click(object sender, EventArgs e) {
@@ -57,5 +58,9 @@ public partial class _Default : System.Web.UI.Page {
 	protected void btnHttpResponse_Click(object sender, EventArgs e) {
 		Response.Write("<b>My name is:</b><br>");
 		Response.Write(Request.Form.Get("txtFirstName") +"<br><br>");
+	}
+
+	protected void Page_Unload(object sender, EventArgs e) {
+		System.IO.File.WriteAllText(@"e:\mylog.txt", "Page unloading!");
 	}
 }
