@@ -28,10 +28,10 @@ public partial class _Default : System.Web.UI.Page {
 		builder.Append($"<li>User Agent [{Request.UserAgent}]</li>");
 
 		builder.Append("<br/>");
-		string terms = string.Empty;
-		foreach (var a in Request.Cookies)
-			terms += $"({a})";
-		builder.Append($"<li>Cookies [{Request.Cookies.Count} {terms}]</li>");
+		StringBuilder term = new StringBuilder();
+		foreach (var cookie in Request.Cookies)
+			term.Append($"({cookie})");
+		builder.Append($"<li>Cookies [{Request.Cookies.Count}{(term.Length < 1 ? "" : " ")}{term}]</li>");
 
 		builder.Append(getList("Query Strings", Request.QueryString));
 		builder.Append(getList("Headers", Request.Headers));
