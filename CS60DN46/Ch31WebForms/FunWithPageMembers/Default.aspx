@@ -21,6 +21,8 @@
                 <br />
                 <asp:Button ID="btnGetFormData" runat="server" OnClick="btnGetFormData_Click" Text="Get First Name" />
                 <br />
+                <br />
+                <asp:Button runat="server" ID="btnHttpResponse" OnClick="btnHttpResponse_Click" Text="Get First Name" BolderColor="DarkCyan" BorderWidth="3" />
             </strong>
         </div>
     </form>
