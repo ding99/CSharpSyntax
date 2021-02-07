@@ -19,7 +19,6 @@ public partial class _Default : System.Web.UI.Page {
 		builder.Append("<br/>");
 		builder.Append($"<li>Text Name [{txtFirstName.Text}]</li>");
 		builder.Append($"<li>Text Name (Get) [{Request.Form.Get("txtFirstName")}]</li>");
-		builder.Append($"<li>Query String Count [{Request.QueryString.Count}]</li>");
 		builder.Append($"<li>Raw Url [{Request.RawUrl}]</li>");
 		builder.Append($"<li>Request Type [{Request.RequestType}]</li>");
 		builder.Append($"<li>Http Method [{Request.HttpMethod}]</li>");
@@ -29,11 +28,12 @@ public partial class _Default : System.Web.UI.Page {
 		builder.Append($"<li>User Agent [{Request.UserAgent}]</li>");
 
 		builder.Append("<br/>");
-		string terms = string.Empty;
-		foreach (var a in Request.Cookies)
-			terms += $"({a})";
-		builder.Append($"<li>Cookies [{Request.Cookies.Count} {terms}]</li>");
+		StringBuilder term = new StringBuilder();
+		foreach (var cookie in Request.Cookies)
+			term.Append($"({cookie})");
+		builder.Append($"<li>Cookies [{Request.Cookies.Count}{(term.Length < 1 ? "" : " ")}{term}]</li>");
 
+		builder.Append(getList("Query Strings", Request.QueryString));
 		builder.Append(getList("Headers", Request.Headers));
 		builder.Append(getList("Form", Request.Form));
 		builder.Append(getList("Server Variables", Request.ServerVariables));
@@ -45,12 +45,17 @@ public partial class _Default : System.Web.UI.Page {
 		StringBuilder terms = new StringBuilder();
 		foreach (var key in collection.AllKeys)
 			terms.Append($"({key}::{collection[key]})");
-		return $"<br/><li>{name} [{collection.Count} {terms}]</li>";
+		return $"<br/><li>{name} [{collection.Count}{(collection.Count == 0 ? "" : " ")}{terms}]</li>";
 
 	}
 
 	protected void btnGetFormData_Click(object sender, EventArgs e) {
 		string txtName = Request.Form.Get("txtFirstName");
 		lblOutput.Text = txtName;
+	}
+
+	protected void btnHttpResponse_Click(object sender, EventArgs e) {
+		Response.Write("<b>My name is:</b><br>");
+		Response.Write(Request.Form.Get("txtFirstName") +"<br><br>");
 	}
 }
