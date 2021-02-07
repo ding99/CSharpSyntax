@@ -22,10 +22,6 @@ public partial class _Default : System.Web.UI.Page {
 		theInfo += $"<li>Text Name [{txtFirstName.Text}]</li>";
 		theInfo += $"<li>Text Name (Get) [{Request.Form.Get("txtFirstName")}]</li>";
 		theInfo += $"<li>Query String Count [{Request.QueryString.Count}]</li>";
-		string cookies = string.Empty;
-		foreach (var a in Request.Cookies)
-			cookies += $"({a})";
-		theInfo += $"<li>Cookies [{Request.Cookies.Count} {cookies}]</li>";
 		theInfo += $"<li>Raw Url [{Request.RawUrl}]</li>";
 		theInfo += $"<li>Request Type [{Request.RequestType}]</li>";
 		theInfo += $"<li>Http Method [{Request.HttpMethod}]</li>";
@@ -34,13 +30,42 @@ public partial class _Default : System.Web.UI.Page {
 		theInfo += $"<li>User Host Name [{Request.UserHostName}]</li>";
 		theInfo += $"<li>User Agent [{Request.UserAgent}]</li>";
 
-		theInfo += "<br/>";
-		string headers = string.Empty;
-		foreach(var key in Request.Headers.AllKeys)
-			headers += $"({key}::{Request.Headers[key]})";
-		theInfo += $"<li>Headers [{Request.Headers.Count} {headers}]</li>";
+		string terms = string.Empty;
+		foreach (var a in Request.Cookies)
+			terms += $"({a})";
+		theInfo += $"<br/><li>Cookies [{Request.Cookies.Count} {terms}]</li>";
 
+		theInfo += getList("Headers", Request.Headers);
+		theInfo += getList("Form", Request.Form);
+		theInfo += getList("Server Variables", Request.ServerVariables);
+		/*
+		theInfo += "<br/>";
+		terms = string.Empty;
+		foreach(var key in Request.Headers.AllKeys)
+			terms += $"({key}::{Request.Headers[key]})";
+		theInfo += $"<li>Headers [{Request.Headers.Count} {terms}]</li>";
+
+		theInfo += "<br/>";
+		terms = string.Empty;
+		foreach (var key in Request.Form.AllKeys)
+			terms += $"({key}::{Request.Form[key]})";
+		theInfo += $"<li>Form [{Request.Headers.Count} {terms}]</li>";
+
+		theInfo += "<br/>";
+		terms = string.Empty;
+		foreach (var key in Request.ServerVariables.AllKeys)
+			terms += $"({key}::{Request.ServerVariables[key]})";
+		theInfo += $"<li>Form [{Request.ServerVariables.Count} {terms}]</li>";
+		*/
 		lblOutput.Text = theInfo;
+	}
+
+	private string getList(string name, System.Collections.Specialized.NameValueCollection collection) {
+		string terms = string.Empty;
+		foreach (var key in collection.AllKeys)
+			terms += $"({key}::{collection[key]})";
+		return $"<br/><li>{name} [{collection.Count} {terms}]</li>";
+
 	}
 
 	protected void btnGetFormData_Click(object sender, EventArgs e) {
