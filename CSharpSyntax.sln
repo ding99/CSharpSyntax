@@ -628,6 +628,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DynamicCtrls", "CS60DN46\Ch
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "57290"
+		SlnRelativePath = "CS60DN46\Ch32WebControls\DynamicCtrls\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
