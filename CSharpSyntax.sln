@@ -610,6 +610,27 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "FunWithPageMembers", "CS60D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ch32WebControls", "Ch32WebControls", "{DC1AD4ED-1D58-4D9F-8EF7-98A8A5DA6BA9}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DynamicCtrls", "CS60DN46\Ch32WebControls\DynamicCtrls\", "{94A2EE1A-CD31-4E2B-BDF8-8B61C9C70D49}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_57290"
+		Debug.AspNetCompiler.PhysicalPath = "CS60DN46\Ch32WebControls\DynamicCtrls\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57290\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_57290"
+		Release.AspNetCompiler.PhysicalPath = "CS60DN46\Ch32WebControls\DynamicCtrls\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57290\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "57290"
+		SlnRelativePath = "CS60DN46\Ch32WebControls\DynamicCtrls\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parsings", "Variables\Parsings\Parsings.csproj", "{745D42A5-AAF4-4508-96CD-CBADA4EE0D2D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ch34MVC", "Ch34MVC", "{32BFE007-5BF3-4A9F-AD36-A9B3B8105BFD}"
@@ -6212,6 +6233,30 @@ Global
 		{6A916814-1EB6-4307-96A4-028F0C205C12}.Release|x64.Build.0 = Debug|Any CPU
 		{6A916814-1EB6-4307-96A4-028F0C205C12}.Release|x86.ActiveCfg = Debug|Any CPU
 		{6A916814-1EB6-4307-96A4-028F0C205C12}.Release|x86.Build.0 = Debug|Any CPU
+		{94A2EE1A-CD31-4E2B-BDF8-8B61C9C70D49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94A2EE1A-CD31-4E2B-BDF8-8B61C9C70D49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94A2EE1A-CD31-4E2B-BDF8-8B61C9C70D49}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{94A2EE1A-CD31-4E2B-BDF8-8B61C9C70D49}.Debug|ARM.Build.0 = Debug|Any CPU
+		{94A2EE1A-CD31-4E2B-BDF8-8B61C9C70D49}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{94A2EE1A-CD31-4E2B-BDF8-8B61C9C70D49}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{94A2EE1A-CD31-4E2B-BDF8-8B61C9C70D49}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{94A2EE1A-CD31-4E2B-BDF8-8B61C9C70D49}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{94A2EE1A-CD31-4E2B-BDF8-8B61C9C70D49}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{94A2EE1A-CD31-4E2B-BDF8-8B61C9C70D49}.Debug|x64.Build.0 = Debug|Any CPU
+		{94A2EE1A-CD31-4E2B-BDF8-8B61C9C70D49}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{94A2EE1A-CD31-4E2B-BDF8-8B61C9C70D49}.Debug|x86.Build.0 = Debug|Any CPU
+		{94A2EE1A-CD31-4E2B-BDF8-8B61C9C70D49}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{94A2EE1A-CD31-4E2B-BDF8-8B61C9C70D49}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{94A2EE1A-CD31-4E2B-BDF8-8B61C9C70D49}.Release|ARM.ActiveCfg = Debug|Any CPU
+		{94A2EE1A-CD31-4E2B-BDF8-8B61C9C70D49}.Release|ARM.Build.0 = Debug|Any CPU
+		{94A2EE1A-CD31-4E2B-BDF8-8B61C9C70D49}.Release|ARM64.ActiveCfg = Debug|Any CPU
+		{94A2EE1A-CD31-4E2B-BDF8-8B61C9C70D49}.Release|ARM64.Build.0 = Debug|Any CPU
+		{94A2EE1A-CD31-4E2B-BDF8-8B61C9C70D49}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{94A2EE1A-CD31-4E2B-BDF8-8B61C9C70D49}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{94A2EE1A-CD31-4E2B-BDF8-8B61C9C70D49}.Release|x64.ActiveCfg = Debug|Any CPU
+		{94A2EE1A-CD31-4E2B-BDF8-8B61C9C70D49}.Release|x64.Build.0 = Debug|Any CPU
+		{94A2EE1A-CD31-4E2B-BDF8-8B61C9C70D49}.Release|x86.ActiveCfg = Debug|Any CPU
+		{94A2EE1A-CD31-4E2B-BDF8-8B61C9C70D49}.Release|x86.Build.0 = Debug|Any CPU
 		{745D42A5-AAF4-4508-96CD-CBADA4EE0D2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{745D42A5-AAF4-4508-96CD-CBADA4EE0D2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{745D42A5-AAF4-4508-96CD-CBADA4EE0D2D}.Debug|ARM.ActiveCfg = Debug|Any CPU
@@ -6537,6 +6582,7 @@ Global
 		{197DA8B6-BC73-41B6-90A5-59C6870641A0} = {49BBD9A2-E900-4674-97BE-ED54FDD44BDA}
 		{6A916814-1EB6-4307-96A4-028F0C205C12} = {49BBD9A2-E900-4674-97BE-ED54FDD44BDA}
 		{DC1AD4ED-1D58-4D9F-8EF7-98A8A5DA6BA9} = {B599F668-236A-4D7A-A51B-F383D94A5154}
+		{94A2EE1A-CD31-4E2B-BDF8-8B61C9C70D49} = {DC1AD4ED-1D58-4D9F-8EF7-98A8A5DA6BA9}
 		{745D42A5-AAF4-4508-96CD-CBADA4EE0D2D} = {98565BA4-0009-4CD3-B1BF-6CCFBA9DDD7C}
 		{32BFE007-5BF3-4A9F-AD36-A9B3B8105BFD} = {B599F668-236A-4D7A-A51B-F383D94A5154}
 		{086EC890-8B82-43C3-A168-2497863AB5A7} = {32BFE007-5BF3-4A9F-AD36-A9B3B8105BFD}
