@@ -96,6 +96,8 @@ namespace Employees
 
 			Employee.BenefitNest.BenefitLevel bLevel = Employee.BenefitNest.BenefitLevel.Platinum;
 			Console.WriteLine($"Benefit level: {bLevel}");
+
+			Console.WriteLine("-> Cannot instantiate a private nested class");
 		}
 
 		static void Containment()
