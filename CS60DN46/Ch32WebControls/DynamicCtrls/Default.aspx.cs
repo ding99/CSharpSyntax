@@ -24,6 +24,14 @@ public partial class _Default : System.Web.UI.Page {
 		}
 	}
 
+	protected void btnGetTextData_Click(object sender, System.EventArgs e) {
+		StringBuilder b = new StringBuilder();
+		for(int i = 0; i < Request.Form.Count; i++) {
+			b.Append($"<li>Request.Form[i]</li><br/>");
+		}
+		lblTextBoxData.Text = b.ToString();
+	}
+
 	private void ListControlsInPanel() {
 		StringBuilder b = new StringBuilder(
 		$"<b>Does the panel have controls? {myPanel.HasControls()} </b><br/>");
