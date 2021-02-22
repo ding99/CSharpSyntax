@@ -15,14 +15,14 @@
             <hr />
         </div>
         <!-- The Panel has three contained controls -->
-        <asp:Panel ID="myPanel" runat="server" Height="218px">
-            <asp:TextBox ID="myTextBox" runat="server"></asp:TextBox>
+        <asp:Panel ID="myPanel" runat="server" Width="200px" BorderColor="Black" BorderStyle="Solid">
+            <asp:TextBox ID="myTextBox1" runat="server"></asp:TextBox>
             <br/>
             <br/>
-            <asp:Button ID="myButton" runat="server" Text="Button" />
+            <asp:Button ID="myButton1" runat="server" Text="Button" />
             <br/>
             <br/>
-            <asp:HyperLink ID="myLink" runat="server">HyperLink</asp:HyperLink>
+            <asp:HyperLink ID="myHyperLink1" runat="server">HyperLink</asp:HyperLink>
         </asp:Panel>
         <br/>
         <br/>
