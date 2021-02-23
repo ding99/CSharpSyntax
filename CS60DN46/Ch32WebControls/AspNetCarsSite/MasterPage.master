@@ -11,6 +11,17 @@
 <body>
     <form id="form1" runat="server">
     <div>
+        <hr />
+        <asp:Label ID="Label1" runat="server" Font-Size="XX-Large" Text="Welcome to the ASP.NET Cars Super Site!"></asp:Label>
+        <asp:AdRotator ID="myAdRotator" runat="server" />
+        &nbsp;<br />
+        <br />
+        <asp:TreeView ID="navigationTree" runat="server">
+
+        </asp:TreeView>
+        <hr />
+    </div>
+    <div>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
