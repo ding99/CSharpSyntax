@@ -23,7 +23,7 @@ public partial class _Default : System.Web.UI.Page {
 	}
 
 	protected void btnGetTextData_Click(object sender, System.EventArgs e) {
-		StringBuilder b = new StringBuilder($"Request Forms ({Request.Form.Count})<br/>");
+		StringBuilder b = new StringBuilder($"*** Request Forms ({Request.Form.Count})<br/>");
 		for(int i = 0; i < Request.Form.Count; i++) {
 			b.Append($"<li>{Request.Form[i]}</li><br/>");
 		}
@@ -31,7 +31,7 @@ public partial class _Default : System.Web.UI.Page {
 	}
 
 	protected void btnGetAddedTextData_Click(object sender, System.EventArgs e) {
-		StringBuilder b = new StringBuilder($"Added Text Box Data<br/>");
+		StringBuilder b = new StringBuilder($"*** Added Text Box Data<br/>");
 		for (int i = 0; i < 3; i++) {
 			b.Append($"<li>{Request.Form.Get($"newTextBox{i}")}</li><br/>");
 		}
