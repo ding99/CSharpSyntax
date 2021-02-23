@@ -17,11 +17,9 @@ public partial class _Default : System.Web.UI.Page {
 	}
 
 	protected void btnAddWidgets_Click(object sender, System.EventArgs e) {
-		for(int i = 0; i < 3; i++) {
-			TextBox t = new TextBox { ID = $"newTextBox{i}", Text = $"TextBox{i}" };
-			myPanel.Controls.Add(t);
-			ListControlsInPanel();
-		}
+		for(int i = 0; i < 3; i++)
+			myPanel.Controls.Add(new TextBox { ID = $"newTextBox{i}", Text = $"TextBox{i}" });
+		ListControlsInPanel();
 	}
 
 	protected void btnGetTextData_Click(object sender, System.EventArgs e) {
