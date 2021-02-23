@@ -15,18 +15,24 @@
             <hr />
         </div>
         <!-- The Panel has three contained controls -->
-        <asp:Panel ID="myPanel" runat="server" Height="218px">
-            <asp:TextBox ID="myTextBox" runat="server"></asp:TextBox>
+        <asp:Panel ID="myPanel" runat="server" Width="200px" BorderColor="Black" BorderStyle="Solid">
+            <asp:TextBox ID="myTextBox1" runat="server"></asp:TextBox>
             <br/>
             <br/>
-            <asp:Button ID="myButton" runat="server" Text="Button" />
+            <asp:Button ID="myButton1" runat="server" Text="Button" />
             <br/>
             <br/>
-            <asp:HyperLink ID="myLink" runat="server">HyperLink</asp:HyperLink>
+            <asp:HyperLink ID="myHyperLink1" runat="server">HyperLink</asp:HyperLink>
         </asp:Panel>
         <br/>
+        <asp:Button ID="btnAddWidgets" runat="server" Text="Add Widgets" OnClick="btnAddWidgets_Click" />
+        <asp:Button ID="btnClearPanel" runat="server" Text="Clear Panel" OnClick="btnClearPanel_Click" />
+        <br />
+        <asp:Button ID="btnGetTextData" runat="server" Text="Get Text" OnClick="btnGetTextData_Click" />
+        <asp:Button ID="butGetAddedTextData" runat="server" Text="Added Text" OnClick="btnGetAddedTextData_Click" />
         <br/>
         <asp:Label ID="lblControlInfo" runat="server"></asp:Label>
+        <asp:Label ID="lblTextBoxData" runat="server"></asp:Label>
     </form>
 </body>
 </html>
