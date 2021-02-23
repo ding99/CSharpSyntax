@@ -29,7 +29,7 @@
         <asp:Button ID="btnClearPanel" runat="server" Text="Clear Panel" OnClick="btnClearPanel_Click" />
         <br />
         <asp:Button ID="btnGetTextData" runat="server" Text="Get Text" OnClick="btnGetTextData_Click" />
-        <asp:Button ID="butGetAddedTextData" runat="server" Text="Added Text" OnClick="btnGetAddedTextData_Click" />
+        <asp:Button ID="butGetAddedTextData" runat="server" Text="Get Added Text" OnClick="btnGetAddedTextData_Click" />
         <br/>
         <asp:Label ID="lblControlInfo" runat="server"></asp:Label>
         <asp:Label ID="lblTextBoxData" runat="server"></asp:Label>
