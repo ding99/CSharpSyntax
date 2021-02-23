@@ -17,17 +17,23 @@ public partial class _Default : System.Web.UI.Page {
 	}
 
 	protected void btnAddWidgets_Click(object sender, System.EventArgs e) {
-		for(int i = 0; i < 3; i++) {
-			TextBox t = new TextBox { ID = $"newTextBox{i}", Text = $"TextBox{i}" };
-			myPanel.Controls.Add(t);
-			ListControlsInPanel();
-		}
+		for(int i = 0; i < 3; i++)
+			myPanel.Controls.Add(new TextBox { ID = $"newTextBox{i}", Text = $"Text{i}" });
+		ListControlsInPanel();
 	}
 
 	protected void btnGetTextData_Click(object sender, System.EventArgs e) {
-		StringBuilder b = new StringBuilder();
+		StringBuilder b = new StringBuilder($"Request Forms ({Request.Form.Count})<br/>");
 		for(int i = 0; i < Request.Form.Count; i++) {
-			b.Append($"<li>Request.Form[i]</li><br/>");
+			b.Append($"<li>{Request.Form[i]}</li><br/>");
+		}
+		lblTextBoxData.Text = b.ToString();
+	}
+
+	protected void btnGetAddedTextData_Click(object sender, System.EventArgs e) {
+		StringBuilder b = new StringBuilder($"Added Text Box Data<br/>");
+		for (int i = 0; i < 3; i++) {
+			b.Append($"<li>{Request.Form.Get($"newTextBox{i}")}</li><br/>");
 		}
 		lblTextBoxData.Text = b.ToString();
 	}
