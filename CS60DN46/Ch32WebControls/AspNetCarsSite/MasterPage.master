@@ -13,6 +13,7 @@
     <div>
         <hr />
         <asp:Label ID="Label1" runat="server" Font-Size="XX-Large" Text="Welcome to the ASP.NET Cars Super Site!"></asp:Label>
+        <br />
         <asp:AdRotator ID="myAdRotator" runat="server" AdvertisementFile="~/Ads.xml" />
         &nbsp;<br />
         <br />
