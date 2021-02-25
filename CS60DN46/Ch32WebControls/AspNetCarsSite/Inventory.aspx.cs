@@ -13,7 +13,8 @@ public partial class InventoryPage : System.Web.UI.Page {
 
 	}
 
-	public IEnumerable<Inventory> GetData() => new InventoryRepo().GetAll();
+	//public IEnumerable<Inventory> GetData() => new InventoryRepo().GetAll().AsQueryable();
+	public IQueryable<Inventory> GetData() => new InventoryRepo().GetAll().AsQueryable();
 
 	public void Delete(int carId, byte[] timeStamp) {
 		new InventoryRepo().Delete(carId, timeStamp);
