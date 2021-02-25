@@ -1,6 +1,5 @@
 ﻿using AutoLotDAL.Models;
 using System.Data.Entity;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace AutoLotDAL.Repos {
@@ -19,7 +18,5 @@ namespace AutoLotDAL.Repos {
 			}).State = EntityState.Deleted;
 			return SaveChangesAsync();
 		}
-
-		public IQueryable<Inventory> GetData() => new InventoryRepo().GetAll().AsQueryable();
 	}
 }
