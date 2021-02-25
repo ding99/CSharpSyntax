@@ -1,20 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-
+﻿using AutoLotDAL.Models;
 using AutoLotDAL.Repos;
-using AutoLotDAL.Models;
+using System;
+using System.Collections;
+using System.Linq;
+using System.Web.ModelBinding;
+using System.Web.UI;
 
 public partial class InventoryPage : System.Web.UI.Page {
 	protected void Page_Load(object sender, EventArgs e) {
-
 	}
 
-	//public IEnumerable<Inventory> GetData() => new InventoryRepo().GetAll().AsQueryable();
-	public IQueryable<Inventory> GetData() => new InventoryRepo().GetAll().AsQueryable();
+	public IQueryable<Inventory> GetData([Control("cboMake")] string make = "") {
+		return string.IsNullOrEmpty(make) ?
+			new InventoryRepo().GetAll().AsQueryable() :
+			new InventoryRepo().GetAll().Where(x => x.Make == make).AsQueryable();
+	}
 
 	public void Delete(int carId, byte[] timeStamp) {
 		new InventoryRepo().Delete(carId, timeStamp);
@@ -33,4 +33,6 @@ public partial class InventoryPage : System.Web.UI.Page {
 	//	if (ModelState.IsValid)
 	//		await new InventoryRepo().SaveAsync(inventory);
 	//}
+
+	public IEnumerable GetMakes() => new InventoryRepo().GetAll().Select(x => new {x.Make}).Distinct();
 }
