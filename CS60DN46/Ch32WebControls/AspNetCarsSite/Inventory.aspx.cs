@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Web.ModelBinding;
-
+﻿using AutoLotDAL.Models;
 using AutoLotDAL.Repos;
-using AutoLotDAL.Models;
+using System;
+using System.Collections;
+using System.Linq;
+using System.Web.ModelBinding;
+using System.Web.UI;
 
 public partial class InventoryPage : System.Web.UI.Page {
 	protected void Page_Load(object sender, EventArgs e) {
-
 	}
 
 	public IQueryable<Inventory> GetData([Control("cboMake")] string make = "") {
