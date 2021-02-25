@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <asp:GridView ID="GridView2" runat="server" CellPadding="4" AutoGenerateColumns="false" DataKeyNames="CarID, Timestamp" ItemType="AutoLotDAL.Models.Inventory" SelectMethod="GetData" DeleteMethod="Delete" UpdateMethod="Update" EmptyDataText="There are no data records to display." ForeColor="#333333" GridLines="None">
+    <asp:GridView ID="carsGrid" runat="server" AllowCustomPaging="true" PageSize="2" AllowSorting="true" AutoGenerateColumns="false" CellPadding="4" DataKeyNames="CarID, Timestamp" ItemType="AutoLotDAL.Models.Inventory" SelectMethod="GetData" DeleteMethod="Delete" UpdateMethod="Update" EmptyDataText="There are no data records to display." ForeColor="#333333" GridLines="None">
         <Columns>
             <asp:CommandField ShowDeleteButton="true" ShowEditButton="true" />
             <asp:BoundField DataField="CarID" HeaderText="CarID" ReadOnly="true" SortExpression="CarID" />

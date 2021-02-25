@@ -581,3 +581,311 @@ SELECT
 -- Completed in 0 ms with result: SqlDataReader
 
 Closed connection at 2/24/2021 11:27:10 PM -05:00
+Opened connection at 2/24/2021 11:34:45 PM -05:00
+SELECT 
+    [Extent1].[CarId] AS [CarId], 
+    [Extent1].[Make] AS [Make], 
+    [Extent1].[Color] AS [Color], 
+    [Extent1].[PetName] AS [PetName], 
+    [Extent1].[Timestamp] AS [Timestamp]
+    FROM [dbo].[Inventory] AS [Extent1]
+-- Executing at 2/24/2021 11:34:45 PM -05:00
+-- Completed in 1 ms with result: SqlDataReader
+
+Closed connection at 2/24/2021 11:34:45 PM -05:00
+Opened connection at 2/24/2021 11:34:59 PM -05:00
+SELECT 
+    [Extent1].[CarId] AS [CarId], 
+    [Extent1].[Make] AS [Make], 
+    [Extent1].[Color] AS [Color], 
+    [Extent1].[PetName] AS [PetName], 
+    [Extent1].[Timestamp] AS [Timestamp]
+    FROM [dbo].[Inventory] AS [Extent1]
+-- Executing at 2/24/2021 11:34:59 PM -05:00
+-- Completed in 0 ms with result: SqlDataReader
+
+Closed connection at 2/24/2021 11:34:59 PM -05:00
+Opened connection at 2/24/2021 11:35:08 PM -05:00
+SELECT 
+    [Extent1].[CarId] AS [CarId], 
+    [Extent1].[Make] AS [Make], 
+    [Extent1].[Color] AS [Color], 
+    [Extent1].[PetName] AS [PetName], 
+    [Extent1].[Timestamp] AS [Timestamp]
+    FROM [dbo].[Inventory] AS [Extent1]
+-- Executing at 2/24/2021 11:35:08 PM -05:00
+-- Completed in 0 ms with result: SqlDataReader
+
+Closed connection at 2/24/2021 11:35:08 PM -05:00
+Opened connection at 2/24/2021 11:35:14 PM -05:00
+SELECT 
+    [Extent1].[CarId] AS [CarId], 
+    [Extent1].[Make] AS [Make], 
+    [Extent1].[Color] AS [Color], 
+    [Extent1].[PetName] AS [PetName], 
+    [Extent1].[Timestamp] AS [Timestamp]
+    FROM [dbo].[Inventory] AS [Extent1]
+-- Executing at 2/24/2021 11:35:14 PM -05:00
+-- Completed in 0 ms with result: SqlDataReader
+
+Closed connection at 2/24/2021 11:35:14 PM -05:00
+Opened connection at 2/24/2021 11:35:18 PM -05:00
+SELECT 
+    [Extent1].[CarId] AS [CarId], 
+    [Extent1].[Make] AS [Make], 
+    [Extent1].[Color] AS [Color], 
+    [Extent1].[PetName] AS [PetName], 
+    [Extent1].[Timestamp] AS [Timestamp]
+    FROM [dbo].[Inventory] AS [Extent1]
+-- Executing at 2/24/2021 11:35:18 PM -05:00
+-- Completed in 0 ms with result: SqlDataReader
+
+Closed connection at 2/24/2021 11:35:18 PM -05:00
+Opened connection at 2/24/2021 11:35:41 PM -05:00
+SELECT 
+    [Extent1].[CarId] AS [CarId], 
+    [Extent1].[Make] AS [Make], 
+    [Extent1].[Color] AS [Color], 
+    [Extent1].[PetName] AS [PetName], 
+    [Extent1].[Timestamp] AS [Timestamp]
+    FROM [dbo].[Inventory] AS [Extent1]
+-- Executing at 2/24/2021 11:35:41 PM -05:00
+-- Completed in 1 ms with result: SqlDataReader
+
+Closed connection at 2/24/2021 11:35:41 PM -05:00
+Opened connection at 2/24/2021 11:41:03 PM -05:00
+select cast(serverproperty('EngineEdition') as int)
+-- Executing at 2/24/2021 11:41:03 PM -05:00
+-- Completed in 1 ms with result: SqlDataReader
+
+Closed connection at 2/24/2021 11:41:03 PM -05:00
+Opened connection at 2/24/2021 11:41:03 PM -05:00
+IF db_id(N'AutoLot') IS NOT NULL SELECT 1 ELSE SELECT Count(*) FROM sys.databases WHERE [name]=N'AutoLot'
+-- Executing at 2/24/2021 11:41:03 PM -05:00
+-- Completed in 21 ms with result: 1
+
+Closed connection at 2/24/2021 11:41:03 PM -05:00
+Opened connection at 2/24/2021 11:41:03 PM -05:00
+
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.CreditRisks','dbo.Customers','dbo.Orders','dbo.Inventory')
+    OR t.TABLE_NAME = 'EdmMetadata'
+-- Executing at 2/24/2021 11:41:03 PM -05:00
+-- Completed in 15 ms with result: 4
+
+Closed connection at 2/24/2021 11:41:03 PM -05:00
+Opened connection at 2/24/2021 11:41:04 PM -05:00
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+-- p__linq__0: 'AutoLotDAL.EF.AutoLotEntities' (Type = String, Size = 4000)
+-- Executing at 2/24/2021 11:41:04 PM -05:00
+-- Completed in 3 ms with result: SqlDataReader
+
+Closed connection at 2/24/2021 11:41:04 PM -05:00
+Opened connection at 2/24/2021 11:41:04 PM -05:00
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+-- p__linq__0: 'AutoLotDAL.EF.AutoLotEntities' (Type = String, Size = 4000)
+-- Executing at 2/24/2021 11:41:04 PM -05:00
+-- Completed in 1 ms with result: SqlDataReader
+
+Closed connection at 2/24/2021 11:41:04 PM -05:00
+Opened connection at 2/24/2021 11:41:04 PM -05:00
+Opened connection at 2/24/2021 11:41:04 PM -05:00
+SELECT 
+    [Extent1].[CarId] AS [CarId], 
+    [Extent1].[Make] AS [Make], 
+    [Extent1].[Color] AS [Color], 
+    [Extent1].[PetName] AS [PetName], 
+    [Extent1].[Timestamp] AS [Timestamp]
+    FROM [dbo].[Inventory] AS [Extent1]
+-- Executing at 2/24/2021 11:41:05 PM -05:00
+SELECT 
+    [Extent1].[CarId] AS [CarId], 
+    [Extent1].[Make] AS [Make], 
+    [Extent1].[Color] AS [Color], 
+    [Extent1].[PetName] AS [PetName], 
+    [Extent1].[Timestamp] AS [Timestamp]
+    FROM [dbo].[Inventory] AS [Extent1]
+-- Executing at 2/24/2021 11:41:05 PM -05:00
+-- Completed in 0 ms with result: SqlDataReader
+
+-- Completed in 0 ms with result: SqlDataReader
+
+Closed connection at 2/24/2021 11:41:05 PM -05:00
+Closed connection at 2/24/2021 11:41:05 PM -05:00
+Opened connection at 2/24/2021 11:41:31 PM -05:00
+SELECT 
+    [Extent1].[CarId] AS [CarId], 
+    [Extent1].[Make] AS [Make], 
+    [Extent1].[Color] AS [Color], 
+    [Extent1].[PetName] AS [PetName], 
+    [Extent1].[Timestamp] AS [Timestamp]
+    FROM [dbo].[Inventory] AS [Extent1]
+-- Executing at 2/24/2021 11:41:31 PM -05:00
+-- Completed in 0 ms with result: SqlDataReader
+
+Closed connection at 2/24/2021 11:41:31 PM -05:00
+Opened connection at 2/24/2021 11:41:35 PM -05:00
+SELECT 
+    [Extent1].[CarId] AS [CarId], 
+    [Extent1].[Make] AS [Make], 
+    [Extent1].[Color] AS [Color], 
+    [Extent1].[PetName] AS [PetName], 
+    [Extent1].[Timestamp] AS [Timestamp]
+    FROM [dbo].[Inventory] AS [Extent1]
+-- Executing at 2/24/2021 11:41:35 PM -05:00
+-- Completed in 0 ms with result: SqlDataReader
+
+Closed connection at 2/24/2021 11:41:35 PM -05:00
+Opened connection asynchronously at 2/24/2021 11:41:40 PM -05:00
+Started transaction at 2/24/2021 11:41:40 PM -05:00
+UPDATE [dbo].[Inventory]
+SET [Make] = @0, [Color] = @1, [PetName] = @2
+WHERE (([CarId] = @3) AND ([Timestamp] = @4))
+SELECT [Timestamp]
+FROM [dbo].[Inventory]
+WHERE @@ROWCOUNT > 0 AND [CarId] = @3
+-- @0: 'Saab' (Type = String, Size = 50)
+-- @1: 'Black2' (Type = String, Size = 50)
+-- @2: 'Mel' (Type = String, Size = 50)
+-- @3: '3' (Type = Int32)
+-- @4: 'System.Byte[]' (Type = Binary, Size = 8)
+-- Executing asynchronously at 2/24/2021 11:41:40 PM -05:00
+-- Completed in 8 ms with result: SqlDataReader
+
+Committed transaction at 2/24/2021 11:41:40 PM -05:00
+Closed connection at 2/24/2021 11:41:40 PM -05:00
+Opened connection at 2/24/2021 11:41:40 PM -05:00
+SELECT 
+    [Extent1].[CarId] AS [CarId], 
+    [Extent1].[Make] AS [Make], 
+    [Extent1].[Color] AS [Color], 
+    [Extent1].[PetName] AS [PetName], 
+    [Extent1].[Timestamp] AS [Timestamp]
+    FROM [dbo].[Inventory] AS [Extent1]
+-- Executing at 2/24/2021 11:41:40 PM -05:00
+-- Completed in 0 ms with result: SqlDataReader
+
+Closed connection at 2/24/2021 11:41:40 PM -05:00
+Opened connection at 2/24/2021 11:43:43 PM -05:00
+select cast(serverproperty('EngineEdition') as int)
+-- Executing at 2/24/2021 11:43:43 PM -05:00
+-- Completed in 1 ms with result: SqlDataReader
+
+Closed connection at 2/24/2021 11:43:43 PM -05:00
+Opened connection at 2/24/2021 11:43:44 PM -05:00
+IF db_id(N'AutoLot') IS NOT NULL SELECT 1 ELSE SELECT Count(*) FROM sys.databases WHERE [name]=N'AutoLot'
+-- Executing at 2/24/2021 11:43:44 PM -05:00
+-- Completed in 19 ms with result: 1
+
+Closed connection at 2/24/2021 11:43:44 PM -05:00
+Opened connection at 2/24/2021 11:43:44 PM -05:00
+
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.CreditRisks','dbo.Customers','dbo.Orders','dbo.Inventory')
+    OR t.TABLE_NAME = 'EdmMetadata'
+-- Executing at 2/24/2021 11:43:44 PM -05:00
+-- Completed in 9 ms with result: 4
+
+Closed connection at 2/24/2021 11:43:44 PM -05:00
+Opened connection at 2/24/2021 11:43:44 PM -05:00
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+-- p__linq__0: 'AutoLotDAL.EF.AutoLotEntities' (Type = String, Size = 4000)
+-- Executing at 2/24/2021 11:43:45 PM -05:00
+-- Completed in 1 ms with result: SqlDataReader
+
+Closed connection at 2/24/2021 11:43:45 PM -05:00
+Opened connection at 2/24/2021 11:43:45 PM -05:00
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+-- p__linq__0: 'AutoLotDAL.EF.AutoLotEntities' (Type = String, Size = 4000)
+-- Executing at 2/24/2021 11:43:45 PM -05:00
+-- Completed in 2 ms with result: SqlDataReader
+
+Closed connection at 2/24/2021 11:43:45 PM -05:00
+Opened connection at 2/24/2021 11:43:45 PM -05:00
+SELECT 
+    [Extent1].[CarId] AS [CarId], 
+    [Extent1].[Make] AS [Make], 
+    [Extent1].[Color] AS [Color], 
+    [Extent1].[PetName] AS [PetName], 
+    [Extent1].[Timestamp] AS [Timestamp]
+    FROM [dbo].[Inventory] AS [Extent1]
+-- Executing at 2/24/2021 11:43:45 PM -05:00
+-- Completed in 1 ms with result: SqlDataReader
+
+Closed connection at 2/24/2021 11:43:45 PM -05:00
+Opened connection at 2/24/2021 11:45:15 PM -05:00
+SELECT 
+    [Extent1].[CarId] AS [CarId], 
+    [Extent1].[Make] AS [Make], 
+    [Extent1].[Color] AS [Color], 
+    [Extent1].[PetName] AS [PetName], 
+    [Extent1].[Timestamp] AS [Timestamp]
+    FROM [dbo].[Inventory] AS [Extent1]
+-- Executing at 2/24/2021 11:45:15 PM -05:00
+-- Completed in 1 ms with result: SqlDataReader
+
+Closed connection at 2/24/2021 11:45:15 PM -05:00
+Opened connection at 2/24/2021 11:45:26 PM -05:00
+SELECT 
+    [Extent1].[CarId] AS [CarId], 
+    [Extent1].[Make] AS [Make], 
+    [Extent1].[Color] AS [Color], 
+    [Extent1].[PetName] AS [PetName], 
+    [Extent1].[Timestamp] AS [Timestamp]
+    FROM [dbo].[Inventory] AS [Extent1]
+-- Executing at 2/24/2021 11:45:26 PM -05:00
+-- Completed in 0 ms with result: SqlDataReader
+
+Closed connection at 2/24/2021 11:45:26 PM -05:00
+Opened connection at 2/24/2021 11:45:43 PM -05:00
+SELECT 
+    [Extent1].[CarId] AS [CarId], 
+    [Extent1].[Make] AS [Make], 
+    [Extent1].[Color] AS [Color], 
+    [Extent1].[PetName] AS [PetName], 
+    [Extent1].[Timestamp] AS [Timestamp]
+    FROM [dbo].[Inventory] AS [Extent1]
+-- Executing at 2/24/2021 11:45:43 PM -05:00
+-- Completed in 0 ms with result: SqlDataReader
+
+Closed connection at 2/24/2021 11:45:43 PM -05:00
