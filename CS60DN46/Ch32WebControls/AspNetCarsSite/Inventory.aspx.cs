@@ -14,4 +14,8 @@ public partial class Default2 : System.Web.UI.Page {
 	}
 
 	public IEnumerable<Inventory> GetData() => new InventoryRepo().GetAll();
+
+	public void Delete(int carId, byte[] timeStamp) {
+		new InventoryRepo().Delete(carId, timeStamp);
+	}
 }
