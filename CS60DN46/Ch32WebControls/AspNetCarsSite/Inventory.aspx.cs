@@ -20,16 +20,16 @@ public partial class InventoryPage : System.Web.UI.Page {
 	}
 
 	//explicit
-	public async void Update(int carID) {
-		var inv = new Inventory() { CarId = carID };
-		if (TryUpdateModel(inv)) {
-			await new InventoryRepo().SaveAsync(inv);
-		}
-	}
+	//public async void Update(int carID) {
+	//	var inv = new Inventory() { CarId = carID };
+	//	if (TryUpdateModel(inv)) {
+	//		await new InventoryRepo().SaveAsync(inv);
+	//	}
+	//}
 
 	//implicit
-	//public async void Update(Inventory inventory) {
-	//	if (ModelState.IsValid)
-	//		await new InventoryRepo().SaveAsync(inventory);
-	//}
+	public async void Update(Inventory inventory) {
+		if (ModelState.IsValid)
+			await new InventoryRepo().SaveAsync(inventory);
+	}
 }
