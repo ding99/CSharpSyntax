@@ -37,6 +37,7 @@
 
         <asp:Button ID="btnPostBack" runat="server" Text="Post Back" OnClick="btnPostBack_Click" />
         <br />
+        <hr />
         <asp:Label ID="lblValidationComplete" runat="server"></asp:Label>
         <br />
         <asp:ValidationSummary ID="ValidationSummary1" runat="server"  Width="353px" HeaderText="Here are the things you must correct." />
