@@ -42,7 +42,7 @@
         <hr />
         <asp:Label ID="lblValidationComplete" runat="server"></asp:Label>
         <br />
-        <asp:ValidationSummary ID="ValidationSummary1" runat="server"  Width="353px" HeaderText="Here are the things you must correct." />
+        <asp:ValidationSummary ID="ValidationSummary1" runat="server"  Width="353px" HeaderText="Here are the things you must correct." ShowMessageBox="true" ShowSummary="true" />
         </div>
     </form>
 </body>
