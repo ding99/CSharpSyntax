@@ -4,10 +4,11 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Validation Group</title>
 </head>
 <body>
     <form id="form2" runat="server">
+        <h2>Validation Group</h2>
         <asp:Panel ID="Panel1" runat="server" Height="83px" Width="296px">
             <asp:TextBox ID="txtRequiredData" runat="server" ValidationGroup="FirstGroup"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*Required field!" ControlToValidate="txtRequiredData" ValidationGroup="FirstGroup"></asp:RequiredFieldValidator>
