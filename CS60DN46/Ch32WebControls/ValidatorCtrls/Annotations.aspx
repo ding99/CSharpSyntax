@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Annotations</title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -92,6 +92,7 @@
                 </table>
             </InsertItemTemplate>
         </asp:FormView>
+        <asp:ValidationSummary ID="ValidationSummary1" runat="server" ShowModelStateErrors="true" ForeColor="Red" HeaderText="Please check the following errors:" />
     </form>
 </body>
 </html>
