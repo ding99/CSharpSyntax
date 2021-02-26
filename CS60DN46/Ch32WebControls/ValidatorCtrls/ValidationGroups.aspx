@@ -7,7 +7,7 @@
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form2" runat="server">
         <asp:Panel ID="Panel1" runat="server" Height="83px" Width="296px">
             <asp:TextBox ID="txtRequiredData" runat="server" ValidationGroup="FirstGroup"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*Required field!" ControlToValidate="txtRequiredData" ValidationGroup="FirstGroup"></asp:RequiredFieldValidator>
@@ -19,7 +19,7 @@
             <asp:TextBox ID="txtSSN" runat="server" ValidationGroup="SecondGroup"></asp:TextBox>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtSSN" ValidationExpression="\d{3}-\d{2}-\d{4}" ValidationGroup="SecondGroup" ErrorMessage="*Need SSN"></asp:RegularExpressionValidator>
             <br />
-            <asp:Button ID="btnValidateSSN" runat="server" OnClick="btnValidateSSN_Click" Text="Validate" />
+            <asp:Button ID="btnValidateSSN" runat="server" OnClick="btnValidateSSN_Click" Text="Validate" ValidationGroup="SecondGroup" />
         </asp:Panel>
     </form>
 </body>
