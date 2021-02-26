@@ -60,6 +60,37 @@
                     </tr>
                 </table>
             </EditItemTemplate>
+
+            <InsertItemTemplate>
+                <table style="width:100%">
+                    <tr>
+                        <td><asp:Label runat="server" AssociatedControlID="make">Make:</asp:Label></td>
+                        <td>
+                            <asp:TextBox runat="server" ID="make" Text='<%# BindItem.Make %>' />
+                            <asp:ModelErrorMessage ModelStateKey="make" runat="server" ForeColor="Red" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><asp:Label runat="server" AssociatedControlID="color">Color:</asp:Label></td>
+                        <td>
+                            <asp:TextBox runat="server" ID="color" Text='<%# BindItem.Color %>' />
+                            <asp:ModelErrorMessage ModelStateKey="color" runat="server" ForeColor="Red" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><asp:Label runat="server" AssociatedControlID="petname">Pet Name:</asp:Label></td>
+                        <td>
+                            <asp:TextBox runat="server" ID="petname" Text='<%# BindItem.PetName %>' />
+                            <asp:ModelErrorMessage ModelStateKey="petname" runat="server" ForeColor="Red" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <asp:Button runat="server" CommandName="Insert" Text="Save" />
+                        </td>
+                    </tr>
+                </table>
+            </InsertItemTemplate>
         </asp:FormView>
     </form>
 </body>
