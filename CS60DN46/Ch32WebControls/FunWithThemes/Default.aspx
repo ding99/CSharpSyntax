@@ -9,6 +9,12 @@
 <body>
     <h2>Fun With Themes</h2>
     <form id="form1" runat="server">
+        <asp:Button ID="btnNoTheme" runat="server" Text="No Theme" OnClick="btnNoTheme_Click" />
+        &nbsp;
+        <asp:Button ID="btnGreenTheme" runat="server" Text="Green Theme" OnClick="btnGreenTheme_Click" />
+        &nbsp;
+        <asp:Button ID="btnOrangeTheme" runat="server" Text="Orange Theme" OnClick="btnOrangeTheme_Click" />
+        <hr />
         <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
         <br />
         <asp:TextBox ID="TextBox1" runat="server" Text="Theme Sample"></asp:TextBox>
