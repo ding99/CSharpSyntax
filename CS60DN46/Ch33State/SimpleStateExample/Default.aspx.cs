@@ -11,6 +11,14 @@ public partial class _Default : System.Web.UI.Page {
 	private string userFavoriteCar = "Yugo";
 
 	protected void Page_Load(object sender, EventArgs e) {
+	}
 
+	protected void btnSetCar_Click(object sender, EventArgs e) {
+		userFavoriteCar = txtFavCar.Text;
+		lblFavCar.Text = userFavoriteCar;
+	}
+
+	protected void btnGetCar_Click(object sender, EventArgs e) {
+		lblFavCar.Text = userFavoriteCar;
 	}
 }
