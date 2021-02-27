@@ -700,6 +700,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "FunWithThemes", "CS60DN46\C
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "63580"
+		SlnRelativePath = "CS60DN46\Ch32WebControls\FunWithThemes\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
