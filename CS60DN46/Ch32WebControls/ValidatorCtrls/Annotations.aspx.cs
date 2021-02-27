@@ -8,8 +8,10 @@ public partial class Annotations : System.Web.UI.Page {
 	}
 
 	public void SaveCar(Inventory car) {
-		_model = car;
-		//Add new record here
+		if (ModelState.IsValid) {
+			_model = car;
+			//Add new record here
+		}
 	}
 
 	public void UpdateCar(int carID) {
