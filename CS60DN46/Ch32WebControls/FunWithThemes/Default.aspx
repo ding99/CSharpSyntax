@@ -14,10 +14,10 @@
         <asp:TextBox ID="TextBox1" runat="server" Text="Theme Sample"></asp:TextBox>
         <br />
         <br />
-        <asp:Button ID="Button1" runat="server" Text="Button1" />
+        <asp:Button ID="Button1" runat="server" Text="Button" />
         <br />
         <br />
-        <asp:Button ID="Button2" runat="server" Text="Button2" SkinID="BigFontButton" />
+        <asp:Button ID="Button2" runat="server" Text="Big Font!" SkinID="BigFontButton" />
     </form>
 </body>
 </html>
