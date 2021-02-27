@@ -8,6 +8,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <h2>Data Annotations</h2>
         <asp:FormView ID="fvDataBinding" runat="server" DataKeyNames="CarID" ItemType="Inventory" DefaultMode="Insert" InsertMethod="SaveCar" UpdateMethod="UpdateCar" SelectMethod="GetCar">
 
             <ItemTemplate>
