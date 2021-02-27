@@ -22,7 +22,7 @@ Default skin template. The following skins are provided as examples only.
     <TodayDayStyle BackColor="#999999" ForeColor="White" />
     <DayStyle BackColor="#CCCCCC" />
     <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="White" />
-    <DayHeaderStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" Height="8pt" ForeColor="#333333" Height="8pt" />
+    <DayHeaderStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" Height="8pt" />
     <TitleStyle BackColor="#333399" BorderStyle="Solid" Font-Bold="True" Font-Size="12pt" ForeColor="White" Height="12pt" />
 </asp:Calendar>
 
