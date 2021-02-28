@@ -9,9 +9,9 @@ namespace CClass {
 		public bool cFlag;
 
 		public CData() {
-			this.cStr = String.Empty;
-			this.cDec = 0;
-			this.cFlag = false;
+			cStr = String.Empty;
+			cDec = 0;
+			cFlag = false;
 		}
 	}
 
@@ -56,38 +56,28 @@ namespace CClass {
 		}
 	}
 
-	class CFrame : System.Object {
+	class CFrame : Object {
 		public double rate;
 		public bool drop;
 		public bool valid;
 
-		//public CFrame() {
-		//    this.rate = 0;
-		//    this.drop = false;
-		//    this.valid = false;
-		//}
-
 		public CFrame(double r, bool d, bool v){
-			this.rate = r;
-			this.drop = d;
-			this.valid = v;
+			rate = r;
+			drop = d;
+			valid = v;
 		}
 
-		public override bool Equals(System.Object obj){
+		public override bool Equals(Object obj){
 			if(obj == null) return false;
 			CFrame c = obj as CFrame;
-			if((System.Object)c == null) return false;
+			if((Object)c == null) return false;
 			return rate == c.rate && drop == c.drop && valid == c.valid;
 		}
-		//public override bool Equals(CFrame c) {
-		//    if((object)c == null) return false;
-		//    return rate == c.rate && drop == c.drop && valid == c.valid;
-		//}
 		public override int GetHashCode() {
 			return 0;
 		}
 		public static bool operator ==(CFrame a, CFrame b) {
-			if(System.Object.ReferenceEquals(a, b))
+			if(Object.ReferenceEquals(a, b))
 				return true;
 			if(((object)a == null) || ((object)b == null))
 				return false;
@@ -116,6 +106,8 @@ namespace CClass {
 		}
 
 		public void toCmp() {
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+
 			CFrame c1 = new CFrame(23.976, false, true);
 			CFrame c2 = new CFrame(29.97, true, true);
 
