@@ -25,7 +25,7 @@ namespace CVariable {
 			double f5 = 12345E2, f6 = 12345E-2;
 			Console.WriteLine($"The double value of '12345E2'(f5) is {f5}, '12345E-2'(f6) is {f6}");
 			Console.WriteLine($"f1==f3: {f1==f3}, f1==f5: {f1==f5},  f3==f5: {f3==f5}");
-			Console.WriteLine($"f2==f4: {f2 == f4}, f2==f6: {f2 == f6}, f4==f6: {f4 == f6}");
+			Console.WriteLine($"f2==f4: {f2==f4}, f2==f6: {f2==f6}, f4==f6: {f4==f6}");
 		}
 
 		public void ByteDef() {
