@@ -22,7 +22,7 @@ namespace CClass {
 	}
 
 	public class ChkClass {
-		public void className() {
+		public void ClassName() {
 			CData cd = new CData() { cStr = "Student", cDec = 50, cFlag = true };
 			Console.WriteLine("First [" + cd.cStr + "," + cd.cDec + "," + cd.cFlag + "]");
 
@@ -33,7 +33,7 @@ namespace CClass {
 
 		}
 
-		public void classMember() {
+		public void ClassMember() {
 			CData cd = new CData() { cStr = "Student", cDec = 50, cFlag = true };
 			Console.WriteLine("First [" + cd.cStr + "," + cd.cDec + "," + cd.cFlag + "]");
 
@@ -41,7 +41,7 @@ namespace CClass {
 				Console.WriteLine(f.Name + ", " );
 		}
 
-		public void initClass() {
+		public void InitClass() {
 			Console.WriteLine("--- cData ---");
 			CData c1 = new CData() { cDec = 5 };
 			CData c2 = new CData { cDec = 5 };
@@ -105,7 +105,7 @@ namespace CClass {
 			Console.WriteLine(m + " [" + f.rate + ", " + f.drop + ", " + f.valid + "]");
 		}
 
-		public void toCmp() {
+		public void ToCmp() {
 			Console.ForegroundColor = ConsoleColor.DarkYellow;
 
 			CFrame c1 = new CFrame(23.976, false, true);
@@ -132,7 +132,7 @@ namespace CClass {
 			Console.WriteLine("------");
 		}
 
-		public void declaration() {
+		public void Declaration() {
 			int? dff = null;
 
 			Console.WriteLine("valid [" + dff.HasValue + "]");
@@ -256,6 +256,7 @@ namespace CClass {
 		}
 
 		public void multit(){
+			Console.ForegroundColor = ConsoleColor.Green;
 			List<GFile> f_sub01 = new List<GFile>{
 				new GFile{ name="S01001", loca = 1, size = 10},
 				new GFile{ name="S01002", loca = 2, size = 20}

@@ -10,20 +10,19 @@ namespace CClass
 		{
 
 			Console.WriteLine("== Start");
-			//ChkClass c = new ChkClass();
-			//c.className();
-			//c.classMember();
-			//c.initClass();
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
+			ChkClass c = new ChkClass();
+			c.ClassName();
+			c.ClassMember();
+			c.InitClass();
 
 			TCmp t = new TCmp();
-			t.toCmp();
-			t.declaration();
+			t.ToCmp();
+			t.Declaration();
 
-			//(new GTree()).multit();
+			new GTree().multit();
 
 			new OverLoad().Test();
-
-			//Console.ResetColor();
 
 			#region assembly
 			Console.ForegroundColor = ConsoleColor.Yellow;
