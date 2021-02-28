@@ -12,7 +12,7 @@
         <br />
         <hr />
         <div>
-            <asp:Button ID="btnShowCarOnSale" runat="server" Text="Show Car On Sale" OnClick="btnShowcarOnSale_Click" />
+            <asp:Button ID="btnShowCarOnSale" runat="server" Text="Show Car On Sale" OnClick="btnShowCarOnSale_Click" />
             <br />
             <br />
             <asp:Label ID="lblCurrCarOnSale" runat="server"></asp:Label>
