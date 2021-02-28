@@ -20,6 +20,6 @@ public partial class _Default : System.Web.UI.Page {
 
 	protected void btnAddToVS_Click(object sender, EventArgs e) {
 		ViewState["CustomViewStateItem"] = "Some user data";
-		lblVSValues.Text = (string)ViewState["CusttomViewStateItem"];
+		lblVSValues.Text = (string)ViewState["CustomViewStateItem"];
 	}
 }
