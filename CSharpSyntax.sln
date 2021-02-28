@@ -768,6 +768,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AppState", "CS60DN46\Ch33St
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "60753"
+		SlnRelativePath = "CS60DN46\Ch33State\AppState\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject

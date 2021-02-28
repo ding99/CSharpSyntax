@@ -9,6 +9,8 @@
 <body>
     <form id="form1" runat="server">
         <asp:Label ID="Label1" runat="server" Font-Size="X-Large" Text="Application State"></asp:Label>
+        <br />
+        <hr />
         <div>
             <asp:Button ID="btnShowCarOnSale" runat="server" Text="Show Car On Sale" OnClick="btnShowcarOnSale_Click" />
             <br />
