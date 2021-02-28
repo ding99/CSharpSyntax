@@ -11,14 +11,23 @@
 
         var theCars = new InventoryRepo().GetAll();
 
-        _theCache.Insert("CarList", theCars, null, DateTime.Now.AddSeconds(15), Cache.NoSlidingExpiration, CacheItemPriority.Default,
-            UpdateCarInventory);
+        _theCache.Insert("CarList",
+            theCars, null,
+            DateTime.Now.AddSeconds(10),
+            Cache.NoSlidingExpiration,
+            CacheItemPriority.Default,
+            UpdateCarInventory); ;
     }
 
     // The target for the CacheItemRemovedCallback delegate
     static void UpdateCarInventory(string key, object item, CacheItemRemovedReason reason) {
         var theCars = new InventoryRepo().GetAll();
-        _theCache.Insert("CarList", theCars, null, DateTime.Now.AddSeconds(15), Cache.NoSlidingExpiration, CacheItemPriority.Default, UpdateCarInventory);
+        _theCache.Insert("CarList",
+            theCars, null,
+            DateTime.Now.AddSeconds(10),
+            Cache.NoSlidingExpiration,
+            CacheItemPriority.Default,
+            UpdateCarInventory);
     }
 
     void Application_End(object sender, EventArgs e)
