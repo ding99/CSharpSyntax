@@ -9,9 +9,9 @@ namespace CClass {
 		public bool cFlag;
 
 		public CData() {
-			this.cStr = String.Empty;
-			this.cDec = 0;
-			this.cFlag = false;
+			cStr = String.Empty;
+			cDec = 0;
+			cFlag = false;
 		}
 	}
 
@@ -22,7 +22,7 @@ namespace CClass {
 	}
 
 	public class ChkClass {
-		public void className() {
+		public void ClassName() {
 			CData cd = new CData() { cStr = "Student", cDec = 50, cFlag = true };
 			Console.WriteLine("First [" + cd.cStr + "," + cd.cDec + "," + cd.cFlag + "]");
 
@@ -33,7 +33,7 @@ namespace CClass {
 
 		}
 
-		public void classMember() {
+		public void ClassMember() {
 			CData cd = new CData() { cStr = "Student", cDec = 50, cFlag = true };
 			Console.WriteLine("First [" + cd.cStr + "," + cd.cDec + "," + cd.cFlag + "]");
 
@@ -41,7 +41,7 @@ namespace CClass {
 				Console.WriteLine(f.Name + ", " );
 		}
 
-		public void initClass() {
+		public void InitClass() {
 			Console.WriteLine("--- cData ---");
 			CData c1 = new CData() { cDec = 5 };
 			CData c2 = new CData { cDec = 5 };
@@ -56,38 +56,28 @@ namespace CClass {
 		}
 	}
 
-	class CFrame : System.Object {
+	class CFrame : Object {
 		public double rate;
 		public bool drop;
 		public bool valid;
 
-		//public CFrame() {
-		//    this.rate = 0;
-		//    this.drop = false;
-		//    this.valid = false;
-		//}
-
 		public CFrame(double r, bool d, bool v){
-			this.rate = r;
-			this.drop = d;
-			this.valid = v;
+			rate = r;
+			drop = d;
+			valid = v;
 		}
 
-		public override bool Equals(System.Object obj){
+		public override bool Equals(Object obj){
 			if(obj == null) return false;
 			CFrame c = obj as CFrame;
-			if((System.Object)c == null) return false;
+			if((Object)c == null) return false;
 			return rate == c.rate && drop == c.drop && valid == c.valid;
 		}
-		//public override bool Equals(CFrame c) {
-		//    if((object)c == null) return false;
-		//    return rate == c.rate && drop == c.drop && valid == c.valid;
-		//}
 		public override int GetHashCode() {
 			return 0;
 		}
 		public static bool operator ==(CFrame a, CFrame b) {
-			if(System.Object.ReferenceEquals(a, b))
+			if(Object.ReferenceEquals(a, b))
 				return true;
 			if(((object)a == null) || ((object)b == null))
 				return false;
@@ -115,7 +105,9 @@ namespace CClass {
 			Console.WriteLine(m + " [" + f.rate + ", " + f.drop + ", " + f.valid + "]");
 		}
 
-		public void toCmp() {
+		public void ToCmp() {
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+
 			CFrame c1 = new CFrame(23.976, false, true);
 			CFrame c2 = new CFrame(29.97, true, true);
 
@@ -140,7 +132,7 @@ namespace CClass {
 			Console.WriteLine("------");
 		}
 
-		public void declaration() {
+		public void Declaration() {
 			int? dff = null;
 
 			Console.WriteLine("valid [" + dff.HasValue + "]");
@@ -264,6 +256,7 @@ namespace CClass {
 		}
 
 		public void multit(){
+			Console.ForegroundColor = ConsoleColor.Green;
 			List<GFile> f_sub01 = new List<GFile>{
 				new GFile{ name="S01001", loca = 1, size = 10},
 				new GFile{ name="S01002", loca = 2, size = 20}
