@@ -10,7 +10,7 @@ using AutoLotDAL.Models;
 public partial class _Default : System.Web.UI.Page {
 	protected void Page_Load(object sender, EventArgs e) {
 		if (!IsPostBack) {
-			carsGridView.DataSource = (IList<Inventory>)Cache["AppDataTable"];
+			carsGridView.DataSource = (IList<Inventory>)Cache["CarList"];
 			carsGridView.DataBind();
 		}
 	}
