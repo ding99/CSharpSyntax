@@ -16,7 +16,13 @@
         </asp:ListBox>
         <br />
         <br />
-        <asp:Button ID="btnPostback" runat="server" Text="Button" />
+        <asp:Button ID="btnPostback" runat="server" Text="Submit" />
+        <br />
+        <br />
+        <asp:Button ID="btnAddToVs" runat="server" Text="Add Value to ViewState" />
+        <br />
+        <br />
+        <asp:Label ID="lblVsValues" runat="server"></asp:Label>
     </form>
 </body>
 </html>
