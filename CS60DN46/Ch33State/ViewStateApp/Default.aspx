@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" EnableViewState="false" %>
 
 <!DOCTYPE html>
 
@@ -9,16 +9,14 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:ListBox ID="myListBox" runat="server">
-                <asp:ListItem>Item One</asp:ListItem>
-                <asp:ListItem>Item Two</asp:ListItem>
-                <asp:ListItem>Item Three</asp:ListItem>
-                <asp:ListItem>Item Four</asp:ListItem>
-            </asp:ListBox>
-            <br />
-            <br />
-            <asp:Button ID="btnPostback" runat="server" Text="Button" />
+        <asp:Label ID="Lable1" runat="server" Font-Size="X-Large" Text="View State"></asp:Label><br />
+        <hr />
         </div>
+        <asp:ListBox ID="myListBox" runat="server">
+        </asp:ListBox>
+        <br />
+        <br />
+        <asp:Button ID="btnPostback" runat="server" Text="Button" />
     </form>
 </body>
 </html>
