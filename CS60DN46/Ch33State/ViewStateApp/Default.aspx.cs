@@ -14,4 +14,12 @@ public partial class _Default : System.Web.UI.Page {
 			myListBox.Items.Add("Item Four");
 		}
 	}
+
+	protected void btnPostback_Click(object sender, EventArgs e) {
+	}
+
+	protected void btnAddToVS_Click(object sender, EventArgs e) {
+		ViewState["CustomViewStateItem"] = "Some user data";
+		lblVSValues.Text = (string)ViewState["CusttomViewStateItem"];
+	}
 }
