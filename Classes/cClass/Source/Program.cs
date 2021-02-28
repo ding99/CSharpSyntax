@@ -21,10 +21,12 @@ namespace CClass
 
 			//(new GTree()).multit();
 
-			//new OverLaod().Test();
+			new OverLoad().Test();
 
 			//Console.ResetColor();
 
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("=> Assembly");
 			Assembly sampleAssembly;
 			var class1 = new Class1();
 			sampleAssembly = Assembly.GetAssembly(class1.GetType());
@@ -33,6 +35,7 @@ namespace CClass
 				Console.WriteLine(t);
 			}
 
+			Console.ResetColor();
 			Console.WriteLine("== End");
 		}
 	}
