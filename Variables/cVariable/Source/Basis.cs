@@ -5,7 +5,7 @@ namespace CVariable {
 
 		public Variables() {
 			Console.ForegroundColor = ConsoleColor.Yellow;
-			Console.WriteLine("-- Variables Basis");
+			Console.WriteLine("== Variables Basis");
 			SizeOfs();
 			Floating();
 		}
@@ -19,11 +19,13 @@ namespace CVariable {
 
 		private void Floating() {
 			float f1 = 12345E2f, f2 = 12345E-2f;
-			Console.WriteLine($"The float value of '12345E2f' is {f1}, '12345E-2f' is {f2}");
+			Console.WriteLine($"The float value of '12345E2f'(f1) is {f1}, '12345E-2f'(f2) is {f2}");
 			double f3 = 12345E2f, f4 = 12345E-2f;
-			Console.WriteLine($"The double value of '12345E2f' is {f3}, '12345E-2f' is {f4}");
+			Console.WriteLine($"The double value of '12345E2f'(f3) is {f3}, '12345E-2f'(f4) is {f4}");
 			double f5 = 12345E2, f6 = 12345E-2;
-			Console.WriteLine($"The double value of '12345E2' is {f5}, '12345E-2' is {f6}");
+			Console.WriteLine($"The double value of '12345E2'(f5) is {f5}, '12345E-2'(f6) is {f6}");
+			Console.WriteLine($"f1==f3: {f1==f3}, f1==f5: {f1==f5},  f3==f5: {f3==f5}");
+			Console.WriteLine($"f2==f4: {f2 == f4}, f2==f6: {f2 == f6}, f4==f6: {f4 == f6}");
 		}
 
 		public void ByteDef() {
