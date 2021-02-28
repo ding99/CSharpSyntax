@@ -17,6 +17,8 @@ public partial class _Default : System.Web.UI.Page {
 	}
 
 	protected void btnSaveCarOnSale_Click(object sender, EventArgs e) {
+		Application.Lock();
 		((CarLotInfo)Application["CarSiteInfo"]).CurrentCarOnSale = txtCurrCarOnSale.Text;
+		Application.UnLock();
 	}
 }
