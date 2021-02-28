@@ -13,10 +13,10 @@
 
         _theCache.Insert("CarList",
             theCars, null,
-            DateTime.Now.AddSeconds(10),
+            DateTime.Now.AddSeconds(30),
             Cache.NoSlidingExpiration,
             CacheItemPriority.Default,
-            UpdateCarInventory); ;
+            UpdateCarInventory);
     }
 
     // The target for the CacheItemRemovedCallback delegate
@@ -24,7 +24,7 @@
         var theCars = new InventoryRepo().GetAll();
         _theCache.Insert("CarList",
             theCars, null,
-            DateTime.Now.AddSeconds(10),
+            DateTime.Now.AddSeconds(30),
             Cache.NoSlidingExpiration,
             CacheItemPriority.Default,
             UpdateCarInventory);
