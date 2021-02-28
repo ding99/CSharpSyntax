@@ -12,6 +12,12 @@
         <br />
         <hr />
         <div>
+            <asp:Button ID="btnSaveCarOnSale" runat="server" Text="Save Car On Sale" OnClick="btnSaveCarOnSale_Click" />
+            <br />
+            <br />
+            <asp:TextBox ID="txtCurrCarOnSale" runat="server" Width="150px"></asp:TextBox>
+            <br />
+            <br />
             <asp:Button ID="btnShowCarOnSale" runat="server" Text="Show Car On Sale" OnClick="btnShowCarOnSale_Click" />
             <br />
             <br />
