@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿using AutoLotDAL.Models;
 using AutoLotDAL.Repos;
-using AutoLotDAL.Models;
+using System;
+using System.Collections.Generic;
+using System.Web.UI;
 
-public partial class _Default : System.Web.UI.Page {
+public partial class _Default : Page {
 	protected void Page_Load(object sender, EventArgs e) {
 		if (!IsPostBack) {
 			carsGridView.DataSource = (IList<Inventory>)Cache["CarList"];
