@@ -15,4 +15,12 @@ public partial class _Default : System.Web.UI.Page {
 		//theCookie.Expires = DateTime.Now.AddMonths(3); // persistent cookie
 		Response.Cookies.Add(theCookie);
 	}
+
+	protected void btnShow_Click(object sender, EventArgs e) {
+		string cookieData = "";
+		foreach(string s in Request.Cookies) {
+			cookieData += $"<li><b>Name</b>: {s}, <b>Value</b>: {Request.Cookies[s]?.Value}</li>";
+		}
+		lblCookieData.Text = cookieData;
+	}
 }

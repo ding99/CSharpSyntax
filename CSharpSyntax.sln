@@ -834,6 +834,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CookieStateApp", "CS60DN46\
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "51861"
+		SlnRelativePath = "CS60DN46\Ch33State\CookieStateApp\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
