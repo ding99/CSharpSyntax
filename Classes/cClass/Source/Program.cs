@@ -10,29 +10,33 @@ namespace CClass
 		{
 
 			Console.WriteLine("== Start");
-			//ChkClass c = new ChkClass();
-			//c.className();
-			//c.classMember();
-			//c.initClass();
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
+			ChkClass c = new ChkClass();
+			c.ClassName();
+			c.ClassMember();
+			c.InitClass();
 
-			//TCmp t = new TCmp();
-			//t.toCmp();
-			//t.declaration();
+			TCmp t = new TCmp();
+			t.ToCmp();
+			t.Declaration();
 
-			//(new GTree()).multit();
+			new GTree().multit();
 
-			//new OverLaod().Test();
+			new OverLoad().Test();
 
-			//Console.ResetColor();
-
+			#region assembly
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("=> Assembly");
 			Assembly sampleAssembly;
 			var class1 = new Class1();
 			sampleAssembly = Assembly.GetAssembly(class1.GetType());
 			var types = sampleAssembly.GetTypes();
-			foreach(Type t in types) {
-				Console.WriteLine(t);
+			foreach(Type typ in types) {
+				Console.WriteLine(typ);
 			}
+			#endregion
 
+			Console.ResetColor();
 			Console.WriteLine("== End");
 		}
 	}
