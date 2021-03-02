@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
-public partial class _Default : System.Web.UI.Page {
+public partial class _Default : Page {
 	protected void Page_Load(object sender, EventArgs e) {
 		if (!IsPostBack) {
 			myListBox.Items.Add("Item One");
@@ -13,6 +9,8 @@ public partial class _Default : System.Web.UI.Page {
 			myListBox.Items.Add("Item Three");
 			myListBox.Items.Add("Item Four");
 		}
+
+		ViewState["LoadState"] = "Loaded";
 	}
 
 	protected void btnPostback_Click(object sender, EventArgs e) {
@@ -20,6 +18,6 @@ public partial class _Default : System.Web.UI.Page {
 
 	protected void btnAddToVS_Click(object sender, EventArgs e) {
 		ViewState["CustomViewStateItem"] = "Some user data";
-		lblVSValues.Text = (string)ViewState["CustomViewStateItem"];
+		lblVSValues.Text = $"(1) [{(string)ViewState["CustomViewStateItem"]}], (2) [{(string)ViewState["LoadState"]}]";
 	}
 }
