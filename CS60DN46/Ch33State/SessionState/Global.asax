@@ -22,7 +22,7 @@
 
     void Session_Start(object sender, EventArgs e) 
     {
-        Session["UserShoppingCarInfo"] = new UserShoppingCart();
+        Session["UserShoppingCartInfo"] = new UserShoppingCart();
     }
 
     void Session_End(object sender, EventArgs e) 
