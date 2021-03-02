@@ -13,7 +13,7 @@ namespace CClass
 		public int Cal01(string name) { return name.Length + Age; }
 	}
 
-	class OverLaod
+	class OverLoad
 	{
 		public void Test()
 		{
