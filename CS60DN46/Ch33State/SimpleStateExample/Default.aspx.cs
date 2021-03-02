@@ -3,7 +3,7 @@
 public partial class _Default : System.Web.UI.Page {
 
 	// State data
-	private string userFavoriteCar = "Yugo";
+	private string userFavoriteCar = "initialized: Yugo";
 
 	protected void Page_Load(object sender, EventArgs e) {
 	}
@@ -11,7 +11,7 @@ public partial class _Default : System.Web.UI.Page {
 	protected void btnSetCar_Click(object sender, EventArgs e) {
 		userFavoriteCar = txtFavCar.Text;
 		//lblFavCar.Text = userFavoriteCar;
-		Session["UserFavCar"] = txtFavCar.Text;
+		Session["UserFavCar"] = $"set: {txtFavCar.Text}";
 	}
 
 	protected void btnGetCar_Click(object sender, EventArgs e) {
