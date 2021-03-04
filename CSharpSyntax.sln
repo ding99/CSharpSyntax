@@ -838,6 +838,28 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CookieStateApp", "CS60DN46\
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "FunWithProfiles", "CS60DN46\Ch33State\FunWithProfiles\", "{26ECCE11-A892-4EB5-B4EA-CF1DE960F4DA}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_61035"
+		Debug.AspNetCompiler.PhysicalPath = "CS60DN46\Ch33State\FunWithProfiles\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61035\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_61035"
+		Release.AspNetCompiler.PhysicalPath = "CS60DN46\Ch33State\FunWithProfiles\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61035\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "61035"
+		SlnRelativePath = "CS60DN46\Ch33State\FunWithProfiles\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -6722,6 +6744,30 @@ Global
 		{AE5F47E1-85EA-46E4-9F50-BE6765C3949E}.Release|x64.Build.0 = Debug|Any CPU
 		{AE5F47E1-85EA-46E4-9F50-BE6765C3949E}.Release|x86.ActiveCfg = Debug|Any CPU
 		{AE5F47E1-85EA-46E4-9F50-BE6765C3949E}.Release|x86.Build.0 = Debug|Any CPU
+		{26ECCE11-A892-4EB5-B4EA-CF1DE960F4DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26ECCE11-A892-4EB5-B4EA-CF1DE960F4DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26ECCE11-A892-4EB5-B4EA-CF1DE960F4DA}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{26ECCE11-A892-4EB5-B4EA-CF1DE960F4DA}.Debug|ARM.Build.0 = Debug|Any CPU
+		{26ECCE11-A892-4EB5-B4EA-CF1DE960F4DA}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{26ECCE11-A892-4EB5-B4EA-CF1DE960F4DA}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{26ECCE11-A892-4EB5-B4EA-CF1DE960F4DA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{26ECCE11-A892-4EB5-B4EA-CF1DE960F4DA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{26ECCE11-A892-4EB5-B4EA-CF1DE960F4DA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{26ECCE11-A892-4EB5-B4EA-CF1DE960F4DA}.Debug|x64.Build.0 = Debug|Any CPU
+		{26ECCE11-A892-4EB5-B4EA-CF1DE960F4DA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{26ECCE11-A892-4EB5-B4EA-CF1DE960F4DA}.Debug|x86.Build.0 = Debug|Any CPU
+		{26ECCE11-A892-4EB5-B4EA-CF1DE960F4DA}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{26ECCE11-A892-4EB5-B4EA-CF1DE960F4DA}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{26ECCE11-A892-4EB5-B4EA-CF1DE960F4DA}.Release|ARM.ActiveCfg = Debug|Any CPU
+		{26ECCE11-A892-4EB5-B4EA-CF1DE960F4DA}.Release|ARM.Build.0 = Debug|Any CPU
+		{26ECCE11-A892-4EB5-B4EA-CF1DE960F4DA}.Release|ARM64.ActiveCfg = Debug|Any CPU
+		{26ECCE11-A892-4EB5-B4EA-CF1DE960F4DA}.Release|ARM64.Build.0 = Debug|Any CPU
+		{26ECCE11-A892-4EB5-B4EA-CF1DE960F4DA}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{26ECCE11-A892-4EB5-B4EA-CF1DE960F4DA}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{26ECCE11-A892-4EB5-B4EA-CF1DE960F4DA}.Release|x64.ActiveCfg = Debug|Any CPU
+		{26ECCE11-A892-4EB5-B4EA-CF1DE960F4DA}.Release|x64.Build.0 = Debug|Any CPU
+		{26ECCE11-A892-4EB5-B4EA-CF1DE960F4DA}.Release|x86.ActiveCfg = Debug|Any CPU
+		{26ECCE11-A892-4EB5-B4EA-CF1DE960F4DA}.Release|x86.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -7013,6 +7059,7 @@ Global
 		{93DAD4F8-0F7C-4563-925D-375C1340344B} = {F5C3D405-24E3-4309-919F-45B6FC83A628}
 		{E5EE33A9-2640-4807-AEF3-5359E69B5C86} = {F5C3D405-24E3-4309-919F-45B6FC83A628}
 		{AE5F47E1-85EA-46E4-9F50-BE6765C3949E} = {F5C3D405-24E3-4309-919F-45B6FC83A628}
+		{26ECCE11-A892-4EB5-B4EA-CF1DE960F4DA} = {F5C3D405-24E3-4309-919F-45B6FC83A628}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7C00B1AC-1A8A-4B50-9373-585713E1AED0}
