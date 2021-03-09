@@ -5,9 +5,9 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using CarLotMVC2.Models;
+using CarLotMVC.Models;
 
-namespace CarLotMVC2
+namespace CarLotMVC
 {
     public partial class Startup
     {

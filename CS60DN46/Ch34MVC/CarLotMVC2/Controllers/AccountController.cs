@@ -8,9 +8,9 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using CarLotMVC2.Models;
+using CarLotMVC.Models;
 
-namespace CarLotMVC2.Controllers
+namespace CarLotMVC.Controllers
 {
     [Authorize]
     public class AccountController : Controller
