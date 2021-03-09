@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 
-namespace CarLotMVC2.Models
+namespace CarLotMVC.Models
 {
     public class IndexViewModel
     {

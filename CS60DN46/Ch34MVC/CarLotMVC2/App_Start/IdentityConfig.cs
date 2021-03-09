@@ -10,9 +10,9 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using CarLotMVC2.Models;
+using CarLotMVC.Models;
 
-namespace CarLotMVC2
+namespace CarLotMVC
 {
     public class EmailService : IIdentityMessageService
     {
