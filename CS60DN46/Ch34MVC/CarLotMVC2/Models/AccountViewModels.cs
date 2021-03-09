@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace CarLotMVC2.Models
+namespace CarLotMVC.Models
 {
     public class ExternalLoginConfirmationViewModel
     {

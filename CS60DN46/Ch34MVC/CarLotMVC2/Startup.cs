@@ -1,8 +1,8 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(CarLotMVC2.Startup))]
-namespace CarLotMVC2
+[assembly: OwinStartupAttribute(typeof(CarLotMVC.Startup))]
+namespace CarLotMVC
 {
     public partial class Startup
     {
