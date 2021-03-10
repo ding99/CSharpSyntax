@@ -9,7 +9,6 @@ namespace CarLotMVC {
 	public class RouteConfig {
 		public static void RegisterRoutes(RouteCollection routes) {
 			routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-			/* routes.MapRoute("Contact", "Contact", new { controller = "Home", action = "Contact" }); */
 
 			routes.MapRoute(
 				name: "Default",
