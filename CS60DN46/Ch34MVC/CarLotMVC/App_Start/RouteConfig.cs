@@ -6,6 +6,9 @@ using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace CarLotMVC {
+
+	// TODO: not work for https://localhost:44376/Home/Contact/Foo/Goo
+
 	public class RouteConfig {
 		public static void RegisterRoutes(RouteCollection routes) {
 			routes.IgnoreRoute("{resource}.axd/{*pathinfo}");
