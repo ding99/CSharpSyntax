@@ -7,7 +7,7 @@ using System.Web.Routing;
 
 namespace CarLotMVC {
 
-	// TODO: not work for https://localhost:44376/Home/Contact/Foo/Goo
+	// TODO: double check https://localhost:44376/Home/Contact/Foo/Goo
 
 	public class RouteConfig {
 		public static void RegisterRoutes(RouteCollection routes) {
@@ -15,7 +15,7 @@ namespace CarLotMVC {
 
 			routes.MapRoute("Contact", "Contact/{*pathinfo}", new { controller = "Home", action = "Contact" });
 
-			routes.MapRoute("About", "About/{*pathinfo}", new { controller = "Home", action = "About" });
+			routes.MapRoute("About", "About", new { controller = "Home", action = "About" });
 
 			routes.MapRoute(
 				name: "Default",
