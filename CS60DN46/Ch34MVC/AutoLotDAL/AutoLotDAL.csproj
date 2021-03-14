@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C9BA8829-4D77-48C2-B15D-DD6273C7334A}</ProjectGuid>
+    <ProjectGuid>{3D7EF797-144C-453B-90CA-C22BAEC1E32B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AutoLotDAL</RootNamespace>
