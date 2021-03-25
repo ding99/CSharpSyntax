@@ -1,18 +1,14 @@
-﻿using System;
-using System.Globalization;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using System.Web;
-using System.Web.Mvc;
+﻿using CarLotMVC.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using CarLotMVC.Models;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Web;
+using System.Web.Mvc;
 
-namespace CarLotMVC.Controllers
-{
-    [Authorize]
+namespace CarLotMVC.Controllers {
+	[Authorize]
     public class AccountController : Controller
     {
         private ApplicationSignInManager _signInManager;
