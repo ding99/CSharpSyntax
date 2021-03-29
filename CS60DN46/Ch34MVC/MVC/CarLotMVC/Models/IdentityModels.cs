@@ -29,5 +29,7 @@ namespace CarLotMVC.Models
         {
             return new ApplicationDbContext();
         }
-    }
+
+		public System.Data.Entity.DbSet<AutoLotDAL.Models.Inventory> Inventories { get; set; }
+	}
 }
