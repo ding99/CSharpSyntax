@@ -18,6 +18,7 @@ namespace CVariable {
 
 			NullAble nl = new NullAble();
 			nl.TestValue();
+			nl.ExceptionMessage();
 
 			Examine exam = new Examine();
 			exam.Interpolation();
