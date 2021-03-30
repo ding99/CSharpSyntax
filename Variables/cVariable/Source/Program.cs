@@ -16,7 +16,8 @@ namespace CVariable {
 
 			new Marks().TestMark();
 
-			new NullAble().TestValue();
+			NullAble nl = new NullAble();
+			nl.TestValue();
 
 			Examine exam = new Examine();
 			exam.Interpolation();
