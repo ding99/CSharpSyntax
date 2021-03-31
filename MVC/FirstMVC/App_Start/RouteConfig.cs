@@ -15,6 +15,8 @@ namespace FirstMVC {
 				url: "{controller}/{action}/{param}",
 				defaults: new { controller = "Home", action = "Index", param = UrlParameter.Optional }
 			);
+
+			routes.MapRoute(name: "Hello", url: "{controller}/{action}/{name}/{id}");
 		}
 	}
 }
