@@ -16,8 +16,8 @@ namespace FirstMVC.Controllers
         }
 
         // GET: /HelloWorld/Welcome/
-        public string Welcome(string name, int param = 1) {
-            return HttpUtility.HtmlEncode($"Hello [{name}], ID: [{param}]");
+        public string Welcome(string name, int id = 1) {
+            return HttpUtility.HtmlEncode($"Hello [{name}], ID: [{id}]");
 		}
     }
 }
