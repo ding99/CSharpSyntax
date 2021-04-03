@@ -8,7 +8,7 @@ namespace Dictionary {
 			Console.ForegroundColor = ConsoleColor.Cyan;
 		}
 
-		private void Method1(int[] input) {
+		private void UseDictionary(int[] input) {
 			Console.WriteLine("-- Method 1: Dictionary");
 
 			Dictionary<int, int> pair = new Dictionary<int, int>();
@@ -28,7 +28,7 @@ namespace Dictionary {
 			Console.WriteLine($"max(linq): {(from p in pair select p.Value).Max()}");
 		}
 
-		private void Method2(int[] input) {
+		private void UseLinq(int[] input) {
 			Console.WriteLine("-- Method 2: Linq");
 
 			var ndata = (from p in input.ToList() group p by p into g select new { key = g.Key, count = g.Count() });
@@ -59,8 +59,8 @@ namespace Dictionary {
 				}
 			}
 
-			Method1(org);
-			Method2(org);
+			UseDictionary(org);
+			UseLinq(org);
 		}
 
 		public void Start() {
