@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ConsoleApp1 {
+namespace Dictionary {
 	public class Person {
 		public int Age;
 		public string Name;
 		public string Address;
 
-		public override string ToString() {
-			return "{Name:" + Name + ",Age:" + Age + "}";
-		}
+		public override string ToString() {return $"<Name:({Name}),Age:({Age}),Address:({Address})>"; }
 	}
 
-	class PersonKey {
+	public class PersonKey {
 		private int _age;
 		private string _name;
 
@@ -40,8 +38,19 @@ namespace ConsoleApp1 {
 		public bool Equals(PersonKey k) {
 			return k != null && k.Age == this.Age && k.Name == this.Name;
 		}
+	}
 
-		public static void Main() {
+	public class ExamineKey {
+
+		public ExamineKey() {
+			Console.ForegroundColor = ConsoleColor.Yellow;
+		}
+
+		private string Key(PersonKey key) {
+			return $"<Age{key.Age},Name:{key.Name}>";
+		}
+		public void Start() {
+
 			Dictionary<PersonKey, Person> storage = new Dictionary<PersonKey, Person>();
 
 			Person p = new Person { Age = 33, Name = "Jason", Address = null };
@@ -57,10 +66,10 @@ namespace ConsoleApp1 {
 			var searchKey2 = new PersonKey(33, "Jason1");
 
 			try {
-				Console.WriteLine(storage[key]); //<-- Jason person
-				Console.WriteLine(storage[searchKey]); //<-- Jason person
-				
-				if(storage.ContainsKey(searchKey2)) // not found
+				Console.WriteLine($"Key-{Key(key)}, Data-{storage[key]}"); //<-- Jason person
+				Console.WriteLine($"Key-{Key(searchKey)}, Data-{storage[searchKey]}"); //<-- Jason person
+
+				if (storage.ContainsKey(searchKey2)) // not found
 					Console.WriteLine($"<{storage[searchKey2]}>");
 				else
 					Console.WriteLine("Not found searchKey2 key");
