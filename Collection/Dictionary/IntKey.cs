@@ -11,9 +11,7 @@ namespace Dictionary {
 		}
 
 		private void Method1(int[] input) {
-			Console.Write($"input ({input.Length}):");
-			foreach (int i in input) Console.Write($" {i}");
-			Console.WriteLine();
+			Console.WriteLine("-- Method 1");
 
 			Dictionary<int, int> pair = new Dictionary<int, int>();
 			foreach(int i in input) {
@@ -22,19 +20,23 @@ namespace Dictionary {
 				else pair.Add(i, 1);
 			}
 
-			int max = 0, key = -1;
+			int max = 0, pos = -1;
 			foreach(var a in pair) {
-				if (a.Value > max) { max = a.Value; key = a.Key; }
+				if (a.Value > max) { max = a.Value; pos = a.Key; }
 			}
 
 			Console.Write($"Dictionary ({pair.Count})");
 			foreach (var a in pair) Console.Write($" {a.Key}-{a.Value}");
 			Console.WriteLine();
 
-			Console.WriteLine($"Pos:{key}, MaxValue:{max}");
+			Console.WriteLine($"max(loop): {max} at value {pos}");
+
+			Console.WriteLine($"max(linq): {(from p in pair select p.Value).Max()}");
 		}
 
 		private void Method2(int[] input) {
+			Console.WriteLine("-- Method 2");
+
 
 		}
 
@@ -62,11 +64,18 @@ namespace Dictionary {
 				}
 			}
 
+			Console.Write($"input ({org.Length}):");
+			foreach (int i in org) Console.Write($" {i}");
+			Console.WriteLine();
+
 			Method1(org);
+			Method2(org);
 		}
 
 		public void Start() {
 			Analysis("5", "1 2 2 3 1");
+			Analysis("7", "1 2 2 3 1 5 2");
+			Analysis("10", "1 2 2 3 1 5 2 3 3 3");
 		}
 	}
 }
