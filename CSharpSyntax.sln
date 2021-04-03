@@ -500,7 +500,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RenderingWithShapes", "CS60
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSAssess", "Challenges\CSAssess\CSAssess.csproj", "{8AE65F6A-A0E9-42AF-83B5-2DC1607ED8CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dictionary", "Collection\ConsoleApp1\Dictionary.csproj", "{07E92E65-20BC-48B7-BCA9-458216EE61E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dictionary", "Collection\Dictionary\Dictionary.csproj", "{07E92E65-20BC-48B7-BCA9-458216EE61E2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trying", "Tests\Trying\Trying.csproj", "{03A96BA4-CE33-45B8-82A0-AC85F8BB3F67}"
 EndProject
