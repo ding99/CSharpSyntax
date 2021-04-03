@@ -31,9 +31,8 @@ namespace Dictionary {
 		private void Method2(int[] input) {
 			Console.WriteLine("-- Method 2: Linq");
 
-			List<int> data = input.ToList();
-			var max = (from p in input.ToList() group p by p into g select new { key = g.Key, count = g.Count() }).Max(x => x.count);
-			Console.WriteLine($"max(linq): {max}");
+			var ndata = (from p in input.ToList() group p by p into g select new { key = g.Key, count = g.Count() });
+			Console.WriteLine($"max(linq): {ndata.Max(x => x.count)}");
 		}
 
 		private void Analysis(string line1, string line2) {
