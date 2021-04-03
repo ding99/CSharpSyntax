@@ -37,7 +37,16 @@ namespace Dictionary {
 		private void Method2(int[] input) {
 			Console.WriteLine("-- Method 2");
 
-
+			List<int> data = input.ToList();
+			var ndata = from p in data group p by p into g select new { newK = g.Key, num = g.Select(c => c) };
+			//data.GroupBy(x => x).Where(x => x.Count() == rows)
+			//var ndata = from p in data group p by p into g select new { g.Key, num = g.Count() };
+			Console.WriteLine($"count {ndata.Count()}");
+			foreach(var a in ndata) {
+				Console.Write($" <{a.newK}>-<{a.num}>");
+			}
+			Console.WriteLine();
+			//Console.WriteLine($"max {ndata.Max()}");
 		}
 
 		private void Analysis(string line1, string line2) {
