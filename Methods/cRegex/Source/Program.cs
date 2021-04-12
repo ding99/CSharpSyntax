@@ -18,10 +18,10 @@ namespace CRegex {
 			tr.rMatch();
 			tr.rMatchi();
 			tr.colorCode();
-			//tr.spaces();
-			//tr.num();
-			//tr.searchccode();
-			//tr.mediatime();
+			tr.spaces();
+			tr.num();
+			tr.searchccode();
+			tr.mediatime();
 
 			//tr.exchAra();
 
@@ -64,15 +64,12 @@ namespace CRegex {
 			mt.vttTests();
 			#endregion
 
-			Console.ForegroundColor = ConsoleColor.DarkYellow;
 			Npv npv = new Npv();
 			npv.slashes();
 
-			Console.ForegroundColor = ConsoleColor.DarkCyan;
 			Vtt v = new Vtt();
 			v.lines();
 
-			Console.ForegroundColor = ConsoleColor.Green;
 			genRegex gen = new genRegex();
             gen.cmp();
             gen.align();

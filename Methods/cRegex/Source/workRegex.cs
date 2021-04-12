@@ -199,6 +199,7 @@ namespace CRegex {
 
 		}
 		public void searchccode() {
+			Console.WriteLine("-- search color code");
 			this.searchone("[2]aa,abb[3]b4ccc, [7]nnn ddd[3]  abcdefg");
 			this.searchone(" [2]aa,abb[3]b4ccc, [7]nn-=##$%*n ddd[3]  abcdefg");
 			this.searchone("aa,abb[3]b4ccc, [7]nnn ddd[3]  abcdefg");
@@ -206,12 +207,14 @@ namespace CRegex {
 		}
 
 		public void num() {
+			Console.WriteLine("-- num");
 			string s = "<SYNC Start=18652 ID=Default><P Class=yueCC>你已進入邪惡巫師的洞穴</P></SYNC>";
 			Match m = Regex.Match(s, "[0-9]+");
 			Console.WriteLine("[" + (m.Success ? m.ToString() : "no") + "]  [" + m.Index + "] [" + m.Length + "]");
 		}
 
 		public void spaces() {
+			Console.WriteLine("-- spaces");
 			string[] ss = new string[] {
 				"     0   17.3838    +9.3643  103    -104     19.7751",
 				"     1   20.4363   +15.5245  122    -102     18.3296",
