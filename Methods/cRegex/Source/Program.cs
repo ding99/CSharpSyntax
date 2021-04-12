@@ -6,14 +6,13 @@ namespace CRegex {
 		static void Main(string[] args) {
 			System.Console.WriteLine("== Start");
 
-			Console.ForegroundColor = ConsoleColor.Yellow;
 			TReg tr = new TReg();
 
 			#region past
 			tr.rSpace();
 			tr.rComma();
-			//tr.rFind1();
-			//tr.rFind2();
+			tr.rFind1();
+			tr.rFind2();
 			//tr.quotes();
 			//tr.ends();
 			//tr.rMatch();
