@@ -11,6 +11,12 @@ namespace Dictionary {
 			IntKey ikey = new IntKey();
 			ikey.Start();
 
+			ExamingDictionary td = new ExamingDictionary();
+			td.Start();
+
+			DRussian dr = new DRussian();
+			bool ret = dr.accMulti();
+
 			Console.ResetColor();
 			Console.WriteLine("== End");
 		}
