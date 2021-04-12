@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CDictionary {
+namespace Dictionary {
 
 	public class ExamingDictionary{
 		private Dictionary<uint, string> sdic;
@@ -17,8 +17,20 @@ namespace CDictionary {
 		}
 
 		public ExamingDictionary(){
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.WriteLine("-- Examine Dictionary");
+
 			this.sdic = new Dictionary<uint,string>();
 			this.createDict();
+		}
+
+		public void Start() {
+			bool ret = false;
+			ret = getStr();
+			ret = launch();
+			ret = corrupt();
+
+			Console.WriteLine($"{(ret ? "Succeeded" : "Failed")}");
 		}
 
 		private void getone(uint i){
@@ -28,7 +40,7 @@ namespace CDictionary {
 				Console.WriteLine("  " + i + " [not found key]");
 		}
 
-		public bool getStr(){
+		private bool getStr(){
 			this.getone(0);
 			this.getone(2);
 			this.getone(3);
@@ -38,7 +50,7 @@ namespace CDictionary {
 		}
 
 		#region direct
-		public bool launch() {
+		private bool launch() {
 
 			Dictionary<string, string> d = new Dictionary<string, string> {
 				{"\x31", "\x61\x62"},
@@ -60,7 +72,7 @@ namespace CDictionary {
 				m += b[i].ToString("x2") + (i + 1 == b.Length ? "" : " ");
 			return m + ">";
 		}
-		public bool corrupt() {
+		private bool corrupt() {
 
 			#region table
 			Dictionary<string, string> d = new Dictionary<string,string>{
