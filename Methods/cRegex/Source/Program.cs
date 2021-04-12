@@ -17,7 +17,7 @@ namespace CRegex {
 			//tr.ends();
 			tr.rMatch();
 			tr.rMatchi();
-			//tr.colorCode();
+			tr.colorCode();
 			//tr.spaces();
 			//tr.num();
 			//tr.searchccode();

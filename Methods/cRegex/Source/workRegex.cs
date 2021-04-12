@@ -123,7 +123,9 @@ namespace CRegex {
 				Console.WriteLine();
 			}
 		}
+
 		public void colorCode() {
+			Console.WriteLine("-- color code");
 			string s1 = "[2]aa,abb[3]b4ccc, [7]nnn ddd[3]  abcdefg";
 			string s2 = " [2]aa,abb[3]b4ccc, [7]nnn ddd[3]  abcdefg";
 			string s3 = "aa,abb[3]b4ccc, [7]nnn ddd[3]  abcdefg";
