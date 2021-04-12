@@ -6,23 +6,22 @@ namespace CRegex {
 		static void Main(string[] args) {
 			System.Console.WriteLine("== Start");
 
-			Console.ForegroundColor = ConsoleColor.Yellow;
 			TReg tr = new TReg();
 
 			#region past
 			tr.rSpace();
 			tr.rComma();
-			//tr.rFind1();
-			//tr.rFind2();
+			tr.rFind1();
+			tr.rFind2();
 			//tr.quotes();
 			//tr.ends();
-			//tr.rMatch();
-			//tr.rMatchi();
-			//tr.colorCode();
-			//tr.spaces();
-			//tr.num();
-			//tr.searchccode();
-			//tr.mediatime();
+			tr.rMatch();
+			tr.rMatchi();
+			tr.colorCode();
+			tr.spaces();
+			tr.num();
+			tr.searchccode();
+			tr.mediatime();
 
 			//tr.exchAra();
 
@@ -65,15 +64,12 @@ namespace CRegex {
 			mt.vttTests();
 			#endregion
 
-			Console.ForegroundColor = ConsoleColor.DarkYellow;
 			Npv npv = new Npv();
 			npv.slashes();
 
-			Console.ForegroundColor = ConsoleColor.DarkCyan;
 			Vtt v = new Vtt();
 			v.lines();
 
-			Console.ForegroundColor = ConsoleColor.Green;
 			genRegex gen = new genRegex();
             gen.cmp();
             gen.align();

@@ -1,12 +1,12 @@
 ﻿using System;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Collections.Generic;
 
 namespace CRegex {
 
 	public class Vtt {
 		public Vtt() {
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
+			Console.WriteLine("-- Vtt");
 		}
 
 		private void one(string s) {
