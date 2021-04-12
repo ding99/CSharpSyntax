@@ -15,8 +15,8 @@ namespace CRegex {
 			tr.rFind2();
 			//tr.quotes();
 			//tr.ends();
-			//tr.rMatch();
-			//tr.rMatchi();
+			tr.rMatch();
+			tr.rMatchi();
 			//tr.colorCode();
 			//tr.spaces();
 			//tr.num();

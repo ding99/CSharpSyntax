@@ -95,6 +95,7 @@ namespace CRegex {
 		}
 
 		public void rMatch() {
+			Console.WriteLine("-- rMatch");
 			string[] ls = new string[] { " ENG 5.1 L ", " PTB 5.1 R", " ENG 7.1 L", " ENG 7.1 R",
 				" ENG 7.1 C", " ENG 7.1 LFE", " ENG 7.1 Ls", " ENG 7.1 Rs", " ENG 7.1 Lr", " ENG 7.1 Rr" };
 			string key = @" (\w)+", mid = String.Empty;
@@ -110,15 +111,15 @@ namespace CRegex {
 		}
 
 		public void rMatchi() {
+			Console.WriteLine("-- rMatchi");
 			string[] ls = new string[] { "<i>aaaaa</i>", "aaa<i>bbb</i>ccc<i>dd23 d</i>eee", "<i>bbbb</i>cccc<i>dddd</i>" };
 			string key = @"<i>(\w+)", mid = String.Empty;
 
 			foreach(string s in ls) {
-				Console.Write("" + s + " : ");
 				this.m = (new Regex(key)).Matches(s);
-				foreach(var a in this.m) {
+				Console.Write($"[{s}]: Count({m.Count})");
+				foreach (var a in this.m)
 					Console.Write(" - [" + a + "]");
-				}
 				Console.WriteLine();
 			}
 		}
