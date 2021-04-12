@@ -17,8 +17,8 @@ namespace CList {
 			//idx.index();
 			//idx.which();
 
-			NPV npv = new NPV();
-			npv.commonList();
+			//NPV npv = new NPV();
+			//npv.commonList();
 
 			CheckJoin join = new CheckJoin();
 			join.join();
