@@ -13,9 +13,9 @@ namespace CList {
 			//cn.vari();
 			//cn.all();
 
-			CheckIndex idx = new CheckIndex();
-			idx.index();
-			idx.which();
+			//CheckIndex idx = new CheckIndex();
+			//idx.index();
+			//idx.which();
 
 			NPV npv = new NPV();
 			npv.commonList();

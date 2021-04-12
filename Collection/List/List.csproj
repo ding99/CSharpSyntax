@@ -47,6 +47,7 @@
     <Compile Include="CList.cs" />
     <Compile Include="ExamineList.cs" />
     <Compile Include="First.cs" />
+    <Compile Include="listNPV.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

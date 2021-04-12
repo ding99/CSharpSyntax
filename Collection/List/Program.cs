@@ -20,6 +20,8 @@ namespace List {
 			idx.index();
 			idx.which();
 
+			new NPV().commonList();
+
 			Console.ResetColor();
 			Console.WriteLine("== End");
 		}
