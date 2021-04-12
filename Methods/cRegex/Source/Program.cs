@@ -71,8 +71,11 @@ namespace CRegex {
 			v.lines();
 
 			genRegex gen = new genRegex();
-            gen.cmp();
             gen.align();
+
+			Replace rep = new Replace();
+			rep.Replaces();
+			rep.cmp();
 
 			Console.ResetColor();
 			System.Console.WriteLine("== End");

@@ -8,17 +8,6 @@ namespace CRegex {
             Console.ForegroundColor = ConsoleColor.Green;
         }
 
-        public void cmp() {
-            Console.WriteLine("=== Replacement Comparison ===");
-            string a = "123456789", b = a, key = "456", target = "ABC";
-            string c = a.Replace(key, target);
-            string d = new Regex(key).Replace(b, target);
-
-            Console.WriteLine($"General source [{a}] destination [{c}]");
-            Console.WriteLine($"Regex   source [{b}] destination [{d}]");
-            Console.WriteLine($"Same [{c == d}]");
-        }
-
         private void oneAlign(string s) {
             string key = @"{\\an[\d]}";
             //key = "called";
