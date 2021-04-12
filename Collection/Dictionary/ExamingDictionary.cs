@@ -40,7 +40,7 @@ namespace Dictionary {
 				Console.WriteLine("  " + i + " [not found key]");
 		}
 
-		public bool getStr(){
+		private bool getStr(){
 			this.getone(0);
 			this.getone(2);
 			this.getone(3);
@@ -50,7 +50,7 @@ namespace Dictionary {
 		}
 
 		#region direct
-		public bool launch() {
+		private bool launch() {
 
 			Dictionary<string, string> d = new Dictionary<string, string> {
 				{"\x31", "\x61\x62"},
@@ -72,7 +72,7 @@ namespace Dictionary {
 				m += b[i].ToString("x2") + (i + 1 == b.Length ? "" : " ");
 			return m + ">";
 		}
-		public bool corrupt() {
+		private bool corrupt() {
 
 			#region table
 			Dictionary<string, string> d = new Dictionary<string,string>{

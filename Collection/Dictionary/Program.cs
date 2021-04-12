@@ -15,7 +15,7 @@ namespace Dictionary {
 			td.Start();
 
 			DRussian dr = new DRussian();
-			bool ret = dr.accMulti();
+			dr.accMulti();
 
 			Console.ResetColor();
 			Console.WriteLine("== End");
