@@ -7,18 +7,18 @@ namespace CList {
 
             Console.WriteLine("== Start");
 
-			CheckNew cn = new CheckNew();
-			cn.startTest();
-			cn.which();
-			cn.vari();
-			cn.all();
+			//CheckNew cn = new CheckNew();
+			//cn.startTest();
+			//cn.which();
+			//cn.vari();
+			//cn.all();
 
-			CheckIndex idx = new CheckIndex();
-			idx.index();
-			idx.which();
+			//CheckIndex idx = new CheckIndex();
+			//idx.index();
+			//idx.which();
 
-			NPV npv = new NPV();
-			npv.commonList();
+			//NPV npv = new NPV();
+			//npv.commonList();
 
 			CheckJoin join = new CheckJoin();
 			join.join();

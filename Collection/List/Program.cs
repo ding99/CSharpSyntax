@@ -16,6 +16,19 @@ namespace List {
 			cn.vari();
 			cn.all();
 
+			CheckIndex idx = new CheckIndex();
+			idx.index();
+			idx.which();
+
+			new NPV().commonList();
+
+			new CheckJoin().join();
+
+			new CheckArrayList().test();
+
+			Brief b = new Brief();
+			b.list();
+			b.less();
 
 			Console.ResetColor();
 			Console.WriteLine("== End");

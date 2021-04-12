@@ -43,9 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Brief.cs" />
+    <Compile Include="cArrayList.cs" />
+    <Compile Include="CIndex.cs" />
     <Compile Include="CList.cs" />
+    <Compile Include="CLoop.cs" />
     <Compile Include="ExamineList.cs" />
     <Compile Include="First.cs" />
+    <Compile Include="ListJoin.cs" />
+    <Compile Include="ListNPV.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
