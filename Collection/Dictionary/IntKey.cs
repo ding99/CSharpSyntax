@@ -6,6 +6,7 @@ namespace Dictionary {
 	class IntKey {
 		public IntKey() {
 			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine("-- Integer Key (Some Assessment)");
 		}
 
 		private void ByDictionary(int[] input) {
