@@ -16,6 +16,9 @@ namespace List {
 			cn.vari();
 			cn.all();
 
+			CheckIndex idx = new CheckIndex();
+			idx.index();
+			idx.which();
 
 			Console.ResetColor();
 			Console.WriteLine("== End");

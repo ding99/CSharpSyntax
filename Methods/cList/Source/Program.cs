@@ -7,11 +7,11 @@ namespace CList {
 
             Console.WriteLine("== Start");
 
-			CheckNew cn = new CheckNew();
-			cn.startTest();
-			cn.which();
-			cn.vari();
-			cn.all();
+			//CheckNew cn = new CheckNew();
+			//cn.startTest();
+			//cn.which();
+			//cn.vari();
+			//cn.all();
 
 			CheckIndex idx = new CheckIndex();
 			idx.index();
