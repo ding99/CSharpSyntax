@@ -4,7 +4,9 @@ using System.Text.RegularExpressions;
 namespace CRegex {
     class genRegex {
 
-        public genRegex() { }
+        public genRegex() {
+            Console.ForegroundColor = ConsoleColor.Green;
+        }
 
         public void cmp() {
             Console.WriteLine("=== Replacement Comparison ===");

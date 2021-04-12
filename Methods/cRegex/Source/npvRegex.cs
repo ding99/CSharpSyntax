@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Collections.Generic;
 
 namespace CRegex {
 
 	public class Npv {
 		public Npv() {
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
 		}
 
 		private bool oneCheck(string s){
