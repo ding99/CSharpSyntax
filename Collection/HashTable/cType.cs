@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections;
 
-namespace CHash{
+namespace HashTable{
 
     public class CType {
-        public CType() { }
+        public CType() { Console.ForegroundColor = ConsoleColor.DarkCyan; }
 
         public void test() {
             Hashtable table = new Hashtable();
