@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CDictionary {
+namespace Dictionary {
 
 	public class DRussian {
 
 		public DRussian() {
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
 		}
 
 		#region table string
@@ -130,14 +131,12 @@ namespace CDictionary {
 			Console.WriteLine();
 		}
 
-		public bool accMulti() {
+		public void accMulti() {
 			this.accOne(0);
 			this.accOne(0x66);
 			this.accOne(0xc0);
 			this.accOne(0xd0);
 			this.accOne(0xee);
-
-			return true;
 		}
 	}
 }

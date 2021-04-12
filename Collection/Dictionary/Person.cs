@@ -44,6 +44,7 @@ namespace Dictionary {
 
 		public ExamineKey() {
 			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("-- Examine Key");
 		}
 
 		private string Key(PersonKey key) {
