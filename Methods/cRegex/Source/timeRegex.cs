@@ -80,7 +80,7 @@ namespace CRegex {
 			return FromSeconds(AlignSecToFrame(sec, fr));
 		}
 
-		public String ToString() {
+		public override String ToString() {
 			return String.Format("{0:D2}:{1:D2}:{2:D2}.{3:D3}", hour, minute, second, millisecond);
 		}
 
