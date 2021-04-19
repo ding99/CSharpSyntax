@@ -24,6 +24,9 @@ namespace CVariable {
 			exam.Interpolation();
 			exam.ExamineStruct();
 
+			CDecimal dec = new CDecimal();
+			dec.MoneyDivision();
+
 			Console.ResetColor();
         }
     }
