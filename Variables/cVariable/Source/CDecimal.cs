@@ -11,18 +11,25 @@ namespace CVariable {
 
 		public void MoneyDivision() {
 			Action(20.1m, 4);
-			Action(23.32m, 5);
+			Action(13.33m, 153);
+			Action(10m, 33);
 		}
 
-		private void Action(Decimal mount, int divisor) {
+		private void Action(Decimal total, int divisor) {
+			Console.WriteLine("-- Action 1");
+
+			Console.Write($"Original ({total})");
 			List<decimal> list = new List<decimal>();
 
 			if (divisor > 0)
-				for (int i = 0; i < divisor; i++)
-					list.Add(Math.Round(mount / divisor, 2));
-			else list.Add(mount);
+				while(divisor > 0) {
+					decimal mount = Math.Round(total / divisor, 2);
+					list.Add(mount);
+					total -= mount;
+					divisor--;
+				}
+			else list.Add(total);
 
-			Console.Write($"Original ({mount})");
 			foreach (var a in list)
 				Console.Write($" {a}");
 			Console.WriteLine($" Sum ({list.Sum()})");
