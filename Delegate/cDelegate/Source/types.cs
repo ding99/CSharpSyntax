@@ -13,15 +13,19 @@ namespace CDelegate {
             ExamineFunc();
 		}
 
+        #region common
+        private void Hello(string person) {
+            Console.WriteLine($"Good morning, {person}");
+        }
+        #endregion
+
         #region delegate
         public delegate void myDelegator(string s);
-        private void Hello(string person) {
-            Console.WriteLine("Good morning, " + person);
-        }
         private void ExamineDelegate() {
             Console.WriteLine("-- using delegate");
             myDelegator d = Hello;
-            d("Mr Zhang");
+            d("Mr. Zhang");
+            d.Invoke("Mr. Change(Invoke)");
         }
         #endregion
 
@@ -29,25 +33,26 @@ namespace CDelegate {
         private void ExamineAction1() {
             Console.WriteLine("-- using Action 1");
             Action<string> a = Hello;
-            a("Mr Wang");
+            a("Mr. Wang");
         }
 
         public void ExamineAction2() {
-            Console.WriteLine("-- using Action 2");
-            Action<string> a = (s => Console.WriteLine("Good night, " + s));
+            Console.WriteLine("-- using Action 2 (Lambda)");
+            Action<string> a = (s => Console.WriteLine($"Good night, {s}"));
             a("Mr. Zhao");
+            a.Invoke("Mr. Luo(Invoke)");
         }
         #endregion
 
         #region func
-        public int Hellowf(string person) {
+        private int HellowFunc(string person) {
             return person.Length;
         }
         public void ExamineFunc() {
             Console.WriteLine("-- using Func");
-            Func<string, int> h = Hellowf;
+            Func<string, int> h = HellowFunc;
             string hello = "Good afternoon, Mr Li";
-            Console.WriteLine(hello + " (" + h(hello) + ")");
+            Console.WriteLine($"{hello}  ({h(hello)})");
         }
         #endregion
     }

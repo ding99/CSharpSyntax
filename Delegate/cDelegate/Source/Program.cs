@@ -3,15 +3,11 @@
 namespace CDelegate {
 
 	class Entrance{
-		static void Main(string[] args) {
-			Console.WriteLine("== Start");
+		static void Main() {
+			Console.WriteLine("== Delegate Examination Start");
 
             Delegator delegator = new Delegator();
 			delegator.Start();
-            //delegator.dele();
-            //delegator.actn();
-            //delegator.act2();
-            //delegator.func();
 
             Console.ForegroundColor = ConsoleColor.Cyan;
 			MultiDelegate md = new MultiDelegate();
