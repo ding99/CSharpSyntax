@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections;
 
 namespace CDelegate {
 
-    delegate int NumberChanger(int n);
+	delegate int NumberChanger(int n);
 
     public class MultiDelegate {
 
