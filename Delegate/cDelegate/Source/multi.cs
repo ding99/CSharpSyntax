@@ -8,13 +8,18 @@ namespace CDelegate {
     public class MultiDelegate {
 
         static int num = 10;
-        public MultiDelegate() { Console.ForegroundColor = ConsoleColor.Cyan; }
+        public MultiDelegate() {
+            Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine($"actor: the initial num is [{num}]");
+        }
 
         public static int AddNum(int p) { num += p; return num; }
         public static int MultiNum(int q) { num *= q; return num; }
         public static int GetNum() { return num; }
 
         public void TestSingle() {
+			Console.WriteLine($"-- Test Single to ADD 25 then Multi 5. Original num: [{GetNum()}]");
+
             NumberChanger nc1 = new NumberChanger(AddNum);
             NumberChanger nc2 = new NumberChanger(MultiNum);
 
@@ -25,7 +30,9 @@ namespace CDelegate {
             Console.WriteLine($"Value of Num: [{GetNum()}]");
         }
 
-        public void Start() {
+        public void TestMulti() {
+            Console.WriteLine($"-- Test Multi to ADD-Multi 5. Original num: [{GetNum()}]");
+
             NumberChanger nc1 = new NumberChanger(AddNum);
             NumberChanger nc2 = new NumberChanger(MultiNum);
 
@@ -34,6 +41,11 @@ namespace CDelegate {
             nc(5);
             Console.WriteLine($"Value of Num: [{GetNum()}]");
         }
+
+        public void Start() {
+            TestSingle();
+            TestMulti();
+		}
 
     }
 
