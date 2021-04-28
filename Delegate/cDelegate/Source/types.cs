@@ -20,7 +20,7 @@ namespace CDelegate {
         #endregion
 
         #region delegate
-        public delegate void myDelegator(string s);
+        private delegate void myDelegator(string s);
         private void ExamineDelegate() {
             Console.WriteLine("-- using delegate");
             myDelegator d = Hello;
@@ -36,7 +36,7 @@ namespace CDelegate {
             a("Mr. Wang");
         }
 
-        public void ExamineAction2() {
+        private void ExamineAction2() {
             Console.WriteLine("-- using Action 2 (Lambda)");
             Action<string> a = (s => Console.WriteLine($"Good night, {s}"));
             a("Mr. Zhao");
@@ -48,7 +48,7 @@ namespace CDelegate {
         private int HellowFunc(string person) {
             return person.Length;
         }
-        public void ExamineFunc() {
+        private void ExamineFunc() {
             Console.WriteLine("-- using Func");
             Func<string, int> h = HellowFunc;
             string hello = "Good afternoon, Mr Li";
