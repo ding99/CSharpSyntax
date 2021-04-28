@@ -12,8 +12,8 @@ namespace CDelegate {
 			MultiDelegate md = new MultiDelegate();
 			md.Start();
 
-			Invoke iv = new Invoke();
-			iv.start();
+			ExamineInvoke iv = new ExamineInvoke();
+			iv.Start();
 
 			Console.ResetColor();
 			Console.WriteLine("== End");
