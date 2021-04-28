@@ -9,10 +9,8 @@ namespace CDelegate {
             Delegator delegator = new Delegator();
 			delegator.Start();
 
-            Console.ForegroundColor = ConsoleColor.Cyan;
 			MultiDelegate md = new MultiDelegate();
-			//md.TestSingle();
-			md.TestMulti();
+			md.Start();
 
 			Invoke iv = new Invoke();
 			iv.start();
