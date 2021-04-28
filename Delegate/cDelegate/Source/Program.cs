@@ -12,7 +12,7 @@ namespace CDelegate {
 			MultiDelegate md = new MultiDelegate();
 			md.Start();
 
-			Invoke iv = new Invoke();
+			ExamineInvoke iv = new ExamineInvoke();
 			iv.Start();
 
 			Console.ResetColor();

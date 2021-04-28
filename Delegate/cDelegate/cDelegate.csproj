@@ -36,7 +36,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Source\Invoke.cs" />
+    <Compile Include="Source\ExamineInvoke.cs" />
     <Compile Include="Source\Types.cs" />
     <Compile Include="Source\Multi.cs" />
     <Compile Include="Source\Program.cs" />
