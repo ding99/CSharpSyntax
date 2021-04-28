@@ -8,7 +8,7 @@ namespace CDelegate {
     public class MultiDelegate {
 
         static int num = 10;
-        public MultiDelegate() { }
+        public MultiDelegate() { Console.ForegroundColor = ConsoleColor.Cyan; }
 
         public static int AddNum(int p) { num += p; return num; }
         public static int MultiNum(int q) { num *= q; return num; }
@@ -25,7 +25,7 @@ namespace CDelegate {
             Console.WriteLine($"Value of Num: [{GetNum()}]");
         }
 
-        public void TestMulti() {
+        public void Start() {
             NumberChanger nc1 = new NumberChanger(AddNum);
             NumberChanger nc2 = new NumberChanger(MultiNum);
 
