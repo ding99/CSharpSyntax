@@ -13,7 +13,7 @@ namespace CDelegate {
 			md.Start();
 
 			Invoke iv = new Invoke();
-			iv.start();
+			iv.Start();
 
 			Console.ResetColor();
 			Console.WriteLine("== End");

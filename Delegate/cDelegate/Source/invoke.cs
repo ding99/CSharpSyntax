@@ -5,25 +5,28 @@ namespace CDelegate {
 
         protected delegate string MyDelegate(string msg);
 
-        public void start() {
-            Console.WriteLine("Hello Dele!");
+        public Invoke() {
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("-- Hello Invoke!");
+        }
+
+        public void Start() {
             var start = new MyDelegate(Love);
-            start("Testing started");
+			Console.WriteLine(start("<Testing new>"));
+			Console.WriteLine(start.Invoke("[Testing new with Invoke]"));
 
-            start.Invoke("Invoke Testing started");
+            MyDelegate oass = Love;
+			Console.WriteLine(oass("<Testing pass>"));
+			Console.WriteLine(oass.Invoke("[Testing pass with Invoke]"));
 
-            MyDelegate stt = Love;
-            stt("stt testing ...");
-            stt.Invoke("Invoke stt testing ...");
-
-            MyDelegate stt1 = new MyDelegate(Love);
-            stt1("stt1 testing ...");
-            stt1.Invoke("Invoke stt1 testing ...");
+            MyDelegate newPass = new MyDelegate(Love);
+			Console.WriteLine(newPass("<Testing new+pass>"));
+			Console.WriteLine(newPass.Invoke("[Testing new+pass with Invoke]"));
         }
 
         private string Love(string msg) {
-            Console.WriteLine("DELEGATE: " + msg);
-            return msg + " DELEGATING Started";
+            Console.WriteLine($"DELEGATE: {msg}");
+            return $"{msg} DELEGATING Started";
         }
 
     }
