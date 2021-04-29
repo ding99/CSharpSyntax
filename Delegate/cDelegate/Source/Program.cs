@@ -15,6 +15,9 @@ namespace CDelegate {
 			ExamineInvoke iv = new ExamineInvoke();
 			iv.Start();
 
+			Predicator pred = new Predicator();
+			pred.Start();
+
 			Console.ResetColor();
 			Console.WriteLine("== End");
         }
