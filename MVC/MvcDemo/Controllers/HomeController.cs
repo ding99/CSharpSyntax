@@ -17,7 +17,7 @@ namespace MvcDemo.Controllers {
 		}
 
 		public ActionResult Contact() {
-			ViewBag.Message = "Your contact page.";
+			ViewBag.Message = "The contact page.";
 
 			return View();
 		}
