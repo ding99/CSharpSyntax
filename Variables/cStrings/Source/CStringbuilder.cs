@@ -3,6 +3,10 @@ using System.Text;
 
 namespace CStrings {
     public class CStringbuilder {
+
+        public CStringbuilder() {
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+		}
         public void cap() {
 
             Console.WriteLine("--- string builder with default capacity");
@@ -36,7 +40,7 @@ namespace CStrings {
             Console.WriteLine($"string 2 [{s2} ({s2.Length})]");
 
             Console.WriteLine();
-            Console.WriteLine($"same strings? [{s1 == s2}] / [{s1.Equals(s2)}]");
+            Console.WriteLine($"same strings? ==:[{s1 == s2}] / equals:[{s1.Equals(s2)}]");
         }
 
         private void append(StringBuilder b, string value){
