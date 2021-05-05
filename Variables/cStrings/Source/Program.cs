@@ -116,6 +116,7 @@ namespace CStrings {
 			Equaling cmp = new Equaling();
 			cmp.CompareString();
 			cmp.CompareClass();
+			cmp.CompareNumber();
 			#endregion
 
 			Console.ResetColor();
