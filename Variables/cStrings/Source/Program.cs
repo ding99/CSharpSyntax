@@ -112,6 +112,11 @@ namespace CStrings {
 			e.ExamineChars();
 			#endregion
 
+			#region compare
+			Equaling cmp = new Equaling();
+			cmp.CompareString();
+			#endregion
+
 			Console.ResetColor();
             Console.WriteLine("=== end");
 		}
