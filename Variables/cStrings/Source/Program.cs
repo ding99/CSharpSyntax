@@ -84,10 +84,10 @@ namespace CStrings {
 			#endregion
 
 			#region stringbuilder
-			//CStringbuilder bd = new CStringbuilder();
-			//bd.cap();
-			//bd.prm();
-			//bd.jon();
+			CStringbuilder bd = new CStringbuilder();
+			bd.cap();
+			bd.prm();
+			bd.jon();
 			#endregion
 
 			#region foramt brakets
