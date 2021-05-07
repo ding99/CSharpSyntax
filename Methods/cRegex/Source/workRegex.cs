@@ -14,40 +14,38 @@ namespace CRegex {
 		private MatchCollection m;
 
 		public TReg() {
+			Console.ForegroundColor = ConsoleColor.Yellow;
 		}
 
 		#region past
+		private void DisplayMatches(string s) {
+			Console.WriteLine("(" + s + ")");
+			Console.Write(this.m.Count + " : ");
+			for (int i = 0; i < this.m.Count; i++)
+				Console.Write("[" + this.m[i].Value + "]");
+			Console.WriteLine();
+		}
+		private void OneSpaceCheck(string s) {
+			this.m = (new Regex(@"( *)(\w+)")).Matches(s);
+			DisplayMatches(s);
+		}
 		public void rSpace() {
-			string str1 = "Lt Rt";
-			this.m = (new Regex(@"( *)(\w+)")).Matches(str1);
-			Console.WriteLine("(" + str1 + ")");
-			Console.Write(this.m.Count + " : ");
-			for(int i = 0; i < this.m.Count; i++)
-				Console.Write("[" + this.m[i].Value + "]");
-			Console.WriteLine();
-
-			string str2 = "Lt  Rt";
-			this.m = (new Regex(@"( *)(\w+)")).Matches(str2);
-			Console.WriteLine("(" + str2 + ")");
-			Console.Write(this.m.Count + " : ");
-			for(int i = 0; i < this.m.Count; i++)
-				Console.Write("[" + this.m[i].Value + "]");
-			Console.WriteLine();
+			Console.WriteLine("-- Examine Space");
+			OneSpaceCheck("Lt Rt");
+			OneSpaceCheck("Lt  Rt");
 		}
 
 		public void rComma() {
+			Console.WriteLine("-- Examine Comma");
 			string sl1 = @" pro, y4#@;%&.2*2-_{p10}~+le, 72x?4'8'0p,  51 !k""b""/s, PAR 8:9 [DAR 4:3], 3.9 fps";
 			this.m = (new Regex(@"(,)?( )[\w /:;|.!()'#$%&{}~@\?\+\-\*\[\]""]+")).Matches(sl1);
-			Console.WriteLine("(" + sl1 + ")");
-			Console.Write(this.m.Count + " : ");
-			for(int i = 0; i < this.m.Count; i++)
-				Console.Write("[" + this.m[i].Value + "]");
-			Console.WriteLine();
+			DisplayMatches(sl1);
 		}
 
 		public void rFind1() {
+			Console.WriteLine("-- rFind1");
 			string s1 = "720x580p", s2 = "720_480p", key = @"([0-9]+)x([0-9]+)";
-			Console.WriteLine(key);
+			Console.WriteLine($"Pattern: [{key}]");
 			Match mc1 = Regex.Match(s1, key);
 			Console.WriteLine("[" + s1 + "] " + (mc1.Success ? mc1.ToString() : "NO"));
 			Match mc2 = Regex.Match(s2, key);
@@ -55,14 +53,13 @@ namespace CRegex {
 		}
 
 		public void rFind2() {
+			Console.WriteLine("-- rFind2");
 			string s1 = "11:22:33.89", key = @"(:)?[\w.]+";
-			Console.WriteLine(s1 + " --- " + key);
+			Console.WriteLine($"String [{s1}], Pattern [{key}]");
 			int manu = (11 * 60 + 22) * 60 + 33;
 
 			m = (new Regex(key)).Matches(s1);
-			for(int i = 0; i < m.Count; i++)
-				Console.Write(m[i].Value + " ");
-			Console.WriteLine();
+			DisplayMatches(s1);
 
 			double d1 = (Convert.ToInt32(m[0].Value) * 60 + Convert.ToInt32(m[1].Value.Substring(1))) * 60;
 			d1 += Convert.ToDouble(m[2].Value.Substring(1));
@@ -76,6 +73,7 @@ namespace CRegex {
 				Console.Write(" {" + ss[i] + "}");
 			Console.WriteLine();
 		}
+
 		public void quotes() {
 			this.quote("شريك مؤسس لموقع الترفيه‎><‏‎،\"Reddit\" ،‎والأخبار الاجتماعية");
 			this.quote("‏‏‏ثمة إحساس عميق بالخسارة‎><‏‎،\"Highland Park\" ‏هذه الليلة في");
@@ -97,6 +95,7 @@ namespace CRegex {
 		}
 
 		public void rMatch() {
+			Console.WriteLine("-- rMatch");
 			string[] ls = new string[] { " ENG 5.1 L ", " PTB 5.1 R", " ENG 7.1 L", " ENG 7.1 R",
 				" ENG 7.1 C", " ENG 7.1 LFE", " ENG 7.1 Ls", " ENG 7.1 Rs", " ENG 7.1 Lr", " ENG 7.1 Rr" };
 			string key = @" (\w)+", mid = String.Empty;
@@ -112,19 +111,21 @@ namespace CRegex {
 		}
 
 		public void rMatchi() {
+			Console.WriteLine("-- rMatchi");
 			string[] ls = new string[] { "<i>aaaaa</i>", "aaa<i>bbb</i>ccc<i>dd23 d</i>eee", "<i>bbbb</i>cccc<i>dddd</i>" };
 			string key = @"<i>(\w+)", mid = String.Empty;
 
 			foreach(string s in ls) {
-				Console.Write("" + s + " : ");
 				this.m = (new Regex(key)).Matches(s);
-				foreach(var a in this.m) {
+				Console.Write($"[{s}]: Count({m.Count})");
+				foreach (var a in this.m)
 					Console.Write(" - [" + a + "]");
-				}
 				Console.WriteLine();
 			}
 		}
+
 		public void colorCode() {
+			Console.WriteLine("-- color code");
 			string s1 = "[2]aa,abb[3]b4ccc, [7]nnn ddd[3]  abcdefg";
 			string s2 = " [2]aa,abb[3]b4ccc, [7]nnn ddd[3]  abcdefg";
 			string s3 = "aa,abb[3]b4ccc, [7]nnn ddd[3]  abcdefg";
@@ -198,6 +199,7 @@ namespace CRegex {
 
 		}
 		public void searchccode() {
+			Console.WriteLine("-- search color code");
 			this.searchone("[2]aa,abb[3]b4ccc, [7]nnn ddd[3]  abcdefg");
 			this.searchone(" [2]aa,abb[3]b4ccc, [7]nn-=##$%*n ddd[3]  abcdefg");
 			this.searchone("aa,abb[3]b4ccc, [7]nnn ddd[3]  abcdefg");
@@ -205,12 +207,14 @@ namespace CRegex {
 		}
 
 		public void num() {
+			Console.WriteLine("-- num");
 			string s = "<SYNC Start=18652 ID=Default><P Class=yueCC>你已進入邪惡巫師的洞穴</P></SYNC>";
 			Match m = Regex.Match(s, "[0-9]+");
 			Console.WriteLine("[" + (m.Success ? m.ToString() : "no") + "]  [" + m.Index + "] [" + m.Length + "]");
 		}
 
 		public void spaces() {
+			Console.WriteLine("-- spaces");
 			string[] ss = new string[] {
 				"     0   17.3838    +9.3643  103    -104     19.7751",
 				"     1   20.4363   +15.5245  122    -102     18.3296",
