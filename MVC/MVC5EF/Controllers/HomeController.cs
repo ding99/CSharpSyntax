@@ -12,7 +12,7 @@ namespace MVC5EF.Controllers {
 
 		public ActionResult About() {
 			ViewBag.Message = "Your application description page.";
-
+			//todo
 			return View();
 		}
 
