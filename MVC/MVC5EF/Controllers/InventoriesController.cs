@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using MVC5EF.Models;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
-using MVC5EF.Models;
 
-namespace MVC5EF.Controllers
-{
-    public class InventoriesController : Controller
+namespace MVC5EF.Controllers {
+	public class InventoriesController : Controller
     {
         private AutoLotEntities db = new AutoLotEntities();
 
