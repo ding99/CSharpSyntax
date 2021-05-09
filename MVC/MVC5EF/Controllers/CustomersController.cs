@@ -5,107 +5,107 @@ using System.Net;
 using System.Web.Mvc;
 
 namespace MVC5EF.Controllers {
-	public class InventoriesController : Controller
+	public class CustomersController : Controller
     {
         private AutoLotEntities db = new AutoLotEntities();
 
-        // GET: Inventories
+        // GET: Customers
         public ActionResult Index()
         {
-            return View(db.Inventories.ToList());
+            return View(db.Customers.ToList());
         }
 
-        // GET: Inventories/Details/5
+        // GET: Customers/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Inventory inventory = db.Inventories.Find(id);
-            if (inventory == null)
+            Customer customer = db.Customers.Find(id);
+            if (customer == null)
             {
                 return HttpNotFound();
             }
-            return View(inventory);
+            return View(customer);
         }
 
-        // GET: Inventories/Create
+        // GET: Customers/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Inventories/Create
+        // POST: Customers/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CarId,Make,Color,PetName,Timestamp")] Inventory inventory)
+        public ActionResult Create([Bind(Include = "CustId,FirstName,LastName,Timestamp")] Customer customer)
         {
             if (ModelState.IsValid)
             {
-                db.Inventories.Add(inventory);
+                db.Customers.Add(customer);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(inventory);
+            return View(customer);
         }
 
-        // GET: Inventories/Edit/5
+        // GET: Customers/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Inventory inventory = db.Inventories.Find(id);
-            if (inventory == null)
+            Customer customer = db.Customers.Find(id);
+            if (customer == null)
             {
                 return HttpNotFound();
             }
-            return View(inventory);
+            return View(customer);
         }
 
-        // POST: Inventories/Edit/5
+        // POST: Customers/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CarId,Make,Color,PetName,Timestamp")] Inventory inventory)
+        public ActionResult Edit([Bind(Include = "CustId,FirstName,LastName,Timestamp")] Customer customer)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(inventory).State = EntityState.Modified;
+                db.Entry(customer).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(inventory);
+            return View(customer);
         }
 
-        // GET: Inventories/Delete/5
+        // GET: Customers/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Inventory inventory = db.Inventories.Find(id);
-            if (inventory == null)
+            Customer customer = db.Customers.Find(id);
+            if (customer == null)
             {
                 return HttpNotFound();
             }
-            return View(inventory);
+            return View(customer);
         }
 
-        // POST: Inventories/Delete/5
+        // POST: Customers/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Inventory inventory = db.Inventories.Find(id);
-            db.Inventories.Remove(inventory);
+            Customer customer = db.Customers.Find(id);
+            db.Customers.Remove(customer);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
