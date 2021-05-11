@@ -4,44 +4,55 @@ namespace CDelegate {
 
 
     public class Delegator {
-        public Delegator() { }
+        public Delegator() { Console.ForegroundColor = ConsoleColor.Yellow; }
+
+        public void Start() {
+            ExamineDelegate();
+            ExamineAction1();
+            ExamineAction2();
+            ExamineFunc();
+		}
+
+        #region common
+        private void Hello(string person) {
+            Console.WriteLine($"Good morning, {person}");
+        }
+        #endregion
 
         #region delegate
-        public delegate void myDelegator(string s);
-        public void Hello(string person) {
-            Console.WriteLine("Good morning, " + person);
-        }
-        public void dele() {
+        private delegate void myDelegator(string s);
+        private void ExamineDelegate() {
             Console.WriteLine("-- using delegate");
-            //myDelegator d = new myDelegator(Hello);
             myDelegator d = Hello;
-            d("Mr Zhang");
+            d("Mr. Zhang");
+            d.Invoke("Mr. Change(Invoke)");
         }
         #endregion
 
         #region action
-        public void actn() {
+        private void ExamineAction1() {
             Console.WriteLine("-- using Action 1");
             Action<string> a = Hello;
-            a("Mr Wang");
+            a("Mr. Wang");
         }
 
-        public void act2() {
-            Console.WriteLine("-- using Action 2");
-            Action<string> a = (s => Console.WriteLine("Good night, " + s));
+        private void ExamineAction2() {
+            Console.WriteLine("-- using Action 2 (Lambda)");
+            Action<string> a = (s => Console.WriteLine($"Good night, {s}"));
             a("Mr. Zhao");
+            a.Invoke("Mr. Luo(Invoke)");
         }
         #endregion
 
         #region func
-        public int Hellowf(string person) {
+        private int HellowFunc(string person) {
             return person.Length;
         }
-        public void func() {
+        private void ExamineFunc() {
             Console.WriteLine("-- using Func");
-            Func<string, int> h = Hellowf;
+            Func<string, int> h = HellowFunc;
             string hello = "Good afternoon, Mr Li";
-            Console.WriteLine(hello + " (" + h(hello) + ")");
+            Console.WriteLine($"{hello}  ({h(hello)})");
         }
         #endregion
     }
