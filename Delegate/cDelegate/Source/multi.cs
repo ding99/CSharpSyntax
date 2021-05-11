@@ -1,20 +1,24 @@
 ﻿using System;
-using System.Collections;
 
 namespace CDelegate {
 
-    delegate int NumberChanger(int n);
+	delegate int NumberChanger(int n);
 
     public class MultiDelegate {
 
         static int num = 10;
-        public MultiDelegate() { }
+        public MultiDelegate() {
+            Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.WriteLine($"actor: the initial num is [{num}]");
+        }
 
-        public static int AddNum(int p) { num += p; return num; }
-        public static int MultiNum(int q) { num *= q; return num; }
-        public static int GetNum() { return num; }
+        private static int AddNum(int p) { num += p; return num; }
+        private static int MultiNum(int q) { num *= q; return num; }
+        private static int GetNum() { return num; }
 
-        public void TestSingle() {
+        private void TestSingle() {
+			Console.WriteLine($"-- Test Single to ADD 25 then Multi 5. Original num: [{GetNum()}]");
+
             NumberChanger nc1 = new NumberChanger(AddNum);
             NumberChanger nc2 = new NumberChanger(MultiNum);
 
@@ -25,7 +29,9 @@ namespace CDelegate {
             Console.WriteLine($"Value of Num: [{GetNum()}]");
         }
 
-        public void TestMulti() {
+        private void TestMulti() {
+            Console.WriteLine($"-- Test Multi to ADD-Multi 5. Original num: [{GetNum()}]");
+
             NumberChanger nc1 = new NumberChanger(AddNum);
             NumberChanger nc2 = new NumberChanger(MultiNum);
 
@@ -34,6 +40,11 @@ namespace CDelegate {
             nc(5);
             Console.WriteLine($"Value of Num: [{GetNum()}]");
         }
+
+        public void Start() {
+            TestSingle();
+            TestMulti();
+		}
 
     }
 

@@ -84,10 +84,10 @@ namespace CStrings {
 			#endregion
 
 			#region stringbuilder
-			//CStringbuilder bd = new CStringbuilder();
-			//bd.cap();
-			//bd.prm();
-			//bd.jon();
+			CStringbuilder bd = new CStringbuilder();
+			bd.cap();
+			bd.prm();
+			bd.jon();
 			#endregion
 
 			#region foramt brakets
@@ -110,6 +110,13 @@ namespace CStrings {
 			e.ExamineOrder();
 			e.ExamineBase64();
 			e.ExamineChars();
+			#endregion
+
+			#region compare
+			Equaling cmp = new Equaling();
+			cmp.CompareString();
+			cmp.CompareClass();
+			cmp.CompareNumber();
 			#endregion
 
 			Console.ResetColor();

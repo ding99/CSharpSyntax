@@ -16,11 +16,16 @@ namespace CVariable {
 
 			new Marks().TestMark();
 
-			new NullAble().TestValue();
+			NullAble nl = new NullAble();
+			nl.TestValue();
+			nl.ExceptionMessage();
 
 			Examine exam = new Examine();
 			exam.Interpolation();
 			exam.ExamineStruct();
+
+			CDecimal dec = new CDecimal();
+			dec.MoneyDivision();
 
 			Console.ResetColor();
         }
