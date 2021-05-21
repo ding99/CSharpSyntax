@@ -63,6 +63,7 @@
     <Compile Include="Repos\BaseRepo.cs" />
     <Compile Include="Repos\InventoryRepo.cs" />
     <Compile Include="Repos\IRepo.cs" />
+    <Compile Include="Repos\OrderRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
