@@ -13,7 +13,6 @@ namespace HashSet {
 
 		private void HashString() {
 			Console.ForegroundColor = ConsoleColor.Yellow;
-			Console.WriteLine("-- HashSet of String: Languages");
 
 			HashSet<string> languages = new HashSet<string>();
 			languages.Add("C");
@@ -23,16 +22,18 @@ namespace HashSet {
 			languages.Add("Ruby");
 			languages.Add("Perl");
 
-			foreach(var a in languages)
+			Console.WriteLine($"-- HashSet of String: Languages. Count ({languages.Count})");
+			foreach (var a in languages)
 				Console.WriteLine(a);
 		}
 
 		private void HashInt() {
 			Console.ForegroundColor = ConsoleColor.Cyan;
 
-			Console.WriteLine("-- HashSet of Integer");
 			HashSet<int> ints = new HashSet<int> { 10, 100, 100, 10000, 100000 };
-			foreach(var i in ints)
+
+			Console.WriteLine($"-- HashSet of Integer. Count ({ints.Count})");
+			foreach (var i in ints)
 				Console.WriteLine(i);
 		}
 	}
