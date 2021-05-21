@@ -7,10 +7,13 @@ namespace AutoLotDAL.Models {
 	public partial class Inventory {
 		[Key]
 		public int CarId { get; set; }
+
 		[StringLength(50)]
 		public string Make { get; set; }
+
 		[StringLength(50)]
 		public string Color { get; set; }
+
 		[StringLength(50)]
 		public string PetName { get; set; }
 
