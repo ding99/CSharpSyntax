@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutoLotDAL
-{
-    public class Class1
-    {
-    }
+namespace AutoLotDAL.Models {
+	class Customer {
+	}
 }
