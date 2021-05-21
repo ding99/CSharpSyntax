@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AutoLotDAL.Models;
 using System.Data.Entity;
-using AutoLotDAL.Models;
+using System.Threading.Tasks;
 
 namespace AutoLotDAL.Repos {
 	public class OrderRepo : BaseRepo<Order>, IRepo<Order> {
