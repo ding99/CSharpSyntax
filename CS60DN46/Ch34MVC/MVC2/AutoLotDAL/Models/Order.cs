@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AutoLotDAL.Models {
 	public partial class Order {
-		[Key, Required, DatabaseGenerated(DatabaseGeneratedOption.Identity]
+		[Key, Required, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		public int OrderId { get; set; }
 
 		[Required]
