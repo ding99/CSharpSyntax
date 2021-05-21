@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 
 namespace AutoLotDAL.Repos {
-	interface IReop<T> {
+	public interface IRepo<T> {
 		int Add(T entity);
 		Task<int> AddAsync(T entity);
 		int AddRange(IList<T> entities);
