@@ -55,6 +55,17 @@ namespace AutoLotDAL.Repos {
 		}
 		#endregion
 
+		#region delete
+		public int Delete(T entity) {
+			Context.Entry(entity).State = EntityState.Deleted;
+			return SaveChanges();
+		}
+		public Task<int> DeleteAsync(T entity) {
+			Context.Entry(entity).State = EntityState.Deleted;
+			return SaveChangesAsync();
+		}
+		#endregion
+
 		#region get
 		public T GetOne(int? id) => Table.Find(id);
 		public Task<T> GetOneAsync(int? id) => Table.FindAsync(id);
