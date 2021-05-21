@@ -25,6 +25,7 @@ namespace AutoLotDAL.Repos {
 			disposed = true;
 		}
 
+		#region add
 		public int Add(T entity) {
 			Table.Add(entity);
 			return SaveChanges();
@@ -33,7 +34,6 @@ namespace AutoLotDAL.Repos {
 			Table.Add(entity);
 			return SaveChangesAsync();
 		}
-
 		public int AddRange(IList<T> entities) {
 			Table.AddRange(entities);
 			return SaveChanges();
@@ -42,17 +42,45 @@ namespace AutoLotDAL.Repos {
 			Table.AddRange(entities);
 			return SaveChangesAsync();
 		}
+		#endregion
 
+		#region save
+		public int Save(T entity) {
+			Context.Entry(entity).State = EntityState.Modified;
+			return SaveChanges();
+		}
+		public Task<int> SaveAsync(T entity) {
+			Context.Entry(entity).State = EntityState.Modified;
+			return SaveChangesAsync();
+		}
+		#endregion
+
+		#region delete
+		public int Delete(T entity) {
+			Context.Entry(entity).State = EntityState.Deleted;
+			return SaveChanges();
+		}
+		public Task<int> DeleteAsync(T entity) {
+			Context.Entry(entity).State = EntityState.Deleted;
+			return SaveChangesAsync();
+		}
+		#endregion
+
+		#region get
 		public T GetOne(int? id) => Table.Find(id);
 		public Task<T> GetOneAsync(int? id) => Table.FindAsync(id);
 		public List<T> GetAll() => Table.ToList();
 		public Task<List<T>> GetAllAsync() => Table.ToListAsync();
+		#endregion
 
+		#region query
 		public List<T> ExecuteQuery(string sql) => Table.SqlQuery(sql).ToList();
 		public Task<List<T>> ExecuteQueryAsync(string sql) => Table.SqlQuery(sql).ToListAsync();
 		public List<T> ExecuteQuery(string sql, object[] parameters) => Table.SqlQuery(sql, parameters).ToList();
 		public Task<List<T>> ExecuteQueryAsync(string sql, object[] parameters) => Table.SqlQuery(sql, parameters).ToListAsync();
+		#endregion
 
+		#region util
 		internal int SaveChanges() {
 			try {
 				return Context.SaveChanges();
@@ -87,5 +115,6 @@ namespace AutoLotDAL.Repos {
 				throw;
 			}
 		}
+		#endregion
 	}
 }
