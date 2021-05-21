@@ -60,6 +60,7 @@
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Partials\InventoryPartial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repos\IReop.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
