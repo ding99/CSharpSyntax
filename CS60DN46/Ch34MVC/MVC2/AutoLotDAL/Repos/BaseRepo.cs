@@ -7,9 +7,23 @@ using System.Threading.Tasks;
 using AutoLotDAL.EF;
 
 namespace AutoLotDAL.Repos {
-	public abstract class BaseRepo<T> where T: class, new() {
-		public AutoLotEntities Context { get; } = new AutoLotEntities();
+	public abstract class BaseRepo<T>: IDisposable where T: class, new() {
+		protected AutoLotEntities Context { get; } = new AutoLotEntities();
 		protected DbSet<T> Table;
+
+		bool disposed = false;
+		public void Dispose() {
+			Dispose(true);
+			GC.SuppressFinalize(this);
+		}
+		protected virtual void Dispose(bool disposing) {
+			if (disposed)
+				return;
+			if (disposing)
+				Context.Dispose();
+
+			disposed = true;
+		}
 
 		public int Add(T entity) {
 			Table.Add(entity);
