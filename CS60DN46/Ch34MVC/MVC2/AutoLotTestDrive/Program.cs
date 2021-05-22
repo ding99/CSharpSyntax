@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AutoLotDAL.EF;
 using AutoLotDAL.Models;
 using AutoLotDAL.Repos;
+using System;
 using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
-using AutoLotDAL.EF;
 
 namespace AutoLotTestDrive {
 	class Program {
@@ -17,16 +12,6 @@ namespace AutoLotTestDrive {
 			Database.SetInitializer(new DataInitializer());
 
 			PrintAllInventory();
-			//int id = AddNewCar();
-			//UpdateRecord(id);
-			//PrintAllInventory();
-
-			//ShowAllOrders();
-			//ShowAllOrdersEagerlyFetched();
-			//UpdateCreditRisk();
-
-			//UpdateRecordWithConcurrency();
-			//PrintAllInventory();
 
 			Console.ResetColor();
 		}
