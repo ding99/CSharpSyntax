@@ -1,7 +1,5 @@
-using System;
-using System.Data.Entity;
-using System.Linq;
 using AutoLotDAL.Models;
+using System.Data.Entity;
 
 namespace AutoLotDAL.EF {
 	public class AutoLotEntities : DbContext {
