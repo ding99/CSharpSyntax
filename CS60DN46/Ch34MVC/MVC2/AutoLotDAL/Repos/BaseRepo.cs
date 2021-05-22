@@ -8,7 +8,7 @@ using AutoLotDAL.EF;
 
 namespace AutoLotDAL.Repos {
 	public abstract class BaseRepo<T>: IDisposable where T: class, new() {
-		protected AutoLotEntities Context { get; } = new AutoLotEntities();
+		public AutoLotEntities Context { get; } = new AutoLotEntities();
 		protected DbSet<T> Table;
 
 		bool disposed = false;
