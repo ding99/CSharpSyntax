@@ -8,29 +8,46 @@ using System.Web;
 using System.Web.Mvc;
 using AutoLotDAL.EF;
 using AutoLotDAL.Models;
+using AutoLotDAL.Repos;
+using System.Threading.Tasks;
 
 namespace CarLotMVC2.Controllers
 {
     public class InventoryController : Controller
     {
         private AutoLotEntities db = new AutoLotEntities();
+        private readonly InventoryRepo _repo = new InventoryRepo();
 
         // GET: Inventory
-        public ActionResult Index()
-        {
-            return View(db.Inventory.ToList());
-        }
+        //public ActionResult Index()
+        //{
+        //    return View(db.Inventory.ToList());
+        //}
+        public async Task<ActionResult> Index() {
+            return View(await _repo.GetAllAsync());
+		}
 
         // GET: Inventory/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
+        //public ActionResult Details(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    Inventory inventory = db.Inventory.Find(id);
+        //    if (inventory == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(inventory);
+        //}
+        public async Task<ActionResult> Details(int? id) {
+            if (id == null) {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Inventory inventory = db.Inventory.Find(id);
-            if (inventory == null)
-            {
+            //Inventory inventory = db.Inventory.Find(id);
+            Inventory inventory = await _repo.GetOneAsync(id);
+            if (inventory == null) {
                 return HttpNotFound();
             }
             return View(inventory);
@@ -121,6 +138,7 @@ namespace CarLotMVC2.Controllers
             if (disposing)
             {
                 db.Dispose();
+                _repo.Dispose();
             }
             base.Dispose(disposing);
         }
