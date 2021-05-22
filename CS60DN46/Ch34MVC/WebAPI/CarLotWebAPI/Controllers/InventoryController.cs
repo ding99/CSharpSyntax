@@ -11,12 +11,14 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using AutoLotDAL.EF;
 using AutoLotDAL.Models;
+using AutoLotDAL.Repos;
 
 namespace CarLotWebAPI.Controllers
 {
     public class InventoryController : ApiController
     {
         private AutoLotEntities db = new AutoLotEntities();
+        private readonly InventoryRepo _repo = new InventoryRepo();
 
         // GET: api/Inventory
         public IQueryable<Inventory> GetInventory()
@@ -108,6 +110,7 @@ namespace CarLotWebAPI.Controllers
             if (disposing)
             {
                 db.Dispose();
+                _repo.Dispose();
             }
             base.Dispose(disposing);
         }
