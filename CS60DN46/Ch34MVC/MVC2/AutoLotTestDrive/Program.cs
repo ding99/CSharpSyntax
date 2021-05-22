@@ -7,7 +7,7 @@ using System.Data.Entity;
 namespace AutoLotTestDrive {
 	class Program {
 		static void Main() {
-			Console.WriteLine("***** ADO.NET EF Code First *****");
+			Console.WriteLine("***** ADO.NET EF Code First (Test Lib) *****");
 
 			Database.SetInitializer(new DataInitializer());
 
