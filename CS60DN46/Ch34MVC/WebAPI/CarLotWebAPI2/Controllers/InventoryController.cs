@@ -11,6 +11,7 @@ using System.Web.Http.Description;
 using AutoLotDAL.EF;
 using AutoLotDAL.Models;
 using AutoLotDAL.Repos;
+using AutoMapper;
 
 namespace CarLotWebAPI2.Controllers
 {
@@ -18,10 +19,18 @@ namespace CarLotWebAPI2.Controllers
     {
         private AutoLotEntities db = new AutoLotEntities();
         private readonly InventoryRepo _repo = new InventoryRepo();
+        private Mapper _mapper;
+
+        public InventoryController() {
+            _mapper = new Mapper(new MapperConfiguration(cfg => {
+                cfg.CreateMap<Inventory, Inventory>().ForMember(x => x.Orders, opt => opt.Ignore());
+            }));
+		}
 
         // GET: api/Inventory
         public IEnumerable<Inventory> GetInventory() {
-            return _repo.GetAll();
+            var inventories = _repo.GetAll();
+            return _mapper.Map<List<Inventory>, List<Inventory>>(inventories);
 		}
         //public IQueryable<Inventory> GetInventory()
         //{
