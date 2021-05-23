@@ -12,6 +12,7 @@ using AutoLotDAL.EF;
 using AutoLotDAL.Models;
 using AutoLotDAL.Repos;
 using AutoMapper;
+using System.Threading.Tasks;
 
 namespace CarLotWebAPI2.Controllers
 {
@@ -39,20 +40,29 @@ namespace CarLotWebAPI2.Controllers
 
         // GET: api/Inventory/5
         [ResponseType(typeof(Inventory))]
-        public IHttpActionResult GetInventory(int id)
+        public async Task<IHttpActionResult> GetInventory(int id)
         {
-            Inventory inventory = db.Inventory.Find(id);
+            Inventory inventory = await _repo.GetOneAsync(id);
             if (inventory == null)
             {
                 return NotFound();
             }
 
-            return Ok(inventory);
+            return Ok(_mapper.Map<Inventory,Inventory>(inventory));
         }
+        //public IHttpActionResult GetInventory(int id) {
+        //    Inventory inventory = db.Inventory.Find(id);
+        //    if (inventory == null) {
+        //        return NotFound();
+        //    }
 
+        //    return Ok(inventory);
+        //}
+
+        //TODO: to test the method
         // PUT: api/Inventory/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutInventory(int id, Inventory inventory)
+        public async Task<IHttpActionResult> PutInventory(int id, Inventory inventory)
         {
             if (!ModelState.IsValid)
             {
@@ -64,26 +74,38 @@ namespace CarLotWebAPI2.Controllers
                 return BadRequest();
             }
 
-            db.Entry(inventory).State = EntityState.Modified;
-
-            try
-            {
-                db.SaveChanges();
+            try {
+                await _repo.SaveAsync(inventory);
             }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!InventoryExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+            catch (Exception) {
+                throw;
             }
-
             return StatusCode(HttpStatusCode.NoContent);
         }
+        //public IHttpActionResult PutInventory(int id, Inventory inventory) {
+        //    if (!ModelState.IsValid) {
+        //        return BadRequest(ModelState);
+        //    }
+
+        //    if (id != inventory.CarId) {
+        //        return BadRequest();
+        //    }
+
+        //    db.Entry(inventory).State = EntityState.Modified;
+
+        //    try {
+        //        db.SaveChanges();
+        //    }
+        //    catch (DbUpdateConcurrencyException) {
+        //        if (!InventoryExists(id)) {
+        //            return NotFound();
+        //        } else {
+        //            throw;
+        //        }
+        //    }
+
+        //    return StatusCode(HttpStatusCode.NoContent);
+        //}
 
         // POST: api/Inventory
         [ResponseType(typeof(Inventory))]
