@@ -20,10 +20,13 @@ namespace CarLotWebAPI2.Controllers
         private readonly InventoryRepo _repo = new InventoryRepo();
 
         // GET: api/Inventory
-        public IQueryable<Inventory> GetInventory()
-        {
-            return db.Inventory;
-        }
+        public IEnumerable<Inventory> GetInventory() {
+            return _repo.GetAll();
+		}
+        //public IQueryable<Inventory> GetInventory()
+        //{
+        //    return db.Inventory;
+        //}
 
         // GET: api/Inventory/5
         [ResponseType(typeof(Inventory))]
