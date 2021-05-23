@@ -12,6 +12,7 @@ using AutoLotDAL.EF;
 using AutoLotDAL.Models;
 using AutoLotDAL.Repos;
 using AutoMapper;
+using System.Threading.Tasks;
 
 namespace CarLotWebAPI2.Controllers
 {
@@ -39,16 +40,24 @@ namespace CarLotWebAPI2.Controllers
 
         // GET: api/Inventory/5
         [ResponseType(typeof(Inventory))]
-        public IHttpActionResult GetInventory(int id)
+        public async Task<IHttpActionResult> GetInventory(int id)
         {
-            Inventory inventory = db.Inventory.Find(id);
+            Inventory inventory = await _repo.GetOneAsync(id);
             if (inventory == null)
             {
                 return NotFound();
             }
 
-            return Ok(inventory);
+            return Ok(_mapper.Map<Inventory,Inventory>(inventory));
         }
+        //public IHttpActionResult GetInventory(int id) {
+        //    Inventory inventory = db.Inventory.Find(id);
+        //    if (inventory == null) {
+        //        return NotFound();
+        //    }
+
+        //    return Ok(inventory);
+        //}
 
         // PUT: api/Inventory/5
         [ResponseType(typeof(void))]
