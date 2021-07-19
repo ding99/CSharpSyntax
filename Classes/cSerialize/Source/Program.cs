@@ -7,14 +7,18 @@ namespace CSerialize
 		static void Main(string[] args)
 		{
 			Console.WriteLine("== start");
+
+			new Mapping().Start();
+
 			bool ret = true;
 
 			SDS sds = new SDS();
-			if (ret) ret = sds.binaryT();
+			ret = sds.binaryT();
 			if(ret) ret = sds.stringT();
 
 			Console.WriteLine("== end (" + (ret ? "succeed" : "fail") + "ed)");
-			Console.ReadKey();
+
+			Console.ResetColor();
 		}
 	}
 }
