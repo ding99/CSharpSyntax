@@ -40,6 +40,7 @@ namespace CSerialize {
 
 	public class SDS {
 		public SDS(){
+			Console.ForegroundColor = ConsoleColor.Cyan;
 		}
 
 		public byte[] BSerialize<T>(T cc) {
