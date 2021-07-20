@@ -7,7 +7,7 @@ namespace CTimer {
 
 	public class TimingOld {
 
-		private int nInterval = 1000* 5; //1 second
+		private int nInterval = 1000 * 5; //1 second
 		private System.Threading.Timer mytime;
 
 		private string folder;
@@ -88,6 +88,8 @@ namespace CTimer {
 		}
 
 		public void start(string path) {
+			Console.WriteLine("Folder [" + path + "]");
+
 			this.folder = path;
 			this.files = new List<string>();
 
