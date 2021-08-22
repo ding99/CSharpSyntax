@@ -25,7 +25,7 @@ namespace CProperty {
     }
 
     public class PV2 {
-        public PV2() { }
+        public PV2() { Console.ForegroundColor = ConsoleColor.Yellow; }
 
         public void test() {
             Student2 s = new Student2();
