@@ -8,6 +8,7 @@ namespace CProperty {
             
             new PV2().test();
             new PV3().test();
+            new PropertyAsParameter().Start();
 
             Console.ResetColor();
             Console.WriteLine("=== end");
