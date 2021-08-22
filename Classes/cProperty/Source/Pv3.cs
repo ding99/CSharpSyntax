@@ -13,7 +13,7 @@ namespace CProperty {
     }
 
     public class PV3 {
-        public PV3() { }
+        public PV3() { Console.ForegroundColor = ConsoleColor.Cyan; }
 
         public void test() {
             Student3 s = new Student3();
