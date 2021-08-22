@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CProperty {
 
-    public class Student {
+	public class Student {
         public string Code { get; set; }
         public string Name { get; set; }
         public int Age { get; set; }
@@ -39,14 +37,16 @@ namespace CProperty {
             foreach(var s in students)
 				Console.WriteLine($"  {s}");
 
+            string key = "Code", value = "CC";
             foreach(var s in students) {
-                if(typeof(Student).GetProperty("Code").GetValue(s).Equals("CC"))
-					Console.WriteLine($"<> 1 <> [{s}]");
+                if(typeof(Student).GetProperty(key).GetValue(s).Equals(value))
+					Console.WriteLine($"<by {key}:{value}> [{s}]");
 			}
 
+            key = "Name"; value = "Alic";
             foreach (var s in students) {
-                if (typeof(Student).GetProperty("Name").GetValue(s).Equals("Alic"))
-                    Console.WriteLine($"<> 2 <> [{s}]");
+                if (typeof(Student).GetProperty(key).GetValue(s).Equals(value))
+                    Console.WriteLine($"<by {key}:{value}> [{s}]");
             }
         }
     }
