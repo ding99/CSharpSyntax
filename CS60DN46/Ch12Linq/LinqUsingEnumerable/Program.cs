@@ -39,7 +39,7 @@ namespace LinqUsingEnumerable {
 		}
 
 		static void QueryStringsWithEnumerableAndLambdas2() {
-			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
 			Console.WriteLine("=> Using the Enumerabl / Lambda Expressioins 2");
 
 			string[] games = { "Morrowind", "Uncharted 2", "Fallout 3", "Daxter", "System Shock 2" };
