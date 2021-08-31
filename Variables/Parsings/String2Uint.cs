@@ -26,7 +26,7 @@ namespace Parsings {
 			}
 
 			try {
-				uint target2 = uint.Parse(source.Substring(0, 4), System.Globalization.NumberStyles.HexNumber);
+				uint target2 = (uint)source.Substring(0,4).Select(c => (int)c).Aggregate(0, (x, y) => x * 256 + y);
 				Console.Write($" Target2 [{target2.ToString("x")}]");
 			}
 			catch (Exception e) {
