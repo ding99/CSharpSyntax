@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Parsings {
 	public class String2Uint {
@@ -10,13 +7,30 @@ namespace Parsings {
 
 		public void Start() {
 			Parsing("ffml");
-			Parsing("scc ");
+			Parsing("vtt ");
+			Parsing("webvtt");
 		}
 
 		private void Parsing(string source) {
-			uint target1 = ((uint)source[0] << 24) + ((uint)source[1] << 16) + ((uint)source[2] << 8) + source[3];
+			Console.Write($"Source [{source}]");
 
-			Console.WriteLine($"source [{source}], target1 [{target1}]");
+			try {
+				uint target1 = ((uint)source[0] << 24) + ((uint)source[1] << 16) + ((uint)source[2] << 8) + source[3];
+				Console.Write($" Target1 [{target1.ToString("x")}]");
+			}
+			catch(Exception e) {
+				Console.Write($" [{e.Message}]");
+			}
+
+			try {
+				uint target2 = (uint)source.Substring(0,4).Select(c => (int)c).Aggregate(0, (x, y) => x * 256 + y);
+				Console.Write($" Target2 [{target2.ToString("x")}]");
+			}
+			catch (Exception e) {
+				Console.Write($" [{e.Message}]");
+			}
+
+			Console.WriteLine();
 		}
 	}
 }
