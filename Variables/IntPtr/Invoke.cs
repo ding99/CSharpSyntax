@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 
 namespace IntPtr {
@@ -10,8 +6,6 @@ namespace IntPtr {
 		public Invoke() { Console.ForegroundColor = ConsoleColor.Yellow; }
 
 		public void Start() {
-			Console.WriteLine("invoke");
-
 			int nValue1 = 10, nValue2 = 20;
 
 			//AllocHGlobal: allocate unmamaged memory
@@ -35,8 +29,6 @@ namespace IntPtr {
 			//release unmanaged momory
 			Marshal.FreeHGlobal(ptr1);
 			Marshal.FreeHGlobal(ptr2);
-
-			Console.WriteLine("finish");
 		}
 	}
 }
