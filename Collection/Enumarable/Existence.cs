@@ -12,16 +12,24 @@ namespace Enumarable {
 
 		public void ExistAny() {
 			ExistOne(new List<string>());
+			ExistOne(new List<double>());
+			ExistOne(new List<string>{"A1", "B2", "C3"});
+			ExistOne(new List<object> { 1, 2.1, true, "ABC"});
 		}
 
-		public void ExistOne<T>(IList<T> one) {
-			Console.Write($"IsNull [{one == null}]");
-			if(one != null) {
-				Console.Write($", Any() [{one.Any()}]");
-				Console.Write($", Count [{one.Count}]");
-				Console.Write($", Count() [{one.Count()}]");
+		public void ExistOne<T>(IEnumerable<T> one) {
+
+			StringBuilder b = new StringBuilder("[");
+
+			var list = one.ToList();
+			for (int i = 0; i < list.Count(); i++)
+				b.Append(i == 0 ? "" : " ").Append("(").Append(list[i]).Append(")");
+			b.Append("]");
+
+			b.Append($", Any() <{one.Any()}>");
+			b.Append($", Count() <{one.Count()}>");
+
+			Console.WriteLine(b.ToString());
 			}
-			Console.WriteLine();
 		}
-	}
 }
