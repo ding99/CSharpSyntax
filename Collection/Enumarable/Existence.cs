@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Enumarable {
 	public class Existence {
@@ -19,15 +18,15 @@ namespace Enumarable {
 
 		public void ExistOne<T>(IEnumerable<T> one) {
 
-			StringBuilder b = new StringBuilder("[");
+			StringBuilder b = new StringBuilder("{");
 
 			var list = one.ToList();
 			for (int i = 0; i < list.Count(); i++)
 				b.Append(i == 0 ? "" : " ").Append("(").Append(list[i]).Append(")");
-			b.Append("]");
+			b.Append("}");
 
-			b.Append($", Any() <{one.Any()}>");
-			b.Append($", Count() <{one.Count()}>");
+			b.Append($", Any [{one.Any()}]");
+			b.Append($", Count [{one.Count()}]");
 
 			Console.WriteLine(b.ToString());
 			}
