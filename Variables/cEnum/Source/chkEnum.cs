@@ -4,6 +4,7 @@ namespace CEnum {
 
 	public class EnumShow {
 		public EnumShow() {
+			Console.ForegroundColor = ConsoleColor.Yellow;
 			Console.WriteLine("< EnumShow >");
 		}
 
@@ -59,6 +60,7 @@ namespace CEnum {
 
 	public class Enum2String {
 		public Enum2String() {
+			Console.ForegroundColor = ConsoleColor.DarkCyan;
 			Console.WriteLine("< Enum2String >");
 		}
 
@@ -83,6 +85,7 @@ namespace CEnum {
 
 	public class EnumParse {
 		public EnumParse() {
+			Console.ForegroundColor = ConsoleColor.Cyan;
 			Console.WriteLine("< EnumParse >");
 		}
 
@@ -121,6 +124,7 @@ namespace CEnum {
 
 	public class Comma {
 		public Comma() {
+			Console.ForegroundColor = ConsoleColor.Green;
 			Console.WriteLine("< Comma >");
 		}
 
@@ -240,6 +244,8 @@ namespace CEnum {
 		}
 
 		public EnumSearch() {
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.WriteLine("< Enum Search >");
 		}
 
 		public void search() {

@@ -2,7 +2,7 @@
 
 namespace CEnum {
     class Program {
-        static void Main(string[] args) {
+        static void Main() {
             Console.WriteLine("==  start");
 
 			(new EnumParse()).parse();
@@ -20,6 +20,7 @@ namespace CEnum {
 			cmp.start();
 			cmp.greater();
 
+			Console.ResetColor();
             Console.WriteLine("==  end");
         }
     }

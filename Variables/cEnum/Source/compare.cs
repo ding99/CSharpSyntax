@@ -28,6 +28,11 @@ namespace CEnum {
     }
 
     public class Compare {
+
+        public Compare() {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("< Compare >");
+		}
         private string prev(LogType type = LogType.All, LogLevel level = LogLevel.Info) {
 
             string key = string.Empty;
