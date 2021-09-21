@@ -37,6 +37,7 @@
     <Compile Include="Source\ChkEnum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Source\Compare.cs" />
+    <Compile Include="Source\Default.cs" />
     <Compile Include="Source\Program.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -196,9 +196,10 @@ namespace CEnum {
 			EE
 		}
 		private void dspDigit(Digit d) {
-			Console.WriteLine(d + " " + (int)d);
+			Console.WriteLine($"{d} {(int)d}");
 		}
 		public void seeDigit() {
+			Console.WriteLine("--- See Digit");
 			this.dspDigit(Digit.EE);
 			this.dspDigit(Digit.DD);
 			this.dspDigit(Digit.CC);

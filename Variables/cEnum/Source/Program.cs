@@ -20,6 +20,9 @@ namespace CEnum {
 			cmp.start();
 			cmp.greater();
 
+			Default def = new Default();
+			def.List();
+
 			Console.ResetColor();
             Console.WriteLine("==  end");
         }
