@@ -2,13 +2,13 @@
 
 namespace CEnum {
     class Program {
-        static void Main(string[] args) {
+        static void Main() {
             Console.WriteLine("==  start");
 
 			(new EnumParse()).parse();
 			(new EnumShow()).stt();
 			(new Enum2String()).transf();
-			(new EnumSearch()).search();
+			(new EnumSearch()).Parse();
 
 			Comma cm = new Comma();
 			cm.comp();
@@ -20,6 +20,7 @@ namespace CEnum {
 			cmp.start();
 			cmp.greater();
 
+			Console.ResetColor();
             Console.WriteLine("==  end");
         }
     }
