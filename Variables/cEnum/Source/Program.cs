@@ -8,7 +8,7 @@ namespace CEnum {
 			(new EnumParse()).parse();
 			(new EnumShow()).stt();
 			(new Enum2String()).transf();
-			(new EnumSearch()).search();
+			(new EnumSearch()).Parse();
 
 			Comma cm = new Comma();
 			cm.comp();

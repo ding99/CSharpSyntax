@@ -8,34 +8,36 @@ namespace CEnum {
 			Console.WriteLine("< EnumShow >");
 		}
 
-		private void toShow(SpclChr s){ Console.WriteLine("  {0} {0:x} {1:x} " + (int)s, s, (int)s); }
+		private void toShow(SpclChr s){ Console.WriteLine("  {0}  {0:x}  {1:x}  " + (int)s, s, (int)s); }
 		public void dsp(int key) {
 
 			Console.WriteLine("- {0:x}", key);
 
 			switch(key) {
 			case (int)SpclChr.SRIGHT:
-				this.toShow(SpclChr.SRIGHT);
+				toShow(SpclChr.SRIGHT);
 				break;
 			case (int)SpclChr.SCIRCUP:
-				this.toShow(SpclChr.SCIRCUP);
+				toShow(SpclChr.SCIRCUP);
 				break;
 			case (int) SpclChr.SASHP:
-				this.toShow(SpclChr.SASHP);
+				toShow(SpclChr.SASHP);
 				break;
 			}
 		}
 
 		public void stt() {
 
+			Console.WriteLine("  value  value:x  (int)v:x  (int)v");
+
 			int k = 0x9130;
-			this.dsp(k);
+			dsp(k);
 
 			string ko = "9131";
-			this.dsp(Convert.ToInt32(ko, 16));
+			dsp(Convert.ToInt32(ko, 16));
 
 			ko = "913b";
-			this.dsp(Convert.ToInt32(ko, 16));
+			dsp(Convert.ToInt32(ko, 16));
 		}
 
 		public enum SpclChr {
@@ -73,7 +75,7 @@ namespace CEnum {
 		}
 
 		public void transf() {
-			Console.WriteLine("enumTo / variableTo");
+			Console.WriteLine("ToString-D / ToString");
 			Console.WriteLine("Normal  " + Merge.Normal.ToString("D") + " / " + Merge.Normal.ToString());
 			Console.WriteLine("Merge20 " + Merge.Merge20.ToString("D") + " / " + Merge.Merge20.ToString());
 			Console.WriteLine("Merge40 " + Merge.Merge40.ToString("D") + " / " + Merge.Merge40.ToString());
@@ -106,11 +108,11 @@ namespace CEnum {
 		}
 
 		private void parseone(int n) {
-			Console.Write("-- " + n + " : ");
+			Console.Write($"-- [{n}] : ");
 			if(this.isone(n))
-				Console.Write("success[" + (Merge)n + "]");
+				Console.Write($"Found [{(Merge)n}]");
 			else
-				Console.Write("failed");
+				Console.Write("Not Found");
 
 			Console.WriteLine();
 		}
@@ -128,16 +130,8 @@ namespace CEnum {
 			Console.WriteLine("< Comma >");
 		}
 
-		private enum e1 {
-			F1,
-			F2,
-			F3,
-		}
-		private enum e2 {
-			G1,
-			G2,
-			G3
-		}
+		private enum e1 { F1, F2, F3, }
+		private enum e2 { G1, G2, G3 }
 
 		public void comp() {
 			Console.WriteLine("--- e1 ---");
@@ -158,13 +152,15 @@ namespace CEnum {
 		}
 
 		public void ecopy() {
+			Console.WriteLine("--- ecopy ---");
+
 			mode m1 = mode.Under;
 			mode m2 = mode.Left;
 
-			Console.WriteLine("m1 (" + m1 + ")  m2 (" + m2 + ")");
+			Console.WriteLine($"m1 ({m1})  m2 ({m2})");
 
 			m2 = m1;
-			Console.WriteLine("m1 (" + m1 + ")  m2 (" + m2 + ")");
+			Console.WriteLine($"m1 ({m1})  m2 ({m2})");
 		}
 
 		public enum LCode {
@@ -248,28 +244,29 @@ namespace CEnum {
 			Console.WriteLine("< Enum Search >");
 		}
 
-		public void search() {
+		public void Parse() {
 			Src v1 = Src.SESHP;
 			Tgt v2 = Tgt.SMONEYC;
 
 			Console.WriteLine("--- original");
-			Console.WriteLine("v1: " + v1 + ", " + v1.ToString("x") + ", {0:x}", (int)v1);
-			Console.WriteLine("v2: " + v2 + ", " + v2.ToString("x") + ", {0:x}", (int)v2);
+			Console.WriteLine($"    v, v-String, v-String-x, 0:x");
+			Console.WriteLine($"v1: {v1}, {v1.ToString()}, {v1.ToString("x")}, " + "{0:x}", (int)v1);
+			Console.WriteLine($"v2: {v2}, {v2.ToString()}, {v2.ToString("x")}, " + "{0:x}", (int)v2);
 
 			Console.WriteLine("--- by Parse");
 			v2 = (Tgt)Enum.Parse(typeof(Src), v1.ToString());
-			Console.WriteLine("v1: " + v1 + ", " + v1.ToString("x") + ", {0:x}", (int)v1);
-			Console.WriteLine("v2: " + v2 + ", " + v2.ToString("x") + ", {0:x}", (int)v2);
+			Console.WriteLine($"v1: {v1}, {v1.ToString()}, {v1.ToString("x")}, " + "{0:x}", (int)v1);
+			Console.WriteLine($"v2: {v2}, {v2.ToString()}, {v2.ToString("x")}, " + "{0:x}", (int)v2);
 
 			v2 = Tgt.SMONEYC;
 			Console.WriteLine(Environment.NewLine + "--- original");
-			Console.WriteLine("v1: " + v1 + ", " + v1.ToString("x") + ", {0:x}", (int)v1);
-			Console.WriteLine("v2: " + v2 + ", " + v2.ToString("x") + ", {0:x}", (int)v2);
+			Console.WriteLine($"v1: {v1}, {v1.ToString()}, {v1.ToString("x")}, " + "{0:x}", (int)v1);
+			Console.WriteLine($"v2: {v2}, {v2.ToString()}, {v2.ToString("x")}, " + "{0:x}", (int)v2);
 
 			Console.WriteLine("--- by TryParse");
 			Enum.TryParse<Tgt>(v1.ToString(), true, out v2);
-			Console.WriteLine("v1: " + v1 + ", " + v1.ToString("x") + ", {0:x}", (int)v1);
-			Console.WriteLine("v2: " + v2 + ", " + v2.ToString("x") + ", {0:x}", (int)v2);
+			Console.WriteLine($"v1: {v1}, {v1.ToString()}, {v1.ToString("x")}, " + "{0:x}", (int)v1);
+			Console.WriteLine($"v2: {v2}, {v2.ToString()}, {v2.ToString("x")}, " + "{0:x}", (int)v2);
 		}
 	}
 
