@@ -28,6 +28,12 @@ namespace CEnum {
     }
 
     public class Compare {
+
+        public Compare() {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("< Compare >");
+		}
+
         private string prev(LogType type = LogType.All, LogLevel level = LogLevel.Info) {
 
             string key = string.Empty;
@@ -95,6 +101,7 @@ namespace CEnum {
             Console.WriteLine($"{type} / {level} -> {prev(type, level)} / {newr(type, level)}");
         }
         public void start() {
+			Console.WriteLine("-- start");
             pair(LogType.All, LogLevel.Info);
             pair(LogType.All, LogLevel.Warn);
             pair(LogType.All, LogLevel.Error);
@@ -107,6 +114,8 @@ namespace CEnum {
         }
 
         public void greater() {
+			Console.WriteLine("-- greater");
+
             Console.WriteLine($"info > warn,  [{LogLevel.Info > LogLevel.Warn}]");
             Console.WriteLine($"info > error, [{LogLevel.Info > LogLevel.Error}]");
             Console.WriteLine($"warn > error, [{LogLevel.Warn > LogLevel.Error}]");
