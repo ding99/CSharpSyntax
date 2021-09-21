@@ -22,6 +22,7 @@ namespace CEnum {
 
 			Default def = new Default();
 			def.List();
+			def.Defaults();
 
 			Console.ResetColor();
             Console.WriteLine("==  end");
