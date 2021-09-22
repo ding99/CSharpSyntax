@@ -37,11 +37,16 @@ namespace CEnum {
 		[DefaultValue(Baz)]
 		public enum E { Foo = 1, Bar = 2, Baz = 3, Quux = 4 }
 
+		enum F { Foo = 1, Bar = 2, Baz = 3, Default = Bar }
+
 		private void Dsp(Enum e) {
-			Console.Write("List:");
+			Console.Write("names:");
+			foreach (var i in Enum.GetNames(e.GetType()))
+				Console.Write($" {i}");
+			Console.Write("; values:");
 			foreach (var i in Enum.GetValues(e.GetType()))
 				Console.Write($" {i}[{(int)i}]");
-			Console.WriteLine($". Default: {e}[{Convert.ToInt32(e)}]");
+			Console.WriteLine($". default: {e}[{Convert.ToInt32(e)}]");
 		}
 
 		public void Defaults() {
@@ -51,6 +56,7 @@ namespace CEnum {
 			Dsp(default(C));
 			Dsp(default(D));
 			Dsp(default(E));
+			Dsp(default(F));
 		}
 	}
 }
