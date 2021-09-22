@@ -2,6 +2,17 @@
 using System.ComponentModel;
 
 namespace CEnum {
+	public static class Utilities {
+		public static T GetDefaultValue<T>() where T: struct, Enum {
+			Type t = typeof(T);
+			DefaultValueAttribute[] attributes = (DefaultValueAttribute[])t.GetCustomAttributes(typeof(DefaultValueAttribute), false);
+
+			if (attributes != null && attributes.Length > 0)
+				return (T)attributes[0].Value;
+			else
+				return default(T);
+		}
+	}
 
 	public class Default {
 
@@ -18,7 +29,7 @@ namespace CEnum {
 		}
 
 		public void List() {
-			Console.WriteLine("--- Same values in an enum");
+			Console.WriteLine("< Same values in an enum >");
 			Console.Write("Names :");
 			foreach(var c in Enum.GetNames(typeof(CapMode)))
 				Console.Write($" [{c}]");
@@ -50,13 +61,21 @@ namespace CEnum {
 		}
 
 		public void Defaults() {
-			Console.WriteLine("--- Default");
+			Console.WriteLine("< Show Default >");
 			Dsp(default(A));
 			Dsp(default(B));
 			Dsp(default(C));
 			Dsp(default(D));
 			Dsp(default(E));
 			Dsp(default(F));
+			Console.WriteLine("<TODO>: how to define what a default is");
+
+			Dsp(Utilities.GetDefaultValue<A>());
+			Dsp(Utilities.GetDefaultValue<B>());
+			Dsp(Utilities.GetDefaultValue<C>());
+			Dsp(Utilities.GetDefaultValue<D>());
+			Dsp(Utilities.GetDefaultValue<E>());
+			Dsp(Utilities.GetDefaultValue<F>());
 		}
 	}
 }
