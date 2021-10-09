@@ -33,7 +33,7 @@ namespace CStrings {
 		public void CompareNumber() {
 			int a = 2;
 			double b = 2.0;
-			Console.WriteLine($"-- Numbers: a[{a}], b[{b}]");
+			Console.WriteLine($"-- Numbers: a(int)-[{a}], b(double)-[{b}]");
 			Console.WriteLine($"a==b[{a == b}], a-quals-b[{a.Equals(b)}]");
 			Console.WriteLine($"2==2.0[{2 == 2.0}], 2-equals-2.0[{2.Equals(2.0)}]");
 		}
