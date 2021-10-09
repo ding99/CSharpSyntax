@@ -40,6 +40,7 @@
     <Compile Include="Source\ChkParser.cs" />
     <Compile Include="Source\ChkSpace.cs" />
     <Compile Include="Source\ChkString.cs" />
+    <Compile Include="Source\CIndex.cs" />
     <Compile Include="Source\Equaling.cs" />
     <Compile Include="Source\Evaluation.cs" />
     <Compile Include="Source\Program.cs" />
