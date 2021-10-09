@@ -4,11 +4,11 @@ using System;
 namespace CStrings {
 	class Entrance {
 
-		static void Main(string[] args) {
+		static void Main() {
 
 			Console.WriteLine("=== start");
 
-            bool ret = false;
+			//bool ret = false;
 
 			#region past
 			//TestString ts = new TestString();
