@@ -119,6 +119,10 @@ namespace CStrings {
 			cmp.CompareNumber();
 			#endregion
 
+			#region index
+			new CIndex().ExamineIndex();
+			#endregion
+
 			Console.ResetColor();
             Console.WriteLine("=== end");
 		}
