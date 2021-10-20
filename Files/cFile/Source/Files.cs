@@ -5,20 +5,24 @@ namespace cFile
 {
 	public class Files
 	{
-		public bool filecopy()
-		{
+		public void filecopy()
+		{  
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("-- File Copy");
+
 			string src = @"d:\test\temp\subdir\tempcp01.bin";
 			string dst = @"d:\test\temp\tempcp03.bin";
 
-			try
-			{
+			Console.WriteLine($"souuce: [{src}]");
+			Console.WriteLine($"target: [{dst}]");
+
+			try {
 				File.Copy(src, dst, true);
-				return true;
+				Console.WriteLine("  Success");
 			}
 			catch (Exception e)
 			{
-				Console.WriteLine(e.Message);
-				return false;
+				Console.WriteLine($"Error [{ e.Message}]");
 			}
 		}
 
@@ -31,6 +35,7 @@ namespace cFile
 		}
 		public bool names()
 		{
+			Console.ForegroundColor = ConsoleColor.Cyan;
 			this.name(@"d:\aaa\bbb\cccc.ext");
 			this.name(@"file01.ext");
 			this.name(@"file 02.txt");
@@ -40,8 +45,11 @@ namespace cFile
 			return true;
 		}
 
-		public bool finfo(string s)
+		public bool finfo()
 		{
+			Console.ForegroundColor = ConsoleColor.Green;
+
+			string s = @"D:\test\testdata.txt";
 			Console.WriteLine("File.Exists: " + File.Exists(s));
 			Console.WriteLine("FileInfo   : " + new FileInfo(s).Exists);
 			Console.WriteLine("FileInfo   : " + (new FileInfo(s)).Exists);
