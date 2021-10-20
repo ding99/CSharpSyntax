@@ -8,9 +8,10 @@ namespace cFile
 
 			Files f = new Files();
 
-			f.filecopy();
-			f.names();
-			f.finfo();
+			f.Filecocpy();
+			f.Nasmes();
+			f.FInfo();
+			f.Paths();
 
 			Console.ResetColor();
 			Console.WriteLine("== End");
