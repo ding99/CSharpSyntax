@@ -3,17 +3,18 @@
 namespace cFile
 {
 	class Entrance {
-		static void Main(string[] args) {
+		static void Main() {
+			Console.WriteLine("== Start");
+
 			Files f = new Files();
 
-			bool ret = false;
-			
-			ret = f.filecopy();
-			ret = f.names();
+			f.Filecocpy();
+			f.Nasmes();
+			f.FInfo();
+			f.Paths();
 
-			if(args.Length > 0) ret = f.finfo(args[0]);
-
-			Console.WriteLine(ret ? "Successful" : "Failed");
+			Console.ResetColor();
+			Console.WriteLine("== End");
 		}
 	}
 }
