@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text;
 
 namespace cFile
 {
@@ -67,11 +68,19 @@ namespace cFile
 			Console.WriteLine($"Directory : [{path}]");
 			Console.WriteLine($"Filename  : [{name}]");
 			Console.WriteLine($"Extension : [{extn}]");
+
+			StringBuilder b = new StringBuilder (name);
+			b.Append("_").Append(Guid.NewGuid().ToString().Substring(0, 8)).Append(extn);
+
+			string chad = Path.Combine(path, b.ToString());
+			Console.WriteLine($"Combined  : [{chad}]");
 		}
 
 		public void Paths() {
 			Console.ForegroundColor = ConsoleColor.DarkYellow;
 			this.OnePath(@"d:\aaa\bbb\cccc.ext");
+			this.OnePath(@"d:\aaa\bbb\cc ff cc.ext");
+			this.OnePath(@"d:\aaa\bbb\cccc");
 		}
 	}
 }
