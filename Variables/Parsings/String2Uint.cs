@@ -16,7 +16,7 @@ namespace Parsings {
 
 			try {
 				uint target1 = ((uint)source[0] << 24) + ((uint)source[1] << 16) + ((uint)source[2] << 8) + source[3];
-				Console.Write($" Target1 [{target1.ToString("x")}]");
+				Console.Write($" Target1 [{target1:x}]");
 			}
 			catch(Exception e) {
 				Console.Write($" [{e.Message}]");
@@ -24,7 +24,7 @@ namespace Parsings {
 
 			try {
 				uint target2 = (uint)source.Substring(0,4).Select(c => (int)c).Aggregate(0, (x, y) => (x << 8) + y);
-				Console.Write($" Target2 [{target2.ToString("x")}]");
+				Console.Write($" Target2 [{target2:x}]");
 			}
 			catch (Exception e) {
 				Console.Write($" [{e.Message}]");
