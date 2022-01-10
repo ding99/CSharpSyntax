@@ -12,7 +12,7 @@ namespace CRegex
 
         private void One(string s)
         {
-            string key = "0*$";
+            string key = "0+$";
             Match m = new Regex(key).Match (s);
             Console.WriteLine ($"key [{key}] string[{s}] match ({m.Success}) value [{m.Value}] [{m.Index}]");
         }
@@ -21,8 +21,10 @@ namespace CRegex
         {
             this.One ("11223344500000");
             this.One ("00011100000");
-            this.One ("aabbcc00000");
-            this.One ("1234560");
+            this.One ("aabbcc00000z");
+            this.One ("1230");
+            this.One ("0000");
+            this.One ("000abc");
         }
     }
 }
