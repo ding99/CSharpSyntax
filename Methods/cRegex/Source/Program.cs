@@ -9,19 +9,19 @@ namespace CRegex {
 			TReg tr = new TReg();
 
 			#region past
-			tr.rSpace();
-			tr.rComma();
-			tr.rFind1();
-			tr.rFind2();
+			//tr.rSpace();
+			//tr.rComma();
+			//tr.rFind1();
+			//tr.rFind2();
 			//tr.quotes();
 			//tr.ends();
-			tr.rMatch();
-			tr.rMatchi();
-			tr.colorCode();
-			tr.spaces();
-			tr.num();
-			tr.searchccode();
-			tr.mediatime();
+			//tr.rMatch();
+			//tr.rMatchi();
+			//tr.colorCode();
+			//tr.spaces();
+			//tr.num();
+			//tr.searchccode();
+			//tr.mediatime();
 
 			//tr.exchAra();
 
@@ -52,32 +52,39 @@ namespace CRegex {
 			#endregion
 
 			Console.ForegroundColor = ConsoleColor.Cyan;
-			#region past 2
-			//tr.eighth();
-			//tr.smiml();
-			//tr.ovrml();
+            #region past 2
+            //tr.eighth();
+            //tr.smiml();
+            //tr.ovrml();
 
-			//Cap c = new Cap();
-			//c.chu();
+            //Cap c = new Cap();
+            //c.chu();
 
-			MediaTime mt = new MediaTime();
-			mt.vttTests();
-			#endregion
+            //MediaTime mt = new MediaTime();
+            //mt.vttTests();
+            #endregion
 
-			Npv npv = new Npv();
-			npv.slashes();
+            #region else
+            //Npv npv = new Npv();
+            //npv.slashes();
 
-			Vtt v = new Vtt();
-			v.lines();
+            //Vtt v = new Vtt();
+            //v.lines();
 
-			genRegex gen = new genRegex();
-            gen.align();
+            //genRegex gen = new genRegex();
+            //         gen.align();
 
-			Replace rep = new Replace();
-			rep.Replaces();
-			rep.cmp();
+            //Replace rep = new Replace();
+            //rep.Replaces();
+            //rep.cmp();
+            #endregion
 
-			Console.ResetColor();
+            #region reverse
+            Reverse r = new Reverse ();
+			r.Start ();
+            #endregion reverse
+
+            Console.ResetColor();
 			System.Console.WriteLine("== End");
 		}
 	}
