@@ -8,8 +8,8 @@ namespace ArrayListApp {
 			ExamineArrayList compare = new ExamineArrayList();
 			compare.SameType();
 			compare.SelfComparer();
-			Console.ResetColor();
 
+			Console.ResetColor();
 			Console.WriteLine("== End");
 		}
 	}
