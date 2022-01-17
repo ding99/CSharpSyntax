@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace NestClass
 {
@@ -27,7 +26,6 @@ namespace NestClass
     {
         private readonly Outer[] table;
 		private readonly byte[] data;
-
 		private readonly Dictionary<byte, Dictionary<byte, int>> outers;
 
         public Searcher ()
@@ -480,12 +478,15 @@ namespace NestClass
 		public void Start ()
         {
             Console.WriteLine ($"-- Start to search for nested classed");
+			Console.ForegroundColor = ConsoleColor.Cyan;
 			this.Old ();
 			this.New ();
+			Console.ForegroundColor = ConsoleColor.Green;
 			this.Old2 ();
 			this.New2 ();
         }
 
+		// Original method. It seems that the decoding logic is not correct
 		private string OldDecode(ref int pos)
         {
 			if (pos >= this.data.Length)
@@ -512,6 +513,7 @@ namespace NestClass
             Console.WriteLine ($"Old : {b}");
         }
 
+		// Use new method (dictionary) to run the old logic. Should get the same result with Old
 		private string NewDecode (ref int pos)
 		{
 			if (pos >= this.data.Length)
@@ -534,6 +536,7 @@ namespace NestClass
 			Console.WriteLine ($"New : {b}");
 		}
 
+		// Correct logic but using the old method
 		private string Old2Decode (ref int pos)
 		{
 			if (pos >= this.data.Length)
@@ -561,6 +564,8 @@ namespace NestClass
 			Console.WriteLine ($"Old2: {b}");
 		}
 
+
+		// Both logic and method are new. Should have the same result with Old2
 		private string New2Decode (ref int pos)
 		{
 			if (pos >= this.data.Length)
@@ -581,7 +586,7 @@ namespace NestClass
 			StringBuilder b = new StringBuilder ();
 			for (int i = 0; i < this.data.Length; i++)
 				b.Append (this.New2Decode (ref i));
-			Console.WriteLine ($"Old2: {b}");
+			Console.WriteLine ($"New2: {b}");
 		}
 	}
 }
