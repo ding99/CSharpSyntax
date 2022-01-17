@@ -8,7 +8,8 @@ namespace HashTable {
 			ExamineHashTable exam = new ExamineHashTable();
 			exam.Start();
 
-			new CType().test();
+			CType ctype = new CType ();
+			ctype.test();
 
 			Console.ResetColor();
 			Console.WriteLine("== End");
