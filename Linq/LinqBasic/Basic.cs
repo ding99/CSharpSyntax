@@ -9,7 +9,6 @@ namespace LinqBasic {
 			Console.ForegroundColor = ConsoleColor.Yellow; Select();
 			Console.ForegroundColor = ConsoleColor.Cyan; Let();
 			Console.ForegroundColor = ConsoleColor.DarkYellow; Group();
-			Console.ResetColor();
 		}
 
 		private void Group() {
@@ -75,6 +74,12 @@ namespace LinqBasic {
 			Console.Write($"Passed (size {passed.Count()}):");
 			foreach (var a in passed) Console.Write($" <{a.Number}-{a.Score}>");
 			Console.WriteLine();
+
+            Console.WriteLine ("- Test empty set");
+			IEnumerable<int> super = from score in scores where score > 100 orderby score select score;
+			Console.Write ($"Super (size {super.Count ()}):");
+			foreach (var a in super) Console.Write ($" <{a}>");
+			Console.WriteLine ();
 		}
 	}
 }
