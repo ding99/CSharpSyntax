@@ -468,11 +468,15 @@ namespace NestClass
 			foreach(var o in this.table)
                 Console.WriteLine ($"  High [{o.High:x2}] Pairs [{o.Pair.Count()}]");
 
-			Console.WriteLine ($"Data : {this.data.Count ()}");
+            Console.WriteLine ($"Dictionary: <outers> has {this.outers.Count()} items");
+			foreach(var a in this.outers.Keys)
+                Console.WriteLine ($"  [{a:x2}] [{this.outers[a].Values.Count()}]");
+
+			Console.WriteLine ($"Data : size {this.data.Count ()}");
 			Console.Write (" ");
-			for(int i = 0; i < this.data.Length; i++)
-                Console.Write ($" {this.data[i]:x2}");
-            Console.WriteLine ();
+			for (int i = 0; i < this.data.Length; i++)
+				Console.Write ($" {this.data[i]:x2}");
+			Console.WriteLine ();
 		}
 
 		public void Start ()
