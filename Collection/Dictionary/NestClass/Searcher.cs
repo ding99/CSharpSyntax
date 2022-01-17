@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace NestClass
@@ -464,15 +463,15 @@ namespace NestClass
 
 			this.data = new byte[] { 0x30, 0x31, 0xc1, 0x55, 0xc2, 0xc4, 0x69, 0x73, 0x61, 0x73, 0xc4, 0x69 };
 
-            Console.WriteLine ($"Table: {this.table.Count()} Outers");
+            Console.WriteLine ($"Table: {this.table.Length} Outers");
 			foreach(var o in this.table)
-                Console.WriteLine ($"  High [{o.High:x2}] Pairs [{o.Pair.Count()}]");
+                Console.WriteLine ($"  High [{o.High:x2}] Pairs [{o.Pair.Length}]");
 
-            Console.WriteLine ($"Dictionary: <outers> has {this.outers.Count()} items");
+            Console.WriteLine ($"Dictionary: <outers> has {this.outers.Count} items");
 			foreach(var a in this.outers.Keys)
-                Console.WriteLine ($"  [{a:x2}] [{this.outers[a].Values.Count()}]");
+                Console.WriteLine ($"  [{a:x2}] [{this.outers[a].Values.Count}]");
 
-			Console.WriteLine ($"Data : size {this.data.Count ()}");
+			Console.WriteLine ($"Data : size {this.data.Length}");
 			Console.Write (" ");
 			for (int i = 0; i < this.data.Length; i++)
 				Console.Write ($" {this.data[i]:x2}");
