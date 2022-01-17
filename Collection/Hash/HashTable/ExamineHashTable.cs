@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http.Headers;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace HashTable {
-	class ExamineHashTable {
+namespace HashTable
+{
+    class ExamineHashTable {
 		public void Start() {
 			Console.ForegroundColor = ConsoleColor.Yellow;
 			Console.WriteLine("-- HashTable with string key");
