@@ -5,6 +5,9 @@
 
 			ExamineHashSet exam = new ExamineHashSet();
 			exam.Start();
+
+			System.Console.ResetColor ();
+			System.Console.WriteLine ("== End");
 		}
 	}
 }
