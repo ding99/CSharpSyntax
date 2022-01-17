@@ -346,7 +346,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Collection", "Collection", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayList", "Collection\ArrayList\ArrayList.csproj", "{5B7A6772-5BDB-4DC0-A226-B04D8CBFC1B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashTable", "Collection\HashTable\HashTable.csproj", "{16FB3F47-0965-457A-8A78-9F9FC42D9DA8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashTable", "Collection\Hash\HashTable\HashTable.csproj", "{16FB3F47-0965-457A-8A78-9F9FC42D9DA8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "List", "Collection\List\List.csproj", "{56945AD0-02BF-4683-B97D-338177169DEC}"
 EndProject
@@ -864,7 +864,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoLotTestDrive", "CS60DN4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarLotWebAPI2", "CS60DN46\Ch34MVC\WebAPI\CarLotWebAPI2\CarLotWebAPI2.csproj", "{D46E1C18-D643-4D01-841D-CDCC977B5D46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashSet", "Collection\HashSet\HashSet.csproj", "{355CC6EF-964F-4A3A-91FB-6340A07713E3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashSet", "Collection\Hash\HashSet\HashSet.csproj", "{355CC6EF-964F-4A3A-91FB-6340A07713E3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntPtr", "Variables\IntPtr\IntPtr.csproj", "{26343802-829F-4BC5-8C1D-E021E03B894C}"
 EndProject
